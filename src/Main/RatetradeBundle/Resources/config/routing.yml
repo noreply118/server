@@ -1,0 +1,123 @@
+ratetrade_homepage:
+    path:     /
+    defaults: { _controller: MainRatetradeBundle:Default:homepage }
+email_subscribe:
+    path:     /email_subscribe
+    defaults: { _controller: MainRatetradeBundle:Default:EmailSubscribe }
+thankyou:
+    path:     /thank-you
+    defaults: { _controller: MainRatetradeBundle:Default:Thankyou }
+get_city:
+    path:     /get_province_city/{provinceid}
+    defaults: { _controller: MainRatetradeBundle:Default:getProvinceCity }
+mortgage_rates:
+    path:     /best-mortgage-rates/{ratetype}
+    defaults: { _controller: MainRatetradeBundle:Default:MortgageRates}
+mort_rates:
+    path:     /best-mortgage-rates
+    defaults: { _controller: MainRatetradeBundle:Default:MortRates}
+real_estate:
+    path:     /real-estate
+    defaults: { _controller: MainRatetradeBundle:Default:RealEstate}
+compare_rates:
+    path:     /compare-mortgage-rates
+    defaults: { _controller: MainRatetradeBundle:Default:CompareRates}
+apply_now:
+    path:     /apply-now
+    defaults: { _controller: MainRatetradeBundle:Default:ApplyNow}
+contact_us:
+    path:     /contact-us
+    defaults: { _controller: MainRatetradeBundle:Default:ContactUs }
+contact_us_update:
+    path:     /contact-us-update
+    defaults: { _controller: MainRatetradeBundle:Default:ContactUsUpdate }
+lead_update:
+    path:     /lead-update
+    defaults: { _controller: MainRatetradeBundle:Default:LeadUpdate }
+broker_list:
+    path:     /mortgage-brokers-list
+    defaults: { _controller: MainRatetradeBundle:Default:BrokerList }
+bank_mortgage_rates:
+    path:     /bank-mortgage-rates
+    defaults: { _controller: MainRatetradeBundle:Default:BankMortgageRates }
+broker_signup:
+    path:     /mortgage-broker-signup
+    defaults: { _controller: MainRatetradeBundle:Default:BrokerSignUp }
+broker_login:
+    path:     /mortgage-broker-login
+    defaults: { _controller: MainRatetradeBundle:Default:BrokerLogin }
+broker_logincheck:
+    path:     /mortgage-broker-logincheck
+    defaults: { _controller: MainRatetradeBundle:Default:BrokerLoginCheck }
+broker_dashboard:
+    path:     /mortgage-broker-dashboard
+    defaults: { _controller: MainRatetradeBundle:Default:BrokerDashboard }
+broker_rates:
+    path:     /mortgage-broker-rates
+    defaults: { _controller: MainRatetradeBundle:Default:BrokerRates }
+broker_update:
+    path:     /broker-update
+    defaults: { _controller: MainRatetradeBundle:Default:BrokerUpdate }
+broker_login_update:
+    path:     /broker-login-update
+    defaults: { _controller: MainRatetradeBundle:Default:BrokerLoginUpdate }
+broker_rate_update:
+    path:     /broker-rate-update
+    defaults: { _controller: MainRatetradeBundle:Default:BrokerRateUpdate }
+broker_logout:
+    path:     /broker-logout
+    defaults: { _controller: MainRatetradeBundle:Default:BrokerLogout }
+mortgage_payment:
+    path:     /mortgage-payment-calculator
+    defaults: { _controller: MainRatetradeBundle:Default:Payment }
+payment_analyzer:
+    path:     /payment-analyzer-calculator
+    defaults: { _controller: MainRatetradeBundle:Default:PaymentAnalyzer }
+income_cal:
+    path:     /income-calculator
+    defaults: { _controller: MainRatetradeBundle:Default:IncomeCal }
+land_transfer_tax:
+    path:     /land-transfer-tax
+    defaults: { _controller: MainRatetradeBundle:Default:LandTransferTax }   
+chmc_insurance:
+    path:     /cmhc-insurance-calculator
+    defaults: { _controller: MainRatetradeBundle:Default:ChmcCalculator }
+equity_refinance:
+    path:     /mortgage-refinance-equity
+    defaults: { _controller: MainRatetradeBundle:Default:getRefinanceEquity }
+refinance_penalty:
+    path:     /mortgage-refinance-penalty
+    defaults: { _controller: MainRatetradeBundle:Default:getRefinancePenalty }
+affordability_cal:
+    path:     /mortgage-affordability
+    defaults: { _controller: MainRatetradeBundle:Default:Affordability }
+debt-consolidation-calculator:
+    path:     /debt-consolidation-refinance-calculator
+    defaults: { _controller: MainRatetradeBundle:Default:DebtConsolidation }
+refinance-calculator:
+    path:     /mortgage-refinance-calculator
+    defaults: { _controller: MainRatetradeBundle:Default:MortgageRefinance }
+detect_city:
+    path:     /detect_city
+    defaults: { _controller: MainRatetradeBundle:Default:DetectCity }
+mortgage_renewals:
+    path:     /mortgage-renewal-process-{city}
+    defaults: { _controller: MainRatetradeBundle:Default:MortgageRenewals}
+mortgage_refinance:
+    path:     /mortgage-refinance-{city}
+    defaults: { _controller: MainRatetradeBundle:Default:MortgageRefinancing}
+dynmaicurl:
+    path:     /{urlparam}
+    defaults: { _controller: MainRatetradeBundle:Default:DynamicPage}
+ncity_ratetypes:
+    path:     /{target}
+    defaults: { _controller: MainRatetradeBundle:Default:NcityRates}
+city_ratetypes:
+    path:     /{target}/{ratetype}
+    defaults: { _controller: MainRatetradeBundle:Default:CityRates}
+city_mortgage_rates:
+    path:     /{target}/{term}/{ratetype}
+    defaults: { _controller: MainRatetradeBundle:Default:CityMortgageRates}
+new_rates:
+    path:     /new-rates
+    defaults: { _controller: MainRatetradeBundle:Default:NewRate}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0;">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Mortgage Equity to Refinance</title>
+        <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/common.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/products.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/add-product.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/admin-manager.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/emicalculator.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/jquery-ui.css')}}">
+    </head>
+    <body>
+        <div class="header">
+            <div class="wrapper"> <a href="#" onclick="window.history.back();" class="home-ico">
+                    <img src="/symfonyratetrade/web/bundles/acmedemo/images/back.png">
+                </a> 
+                <span class="page-name">Equity Calculator</span> </div>
+        </div>
+        <div class="headerfix"></div>
+        <div class="wrapper bodywrapper">
+            <div class="left-nav"> 
+                <a href="{{path('mortgage_payment')}}">EMI Calculator</a>
+                <a href="{{path('chmc_insurance')}}">CHMC Calculator</a>
+                <a href="{{path('land_transfer_tax')}}">Land Transfer Tax</a>
+                <a href="{{path('equity_refinance')}}" class="selected">Refinance Equity</a>
+                <a href="{{path('refinance_penalty')}}">Refinance Penalty</a>
+            </div>
+            <div class="right-details">
+                <div class="right-inner">
+                    <div class="inner">
+                        <form class="imageform">
+                            <div class="entry-content">
+                                <div id="emicalcalulatorinnerform">
+                                    <div class="lamount">
+                                        <label for="loanamount"><strong>Current Property Value</strong> </label>
+                                        <span><img class="num-icon" src="{{asset('./bundles/acmedemo/images/us-dollar-xxl.png')}}"></span>
+                                        <input id="loanamount" name="loanamount" value="" type="text" />
+
+                                    </div>
+                                    <div id="loanamountslider"></div>
+                                    <div id="loanamountsteps" class="steps">
+                                        <span class="tick" style="left: 0%;">|<br/><span class="marker">0</span></span>
+                                        <span class="tick" style="left: 25%;">|<br/><span class="marker">2.5L</span></span>
+                                        <span class="tick" style="left: 50%;">|<br/><span class="marker">5L</span></span>
+                                        <span class="tick" style="left: 75%;">|<br/><span class="marker">7.5L</span></span>
+                                        <span class="tick" style="left: 100%;">|<br/><span class="marker">10L</span></span>
+                                    </div>
+                                    <div class="lamount">
+                                        <label for="leftamount"><strong>Remaining Balance on Mortgage</strong> </label>
+                                        <span><img class="num-icon" src="{{asset('./bundles/acmedemo/images/us-dollar-xxl.png')}}"></span>
+                                        <input id="leftamount" name="leftamount" value="" type="text" />
+
+                                    </div>
+                                    <div id="leftamountslider"></div>
+                                    <div id="leftamountsteps" class="steps">
+                                        <span class="tick" style="left: 0%;">|<br/><span class="marker">0</span></span>
+                                        <span class="tick" style="left: 25%;">|<br/><span class="marker">2.5L</span></span>
+                                        <span class="tick" style="left: 50%;">|<br/><span class="marker">5L</span></span>
+                                        <span class="tick" style="left: 75%;">|<br/><span class="marker">7.5L</span></span>
+                                        <span class="tick" style="left: 100%;">|<br/><span class="marker">10L</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                      
+                            <div style="clear:both"></div>  
+                            <br/><br/>
+                            <table>
+                                <tr>
+                                    <th>Maximum Loan To Value</th>
+                                    <th>&nbsp;</th>
+                                    <th>Available Equity</th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input id="max-loan" value="" type="text" disabled="disabled" style="text-align:center;color:#000;"/>
+                                    </th>
+                                    <th>&nbsp;</th>
+                                    <th>
+                                        <input id="equity" value="" type="text" disabled="disabled" style="text-align:center;color:#000;"/>
+                                    </th>
+                                </tr>
+                            </table>
+                            <br/>
+                            <label id="msg">You cannot access equity</label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery_ss.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.widget.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.accordion.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.tabs.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/superfish.js') }}"></script>
+
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.loadmask.min.js') }}"></script>
+
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/globalize.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/equity.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.mouse.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.slider.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.datepicker.min.js') }}"></script>
+    </body>
+</html>

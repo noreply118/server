@@ -1,0 +1,7 @@
+parameters:
+#    main_ratetrade.example.class: Main\RatetradeBundle\Example
+
+services:
+#    main_ratetrade.example:
+#        class: %main_ratetrade.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

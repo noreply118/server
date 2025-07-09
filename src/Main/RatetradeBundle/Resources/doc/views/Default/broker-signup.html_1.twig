@@ -1,0 +1,167 @@
+<html>
+    <body>
+        <table>
+            <tr><td>
+                    First Name
+                </td>
+                <td>
+                    <input type="text" value="" id="fname" class="required"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Last Name
+                </td>
+                <td>
+                    <input type="text" value="" id="lname" class="required"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Email
+                </td>
+                <td>
+                    <input type="text" value="" id="email" class="required"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Phone Number
+                </td>
+                <td>
+                    <input type="text" value="" id="phone" class="required"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    City
+                </td>
+                <td>
+                    <input type="text" value="" id="city" class="required"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Brokerage Name
+                </td>
+                <td>
+                    <input type="text" value="" id="brokerage_name" class="required"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Website URL
+                </td>
+                <td>
+                    <input type="text" value="" id="weburl" class="required"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    About Broker
+                </td>
+                <td>
+                    <textarea id="message" class="required"></textarea>
+                </td>
+            </tr>
+            <tr colspan="2">
+                <td><input type="button" id="submit" value="Submit" />
+                </td></tr>
+        </table>
+        <div id="success"></div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script>
+            function validateEmail(email) {
+                var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                return re.test(email);
+            }
+
+            $(document).on("change", ".required", function () {
+                $(this).css('border', '1px solid green');
+
+                if ($(this).val() == '')
+                {
+                    $(this).focus();
+                    $(this).css('border', '1px solid red');
+                }
+
+                var id = $(this).attr('id');
+                if (id == 'email' && !validateEmail($("#email").val()))
+                {
+                    $("#email").focus();
+                    $("#email").css('border', '1px solid red');
+                }
+            });
+
+            $(document).on("click", "#submit", function (e) {
+
+                if ($("#fname").val() == '')
+                {
+                    $("#fname").focus();
+                    $("#fname").css('border', '1px solid red');
+                }
+                else if ($("#lname").val() == '')
+                {
+                    $("#lname").focus();
+                    $("#lname").css('border', '1px solid red');
+                }
+                else if ($("#email").val() == '')
+                {
+                    $("#email").focus();
+                    $("#email").css('border', '1px solid red');
+                }
+                else if (!validateEmail($("#email").val()))
+                {
+                    $("#email").css('border', '1px solid red');
+                    $("#email").focus();
+                }
+                else if ($("#phone").val() == '')
+                {
+                    $("#phone").focus();
+                    $("#phone").css('border', '1px solid red');
+                }
+                else {
+                    var currentRequest = null;
+                    $("#submit").text("Please Wait..");
+                    var formData = {
+                        fname: $("#fname").val(),
+                        lname: $("#lname").val(),
+                        email: $("#email").val(),
+                        phone: $("#phone").val(),
+                        city: $("#city").val(),
+                        brokerage_name: $("#brokerage_name").val(),
+                        weburl: $("#weburl").val(),
+                        message: $("#message").val()
+                    };
+                    currentRequest = $.ajax({
+                        type: "post",
+                        async: true,
+                        url: "{{path('broker_update')}}",
+                        data: formData,
+                        beforeSend: function () {
+                            if (currentRequest != null) {
+                                currentRequest.abort();
+                            }
+                        },
+                        success: function (response) {
+                            $("#success").text("Data Captured Successfully");
+                            $("#fname").val("");
+                            $("#lname").val("");
+                            $("#email").val("");
+                            $("#phone").val("");
+                            $("#city").val("");
+                            $("#brokerage_name").val("");
+                            $("#weburl").val("");
+                            $("#message").val("");
+                            $(".required").removeAttr('style');
+                        },
+                        error: function (request, error) {
+                            $("#success").text("Failed! Try Again");
+                            $("#submit").text("Submit");
+                        }
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

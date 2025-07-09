@@ -1,0 +1,192 @@
+h1,h3 {font-weight: normal;}
+input {padding: 12px 10px;
+font-size: 14px;
+border: 1px solid #DDD;
+background-color: #F2F0F3;}
+.tablem {font-size: 17px;padding: 0 10px; width:100%;}
+.tablem td{height: 35px; padding:7px 10px;text-align: center;background:#f5f5f5;}
+.tablem tr{border-bottom: 3px solid #fff;}
+.downtext,.downtext1 {text-align: center;}
+#go{
+    clear: both;
+color: #FFF;
+padding: 6px 10px;
+background-color: #006F98;
+border-radius: 3px;
+width: 10%;
+border: medium none;
+cursor: pointer;
+}
+.getquoteform{
+position: absolute;
+top: 300px;
+left: 30%;
+border: 3px solid #CCC;
+background: #FFF none repeat scroll 0% 0%;
+width: 480px;
+text-align: center;
+color: #666;
+border-radius: 3px;
+box-shadow: 0px 0px 2000px 2000px rgba(0, 0, 0, 0.6);
+z-index: 9999;
+display: none;
+}
+
+a.closebtn {
+    position: absolute;
+    padding: 5px 8px;
+    text-align: center;
+    color: #FFF;
+    background: #C00 none repeat scroll 0% 0%;
+    top: -15px;
+    right: -15px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+#emipaymenttable{
+background: #FCFCFC none repeat scroll 0px 0px;
+clear: both;
+margin: 0px 0px 20px;
+text-align: center;
+position: relative;
+bottom: 70px;
+margin-top: 5%;
+}
+
+#emipaymenttable table{
+width: 100%;
+border-top: 1px solid #DBDAD7;
+}
+
+#emipaymenttable table td {
+    border-left: 1px solid #DBDAD7;
+    border-bottom: 1px solid #DBDAD7;
+    border-right: 1px solid #DBDAD7;
+    text-align: center;
+    font-size: 11px;
+    padding: 4px;
+}
+
+td.currency {
+    border-left: 0px none !important;
+    text-align: right !important;
+    width: 150px !important;
+}
+
+td.paidtodateyear, td.paidtodatemonthyear {
+    border-left: 0px none !important;
+    text-align: right !important;
+}
+.ammort-graph {
+    display: none;
+}
+td.monthyearwrapper {
+    margin: 0px;
+    padding: 0px !important;
+    border-bottom: 0px none !important;
+    border-top: 0px none !important;
+}
+
+#monthlypaymentcontainer table {
+    margin: 0px;
+    padding: 0px;
+}
+
+#monthlypaymentcontainer td {
+    background: #EFEFEF none repeat scroll 0px 0px;
+}
+
+td.paymentmonthyear {
+    width: 69px !important;
+}
+
+td.paymentyear {
+    text-align: right !important;
+    width: 77px !important;
+}
+.toggle {
+    background: transparent url("../../acmedemo/images/toggle-closed.png") no-repeat scroll 10% 50%;
+    cursor: pointer;
+}
+
+.toggle-open {
+    background: transparent url("../../acmedemo/images/toggle-open.png") no-repeat scroll 10% 50%;
+}
+
+.tablem th {
+    background: #14998b;
+    color: #fff;
+    text-align: center;
+    padding: 7px;
+    font-size: 18px;
+}
+.tablem td:first-child , .tablem td{
+    text-align: left;
+    font-weight: bold;
+    color: #494949;
+}
+.affordresult td {
+ background: #ddd;
+    border: none!important;
+    margin: 0!important;
+    width: 357px;
+    color: #403a3a!important;
+}
+.affordresult tr {
+    border: 1px solid #bfbfbf!important;
+}
+.tablem select, .tablem input {
+        background: #fefefe none repeat scroll 0 0;
+    max-width: 100%;
+    border: 1px solid #b9babb;
+    border-radius: 4px;
+    color: #2eb594;
+    padding: 2px 5px;
+    width: 157px;
+    font-size: 18px;
+    height: 41px;
+}
+input[type="checkbox"] {
+    height: 21px;
+}
+
+input.how-afford {
+    background: #0dac85;
+    color: #fff;
+    border: 0;
+    box-shadow: 0 1px 2px #000;
+    height: 49px;
+    margin-top: 11px;
+    width: 264px;
+    padding-top: 0px!important;
+}
+a.select-rate {
+    background: #0dac85 none repeat scroll 0 0;
+    border-radius: 7px;
+    box-shadow: 1px 1px 2px #000;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 17px;
+    text-decoration: none;
+}
+table.tablem.affordresult {
+    margin-left: -1px;
+}
+
+.rateval {
+    width: 45% !important;
+}
+.tablem.affordresult td:first-child {
+    background: #c2c2c2 none repeat scroll 0 0 !important;
+    color: #fff !important;
+    text-align: right !important;
+}
+.tablem.tableafford span {
+    color: #919191;
+    display: block;
+    font-size: 12px;
+    margin-top: -9px;
+}
+.debtshead th{
+    background: #68c1dc!important;
+}

@@ -1,0 +1,25 @@
+.edu-cat{
+    background: rgb(13, 172, 133)!important;
+    color: rgba(255,255,255,1.00)!important;
+}
+
+.an-button{
+    display: inline-block;
+    border-radius: 5px;
+    color: white !important;
+    font-weight: 500;
+    font-size: 12pt;
+    cursor: pointer;
+    padding:15px;
+    background: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.bluediv{
+    background-color: #DFEFFF;
+    border-color: #DDDDDD #BBBBBB #BBBBBB #DDDDDD;
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+    margin: 10px 0
+}

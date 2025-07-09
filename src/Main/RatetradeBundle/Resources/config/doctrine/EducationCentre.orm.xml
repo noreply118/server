@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Main\RatetradeBundle\Entity\EducationCentre" table="education_centre">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="category" type="string" column="category" length="255" nullable="false"/>
+    <field name="parentCategory" type="integer" column="parent_category" nullable="false"/>
+    <field name="image" type="string" column="image" length="255" nullable="true"/>
+    <field name="pageUrl" type="string" column="page_url" length="255" nullable="false"/>
+    <field name="pageMeta" type="string" column="page_meta" length="255" nullable="false"/>
+    <field name="parentPageContent" type="string" column="parent_page_content" length="255" nullable="true"/>
+    <field name="pageContent" type="text" column="page_content" nullable="false"/>
+    <field name="ptitle" type="string" column="ptitle" length="255" nullable="false"/>
+    <field name="mdescription" type="string" column="mdescription" length="255" nullable="false"/>
+<field name="mkeywords" type="string" column="mkeywords" length="500" nullable="false"/>
+    <field name="updateDateTime" type="datetime" column="update_date_time" nullable="false"/>
+  </entity>
+</doctrine-mapping>

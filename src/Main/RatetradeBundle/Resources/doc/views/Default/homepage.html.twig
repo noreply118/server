@@ -1,0 +1,1414 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="geo.region" content="CA" />
+    <title>{% for td in termds %}{{td.ptitle}}{% endfor %}</title>
+    <meta name="description" content="{% for td in termds %}{{td.mdescription}}{% endfor %}" />
+<meta name="keyword" content"mortgage rate, mortgage down payment, fixed mortgage rates, variable mortgage rates, mortgage rates in canada, best mortgage rates in canada,compare best mortgage rate in canada, payment analyzer,find the lowest mortgage rates in Canada, mortgage affordability, calculate maximum affordability">
+    <meta name="robots" content="index, follow">
+    <meta name="title" content="{% for td in termds %}{{td.ptitle}}{% endfor %}">
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:site_name" content="Rate Trade" />
+    <meta property="og:title" content="{% for td in termds %}{{td.ptitle}}{% endfor %}"/>
+    <meta property="og:description" content="{% for td in termds %}{{td.mdescription}}{% endfor %}"/>
+    <meta name="twitter:title" content="{% for td in termds %}{{td.ptitle}}{% endfor %}"/>
+    <meta name="twitter:description" content="{% for td in termds %}{{td.mdescription}}{% endfor %}"/>
+    <meta property="article:publisher" content="https://www.facebook.com/ratetrade/" />
+    <meta name="twitter:site" content="@ratetrade" />
+    <meta name="twitter:creator" content="@ratetrade" />   
+    <link rel="canonical" href="{{ app.request.uri }}"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('./bundles/assets/ico/favicon.png')}}">
+    <link rel="shortcut icon" href="{{asset('./bundles/assets/ico/favicon.ico')}}">
+    <link href="{{asset('./bundles/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/bootstrap-select/css/bootstrap-select.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/fontawesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/prettyphoto/css/prettyPhoto.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/owl-carousel2/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/owl-carousel2/assets/owl.theme.default.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/animate/animate.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/swiper/css/swiper.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/css/theme.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/css/theme-red-1.css')}}" rel="stylesheet" id="theme-config-link">
+    <script src="{{asset('./bundles/assets/plugins/modernizr.custom.js')}}"></script>
+
+          {{ render(controller('MainRatetradeBundle:Default:Header')) }}
+    <!-- /HEADER -->
+<style>
+#twitter-widget-0{
+   margin-top:-46px!important;
+}
+</style>
+    <!-- CONTENT AREA -->
+    <div class="content-area">
+
+        <!-- PAGE -->
+        <section class="page-section no-padding slider">
+            <div class="container full-width">
+
+                <div class="main-slider">
+                    <div class="owl-carousel" id="main-slider">
+
+                        <!-- Slide 1 -->
+                        <div class="item slide1 ver1">
+                            <div class="caption">
+                                <div class="container"> 
+                                    <div class="div-table">
+                                        <div class="div-cell">
+                                            <div class="caption-content">
+                                                <h2 class="caption-title">Find the lowest</h2>
+                                                <h1 class="caption-subtitle">Mortgage Rates in Canada</h1>
+                                                <!-- Search form -->
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-10 col-md-offset-1">
+
+                                                        <div class="form-search dark">
+                                                            <form action="https://www.ratetrade.ca/best-mortgage-rates/fixed">
+                                                                <div class="form-title">
+                                                                    <i class="fa fa-globe"></i>
+                                                                    <h2>Find Your Suitable Rate!</h2>
+                                                                </div>
+
+                                                                <div class="row row-inputs">
+                                                                    <div class="container-fluid">
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group has-icon has-label">
+                                                                                <label for="formSearchUpLocation">I am looking for</label>
+                                                                           <select
+                                                                                        class="selectpicker1 input-price" data-live-search="true" data-width="100%"
+                                                                                        data-toggle="tooltip" title="Select">
+                                                                                    <option>Buying Home</option>
+                                                                                    <option>Refinance</option>
+                                                                                    <option>Renewing</option>
+                                                                                </select>
+                                                                                     
+                                                                                <span class="form-control-icon"><i class="fa  fa-arrow-circle-down"></i></span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row row-inputs">
+                                                                    <div class="container-fluid">
+                                                                    
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group has-icon has-label">
+                                                                                <label for="formSearchOffLocation">Select Location</label>
+                                                                             <select
+                                                                                        class="selectpicker1 input-price" data-live-search="true" data-width="100%"
+                                                                                        data-toggle="tooltip" title="Select"> <option value="best-barrie-mortgage-rates">Barrie</option>
+                                                            <option value="best-belleville-mortgage-rates">Belleville</option>
+                                                            <option value="best-brampton-mortgage-rates">Brampton</option>
+                                                            <option value="best-brantford-mortgage-rates">Brantford</option>
+                                                            <option value="best-burlington-mortgage-rates">Burlington</option>
+                                                            <option value="best-cambridge-mortgage-rates">Cambridge</option>
+                                                            <option value="best-cornwall-mortgage-rates">Cornwall</option>
+                                                            <option value="best-guelph-mortgage-rates">Guelph</option>
+                                                            <option value="best-hamilton-mortgage-rates">Hamilton</option>
+                                                            <option value="best-kanata-mortgage-rates">Kanata</option>
+                                                            <option value="best-kingston-mortgage-rates">Kingston</option>
+                                                            <option value="best-kitchener-mortgage-rates">Kitchener</option>
+                                                            <option value="best-london-mortgage-rates">London</option>
+                                                            <option value="best-markham-mortgage-rates">Markham</option>
+                                                            <option value="best-milton-mortgage-rates">Milton</option>
+                                                            <option value="best-mississauga-mortgage-rates">Mississauga</option>
+                                                            <option value="best-north-bay-mortgage-rates">North Bay</option>
+                                                            <option value="best-oshawa-mortgage-rates">Oshawa</option>
+                                                            <option value="best-ottawa-mortgage-rates">Ottawa</option>
+                                                            <option value="best-peterborough-mortgage-rates">Peterborough</option>
+                                                            <option value="best-pickering-mortgage-rates">Pickering</option>
+                                                            <option value="best-sarnia-mortgage-rates">Sarnia</option>
+                                                            <option value="best-sault-ste-marie-mortgage-rates">Sault Ste. Marie</option>
+                                                            <option value="best-st-catharines-mortgage-rates">St. Catharines</option>
+                                                            <option value="best-sudbury-mortgage-rates">Sudbury</option>
+                                                            <option value="best-thunder-bay-mortgage-rates">Thunder Bay</option>
+                                                            <option value="best-toronto-mortgage-rates">Toronto</option>
+                                                            <option value="best-waterloo-mortgage-rates">Waterloo</option>
+                                                            <option value="best-welland-mortgage-rates">Welland</option>
+                                                            <option value="best-windsor-mortgage-rates">Windsor</option>
+                                                            <option value="best-kawartha-lakes-mortgage-rates">Kawartha Lakes</option></select>  
+                                                                                <span class="form-control-icon"><i class="fa fa-arrow-circle-down"></i></span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-3">
+                                                                            <div class="form-group has-icon has-label">
+                                                                                <label for="formSearchOffDate">Rate Type</label>
+                                                                          <select
+                                                                                        class="selectpicker1 input-price" data-live-search="true" data-width="100%"
+                                                                                        data-toggle="tooltip" title="Select">
+                                                                                    <option>Fixed</option>
+                                                                                    <option>Variable</option>
+                                                                                   
+                                                                                </select>       
+                                                                                <span class="form-control-icon"><i class="fa fa-arrow-circle-down"></i></span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-3">
+                                                                            <div class="form-group has-icon has-label selectpicker-wrapper">
+                                                                                <label>Select Year</label>
+                                                                                <select
+                                                                                        class="selectpicker1 input-price" data-live-search="true" data-width="100%"
+                                                                                        data-toggle="tooltip" title="Select">
+                                                                                    <option>6-Months</option>
+                                                                                    <option>1 Year</option>
+                                                                                    <option>2 Year</option>
+                                                                                </select>
+                                                                                <span class="form-control-icon"><i class="fa fa-arrow-circle-down"></i></span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row row-submit">
+                                                                    <div class="container-fluid">
+                                                                        <div class="inner">
+                                                                           
+                                                                            <button type="submit" id="formSearchSubmit" class="btn btn-submit btn-theme pull-right">Get Rate Now</button><br/>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <!-- /Search form -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Slide 1 -->
+
+                        <!-- Slide 2 -->
+                        <div class="item slide4 ver2">
+                            <div class="caption">
+                                <div class="container">
+                                    <div class="div-table">
+                                        <div class="div-cell">
+                                            <div class="caption-content">
+                                                <!-- Search form -->
+                                                <div class="form-search light">
+                                                    <form action="https://www.ratetrade.ca/mortgage-affordability">
+                                                        <div class="form-title">
+                                                            <i class="fa fa-globe"></i>
+                                                            <h2>Calculate Maximum Affordability</h2>
+                                                        </div>
+
+                                                        <div class="row row-inputs">
+                                                            <div class="container-fluid">
+                                                                <div class="col-sm-12">
+                                                                    <div class="form-group has-icon has-label">
+                                                                        <label for="formSearchUpLocation2">Annual Income</label>
+                                                                        <input type="text" class="form-control" id="formSearchUpLocation2" placeholder="$75000">
+                                                                        <span class="form-control-icon"><i class="fa fa-usd""></i></span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-12">
+                                                                    <div class="form-group has-icon has-label">
+                                                                        <label for="formSearchOffLocation2">Co-Applicant Income</label>
+                                                                        <input type="text" class="form-control" id="formSearchOffLocation2" placeholder="$35000">
+                                                                        <span class="form-control-icon"><i class="fa fa-usd"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-12">
+                                                                    <div class="form-group has-icon has-label">
+                                                                        <label for="formSearchOffLocation2">Property Tax </label>
+                                                                        <input type="text" class="form-control" id="formSearchOffLocation2" placeholder="$200">
+                                                                        <span class="form-control-icon"><i class="fa fa-usd"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                      
+
+                                                        <div class="row row-submit">
+                                                            <div class="container-fluid">
+                                                                <div class="inner">
+                                                                
+                                                                    <button type="submit" id="formSearchSubmit2" class="btn btn-submit btn-theme ripple-effect pull-right">Calculate</button><br/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <!-- /Search form -->
+
+                                                <h1 class="caption-subtitle">How Much Can You Afford<br/> for a New Home?</h1>
+                                                <p class="caption-text">
+                                                   Are you financially ready to buy a home? While hunting for a home in Canada, a rule of thumb often followed is that one can afford to spend three times of his/her gross household income. 
+                                                </p>
+                                                <p class="caption-text">
+                                                    <a class="btn btn-theme ripple-effect btn-theme-md" href="#">Read More</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Slide 2 -->
+
+                        <!-- Slide 3 -->
+                        <div class="item slide3 ver3">
+                            <div class="caption">
+                                <div class="container">
+                                    <div class="div-table">
+                                        <div class="div-cell">
+                                            <div class="caption-content">
+                                                <!-- Search form -->
+                                                <div class="form-search light">
+                                                    <form action="https://www.ratetrade.ca/chmc-insurance-calculator">
+                                                        <div class="form-title">
+                                                            <i class="fa fa-globe"></i>
+                                                            <h2>Calculate Mortgage Insurance</h2>
+                                                        </div>
+
+                                                        <div class="row row-inputs">
+                                                            <div class="container-fluid">
+                                                                <div class="col-sm-12">
+                                                                    <div class="form-group has-icon has-label">
+                                                                        <label for="formSearchUpLocation3">Property Value</label>
+                                                                        <input type="text" class="form-control" id="formSearchUpLocation3" placeholder="$350,000">
+                                                                        <span class="form-control-icon"><i class="fa fa-usd"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-12">
+                                                                    <div class="form-group has-icon has-label">
+                                                                        <label for="formSearchOffLocation3">Amortization Period</label>
+                                                                       <select
+                                                                                class="selectpicker input-price" data-live-search="true" data-width="100%"
+                                                                                data-toggle="tooltip" title="Select">
+                                                                            <option>5 Years</option>
+                                                                            <option>15 Years</option>
+                                                                            <option>25 Years</option>
+                                                                               <option>30 Years</option>
+                                                                            <option>35 Years</option>
+                                                                        </select>
+                                                                        <span class="form-control-icon"><i class="fa fa-arrow-circle-down"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row row-inputs">
+                                                            <div class="container-fluid">
+                                                                <div class="col-sm-7">
+                                                                    <div class="form-group has-icon has-label">
+                                                                        <label for="formSearchUpDate3">Down Payment</label>
+                                                                        <input type="text" class="form-control" id="formSearchUpDate3" placeholder="$70,000">
+                                                                        <span class="form-control-icon"><i class="fa fa-usd"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-5">
+                                                                    <div class="form-group has-icon has-label selectpicker-wrapper">
+                                                                        <label></label>
+                                                                      <input type="text" class="form-control" id="formSearchUpDate3" placeholder="20%">
+                                                                        <span class="form-control-icon"><i class="fa fa-percent"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                       
+                                                        <div class="row row-submit">
+                                                            <div class="container-fluid">
+                                                                <div class="inner">
+                                                           
+                                                                    <button type="submit" id="formSearchSubmit3" class="btn btn-submit ripple-effect btn-theme pull-right">Calculate</button><br/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <!-- /Search form -->
+
+                                                <h2 class="caption-title">Mortgage</h2>
+                                                <h1 class="caption-subtitle">Down Payment</h1>
+                                                <p class="caption-text">
+                                                   Mortgage down payment is the amount of money paid upfront <br/> by the home buyer to obtain a mortgage for purchasing a home. 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Slide 3 -->
+
+                        <!-- Slide 2 -->
+                        <div class="item slide2 ver2">
+                            <div class="caption">
+                                <div class="container">
+                                    <div class="div-table">
+                                        <div class="div-cell">
+                                            <div class="caption-content">
+                                                <!-- Search form -->
+                                                <div class="form-search light">
+                                                    <form action="https://www.ratetrade.ca/payment-analyzer-calculator">
+                                                        <div class="form-title">
+                                                            <i class="fa fa-globe"></i>
+                                                            <h2>Payment Analyzer</h2>
+                                                        </div>
+
+                                                        <div class="row row-inputs">
+                                                            <div class="container-fluid">
+                                                                <div class="col-sm-12">
+                                                                    <div class="form-group has-icon has-label">
+                                                                        <label for="formSearchUpLocation2">Mortgage Amount ($)</label>
+                                                                        <input type="text" class="form-control" id="formSearchUpLocation2" placeholder="$75000">
+                                                                        <span class="form-control-icon"><i class="fa fa-usd""></i></span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-12">
+                                                                    <div class="form-group has-icon has-label">
+                                                                        <label for="formSearchOffLocation2">Ammortization Period (Yr)</label>
+                                                                        <input type="text" class="form-control" id="formSearchOffLocation2" placeholder="$35000">
+                                                                        <span class="form-control-icon"><i class="fa fa-calendar"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-12">
+                                                                    <div class="form-group has-icon has-label">
+                                                                        <label for="formSearchOffLocation2">Mortgage Rate (%)</label>
+                                                                        <input type="text" class="form-control" id="formSearchOffLocation2" placeholder="$200">
+                                                                        <span class="form-control-icon"><i class="fa fa-percent"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                      
+
+                                                        <div class="row row-submit">
+                                                            <div class="container-fluid">
+                                                                <div class="inner">
+                                                                
+                                                                    <button type="submit" id="formSearchSubmit2" class="btn btn-submit btn-theme ripple-effect pull-right">Calculate</button><br/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <!-- /Search form -->
+
+                                                <h1 class="caption-subtitle">Calculate your<br/> mortgage payment</h1>
+                                                <p class="caption-text">
+                                                   Are you financially ready to buy a home? While hunting for a home in Canada, a rule of thumb often followed is that one can afford to spend three times of his/her gross household income. 
+                                                </p>
+                                                <p class="caption-text">
+                                                    <a class="btn btn-theme ripple-effect btn-theme-md" href="#">Read More</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Slide 2 -->
+
+                      
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- /PAGE -->
+
+       
+
+        <!-- PAGE -->
+        <section class="page-section ratesec">
+            <div class="container">
+
+                <h2 class="section-title wow fadeInUp" data-wow-offset="70" data-wow-delay="100ms">
+                    <small>Today's Best Rates</small>
+                    <span>Select Best Offers for You</span>
+                </h2>
+
+                <div class="tabs wow fadeInUp" data-wow-offset="70" data-wow-delay="300ms">
+                    <ul id="tabs" class="nav"><!--
+                        --><li class="active"><a href="#tab-1" data-toggle="tab">Fixed Mortgage Rates</a></li><!--
+                    
+                        --><li class=""><a href="#tab-3" data-toggle="tab">Variable Mortgage Rates</a></li>
+                    </ul>
+                </div>
+
+                <div class="tab-content wow fadeInUp" data-wow-offset="70" data-wow-delay="500ms">
+
+                    <!-- tab 1 -->
+                    <div class="tab-pane active fade in" id="tab-1">
+
+                        <div class="swiper swiper--offers-best">
+                            <div class="swiper-container">
+
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <div class="thumbnail no-border no-padding thumbnail-car-card">
+                                            <div class="media">
+                                                <a class="media-link">
+                                                 2.24<sup>%</sup>
+                                                    
+                                                </a>
+                                            </div>
+                                            <div class="caption text-center">
+                                                 <div class="caption-text">2 YR FIXED</div>
+                                                <div class="buttons">
+                                                    <a class="btn btn-theme ripple-effect" href="./compare-rates?rate=2.24&amp;term=2+Year&amp;type=Fixed">Compare</a>
+                                                </div>
+                                                <table class="table">
+                                                    <tr>
+                                                        <td><i class="fa fa-crosshairs""></i> ADD WISHLIST</td>
+                                                        <td><a href="https://www.ratetrade.ca/apply-now?rate=2.24"><i class="fa fa-share"></i> APPLY NOW</a></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="thumbnail no-border no-padding thumbnail-car-card">
+                                            <div class="media active">
+                                                <a class="media-link">
+                                                 2.39<sup>%</sup>
+                                                </a>
+                                            </div>
+                                            <div class="caption text-center">
+                                                 <div class="caption-text">3 YR FIXED</div>
+                                                <div class="buttons">
+                                                    <a class="btn btn-theme ripple-effect" href="./compare-rates?rate=2.39&amp;term=3+Year&amp;type=Fixed">Compare</a>
+                                                </div>
+                                                <table class="table">
+                                                    <tr>
+                                                        <td><i class="fa fa-crosshairs""></i> ADD WISHLIST</td>
+                                                        <td><a href="https://www.ratetrade.ca/apply-now?rate=2.39"><i class="fa fa-share"></i> APPLY NOW</a></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="thumbnail no-border no-padding thumbnail-car-card">
+                                            <div class="media">
+                                                <a class="media-link">
+                                                 2.59<sup>%</sup>
+                                                </a>
+                                            </div>
+                                            <div class="caption text-center">
+                                                 <div class="caption-text">5 YR FIXED</div>
+                                                <div class="buttons">
+                                                    <a class="btn btn-theme ripple-effect" href="./compare-rates?rate=2.59&amp;term=5+Year&amp;type=Fixed">Compare</a>
+                                                </div>
+                                                <table class="table">
+                                                    <tr>
+                                                        <td><i class="fa fa-crosshairs""></i> ADD WISHLIST</td>
+                                                        <td><a href="https://www.ratetrade.ca/apply-now?rate=2.59"><i class="fa fa-share"></i> APPLY NOW</a></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="thumbnail no-border no-padding thumbnail-car-card">
+                                             <div class="media">
+                                                <a class="media-link">
+                                                 3.84<sup>%</sup>
+                                                </a>
+                                            </div>
+                                            <div class="caption text-center">
+                                                 <div class="caption-text">10 YR FIXED</div>
+                                                <div class="buttons">
+                                                    <a class="btn btn-theme ripple-effect" href="./compare-rates?rate=3.84&amp;term=10+Year&amp;type=Fixed">Compare</a>
+                                                </div>
+                                                <table class="table">
+                                                    <tr>
+                                                        <td><i class="fa fa-crosshairs""></i> ADD WISHLIST</td>
+                                                        <td><a href="https://www.ratetrade.ca/apply-now?rate=3.84"><i class="fa fa-share"></i> APPLY NOW</a></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="swiper-button-next"><i class="fa fa-angle-right"></i></div>
+                            <div class="swiper-button-prev"><i class="fa fa-angle-left"></i></div>
+
+                        </div>
+
+                    </div>
+
+                
+                    <!-- tab 3 -->
+                    <div class="tab-pane fade" id="tab-3">
+
+                        <div class="swiper swiper--offers-economic">
+                            <div class="swiper-container">
+
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <div class="thumbnail no-border no-padding thumbnail-car-card">
+                                            <div class="media">
+                                                <a class="media-link">
+                                                 2.2<sup>%</sup>
+                                                </a>
+                                            </div>
+                                            <div class="caption text-center">
+                                                 <div class="caption-text">3 YR VARIABLE</div>
+                                                <div class="buttons">
+                                                    <a class="btn btn-theme ripple-effect" href="./compare-rates?rate=2.2&amp;term=3+Year&amp;type=Variable">Compare</a>
+                                                </div>
+                                                <table class="table">
+                                                    <tr>
+                                                        <td><i class="fa fa-crosshairs""></i> ADD WISHLIST</td>
+                                                        <td><a href="https://www.ratetrade.ca/apply-now?rate=2.2"><i class="fa fa-share"></i> APPLY NOW</a></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="thumbnail no-border no-padding thumbnail-car-card">
+                                           <div class="media">
+                                                <a class="media-link">
+                                                 1.9<sup>%</sup>
+                                                </a>
+                                            </div>
+                                            <div class="caption text-center">
+                                                 <div class="caption-text">5 YR VARIABLE</div>
+                                                <div class="buttons">
+                                                    <a class="btn btn-theme ripple-effect" href="./compare-rates?rate=1.9&amp;term=5+Year&amp;type=Variable">Compare</a>
+                                                </div>
+                                                <table class="table">
+                                                    <tr>
+                                                        <td><i class="fa fa-crosshairs""></i> ADD WISHLIST</td>
+                                                        <td><a href="https://www.ratetrade.ca/apply-now?rate=1.9"><i class="fa fa-share"></i> APPLY NOW</a></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                </div>
+
+                            </div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-next"><i class="fa fa-angle-right"></i></div>
+                            <div class="swiper-button-prev"><i class="fa fa-angle-left"></i></div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- /PAGE -->
+    <!-- PAGE -->
+        <section class="page-section dark">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-6 wow fadeInLeft" data-wow-offset="200" data-wow-delay="100ms">
+                        <h2 class="section-title text-left">
+                            <small>What Do You Know About Us</small>
+                            <span>Why Choose Us?</span>
+                        </h2>
+                        <p>Ratetrade.ca is your one stop shop for making quick search and easy comparison of prevailing mortgage rates in Canada to take smart financial decisions. We share knowledge, information, expert advice and easy to use mortgage comparison tools to find you the ideal mortgage rate. When you apply for mortgage using our portal, we represent you to several reputed lenders and banks in Canada to assure you can compare from the best mortgage options available in the market. </p>
+                        <ul class="list-icons">
+                            <li><i class="fa fa-check-circle"></i>Resources</li>
+                            <li><i class="fa fa-check-circle"></i>Comparison Tools</li>
+                            <li><i class="fa fa-check-circle"></i>Find the lowest mortgage rates in Canada</li>
+                        </ul>
+                     
+                    </div>
+                    <div class="col-md-6 wow fadeInRight" data-wow-offset="200" data-wow-delay="300ms">
+                        <div class="owl-carousel img-carousel">
+                            <div class="item"><a href="{{asset('./bundles/assets/img/preview/slider/slide-775x500x1.jpg')}}" data-gal="prettyPhoto"><img class="img-responsive" src="{{asset('./bundles/assets/img/preview/slider/slide-775x500x1.jpg')}}" alt=""/></a></div>
+                            <div class="item"><a href="{{asset('./bundles/assets/img/preview/slider/slide-775x500x1.jpg')}}" data-gal="prettyPhoto"><img class="img-responsive" src="{{asset('./bundles/assets/img/preview/slider/slide-775x500x1.jpg')}}" alt=""/></a></div>
+                            <div class="item"><a href="{{asset('./bundles/assets/img/preview/slider/slide-775x500x1.jpg')}}" data-gal="prettyPhoto"><img class="img-responsive" src="{{asset('./bundles/assets/img/preview/slider/slide-775x500x1.jpg')}}" alt=""/></a></div>
+                            <div class="item"><a href="{{asset('./bundles/assets/img/preview/slider/slide-775x500x1.jpg')}}" data-gal="prettyPhoto"><img class="img-responsive" src="{{asset('./bundles/assets/img/preview/slider/slide-775x500x1.jpg')}}" alt=""/></a></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- /PAGE -->
+        
+         <!-- PAGE -->
+        <section class="page-section blogp">
+            <div class="container">
+
+                <h2 class="section-title wow fadeInDown" data-wow-offset="200" data-wow-delay="100ms">
+                    
+                    <span>Recent Blog Posts</span>
+                </h2>
+
+                <div class="row">
+
+
+<!-- {% for ct in blogpost|slice(0, 25) %}
+{% if ct.posttype == 'post' %}
+
+
+   
+
+
+
+
+
+
+
+<div class="col-md-3 wow fadeInLeft" data-wow-offset="200" data-wow-delay="200ms">
+                        <div class="recent-post alt">
+                            <div class="media">
+                                <a class="media-link" href="#">
+                                  <div class="badge type"><div class="meta-date">
+                                        <div class="day">27</div>
+                                        <div class="month">March</div>
+                                    </div></div>
+                           
+                                    <img class="media-object" src="https://www.ratetrade.ca/blog/wp-content/uploads/bfi_thumb/Land-Transfer-Tax-n66pwe1zt0h58rt1f9wm263va6sk4rsg53dcimqghg.jpg" alt="">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                               
+                                <div class="media-body">
+                                    <div class="media-meta">
+                                        By Admin
+                                        <span class="divider">|</span><a href="#"><i class="fa fa-comment"></i>0</a>
+                                        <span class="divider">|</span><a href="#"><i class="fa fa-heart"></i>0</a>
+                                                                        </div>
+                                    <h4 class="media-heading"><a href="{{ct.postName}}">{{ct.posttitle}}</a></h4>
+                                    <div class="media-excerpt">{{ct.postContent|slice(0, 100) ~ '...'}} </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  
+ {% endif %}
+{% endfor %} -->
+
+
+
+ <div class="col-md-3 wow fadeInLeft" data-wow-offset="200" data-wow-delay="200ms">
+                        <div class="recent-post alt">
+                            <div class="media">
+                                <a class="media-link" href="#">
+                                  <div class="badge type"><div class="meta-date">
+                                        <div class="day">30</div>
+                                        <div class="month">June</div>
+                                    </div></div>
+                           
+                                    <img class="media-object" src="https://www.ratetrade.ca/blog/wp-content/uploads/bfi_thumb/img-d1-nash0fhcyvfu9niumouf23916lvk9kkrxrt468unsk.jpg" alt="">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                               
+                                <div class="media-body">
+                                    <div class="media-meta">
+                                        By Admin
+                                        <span class="divider">|</span><a href="#"><i class="fa fa-comment"></i>0</a>
+                                        <span class="divider">|</span><a href="#"><i class="fa fa-heart"></i>0</a>
+                                                                           </div>
+                                    <h4 class="media-heading"><a href="https://www.ratetrade.ca/blog/get-mortgage-no-payment-bad-credit-ontario/">How to Get a Mortgage with No Down Payment and Bad Credit in Ontario</a></h4>
+                                    <div class="media-excerpt">If you think that your scarcity of funds will not allow owning a house, think twice. This is because there are other options... </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+<div class="col-md-3 wow fadeInLeft" data-wow-offset="200" data-wow-delay="200ms">
+                        <div class="recent-post alt">
+                            <div class="media">
+                                <a class="media-link" href="#">
+                                  <div class="badge type"><div class="meta-date">
+                                        <div class="day">23</div>
+                                        <div class="month">June</div>
+                                    </div></div>
+                           
+                                    <img class="media-object" src="https://www.ratetrade.ca/blog/wp-content/uploads/bfi_thumb/blog-c1-nag0mg5cw8a8fcnhgq9v4yo6l9ncwt12adr5vsq86s.jpg" alt="">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                               
+                                <div class="media-body">
+                                    <div class="media-meta">
+                                        By Admin
+                                        <span class="divider">|</span><a href="#"><i class="fa fa-comment"></i>0</a>
+                                        <span class="divider">|</span><a href="#"><i class="fa fa-heart"></i>0</a>
+                                                                           </div>
+                                    <h4 class="media-heading"><a href="https://www.ratetrade.ca/blog/will-bad-credit-affect-mortgage-renewal/">Will bad credit affect my mortgage renewal?</a></h4>
+                                    <div class="media-excerpt">Usually the term required for paying off the cost plus interest while buying a house is much longer than the period for which... </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+  <div class="col-md-3 wow fadeInLeft" data-wow-offset="200" data-wow-delay="200ms">
+                        <div class="recent-post alt">
+                            <div class="media">
+                                <a class="media-link" href="#">
+                                  <div class="badge type"><div class="meta-date">
+                                        <div class="day">15</div>
+                                        <div class="month">June</div>
+                                    </div></div>
+                           
+                                    <img class="media-object" src="https://www.ratetrade.ca/blog/wp-content/uploads/bfi_thumb/blog-payment1-na2asxn13e7h31hensusok1pjur47oj3ruu64pmj90.jpg" alt="">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                               
+                                <div class="media-body">
+                                    <div class="media-meta">
+                                        By Admin
+                                        <span class="divider">|</span><a href="#"><i class="fa fa-comment"></i>0</a>
+                                        <span class="divider">|</span><a href="#"><i class="fa fa-heart"></i>0</a>
+                                                                           </div>
+                                    <h4 class="media-heading"><a href="https://www.ratetrade.ca/blog/what-is-an-accelerated-weekly-mortgage-payment-in-canada/">What is an accelerated weekly mortgage payment in Canada</a></h4>
+                                    <div class="media-excerpt">It is generally believed that if you pay off your mortgage before the end of the term, you can save money on account of payment... </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+<div class="col-md-3 wow fadeInLeft" data-wow-offset="200" data-wow-delay="200ms">
+                        <div class="recent-post alt">
+                            <div class="media">
+                                <a class="media-link" href="#">
+                                  <div class="badge type"><div class="meta-date">
+                                        <div class="day">14</div>
+                                        <div class="month">June</div>
+                                    </div></div>
+                           
+                                    <img class="media-object" src="https://www.ratetrade.ca/blog/wp-content/uploads/bfi_thumb/fv-na0978hjiaywz6bh1gdaw761jes3vves52da2eczck.png" alt="">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                               
+                                <div class="media-body">
+                                    <div class="media-meta">
+                                        By Admin
+                                        <span class="divider">|</span><a href="#"><i class="fa fa-comment"></i>0</a>
+                                        <span class="divider">|</span><a href="#"><i class="fa fa-heart"></i>0</a>
+                                                                        </div>
+                                    <h4 class="media-heading"><a href="https://www.ratetrade.ca/blog/pros-cons-fixed-vs-variable-mortgage-rates/">Pros And Cons Of Fixed Vs Variable Mortgage Rates</a></h4>
+                                    <div class="media-excerpt">After you have finally taken the decision to go for the purchase of a particular property, the next important decision you have… </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             
+
+
+
+
+
+
+
+
+
+
+
+
+             
+   
+
+
+
+
+
+                  
+
+
+
+                    
+                </div>
+
+            
+
+            </div>
+        </section>
+        <!-- /PAGE -->
+
+
+
+        <!-- PAGE -->
+        <section class="page-section testimonials">
+            <div class="container wow fadeInUp" data-wow-offset="70" data-wow-delay="500ms">
+                <div class="testimonials-carousel">
+                    <div class="owl-carousel" id="testimonials">
+                                        <div class="testimonial">
+                            <div class="media">
+                                
+                                <div class="media-body">
+                                    <div class="testimonial-text">Have not enough words to extend my gratitude for the help that my family and I got from this site. Wish you all the best for all your efforts in providing people with the best of the rates. And promise you to refer all those who I know if they are looking for the best insurance and mortgage plan. Thank you so much for all your hard work in putting the things together.</div>
+                                    <div class="testimonial-name">Samuel <span class="testimonial-position"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial">
+                            <div class="media">
+                                
+                                <div class="media-body">
+                                    <div class="testimonial-text">Mortgage renewal doesn't seem to be that easy the way you people have made. I was thinking it is going to be a tough game, but you people have kept it easy. Thanks very much for all your efforts.</div>
+                                    <div class="testimonial-name">Victor <span class="testimonial-position"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /PAGE -->
+
+        <!-- PAGE -->
+        <section class="page-section">
+            <div class="container">
+
+                <h2 class="section-title wow fadeInDown" data-wow-offset="200" data-wow-delay="100ms">
+                    <small>See What People Ask to Us</small>
+                    <span>FAQS</span>
+                </h2>
+
+                <div class="row">
+                    <div class="col-md-6 wow fadeInLeft" data-wow-offset="200" data-wow-delay="200ms">
+                        <!-- FAQ -->
+                        <div class="panel-group accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                            <!-- faq1 -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading1">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                            <span class="dot"></span> How Much Can You Afford for a New Home?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
+                                    <div class="panel-body">
+                                        Are you financially ready to buy a home? While hunting for a home in Canada, a rule of thumb often followed is that one can afford to spend three times of his/her gross household income. 
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /faq1 -->
+                            <!-- faq2 -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading2">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                            <span class="dot"></span> What is Mortgage Default Insurance?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                                    <div class="panel-body">
+                                       Mortgage default insurance, popularly known as CMHC insurance in Canada is mandatory on high ratio mortgages, that is, mortgages with a down payment of 20 per cent or less.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /faq2 -->
+                            <!-- faq3 -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading3">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                            <span class="dot"></span> Why use RRSP for Buying your First Home?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                                    <div class="panel-body">
+                                        RRSP enables first time home buyer to use his existing sources to make down payment. It may also enable buyer to accumulate 20% as down payment, so he don't need to pay for mortgage default insurance premiums in future. 
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /faq3 -->
+                        </div>
+                        <!-- /FAQ -->
+                    </div>
+                    <div class="col-md-6 wow fadeInRight" data-wow-offset="200" data-wow-delay="200ms">
+                        <!-- FAQ -->
+                        <div class="panel-group accordion" id="accordion2" role="tablist" aria-multiselectable="true">
+                            <!-- faq1 -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading21">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse21" aria-expanded="false" aria-controls="collapse21">
+                                            <span class="dot"></span> How Credit Score is Built?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse21" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading21">
+                                    <div class="panel-body">
+                                        Credit score is built on the basis of credit report prepared by credit reporting agencies in Canada. These are the private agencies engaged in collecting, storing and sharing information about how you use credit. 
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /faq1 -->
+                            <!-- faq2 -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading22">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion2" href="#collapse22" aria-expanded="true" aria-controls="collapse22">
+                                            <span class="dot"></span> How Much Will it Cost to Refinance?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse22" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading22">
+                                    <div class="panel-body">
+                                        Refinancing is often chosen as alternative by borrowers to either get a lower interest rate or access the equity out of their home. It is essential to know the cost of refinancing to take a calculated decision for refinancing.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /faq2 -->
+                            <!-- faq3 -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading23">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse23" aria-expanded="false" aria-controls="collapse23">
+                                            <span class="dot"></span> How to Calculate Debt Service Ratios?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse23" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading23">
+                                    <div class="panel-body">
+                                      Gross debt service ratio and total debt service ratio are two important figures considered by a lender to decide whether he should grant you a loan or not. 
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /faq3 -->
+                        </div>
+                        <!-- /FAQ -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- /PAGE -->
+
+    <!-- PAGE -->
+        <section class="page-section image homesc">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 wow fadeInDown" data-wow-offset="200" data-wow-delay="100ms">
+                        <div class="thumbnail thumbnail-counto no-border no-padding">
+                            <div class="caption">
+                                <div class="caption-icon"><i class="fa fa-heart"></i></div>
+                                <div class="caption-number">5657</div>
+                                <h4 class="caption-title">Happy costumers</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 wow fadeInDown" data-wow-offset="200" data-wow-delay="200ms">
+                        <div class="thumbnail thumbnail-counto no-border no-padding">
+                            <div class="caption">
+                                <div class="caption-icon"><i class="fa fa-home"></i></div>
+                                <div class="caption-number">657</div>
+                                <h4 class="caption-title">Mortgage Solution</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 wow fadeInDown" data-wow-offset="200" data-wow-delay="300ms">
+                        <div class="thumbnail thumbnail-counto no-border no-padding">
+                            <div class="caption">
+                                <div class="caption-icon"><i class="fa fa-flag"></i></div>
+                                <div class="caption-number">1.255.657</div>
+                                <h4 class="caption-title">Technical Support</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 wow fadeInDown" data-wow-offset="200" data-wow-delay="400ms">
+                        <div class="thumbnail thumbnail-counto no-border no-padding">
+                            <div class="caption">
+                                <div class="caption-icon"><i class="fa fa-comments-o"></i></div>
+                                <div class="caption-number">1255</div>
+                                <h4 class="caption-title">Call Center Solutions</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- /PAGE -->
+
+    
+    
+       
+        <!-- PAGE -->
+        <section class="page-section image subscribe">
+            <div class="container">
+
+                <h2 class="section-title wow fadeInDown" data-wow-offset="200" data-wow-delay="100ms">
+                    <small>Stay On Top of Your Finances</small>
+                    <span>Subscribe</span>
+                </h2>
+
+                <div class="row wow fadeInDown" data-wow-offset="200" data-wow-delay="200ms">
+                    <div class="col-md-8 col-md-offset-2">
+
+                        <p class="text-center">Sign up to subscribe to our newsletter, receive alerts when rates change or schedule a reminder prior to the renewal of your insurance policy and/or mortgage </p>
+
+                        <!-- Subscribe form -->
+                        <form action="#" class="form-subscribe">
+                            <div class="form-group">
+                                <label for="formSubscribeEmail" class="sr-only">Enter your email here</label>
+                                <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Enter your email here" title="Email is required">
+                            </div>
+                            <button type="submit" class="btn btn-submit btn-theme ripple-effect btn-theme-dark subsc">Subscribe</button>
+                        </form>
+                        <!-- Subscribe form -->
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- /PAGE -->
+
+    
+        <!-- PAGE -->
+        <section class="page-section contact dark">
+            <div class="container">
+
+                <!-- Get in touch -->
+
+                <h2 class="section-title wow fadeInDown" data-wow-offset="200" data-wow-delay="100ms">
+                    <small>Feel Free to Say Hello!</small>
+                    <span>Get in Touch With Us</span>
+                </h2>
+
+                <div class="row">
+                    <div class="col-md-6 wow fadeInLeft" data-wow-offset="200" data-wow-delay="200ms">
+                        <!-- Contact form -->
+                        <form name="contact-form" method="post" action="#" class="contact-form" id="contact-form">
+
+                            <div class="row">
+                                <div class="col-md-6">
+
+                                    <div class="outer required">
+                                        <div class="form-group af-inner has-icon">
+                                            <label class="sr-only" for="name">Name</label>
+                                            <input
+                                                    type="text" name="name" id="name" placeholder="Name" value="" size="30"
+                                                    data-toggle="tooltip" title="Name is required"
+                                                    class="form-control placeholder"/>
+                                            <span class="form-control-icon"><i class="fa fa-user"></i></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+
+                                    <div class="outer required">
+                                        <div class="form-group af-inner has-icon">
+                                            <label class="sr-only" for="email">Email</label>
+                                            <input
+                                                    type="text" name="email" id="email" placeholder="Email" value="" size="30"
+                                                    data-toggle="tooltip" title="Email is required"
+                                                    class="form-control placeholder"/>
+                                            <span class="form-control-icon"><i class="fa fa-envelope"></i></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="outer required">
+                                <div class="form-group af-inner has-icon">
+                                    <label class="sr-only" for="subject">Subject</label>
+                                    <input
+                                            type="text" name="subject" id="subject" placeholder="Subject" value="" size="30"
+                                            data-toggle="tooltip" title="Subject is required"
+                                            class="form-control placeholder"/>
+                                    <span class="form-control-icon"><i class="fa fa-bars"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group af-inner has-icon">
+                                <label class="sr-only" for="input-message">Message</label>
+                                <textarea
+                                        name="message" id="input-message" placeholder="Message" rows="4" cols="50"
+                                        data-toggle="tooltip" title="Message is required"
+                                        class="form-control placeholder"></textarea>
+                                <span class="form-control-icon"><i class="fa fa-bars"></i></span>
+                            </div>
+
+                            <div class="outer required">
+                                <div class="form-group af-inner">
+                                    <input type="submit" name="submit" class="form-button form-button-submit btn btn-block btn-theme ripple-effect btn-theme-dark" id="submit_btn" value="Send message" />
+                                </div>
+                            </div>
+
+                        </form>
+                        <!-- /Contact form -->
+                    </div>
+                    <div class="col-md-6 wow fadeInRight" data-wow-offset="200" data-wow-delay="200ms">
+<p>We are one of the best financial comparison platforms in Canada. We are on a mission to provide best mortgage rate by making a virtual comparison between different rates offered by various lenders and top mortgage brokers of the Canada</p>
+                      
+                        <ul class="media-list contact-list">
+                             <li class="media">
+                                <div class="media-left"><i class="fa fa-home"></i></div>
+                                <div class="media-body">Adress: 2960 Drew Rd. Unit# 139, Mississauga </div>
+                            </li>
+                            <li class="media">
+                                <div class="media-left"><i class="fa fa"></i></div>
+                                <div class="media-body">ON L4T 0A5</div>
+                            </li>
+                            <li class="media">
+                                <div class="media-left"><i class="fa fa-phone"></i></div>
+                                <div class="media-body">Support Phone: 416 875 0024</div>
+                            </li>
+                            <li class="media">
+                                <div class="media-left"><i class="fa fa-envelope"></i></div>
+                                <div class="media-body">E mails: contact@ratetrade.ca, 
+info@ratetrade.ca
+</div>
+                            </li>
+                            
+                            <li class="media">
+                                <div class="media-left"><i class="fa fa-map-marker"></i></div>
+                                <div class="media-body">View on The Map</div>
+                            </li>
+                        </ul>
+<div id="contact"></div>
+                    </div>
+                </div>
+
+                <!-- /Get in touch -->
+
+            </div>
+        </section>
+        <!-- /PAGE -->
+
+    </div>
+    <!-- /CONTENT AREA -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-meta">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <p class="btn-row text-center">
+                            <a href="https://www.facebook.com/ratetrade" class="btn btn-theme ripple-effect btn-icon-left facebook wow fadeInDown" data-wow-offset="20" data-wow-delay="100ms" target="_blank"><i class="fa fa-facebook"></i>FACEBOOK</a>
+                            <a href="https://twitter.com/ratetrade1" class="btn btn-theme btn-icon-left ripple-effect twitter wow fadeInDown" data-wow-offset="20" data-wow-delay="200ms" target="_blank"><i class="fa fa-twitter"  target="_blank"></i>TWITTER</a>
+    <a href="https://instagram.com/ratetrade" class="btn btn-theme btn-icon-left ripple-effect instagram wow fadeInDown" data-wow-offset="20" data-wow-delay="200ms" target="_blank"><i class="fa fa-instagram"  target="_blank"></i>INSTAGRAM</a>
+                            <a href="https://in.pinterest.com/ratetrade/" class="btn btn-theme btn-icon-left ripple-effect pinterest wow fadeInDown" data-wow-offset="20" data-wow-delay="300ms"  target="_blank"><i class="fa fa-pinterest"></i>PINTEREST</a>
+                            <a href="https://plus.google.com/112981913805680468055" class="btn btn-theme btn-icon-left ripple-effect google wow fadeInDown" data-wow-offset="20" data-wow-delay="400ms" ><i class="fa fa-google"></i>GOOGLE</a>
+<a href="https://www.linkedin.com/in/ratetrade-canada-47a075120" class="btn btn-theme btn-icon-left ripple-effect linkedin wow fadeInDown" data-wow-offset="20" data-wow-delay="400ms" target="_blank"><i class="fa fa-linkedin"></i>LINKEDIN</a>
+                        </p>
+                        <div class="copyright"><a href="https://www.ratetrade.ca">Home</a> | <a href="https://www.ratetrade.ca/best-mortgage-rates/fixed">Mortgage Rates</a> | <a href="https://www.ratetrade.ca/blog">Blog</a> | <a href="https://www.ratetrade.ca/contact-us">Contact Us</a>  <br/>&copy; 2016 Ratetrade.ca | All right reserved</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /FOOTER -->
+
+    <div id="to-top" class="to-top"><i class="fa fa-angle-up"></i></div>
+
+</div>
+<!-- /WRAPPER -->
+ 
+<!-- JS Global -->
+<script src="{{asset('./bundles/assets/plugins/jquery/jquery-1.11.1.min.js')}}"></script>
+<script src="{{asset('./bundles/assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('./bundles/assets/plugins/bootstrap-select/js/bootstrap-select.min.js')}}"></script>
+<script src="{{asset('./bundles/assets/plugins/superfish/js/superfish.min.js')}}"></script>
+<script src="{{asset('./bundles/assets/plugins/prettyphoto/js/jquery.prettyPhoto.js')}}"></script>
+<script src="{{asset('./bundles/assets/plugins/owl-carousel2/owl.carousel.min.js')}}"></script>
+<script src="{{asset('./bundles/assets/plugins/jquery.sticky.min.js')}}"></script>
+<script src="{{asset('./bundles/assets/plugins/jquery.easing.min.js')}}"></script>
+<script src="{{asset('./bundles/assets/plugins/jquery.smoothscroll.min.js')}}"></script>
+<!--<script src="{{asset('./bundles/assets/plugins/smooth-scrollbar.min.js')}}"></script>-->
+<!--<script src="{{asset('./bundles/assets/plugins/wow/wow.min.js')}}"></script>-->
+<script>
+    // WOW - animated content
+    //new WOW().init();
+</script>
+        <script>
+
+                                                    function validateEmail(email) {
+                                                        var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                                                        return re.test(email);
+                                                    }
+
+                                                    $(document).on("click", ".get-rates", function(e) {
+
+                                                        var ratetype = $("select[name=ratetype]").find("option:selected").val();
+
+                                                        if (ratetype == 'variable')
+                                                        {
+                                                            window.location.href = '{{path('mortgage_rates',{'ratetype':'variable'})}}';
+                                                        }
+                                                        else
+                                                        {
+                                                            window.location.href = '{{path('mortgage_rates',{'ratetype':'fixed'})}}';
+                                                        }
+                                                    });
+
+                                                    $(document).on("click", "#equiryBtn", function(e) {
+
+                                                        window.location.href = '{{path('contact_us')}}';
+
+                                                    });
+
+
+                                                    function capitalizeFirstLetter(string) {
+                                                        return string.charAt(0).toUpperCase() + string.slice(1);
+                                                    }
+
+                                                    $('#locationName').on('input', function() {
+                                                        // Getiing option based on input value and setting it as selected
+                                                        $('#locationList option:contains(' + capitalizeFirstLetter(this.value) + ')').eq(0).prop('selected', true);
+                                                    });
+
+
+                                                    $(document).on("click", ".subsc", function(e) {
+                                                        e.preventDefault();
+                                                        $("#exampleInputName1").css('border', '1px solid green');
+                                                        ;
+                                                        $("#exampleInputEmail2").css('border', '1px solid green');
+                                                        ;
+
+                                                        if ($("#exampleInputName1").val() == '')
+                                                        {
+                                                            $("#exampleInputName1").focus();
+                                                            $("#exampleInputName1").css('border', '1px solid red');
+                                                        }
+                                                        else if ($("#exampleInputEmail2") == '')
+                                                        {
+                                                            $("#exampleInputEmail2").focus();
+                                                            $("#exampleInputEmail2").css('border', '1px solid red');
+                                                        }
+                                                        else if (!validateEmail($("#exampleInputEmail2").val()))
+                                                        {
+                                                            $("#exampleInputEmail2").css('border', '1px solid red');
+                                                            $("#exampleInputEmail2").focus();
+                                                        }
+                                                        else {
+                                                            $.ajax({
+                                                                url: '{{path('email_subscribe')}}',
+                                                                type: "post",
+                                                                async: true,
+                                                                data: {'email': $("#exampleInputEmail2").val(),
+                                                                    'name': $("#exampleInputName1").val()},
+                                                                success: function(response) {
+                                                                    $("#exampleInputName1").val('');
+                                                                    $("#exampleInputEmail2").val('');
+                                                                    alert(response);
+                                                                },
+                                                                error: function(request, error) {
+                                                                    // alert('No data found');
+                                                                }
+                                                            });
+                                                        }
+                                                    });
+
+                                                    $('#locationName').click(function(e) {
+                                                        $('.loclist').show(100);
+                                                    });
+                                                    $('.loclist').blur(function(e) {
+                                                        $(this).hide(100);
+                                                    });
+                                                    $('#fixedBtn').click(function(e) {
+                                                        if ($(this).hasClass('active-btn'))
+                                                        {
+                                                            e.preventDefault();
+
+                                                        }
+                                                        else
+                                                        {
+                                                            $(this).addClass('active-btn');
+                                                            $('#variableBtn').removeClass('active-btn');
+                                                            $('#variaTab').hide(100);
+                                                            $('#fixedTab').show(100);
+
+                                                        }
+                                                    });
+                                                    $('#variableBtn').click(function(e) {
+                                                        if ($(this).hasClass('active-btn'))
+                                                        {
+                                                            e.preventDefault();
+                                                        }
+                                                        else
+                                                        {
+                                                            $(this).addClass('active-btn');
+                                                            $('#fixedBtn').removeClass('active-btn');
+                                                            $('#fixedTab').hide(100);
+                                                            $('#variaTab').show(100);
+                                                        }
+                                                    });
+
+                                                    function getSelected() {
+
+                                                        //document.getElementById('locationName').value = document.getElementById('locationList').text;
+                                                        $('#locationName').val($('option:selected', $('#locationList')).text());
+                                                        $('#locationList').hide(100);
+                                                    }
+        </script>
+<script src="{{asset('./bundles/assets/plugins/swiper/js/swiper.jquery.min.js')}}"></script>
+<script src="{{asset('./bundles/assets/plugins/datetimepicker/js/moment-with-locales.min.js')}}"></script>
+<script src="{{asset('./bundles/assets/plugins/datetimepicker/js/bootstrap-datetimepicker.min.js')}}"></script>
+
+<!-- JS Page Level -->
+<script src="{{asset('./bundles/assets/js/theme-ajax-mail.js')}}"></script>
+<script src="{{asset('./bundles/assets/js/theme.js')}}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="{{asset('./bundles/assets/plugins/jquery.cookie.js')}}"></script>
+<!--<![endif]-->
+
+</body>
+</html>

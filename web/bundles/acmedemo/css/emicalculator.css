@@ -1,0 +1,1798 @@
+/*-----------------------------------------------------------------------------------*/
+
+/*	11.	EMI Calculator Styles
+
+/*-----------------------------------------------------------------------------------*/
+
+div.result {
+
+   padding: 6%;
+
+}
+
+
+
+th.result {
+
+    padding-top: 4%;
+
+    font-size: 18px;
+
+    color: #993A00;
+
+}
+
+
+
+.num-icon{
+
+    height: 18px;
+
+}
+
+
+
+.entry-content h2,.entry-content h3,.entry-content p,.entry-content span,.entry-content table,.entry-content form,.entry-content ul
+
+{
+
+    font-family: verdana, Helvetica, sans-serif;
+
+}
+
+#emidashchk{width: 66.7%;  margin: 0 10px 20px 0;}
+
+#emipaymentdetails{position:relative;}
+
+#emidashboard {
+
+    float: left;
+
+    width: 67%;
+
+    height: 500px;
+
+    margin: 0 10px 20px 0;
+
+}
+
+#emicalcalulatorform {
+
+    margin-bottom: 0 !important;
+
+}
+
+#emicalcalulatorinnerformwrapper {
+
+    background: none repeat scroll 0 0 #FCFCFC;
+
+    border: 1px solid #DDDDDD;
+
+    /*width: 522px;*/
+
+    height: 449px;
+
+}
+
+#emicalcalulatorinnerform {
+
+   // border-bottom: 1px solid #DDDDDD;
+
+
+}
+
+
+
+.lint span, .lamount span {
+
+   // background: none repeat scroll 0 0 #EDEDED;
+
+   // border-bottom: 1px solid #DBDAD7;
+
+   // border-left: 0 none !important;
+
+   // border-right: 1px solid #DBDAD7;
+
+   // border-top: 1px solid #DBDAD7;
+
+    display: inline;
+
+    font-size: 14px;
+
+    height: 30px;
+
+    line-height: 32px;
+
+    margin: 0;
+
+    padding: 0;
+
+    text-align: center;
+
+    vertical-align: top;
+
+    width: 33px;
+
+}
+
+
+
+#emicalcalulatorform div.sep {
+
+    padding-top: 25px;
+
+}
+
+#emicalcalulatorform input[type="text"] {
+
+    background: none repeat scroll 0 0 #FCFCFC;
+
+    border: 1px solid #DBDAD7;
+
+    box-shadow: 1px 1px 4px #F4F4F4 inset;
+
+    font-size: 14px;
+
+    height: 32px;
+
+    line-height: 32px;
+
+    margin: 0;
+
+    padding: 0 5px;
+
+}
+
+#emicalcalulatorform input:focus {
+
+    border-color: rgba(82, 168, 236, 0.8);
+
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+
+    outline: 0 none;
+
+}
+input:focus{
+   border:1px solid rgba(0, 0, 0, 0.6)!important;
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+}
+#loanamount, #leftamount,#equityamount, #proptax, #heating, #condo, #debt {
+
+ width: 100% !important;
+    text-align: right;
+    background: #fff;
+    border: 1px solid #CDD6D9;
+    border-radius: 4px;
+    color: #0b775c;
+    max-width: 100%;
+    box-shadow: rgba(0,0,0,0.1) 0 2px inset;
+    height: 35px;
+    font-weight: bold;
+    padding: 8px;
+   padding-right:42px;
+}
+
+#new-mort {
+
+   // margin: 0 0 0 15px !important;
+
+    width: 200px !important;
+
+    height: 35px;
+
+    background: #F8F6F6;
+
+}
+
+#loaninterest, #loanterm, #mortrate, #newloaninterest{
+
+    //margin: 0 0 0 15px !important;
+
+    width: 100% !important;
+
+    text-align: right;
+
+    height: 35px;
+
+	 background: #fff none repeat scroll 0 0;
+
+    border: 1px solid #CDD6D9;
+
+    border-radius: 4px;
+  color: #0b775c;
+    box-shadow: rgba(0,0,0,0.1) 0 2px inset;
+ font-weight: bold;
+    padding: 8px;
+ padding-right:42px;
+}
+
+#loanamountslider, #loaninterestslider, #loantermslider {
+
+    margin-bottom: 0 !important;
+
+}
+
+.lterm {
+
+    float: left;
+
+    width: 180px;
+
+}
+
+#tenurechoice {
+
+    float: left;
+
+    height: 36px;
+
+    margin: 0 0 0 5px;
+
+   // padding-top: 22px;
+
+    width: 95px;
+
+}
+
+#loanyears, #loanmonths {
+
+    border: 0 none;
+
+    margin: 0;
+
+    padding: 0;
+
+    height: 14px;
+
+    width: 14px;
+
+}
+
+#loanyearslabel, #loanmonthslabel {
+
+    font-size: 13px !important;
+
+    letter-spacing: 0;
+
+    margin: 0;
+
+    padding: 0 5px;
+
+}
+
+#lyrs, #lmths {
+
+    height: 18px;
+
+    margin: 0 !important;
+
+}
+
+.escheme {
+
+    float: left;
+
+    width: 200px;
+
+}
+
+#emischemes {
+
+    float: left;
+
+    height: 36px;
+
+    margin: 0 0 0 25px !important;
+
+    padding-top: 25px;
+
+    width: 247px;
+
+}
+
+#emiadvance, #emiarrears {
+
+    border: 0 none;
+
+    margin: 0;
+
+    padding: 0;
+
+    height: 14px;
+
+    width: 14px;
+
+}
+
+#emiadvancelabel {
+
+    font-size: 14px !important;
+
+    letter-spacing: 0;
+
+    margin: 0;
+
+    padding: 0 10px 0 5px;
+
+}
+
+#emiarrearslabel {
+
+    font-size: 14px !important;
+
+    letter-spacing: 0;
+
+    margin: 0;
+
+    padding: 0 0 0 5px;
+
+}
+
+#eadvance, #earrears {
+
+    float: left;
+
+    margin: 0 !important;
+
+}
+
+#emicalcalulatorform .helpbutton {
+
+    float: right;
+
+    padding-top: 30px;
+
+}
+
+.cleardiv {
+
+    height: 0;
+
+    clear: both; 
+
+    margin: 0 !important; 
+
+    padding: 0 !important; 
+
+    overflow: hidden; 
+
+}
+
+#emipaymentsummary {
+
+    background: none repeat scroll 0 0 #FCFCFC;
+
+    border: 1px solid #DBDAD7;
+
+    border-left: none;
+
+    border-bottom: none;
+
+    clear: both;
+
+    float: left;
+
+    /*height: 255px;*/
+
+    margin-left: 1px;
+
+    width: 252px;    
+
+}
+
+#emiamount, #emitotalinterest {
+
+    background: none repeat scroll 0 0 #FCFCFC;
+
+    margin: 0;
+
+    padding: 10px;
+
+    text-align: center;
+
+    height: 81px;
+
+    border-bottom: 1px dotted #DBDAD7;
+
+}
+
+#emitotalamount {
+
+    background: none repeat scroll 0 0 #FCFCFC;
+
+    margin: 0;
+
+    padding: 10px;
+
+    text-align: center;
+
+    height: 92px;
+
+}
+
+#emipaymentsummary h4 {
+
+    color: #888888;
+
+    font-family: verdana, Helvetica, sans-serif;
+
+    font-size: 15px;
+
+    margin-bottom: 5px;
+
+}
+
+#emipaymentsummary p {
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+}
+
+#emipaymentsummary span {
+
+    padding-left: 5px;
+
+}
+
+#emiamount {
+
+    border-top: 0 none !important;
+
+}
+
+#emiamount p {
+
+    font-size: 24px;
+
+}
+
+/*New Div container*/
+
+ #left{
+
+      border-top: 1px solid #dddddd;
+
+    clear: both;
+
+    float: right;
+
+    position: relative;
+
+    top: -511px;
+
+    width: 0;
+
+}
+
+/*New Div container*/
+
+#emipiechart {
+
+    background: none repeat scroll 0 0 #FCFCFC;
+
+    float: left;
+
+    height: 255px;
+
+    margin: 0;
+
+    position: relative;
+
+    text-align: center;
+
+    /*width: 315px; CHanged*/
+
+    width: 253px;
+
+    /*Added Border*/
+
+    border: 1px solid #dddddd;
+
+}
+
+#emipaymenttable {
+
+    background: none repeat scroll 0 0 #FCFCFC;
+
+    clear: both;
+
+    margin: 0 0 20px;
+
+    text-align: center;
+
+    position:relative;
+
+}
+
+#emipaymenttable table {
+
+    width: 100%;
+
+    border-top: 1px solid #dbdad7
+
+}
+
+#emipaymenttable table th {
+
+    background: none repeat scroll 0 0 #B8204C;
+
+    border-color: #DBDAD7;
+
+    border-style: none solid solid;
+
+    border-width: 0 1px 1px;
+
+    text-align: center;
+
+	vertical-align:middle!important;
+
+	font-size:14px;
+
+        color: #FFF;
+
+}
+
+#principalheader {
+
+   // background: none repeat scroll 0 0 #88A825 !important;
+
+    //color: #FFFFFF;
+
+}
+
+#interestheader {
+
+    //background: none repeat scroll 0 0 #ED8C2B !important;
+
+    //color: #FFFFFF;
+
+}
+
+#balanceheader {
+
+  //  background: none repeat scroll 0 0 #B8204C !important;
+
+   // color: #FFFFFF;
+
+}
+
+
+
+#emipaymenttable table td {
+
+    border-left: 1px solid #DBDAD7;
+
+	border-bottom: 1px solid #DBDAD7;
+
+	border-right: 1px solid #DBDAD7;
+
+    text-align: center;
+
+    font-size: 13px;
+
+	padding:4px;
+
+}
+
+.toggle {
+
+    background: url("../../images/toggle-closed.png") no-repeat scroll 10% 50% transparent;
+
+    cursor: pointer;
+
+}
+
+.toggle-open {
+
+    background: url("../../images/toggle-open.png") no-repeat scroll 10% 50% transparent;
+
+}
+
+.toggle-hidden {
+
+    display: none;
+
+    visibility: hidden;
+
+}
+
+.toggle-visible {
+
+    display: block;
+
+    visibility: visible;
+
+    margin-bottom: 0 !important;
+
+}
+
+td.paymentyear {
+
+    text-align: right !important;
+
+    /*font-weight: bold !important;*/
+
+    width: 77px !important;
+
+}
+
+td.currency {
+
+    border-left: 0 none !important;
+
+    text-align: right !important;
+
+    width: 150px !important;
+
+}
+
+td.monthyearwrapper {
+
+    margin: 0;
+
+    padding: 0!important;
+
+	border-bottom:0px!important;
+
+	border-top:0px!important;
+
+}
+
+td.paidtodateyear, td.paidtodatemonthyear {
+
+    border-left: 0 none !important;
+
+    text-align: right !important;
+
+}
+
+#monthlypaymentcontainer table {
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+#monthlypaymentcontainer td {
+
+    background: none repeat scroll 0 0 #EFEFEF;
+
+}
+
+td.paymentmonthyear {
+
+    width: 69px !important;
+
+}
+
+ul.loanproduct-nav {
+
+    background: none repeat scroll 0 0 transparent;
+
+    border: 0 none;
+
+    float: none;
+
+    list-style: none outside none !important;
+
+    margin: 0 !important;
+
+    padding: 0;
+
+}
+
+ul.loanproduct-nav li {
+
+   /* float: left;*/
+
+    list-style: none outside none !important;
+
+   /* margin: 0 5px -1px 0 !important;
+
+    position: relative;*/
+
+   /* z-index: 10;*/
+
+}
+
+ul.loanproduct-nav li img{padding-right:10px;}
+
+ul.loanproduct-nav li a {
+
+    border: 1px solid #DDDDDD!important;
+
+    border-bottom: none!important;
+
+    display: block;
+
+    overflow: hidden;
+
+    padding: 5px 10px 0 10px;
+
+    height: 30px;
+
+    background: #EFEFEF;
+
+    margin: 0!important;
+
+    text-decoration: none;
+
+    color: #444444!important;
+
+    font-weight: bold;
+
+    font-size: 16px;
+
+    -webkit-border-radius: 4px 4px 0 0;
+
+    -moz-border-radius: 4px 4px 0 0;
+
+    border-radius: 4px 4px 0 0;
+
+}
+
+ul.loanproduct-nav li a:hover {
+
+    background: none repeat scroll 0 0 #FCFCFC !important;
+
+    margin: 0 !important;
+
+}
+
+ul.loanproduct-nav li.active a {
+
+    background: none repeat scroll 0 0 #FCFCFC;
+
+    height: 31px;
+
+}
+
+.steps {
+
+    border-color: transparent;
+
+    border-style: none solid;
+
+    border-width: 0 1px;
+
+    margin: 0 0 35px !important;
+
+    position: relative;
+
+    width: 100%;
+
+}
+
+.tick {
+
+    color: #a0a0a0;
+
+    font-size: 11px;
+
+    height: 11px;
+
+    left: 0;
+
+    line-height: 11px;
+
+    margin-left: -24px;
+
+    position: absolute;
+
+    text-align: center;
+
+    width: 48px;
+
+}
+
+.marker {
+
+    border: 1px solid transparent;
+
+    color: #a0a0a0;
+
+    font-size: 12px !important;
+
+    font-weight: bold;
+
+    height: 18px;
+
+    line-height: 18px;
+
+    text-align: center;
+
+}
+
+#EMIPaymentscheduleheader {
+
+    background: none repeat scroll 0 0 #EDEDED;
+
+    border-color: #DBDAD7;
+
+    border-style: solid none;
+
+    border-width: 1px 0;
+
+    margin-bottom: 20px;
+
+    padding: 5px 0;
+
+    text-align: center;
+
+    width: 751px;
+
+}
+
+#EMIPaymentscheduleheader label {
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-right: 10px;
+
+    font-family: verdana, Helvetica, sans-serif;
+
+}
+
+#EMIPaymentscheduleheader input[type="text"] {
+
+    background: none repeat scroll 0 0 #FCFCFC;
+
+    border: 1px solid #DBDAD7;
+
+    box-shadow: 1px 1px 4px #F4F4F4 inset;
+
+    font-size: 14px;
+
+    height: 32px;
+
+    line-height: 32px;
+
+    margin: 0;
+
+    padding: 0 10px;
+
+}
+
+#EMIPaymentscheduleheader input:focus {
+
+    border-color: rgba(82, 168, 236, 0.8);
+
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+
+    outline: 0 none;
+
+}
+
+#startmonthyear {
+
+    width: 140px;
+
+}
+
+#emibarchart {
+
+    clear: both;
+
+    margin-bottom: 20px;
+
+	position:absolute; width:100%;
+
+}
+
+.featuredposts {
+
+    float: left;
+
+    width: 314px;
+
+    height: 207px;
+
+    margin: 0 0 9px;
+
+    border: 1px solid #DDDDDD;
+
+    padding: 10px;
+
+    overflow: hidden;
+
+}
+
+.fpcaption {
+
+    display: block;
+
+    font-weight: bold;
+
+    text-align: left;
+
+    margin: 0 0 5px 0 !important;
+
+    border-bottom: 3px double #EBEBEB;
+
+}
+
+.featuredposts ul {
+
+    list-style: none;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+}
+
+.featuredposts li {
+
+    padding: 5px 0 !important;
+
+    margin: 0 !important;
+
+    list-style: none;
+
+    border-bottom: 1px dotted #DDDDDD;
+
+}
+
+.featuredposts li:last-child {
+
+    border-bottom: 0 none;
+
+}
+
+.featuredposts a {
+
+    border-bottom: 0 none !important;
+
+}
+
+#bbloanproducts {
+
+    border-top: 1px solid #DDDDDD;
+
+    float: left;
+
+    height: 80px;
+
+    margin: 0;
+
+    padding: 10px;
+
+    width: 502px;
+
+}
+
+#bbloanproducts p {
+
+    margin: 0 0 5px 0;
+
+    text-align: center;
+
+    font-weight: bold;
+
+}
+
+#bbloanproducts a {
+
+    font: bold 18px/1 "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+
+#bbhomeloan, #bbcarloan, #bbpersonalloan {
+
+    text-align: center;
+
+}
+
+.socialshare {
+
+    list-style: none;
+
+    float: right;
+
+    display: inline;
+
+    margin: 0;
+
+    height: 90px;
+
+    padding: 0;
+
+}
+
+.socialshare li {
+
+    display: inline;
+
+    float: right;
+
+    margin-left: 20px;
+
+}
+
+.display-posts-listing {
+
+	padding: 0;
+
+	margin: 0;
+
+}
+
+.listing-item {
+
+	list-style: none;
+
+	padding: 20px 0;
+
+	border-bottom: 1px solid #DDDDDD;
+
+}
+
+.listing-item a {
+
+	border-bottom: 0 none;
+
+}
+
+span.tags {
+
+	float: right;
+
+}
+
+span.tags a {
+
+	font: 11px/1 "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+
+	text-transform: uppercase;
+
+	background: #bf4e10;
+
+	color: #FFFFFF;
+
+	padding: 5px;
+
+	display: inline-block;
+
+	-moz-border-radius:4px;
+
+	-webkit-border-radius:4px;
+
+	border-radius:4px;
+
+	margin-right: 5px;
+
+	letter-spacing: 1px;
+
+	word-spacing: 1px;
+
+}
+
+span.tags a:hover {
+
+	background: #A0410D;
+
+}
+
+span.date {
+
+	color: #999999;
+
+	font: 11px/13px "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+
+	text-transform: uppercase;
+
+	width: 40px;
+
+	display: inline-block;
+
+	text-align: right;
+
+	margin-right: 20px;
+
+}
+
+span.title {
+
+	margin-right: 10px;
+
+}
+
+span.title a {
+
+	font: bold 26px/1 "PT Sans Narrow", "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+
+	color: #444444;
+
+	text-transform: uppercase;
+
+}
+
+span.title a:hover {
+
+	color: #A0410D;
+
+}
+
+.page-template-template-emicalculator-php #content-wrap {
+
+    width: 980px;
+
+}
+
+.page-template-template-emicalculator-php #content-top {
+
+    background: url("../../images/content_top_full.png") no-repeat scroll 0 0 transparent;
+
+    width: 980px;
+
+}
+
+.page-template-template-emicalculator-php #content-btm {
+
+    background: url("../../images/content_bottom_full.png") no-repeat scroll 0 0 transparent;
+
+    width: 980px;
+
+}
+
+.page-template-template-emicalculator-php #primary {
+
+    background: url("../../images/primary_bg_full.png") repeat-y scroll 0 0 transparent;
+
+    width: 870px;
+
+}
+
+
+
+.loadmask-msg{display:none !important;}
+
+#EMIPaymentscheduleheader{display:none !important;}
+
+.bottom{margin-top:80px;}
+
+@media screen and (min-width:768px) and (max-width:1023px){
+
+section.content{margin-top:0px;}
+
+#emipaymenttable table th{font-size:11px;}
+
+#emipaymenttable table td{font-size:11px;}
+
+.toggle {
+
+    background: url("../../images/toggle-closed-med.png") no-repeat scroll 10% 50% transparent;
+
+    cursor: pointer;
+
+}
+
+.toggle-open {
+
+    background: url("../../images/toggle-open-med.png") no-repeat scroll 10% 50% transparent;
+
+}
+
+#tenurechoice {
+
+    float: left;
+
+    height: 36px;
+
+    margin: 0 0 0 5px;
+
+    padding-top: 22px;
+
+    width: 75px;
+
+}
+
+}
+
+@media screen and (max-width:768px){#emidashboard{width:67%;}}
+
+@media screen and (max-width:800px){#emidashboard{width:67%;} 
+
+#emidashchk{width:54.5%;} #tenurechoice{padding-top:19px; margin-bottom:0px;} 
+
+#loanamount,#loaninterest, #newloaninterest,#leftamount { background: #fefefe none repeat scroll 0 0;
+
+    margin-bottom: 10px !important;
+
+    max-width: 100%;
+
+    width: 500px !important; border: 1px solid #b9babb;
+
+    border-radius: 4px;
+
+    color: #353535;
+
+    padding: 6px 27px;}
+
+#loanterm, #mortrate{ background: #fefefe none repeat scroll 0 0;
+
+    margin-bottom: 10px !important;
+
+    max-width: 100%;
+
+    width: 500px !important;}
+
+.marker {
+
+    font-size: 12px;
+
+}
+
+.right-details{border-left:1px solid #d1d1d1;
+
+border-right:1px solid #d1d1d1;border-bottom:1px solid #d1d1d1;
+
+border-top:none;}
+
+.box-full{min-height: 80px;}
+
+.abutton{
+
+    font-size: 13px;
+
+   }
+
+}
+
+
+
+@media screen and (max-width:639px) and (min-width:320px){
+
+/*Check Eligibility*/
+
+   #emidashboard{width:100%;} 
+
+   #left{position:none; float:none; top:0px;}
+
+   #emipaymentsummary, #emipiechart{width:453px ;}
+
+   .lterm{width:164px;}
+
+   #emidashchk{width:100%;}
+
+   #emibarchart{position:static;}
+
+   #emipaymenttable table th{font-size:11px; }
+
+   #emipaymenttable table td{font-size:8px;}
+
+   .toggle {
+
+    background: url("../../images/toggle-closed-small.png") no-repeat scroll 4% 43% transparent;
+
+    cursor: pointer;
+
+}
+
+.toggle-open {
+
+    background: url("../../images/toggle-open-small.png") no-repeat scroll 4% 43% transparent;
+
+}
+
+#emidashboard{float:none;}
+
+.abutton{
+
+    font-size: 13px;
+
+   }
+
+   #province,#city{
+
+       width:70%;
+
+   }
+
+  
+
+  } 
+
+@media screen and (max-width:510px){  
+.imageform .pbox {
+    float: none!important;
+    height: 141px;
+    padding: 35px !important;
+    width: 100%!important;
+}
+.imageform span.prc-addon{
+    display:none;
+}
+#loaninterest, #newloaninterest,#leftamount, #loanterm, #mortrate{
+
+	   margin-bottom: 19px !important;
+
+    margin-top: 5px !important;
+
+    text-align: left;
+
+    width: 100% !important;
+
+   }
+   #loanamount{
+	   
+	   margin-bottom: 19px !important;
+
+    margin-top: 5px !important;
+
+    text-align: left;
+
+    width: 87% !important;
+   }
+   #down-payment, #mort-reqd, #chmc-ins, #mort-reqd{
+
+      width:100%!important;
+
+	  	  color:#7a7a7a!important;
+
+   }
+
+}
+
+@media screen and (max-width:640px){
+
+    #emipaymentsummary, #emipiechart{width: 572px;}
+
+    .marker {
+
+    font-size: 10px;
+
+}
+
+.abutton{
+
+    font-size: 12px;
+
+   }
+
+   #province,#city{
+
+       width:70%;
+
+   }
+
+}
+
+@media screen and (min-width:321px) and (max-width:360px){
+
+	/*Check Eligibility*/
+
+  #emipaymentsummary, #emipiechart{width:343px !important;} 
+
+  .abutton{
+
+    font-size: 12px;
+
+   }
+
+   #province,#city{
+
+       width:100%;
+
+   }
+
+}
+
+@media screen and (max-width:320px){
+
+/*Check Eligibility*/
+
+   #emidashboard{width:100% !important;} 
+
+   #left{position:none; float:none !important; top:0px !important;}
+
+   #emipaymentsummary, #emipiechart{width:305px;}
+
+   .marker {
+
+    font-size: 10px;
+
+}
+
+    .abutton{
+
+    font-size: 12px;
+
+   }
+
+   
+
+   #province,#city{
+
+       width:100%;
+
+   }
+
+}
+
+.errorc {
+    color: #ff0000 !important;
+    display: block !important;
+    font-size: 11px !important;
+    margin-top: -8px !important;
+    position: relative;
+}
+
+  #down-payment, #mort-reqd, #chmc-ins, #mort-reqd{
+
+     	  	  color:#4c4c4c!important;
+   font-weight:bold;
+  }
+.framecontent strong {
+    border: medium none;
+    color: #000 !important;
+    display: block;
+    padding: 0;
+}
+.pbox {
+float: left;
+    width: 423px;
+    padding: 10px 38px;
+    max-width: 100%;
+    height: 171px;
+    border: 1px solid #ffffff;
+    display: inline-table;
+    background: #f2f2f2;
+}
+.framecontent {
+    border: none;
+    padding: 0;
+}
+.ui-slider {
+    margin-top: 12px;
+    margin-left: 3px;
+}
+.box.resultam {
+    float: left;
+    width: 282px;
+    background: #265867;
+    color: #fff!important;
+    padding: 12px;
+    text-align: center;
+    max-width: 100%;
+}
+.resultam strong.orange {
+     border: medium none;
+    color: #fff !important;
+    display: block;
+    margin-top: -12px;
+    padding: 15px;
+}
+.box-full.resultbarhead {
+    display: block;
+    clear: both;
+    text-align: center;
+    color: #000!important;
+}
+.landresult{
+width: 210.8px!important;
+}
+.box-4.landresult input {
+    width: 176px;
+    color:#000!important;
+}
+.box-4.landresult strong{
+    color: #fff!important;
+}
+.box-4 {
+    float: left;
+    background: #68c1dc;
+    width: 211.5px;
+    margin-bottom: 26px;
+    text-align: center;
+    padding: 8px;
+    max-width:100%;
+    font-weight:bold;
+}
+.box-4 span {
+    color: #fff!important;
+}
+table#ana-result {
+    background: #68c1dc;
+    width: 100%;
+    margin-bottom: 41px;
+    display: inline-table;
+     font-weight:bold;
+}
+tr.aprow {
+    background: #265867;
+    text-align:center;
+}
+.aprow td strong, .aprow td span{
+   color:#fff!important;
+   border:none;
+}
+#ana-result td {
+    border: 1px solid #78aab9;
+}
+.aprow2 td strong, .aprow2 td span{
+   border:none;
+   text-align:center;
+ color:#072831!important;
+  display: block;
+}
+.boxdta {
+    margin: 27px 0;
+    display: block;
+    clear: both;
+    height: 200px;
+}
+#ana-result td {
+    padding: 9px;
+}
+.pbox select {
+    padding: 9px;
+    width: 100%;
+    margin-top: 10px;
+    background: #ddd;
+}
+.firstt{
+    background: #265867;
+    width: 99.6%;
+    padding: 11px 5px;
+    color: #fff;
+}
+.box-7.resultrate {
+    background: #265867;
+    text-align: center;
+    padding: 21px;
+    margin-top: -21px;
+   //width: 96.5%;
+}
+.box-7.resultrate strong {
+    color: #fff!important;
+}
+.box-full.equtyresult {
+    background: #265867;
+    text-align: center;
+    margin-top: -19px;
+    padding: 6px;
+}
+.box-full.equtyresult label, .box-7.box2 strong {
+    color: #fff;
+}
+.box-full.equtyresult label span{
+  color: #2db593!important;
+}
+.box-7.box2 strong {
+    color: #000 !important;
+    font-weight: 500 !important;
+}
+.box-7.box2 {
+    background: #68c1dc;
+    float: left;
+    margin-bottom: 39px;
+    padding: 19px 1px;
+    width: 50%;
+}
+.pbox.pboxnew {
+    height: 104px;
+    padding: 21px 263px;
+    width: 100%;
+    text-align:center;
+}
+.box-7.box2 input {
+    color: #265867 !important;
+    font-weight: bold;
+}
+.box-7.resultam1 {
+    float: left;
+    width: 48.3%;
+    height: 145px;
+    background:#265867;
+    padding: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: -21px;
+}
+.box-full.payresult {
+    margin-top: -21px;
+}
+.resultam1 strong {
+    color: #fff !important;
+    display: block;
+    margin-bottom: 9px;
+}
+.box-debt {
+    border: 1px solid #ddd;
+    float: left;
+    height: 55px;
+    margin: 0;
+    padding: 18px 9px;
+    width: 211px;
+  background:#ddd;
+}
+
+.newdatain .resultbarhead i {
+    color: #000 !important;
+    font-size: 15px;
+    margin: 5px;
+}
+#emicalcalulatorinnerform {
+    clear: both;
+    display: block;
+}
+.con-box-debt {
+    border: 1px solid #ddd;
+    float: left;
+    height: 43px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding: 6px;
+    width: 282px;
+}
+.con-box-debt {
+    text-align: center;
+}
+.morhead {
+  background: #265867 none repeat scroll 0 0;
+    clear: both;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px !important;
+    padding: 8px;
+    position: relative;
+    text-align: center;
+    text-transform: capitalize;
+}
+.box-debt.headdebt {
+    clear: both;
+    display: block;
+    width: 99.6%;
+}
+.add-debt {
+    background: #2eb594 none repeat scroll 0 0;
+    box-shadow: 0 1px 1px #000;
+    color: #fff !important;
+    padding: 6px 10px;
+}
+.box-debt #non-mort-debt {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    color: #000;
+    font-weight: bold;
+}
+.content-boxes strong{
+  font-size:17px!important;
+}
+label{
+   display:inline!important;
+}
+span.prc-addon {
+    background: #2eb594 none repeat scroll 0 0;
+    color: #ffffff;
+    float: right;
+    font-size: 17px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-top: -34px;
+    padding: 0 12px;
+    position: relative;
+    right: -9px;
+    text-align: center;
+    width: 36px;
+    z-index: 9999999;
+}
+.pr-addon {
+    background: #2eb594 none repeat scroll 0 0;
+    color: #fff;
+    float: right;
+    font-weight: bold;
+    margin-top: 0;
+    padding: 3px 8px;
+    position: absolute;
+    width: 28px;
+    z-index: 9999;
+ margin-left: -29px;
+}
+.box-debt select {
+    font-weight: 500;
+    padding: 6px 20px;
+}
+.fields.debtsbox div {
+    background: rgba(0, 0, 0, 0) linear-gradient(#265867, #164857) repeat scroll 0 0;
+    color: #fff;
+    margin: 0;
+    padding: 7px;
+    text-align: center;
+font-weight:bold;
+}
+.fields.debtsbox div {
+    background: rgba(0, 0, 0, 0) linear-gradient(#265867, #164857) repeat scroll 0 0;
+}
+.pboxheading {
+    background: #68c1dc;
+    text-align: center;
+    padding: 6px;
+    border-radius: 10px 9px 0 2px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.imageform strong {
+    border: medium none;
+    color: #000 !important;
+    display: block !important;
+    font-family: inherit;
+    font-size: 18px !important;
+    padding: 4px 0;
+}
+.imageform .sep.lint{
+    float:none!important;
+    margin:0!important;
+    width:100%!important;
+    text-align:left!important;
+    padding: 16px 0 !important;
+}
+.imageform span.prc-addon {
+    font-family: sans-serif;
+    font-size: 17px;
+    margin-top: -41px;
+}
+.imageform .pbox {
+    background: #fff none repeat scroll 0 0 !important;
+    border: 1px solid #ddd;
+    clear: none !important;
+    float: left;
+    margin: 0;
+    width: 50%;
+    height:auto!important;
+ padding: 4px 47px 41px 47px !important;
+}
+.newdatain .box.resultam {
+    width: 33.33%;
+}
+.imageform .pbox.pboxnew {
+    padding: 0 338px 19px !important;
+    width: 100%;
+}
+.imageform .lamount {
+    float: none;
+    padding: 11px 0;
+    text-align: left;
+    width: 100%;
+}
+.imageform .pboxnew strong {
+    text-align: center;
+}
+.imageform select {
+    color: #242424 !important;
+    font-weight: 400;
+    text-align: left !important;
+    margin:0!important;
+}
+.imageform .firstt{
+    width:100%!important;
+    color:#fff!important;
+
+}
+.newdatain .ratech {
+    background: #68c1dc none repeat scroll 0 0;
+}
+.newdatain .box-4 {
+    margin: 0 auto!important;
+    padding: 20px;
+    width: 25%!important;
+}
+.newdatain .resultbarhead strong, .newdatain .resultbarhead .emi-data.result{
+   background:#fff!important;
+   color:#000!important;
+  padding:10px!important;
+}

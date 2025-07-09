@@ -1,0 +1,80 @@
+<link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/common.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/products.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/add-product.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/admin-manager.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/emicalculator.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/jquery-ui.css')}}">
+<div class="left-details">
+    <div class="right-inner">
+        <div class="inner">
+            <form class="imageform">
+                <div class="entry-content">
+                    <div id="emicalcalulatorinnerform" style="padding: 0px 0px 10px;">
+                        <div class="pbox">
+                            <div class="lamount">
+                                <label for="loanamount" class="orange"><strong>Current Property Value ($)</strong> </label>
+                                <span></span>
+                            </div>
+                            <div class="datafeild">
+                                <input id="loanamount" name="loanamount" value="" type="text" />
+                                <div id="loanamountslider" style="margin-top: 45px;"></div>
+                                <div id="loanamountsteps" class="steps">
+                                    <span class="tick" style="left: 0%;">|<br/><span class="marker">0</span></span>
+                                    <span class="tick" style="left: 25%;">|<br/><span class="marker">$250,000</span></span>
+                                    <span class="tick" style="left: 50%;">|<br/><span class="marker">$500,000</span></span>
+                                    <span class="tick" style="left: 75%;">|<br/><span class="marker">$750,000</span></span>
+                                    <span class="tick" style="left: 100%;">|<br/><span class="marker">$1M</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pbox">
+                            <div class="lamount">
+                                <label for="leftamount" class="orange"><strong>Remaining Balance on Mortgage ($)</strong> </label>
+                                <span></span>
+                            </div>    
+                            <div class="datafeild">
+                                <input id="leftamount" name="leftamount" value="" type="text" />
+                                <div id="leftamountslider" style="margin-top: 45px;"></div>
+                                <div id="leftamountsteps" class="steps">
+                                    <span class="tick" style="left: 0%;">|<br/><span class="marker">0</span></span>
+                                    <span class="tick" style="left: 25%;">|<br/><span class="marker">$250,000</span></span>
+                                    <span class="tick" style="left: 50%;">|<br/><span class="marker">$500,000</span></span>
+                                    <span class="tick" style="left: 75%;">|<br/><span class="marker">$750,000</span></span>
+                                    <span class="tick" style="left: 100%;">|<br/><span class="marker">$1M</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="box-full resultbarhead" style="margin-top: -6px; width: 100% !important; background: #484848!important; min-height:47px !important;">
+                 <strong style="background:#484848!important;">
+                <label id="msg">You cannot access equity</label>
+                </strong></div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="left-details" style="margin-left: 15px; width: 98%;">
+    <div class="box-7 box2">
+        <strong class="orange">Maximum Loan To Value</strong>
+        <input id="max-loan" value="" type="text" disabled="disabled" style="text-align:center;color:rgb(35, 98, 2);"/>
+    </div>
+    <div class="box-7 box2">
+        <strong class="orange">Available Equity</strong>
+        <input id="equity" value="" type="text" disabled="disabled" style="text-align:center;color:rgb(35, 98, 2);"/>
+    </div>
+</div>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery_ss.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.widget.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.accordion.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.tabs.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/superfish.js') }}"></script>
+
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.loadmask.min.js') }}"></script>
+
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/globalize.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/equity.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.mouse.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.slider.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.datepicker.min.js') }}"></script>

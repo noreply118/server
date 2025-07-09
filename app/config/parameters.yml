@@ -1,0 +1,17 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_mysql
+    database_host: 50.62.139.235
+    database_port: null
+    database_name: ratetrad_webs
+    database_user: ratetrad_webs
+    database_password: ratetrade@123
+    mailer_transport: smtp
+    mailer_host: 50.62.139.235
+    mailer_user: no-reply@ratetrade.ca
+    mailer_password: 'g+RD?O9sqR6@'
+    locale: en
+    secret: ogGM_pzr3ybW
+    debug_toolbar: true
+    debug_redirects: false
+    use_assetic_controller: true

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Main\RatetradeBundle\Entity\MortgageRateTypes" table="mortgage_rate_types">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="rateType" type="string" column="rate_type" length="100" nullable="false"/>
+    <field name="rateTypeUrl" type="string" column="rate_type_url" length="255" nullable="false"/>
+    <field name="updateDateTime" type="datetime" column="update_date_time" nullable="false"/>
+  </entity>
+</doctrine-mapping>

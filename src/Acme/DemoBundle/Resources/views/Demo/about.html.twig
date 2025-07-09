@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RateTrade.ca | About</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="{{asset('./bundles/acmedemo/css/bootstrap.min.css')}}"/>
+        <link rel="stylesheet" href="{{asset('./bundles/acmedemo/css/style_bag.css')}}"/>
+        <link rel="stylesheet" href="{{asset('./bundles/acmedemo/css/custom.css')}}"/>
+    </head>
+    <body>
+        <div>
+            {{ render(controller('AcmeDemoBundle:Mortgage:header')) }}
+            <div class="container rateTradelogo">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">About Company</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div>
+                            <p>The best financial and mortgage firm is one which can provide lowest mortgage rates, and suitable payment-option based plans to clients, befitting their financial management.</p>
+                            <p>At Golden Financial, we are proud to state that we have been at the forefront in providing the best in terms of both these factors to our clients, with unsurpassed and professional excellence.</p>
+                        </div>
+                        <div>
+                            <h4>Our Profile</h4>
+                            <p>A renowned and revered name in the nation and industry, we provide quality, expert and dedicated service to clients. We have built our service structure through continual evolution and knowledge enhancement and keep ourselves updated with market and financial conditions throughout. </p>
+                        </div>
+                        <div>
+                            <h4>Our Team</h4>
+                            <p>We have employed some of the best minds in the industry, who not only possess great financial market knowledge, analytical skills, industry experience and proficiency in service deliverance, but are also friendly and understand the importance of saving money and maximizing the investment returns. The mortgage specialists listen to the clients fully, understanding their requirement and provide viable advice and solution, searching the market for best possible and lowest rate mortgage plans.</p>
+                        </div>
+                        <div>
+                            <h4>Our Business Principles – Outstanding Financing Solutions</h4>
+                            <p>We work through a large network of lenders, comprising numerous financial products. This enables us to provide our clients with lowest rate mortgage, befitting their requirements.</p>
+                        </div>
+                        <div>
+                            <h4>Our Mission</h4>
+                            <p>Clients come to us hoping to find a financial product which will help in reducing their stress and increase their savings. Our dedication and passion is derived by our will to be like a friend to clients, helping them make the most of the mortgage plans, and save their hard-earned money.</p>
+                            <p>With our extraordinary & integrated financing process, we strive to bring stress-free mortgage solution to our clients, providing them with simple, reasonable and time-consuming methodology. We aim to develop professional and trustworthy relation with our customers as well as our lender network.<p>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Main Menu</h3>
+                        <div class="list-group">
+                            <a class="list-group-item" href="{{path('home')}}">Home</a>
+                            <a class="list-group-item" href="{{path('home')}}">Mortgage</a>
+                            <a class="list-group-item" href="{{path('home')}}">Calculator</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ render(controller('AcmeDemoBundle:Mortgage:footer')) }}
+        </div>
+        <script src="{{asset('./bundles/acmedemo/js/jquery_bag.min.js')}}"></script>
+        <script src="{{asset('./bundles/acmedemo/js/bootstrap.min.js')}}"></script>
+    </body>
+</html>

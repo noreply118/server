@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Main\RatetradeBundle\Entity\CanadaProvince" table="canada_province">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="province" type="string" column="province" length="255" nullable="false"/>
+    <field name="provinceUrl" type="string" column="province_url" length="255" nullable="false"/>
+    <field name="urlLink" type="string" column="url_link" length="255" nullable="false"/>
+    <field name="shortform" type="string" column="shortform" length="2" nullable="false"/>
+    <field name="urlFlag" type="integer" column="url_flag" nullable="false"/>
+  </entity>
+</doctrine-mapping>

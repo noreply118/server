@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0;">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Broker SignUp</title>
+        <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/common.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/login.css')}}">
+    </head>
+    <body>
+        <div class="header">
+            <div class="wrapper">
+                <a href="#" onclick="window.history.back();" class="home-ico"> <img src="{{asset('./bundles/acmedemo/images/back.png')}}"></a> 
+                <span class="page-name">Register</span>
+            </div>
+        </div>
+        <div class="headerfix"></div>
+        <div class="wrapper bodywrapper">
+            <form id="reg-form" method="post" action='#'>
+                <div id="signup-form">
+                    <h3>Add Your Details OR&nbsp;<div style="display:inline-block;"><a id="login-back" href="{{path('login')}}">Sign In</a></div></h3>
+                    <label>Store Name</label>
+                    <input type="text" id="storename" name="storename" value="" class="required" placeholder="Your Store Name"/>
+                    <span id="storename_error" class="verror"></span>
+                    <label>Select City</label>
+                    <div class="fields searchcitydiv">
+                        <select name="city" id="select-city-div">
+                            <option value='select-city'>Select City</option>
+                        </select>
+                        <span id="searchcity_error" class="verror"></span>
+                        <label>Area</label>
+                        <input type="text" id="area" name="area" value="" class="required" placeholder="Area"/>
+                        <span id="area_error" class="verror"></span>
+                        <label>Street Name</label>
+                        <input type="text" id="address" name="address" value="" class="required" placeholder="Street Name"/>
+                        <span id="address_error" class="verror"></span>
+                        <label>Mobile Number</label>
+                        <input type="text" id="mobile" name="mobile" value="" maxlength="10" class="required" placeholder="Mobile Number"/>
+                        <span id="mobile_error" class="verror"></span>
+                        <label>Choose Password</label>
+                        <input type="password" id="pwd" name="pwd" value="" class="required" placeholder="Password"/>
+                        <span id="pwd_error" class="verror"></span>
+                        <span class="submitagree">By clicking on 'Submit' button, you accept our <a href="/posting-rules">Posting Rules</a> &amp; <a href="/terms">Terms of Use</a>.</span>
+                        <input type="button" id="signup-submit" name="signup" value="Submit" class="prodsubmit"/>
+                    </div>
+            </form>
+        </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script>
+            $(document).on("click", "#signup-submit", function () {
+                if ($("#storename").val() == '')
+                {
+                    $("#storename_error").html('Please Enter Store Name');
+                    $("#storename").focus();
+                }
+                else if ($("#select-city-div option:selected").val() == 'select-city')
+                {
+                    $("#searchcity_error").html('Please Select City Name');
+                    $("#select-city-div").focus();
+                }
+                else if ($("#area").val() == '')
+                {
+                    $("#area_error").html('Please Select Area');
+                    $("#area").focus();
+                }
+                else if ($("#address").val() == '')
+                {
+                    $("#address_error").html('Please Enter Your Store Address');
+                    $("#address").focus();
+                }
+                else if ($("#mobile").val() == '')
+                {
+                    $("#mobile_error").html('Please Enter Your Mobile Number');
+                    $("#mobile").focus();
+                }
+                else if ($("#pwd").val() == '')
+                {
+                    $("#pwd_error").html('Please Choose Your Password');
+                    $("#pwd").focus();
+                }
+                else
+                {
+                    $("#reg-form").submit();
+                }
+            });
+        </script>
+    </body>
+</html>

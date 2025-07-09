@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+    <head>
+        <title> {% for a in educationall %}{% if a.id == '30' %}{{a.ptitle}}{% endif %}{% endfor %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="widht=content-width, initial-scale=1">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="{{ app.request.uri }}">  
+        <meta name="geo.region" content="CA" />
+        <meta name="title" content="{% for a in educationall %}{% if a.id == '30' %}{{a.ptitle}}{% endif %}{% endfor %}">
+        <meta name="description" content="{% for a in educationall %}{% if a.id == '30' %}{{a.mdescription}}{% endif %}{% endfor %}"> 
+        <meta property="og:type" content="article" />
+        <meta name="og:title" content="{% for a in educationall %}{% if a.id == '30' %}{{a.ptitle}}{% endif %}{% endfor %}">
+        <meta name="og:description" content="{% for a in educationall %}{% if a.id == '30' %}{{a.mdescription}}{% endif %}{% endfor %}">
+        <meta property="og:site_name" content="Rate Trade" />
+        <meta property="article:publisher" content="https://www.facebook.com/ratetrade/" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:description" content="{% for a in educationall %}{% if a.id == '30' %}{{a.mdescription}}{% endif %}{% endfor %}">
+        <meta name="twitter:title" content="{% for a in educationall %}{% if a.id == '30' %}{{a.ptitle}}{% endif %}{% endfor %}">
+        <meta name="twitter:site" content="@ratetrade" />
+        <meta name="twitter:creator" content="@ratetrade" />
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('./bundles/assets/ico/favicon.png')}}">
+    <link rel="shortcut icon" href="{{asset('./bundles/assets/ico/favicon.ico')}}">
+    <link href="{{asset('./bundles/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/bootstrap-select/css/bootstrap-select.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/fontawesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/prettyphoto/css/prettyPhoto.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/owl-carousel2/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/owl-carousel2/assets/owl.theme.default.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/animate/animate.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/swiper/css/swiper.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/css/theme.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/css/theme-red-1.css')}}" rel="stylesheet" id="theme-config-link">
+	    <script src="/./bundles/assets/plugins/modernizr.custom.js"></script>
+     <link rel="stylesheet" type="text/css" href="/./bundles/acmedemo/css/emicalculator.css">
+<link rel="stylesheet" type="text/css" href="/./bundles/acmedemo/css/jquery-ui.css">  
+
+
+           {{ render(controller('MainRatetradeBundle:Default:Header')) }}
+    <!-- /HEADER -->
+ <!-- CONTENT AREA -->
+    <div class="content-area">
+
+        <!-- BREADCRUMBS -->
+        <section class="page-section breadcrumbs text-right">
+            <div class="container">
+                <div class="page-header">
+                             <h1 class="entrytitle">Land Transfer Tax</h1>
+</div>
+                <ul class="breadcrumb"> 
+                                <li>Home</li>
+                                <li>Calculator</li>
+                                <li class="active">Land Transfer Tax</li>
+                </ul>
+            </div>
+        </section>
+<!-- /BREADCRUMBS --
+        <!-- PAGE WITH SIDEBAR -->
+        <section class="page-section with-sidebar">
+            <div class="container">
+                <div class="row">
+                    
+
+                    <!-- CONTENT -->
+                    <div class="col-md-9 content" id="content">
+
+                        <!-- Blog posts -->
+                        <article class="post-wrap">
+                            <div class="post-media">
+
+
+                            <div class="content-boxes framecontent">
+                         			   
+            <form>
+<div class="pboxheading">LAND TRANSFER TAX CALCULATE</div>
+                        <div class="pbox pboxnew">
+                        <div class="lamount">
+                            <label for="loanamount" class="orange"><strong>Property Value ($)</strong> </label>
+                            <span></span>
+                        </div> <div class="datafeild">
+         <label class="property-error errorc" style="color: #993A00;"></label>
+                            <input id="loanamount" name="loanamount" value="" type="text" />
+                        <span class="prc-addon">$</span>
+                        <div id="loanamountslider"></div>
+                        <div id="loanamountsteps" class="steps">
+                          <span class="tick" style="left: 0%;">|<br/><span class="marker">0</span></span>
+                                    <span class="tick" style="left: 16.67%;">|<br/><span class="marker">$500,000</span></span>				            
+                                    <span class="tick" style="left: 33.34%;">|<br/><span class="marker">$1M</span></span>
+                                    <span class="tick" style="left:  50%;">|<br/><span class="marker">$1.5M</span></span>
+                                    <span class="tick" style="left: 66.67%;">|<br/><span class="marker">$2M</span></span>				            
+                                    <span class="tick" style="left: 83.34%;">|<br/><span class="marker">$2.5M</span></span>
+                                    <span class="tick" style="left: 100%;">|<br/><span class="marker">$3</span></span>
+                        </div>
+                        </div>
+                        </div>
+                <div class="pbox">
+                  <div class="lamount" style="padding-right: 34px;">
+                    <label class="orange">
+                    <strong>Province</strong>
+                    </label>
+                  </div>
+                <div class="datafeild">
+                <div class="fields">
+                    <select id="province" name="province" >
+                        <option value="AL">Alberta</option>
+                        <option value="BC">British Columbia</option>
+                        <option value="MA">Manitoba</option>
+                        <option value="NB">New Brunswick</option>
+                        <option value="NE">Newfoundland</option>
+                        <option value="NS">Nova Scotia</option>
+                        <option value="NT">Northwest Territories</option>
+                        <option value="NU">Nunavut</option>
+                        <option value="ON" selected="selected">Ontario</option>
+                        <option value="PE">Prince Edward Island</option>
+                        <option value="QU">Quebec</option>
+                        <option value="SK">Saskatchewan</option>
+                        <option value="YU">Yukon</option>				
+                    </select>
+                </div></div></div>
+                <div class="pbox">
+                  <div class="lamount" style="padding-right: 34px;">
+                <label class="orange">
+                    <strong>City</strong>
+                </label>
+                  </div><div class="datafeild">
+                <div class="fields">
+                    <select id="city" name="city" >
+
+                    </select>
+                </div></div></div>
+                <div style="clear:both"></div>
+                <div class="firstt">
+                    I am a first time home buyer&nbsp;<input type="checkbox" id="first-time" />
+                </div>
+            </form>
+        
+
+    <div class="box-4 landresult">
+        <strong class="orange">Provincial</strong>
+        <input id="pro" value="" type="text" disabled="disabled" style="text-align:center;color:rgb(35, 98, 2);"/>
+    </div>
+    <div class="box-4 landresult">
+        <strong class="orange">Municipal</strong>
+        <input id="mum" value="" type="text" disabled="disabled" style="text-align:center;color:rgb(35, 98, 2);"/>
+    </div>
+    <div class="box-4 landresult">
+        <strong class="orange">Rebate</strong>
+        <input id="reb" value="" type="text" disabled="disabled" style="text-align:center;color:rgb(35, 98, 2);"/> 
+    </div>
+    <div class="box-4 landresult">
+        <strong class="orange">Land Transfer Tax</strong>
+        <input id="tot" value="" type="text" disabled="disabled" style="text-align:center;color:rgb(35, 98, 2);"/>
+    </div>
+</div></div>
+			   
+						   
+				<div class="clear"></div>		   
+						   
+						   
+						   
+                         <div class="mortapb">
+                            <a href="{{path('mortgage_rates',{'target':'best','ratetype':'fixed'})}}" class="an-button">Best Available Rates</a>
+                        </div>
+                    </article>
+                    </div>
+
+
+
+<!-- SIDEBAR -->
+                    <aside class="col-md-3 sidebar" id="sidebar">
+                    
+                    <!-- widget car categories -->
+                    <div class="widget shadow car-categories">
+                        <h4 class="widget-title">Mortgage Categories</h4>
+                        <div class="widget-content">
+                            <ul>
+                                <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-calculator"></i> &nbsp; Calculators</a>
+                                    <ul class="children active">
+                                                <li><a href="{{path('mortgage_payment')}}">Mortgage Payment</a></li>
+                                                <li><a href="{{path('payment_analyzer')}}">Payment Analyzer</a></li>
+                                                <li><a href="{{path('income_cal')}}">Income Calculator</a></li>
+                                                <li><a href="{{path('affordability_cal')}}">Mortgage Affordability</a></li>
+                                                <li><a href="{{path('chmc_insurance')}}">Mortgage Insurance</a></li>
+                                                <li><a href="{{path('land_transfer_tax')}}">Land Transfer Tax</a></li>
+                                                <li><a href="{{path('refinance-calculator')}}">Refinance Calculator</a></li>
+                                                <li><a href="{{path('equity_refinance')}}">Refinance Equity</a></li>
+                                                <li><a href="{{path('refinance_penalty')}}">Refinance Penalty</a></li>
+                                                <li><a href="{{path('debt-consolidation-calculator')}}">Debt Consolidation</a></li>
+                                     </ul>
+                                </li>
+                                <li> 
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Home Buying Process</a>
+                                    <ul class="children">
+                                        
+                                                {% for a in educationall %}
+                                                        {% if a.parentCategory == '6' %}
+                                                            <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                       
+                                </ul>
+                                </li>
+                                <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Renewing Mortgage</a>
+                                    <ul class="children">
+                                       {% for a in educationall %}
+                                                        {% if a.parentCategory == '18' %}
+                                                            <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Refinancing Guide</a>
+                                    <ul class="children">
+                                      {% for a in educationall %}
+                                                        {% if a.parentCategory == '1' %}
+                                                            <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /widget car categories -->
+                   
+                                 </aside>
+                    <!-- /SIDEBAR -->
+
+
+                           </div>
+        </div>
+        </section>
+        {{ render(controller('MainRatetradeBundle:Default:Footer')) }}
+      
+
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.widget.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.accordion.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.tabs.min.js') }}"></script>
+
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.loadmask.min.js') }}"></script>
+
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/globalize.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/lttcal.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.mouse.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.slider.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.datepicker.min.js') }}"></script>
+   
+    </body>
+</html>

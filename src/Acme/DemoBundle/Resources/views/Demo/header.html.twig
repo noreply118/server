@@ -1,0 +1,139 @@
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{path('home')}}">RateTrade</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{path('login')}}">Login</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">MORTGAGE<b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-level">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mortgage Rates</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Fixed Rate Mortgage</a></li>
+                                <li><a href="#">Variable Rate Mortgage</a></li>
+                                <li><a href="#">Home Equity Line Of Credit</a></li>
+                                <li><a href="#">Open Mortgage Rates</a></li>
+                                <li><a href="#">Fixed Rate Mortgage</a></li>
+                                <li><a href="#">Bank Mortgage Rates</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Mortgage Terms</a></li>
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mortgage Brokers</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">List of Banks & Brokers</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mortgage Education Center</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a href="#"class="dropdown-toggle" data-toggle="dropdown">Home Buying Guide</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-submenu">
+                                            <a href="#">How Much I Can Afford</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Maximum Affordability In Canada</a></li>
+                                                <li><a href="#">TDS/GDS</a></li>
+                                                <li><a href="#">Down Payment</a></li>
+                                                <li><a href="#">CMHC Insurance</a></li>
+                                                <li><a href="#">Credit Score</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-submenu">
+                                            <a href="#">Mortgage & Purchase Process</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Pre-approval</a></li>
+                                                <li><a href="#">Home Inspection</a></li>
+                                                <li><a href="#">Deposit</a></li>
+                                                <li><a href="#">Mortgage Approval Process</a></li>
+                                                <li><a href="#">Choosing a mortgage provider</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-submenu">
+                                            <a href="#">Closing a Mortgage Rate</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Mortgage Term</a></li>
+                                                <li><a href="#">Variable v/s fixed</a></li>
+                                                <li><a href="#">Terms &amp; Condition</a></li>
+                                                <li><a href="#">Prepayment Options</a></li>
+                                                <li><a href="#">Porting &amp; Assuming your Mortgage</a></li>
+                                                <li><a href="#">Prepayment Options</a></li>
+                                                <li><a href="#">Cash Back Mortgage</a></li>
+                                                <li><a href="#">Collateral Mortgages</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-submenu">
+                                            <a href="#">Mortgage Payment</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Payment Frequency</a></li>
+                                                <li><a href="#">Amortization</a></li>
+                                                <li><a href="#">Determine Your Payment</a></li>
+                                                <li><a href="#">Additional Monthly Cost</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-submenu">
+                                            <a href="#">First Time Home Buyer</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">First Time Home Buyer Tax Credit</a></li>
+                                                <li><a href="#">RRSP Home Buyer</a></li>
+                                                <li><a href="#">Land Transfer Tax Rebate</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-submenu">
+                                            <a href="#">Closing Cost</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Closing Costs Overview</a></li>
+                                                <li><a href="#">Real Estate Lawyer</a></li>
+                                                <li><a href="#">Interest Adjustment</a></li>
+                                                <li><a href="#">GST-HST</a></li>
+                                                <li><a href="#">PST ON CMHC Insurance</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mortgage Renewal</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Mortgage Renewal Process</a></li>
+                                        <li><a href="#">Mortgage Renewal Tips</a></li>
+                                        <li><a href="#">Early Mortgage Renewal</a></li>
+                                        <li><a href="#">Mortgage Renewal Denied Situation</a></li>
+                                        <li><a href="#">Switching providers</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Refinancing Guide</a></li>
+                                <li><a href="#">Special Mortgage</a></li>
+                                <li><a href="#">Mortgage Report</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">CALCULATOR<b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-level">
+                        <li><a href="{{path('mortgage_payment')}}">EMI Calculator</a></li>
+                        <li><a href="{{path('chmc_insurance')}}" class="selected">CHMC Calculator</a></li> 
+                        <li><a href="{{path('land_transfer_tax')}}">Land Transfer Tax</a></li>                
+                        <li><a href="{{path('equity_refinance')}}">Refinance Equity</a></li>
+                        <li><a href="{{path('refinance_penalty')}}">Refinance Penalty</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{path('about')}}">ABOUT</a></li>
+                <li><a href="{{path('contact')}}">CONTACT</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>

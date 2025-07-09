@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title> {% for a in educationall %}{% if a.id == '36' %}{{a.ptitle}}{% endif %}{% endfor %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=content-width, initial-scale=1">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="{{ app.request.uri }}">  
+        <meta name="geo.region" content="CA" />
+        <meta name="title" content="{% for a in educationall %}{% if a.id == '36' %}{{a.ptitle}}{% endif %}{% endfor %}">
+        <meta name="description" content="{% for a in educationall %}{% if a.id == '36' %}{{a.mdescription}}{% endif %}{% endfor %}"> 
+        <meta property="og:type" content="article" />
+        <meta name="og:title" content="{% for a in educationall %}{% if a.id == '36' %}{{a.ptitle}}{% endif %}{% endfor %}">
+        <meta name="og:description" content="{% for a in educationall %}{% if a.id == '36' %}{{a.mdescription}}{% endif %}{% endfor %}">
+        <meta property="og:site_name" content="Rate Trade" />
+        <meta property="article:publisher" content="https://www.facebook.com/ratetrade/" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:description" content="{% for a in educationall %}{% if a.id == '36' %}{{a.mdescription}}{% endif %}{% endfor %}">
+        <meta name="twitter:title" content="{% for a in educationall %}{% if a.id == '36' %}{{a.ptitle}}{% endif %}{% endfor %}">
+        <meta name="twitter:site" content="@ratetrade" />
+        <meta name="twitter:creator" content="@ratetrade" /> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="favicon.ico" rel="shortcut icon" type="image/png">
+        <link href="favicon.ico" rel="apple-touch-icon">
+        <link href="favicon.ico" rel="apple-touch-icon" sizes="72x72">
+        <link href="favicon.ico" sizes="114x114">
+        <link href="favicon.ico" rel="apple-touch-icon" sizes="144x144">
+        <link href="{{asset('./bundles/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+        <link href="{{asset('./bundles/assets/plugins/bootstrap-select/css/bootstrap-select.min.css')}}" rel="stylesheet">
+        <link href="{{asset('./bundles/assets/plugins/fontawesome/css/font-awesome.min.css')}}" rel="stylesheet">
+        <link href="{{asset('./bundles/assets/plugins/prettyphoto/css/prettyPhoto.css')}}" rel="stylesheet">
+        <link href="{{asset('./bundles/assets/plugins/owl-carousel2/assets/owl.carousel.min.css')}}" rel="stylesheet">
+        <link href="{{asset('./bundles/assets/plugins/owl-carousel2/assets/owl.theme.default.min.css')}}" rel="stylesheet">
+        <link href="{{asset('./bundles/assets/plugins/animate/animate.min.css')}}" rel="stylesheet">
+        <link href="{{asset('./bundles/assets/plugins/swiper/css/swiper.min.css')}}" rel="stylesheet">
+        <link href="{{asset('./bundles/assets/css/theme.css')}}" rel="stylesheet">
+        <link href="{{asset('./bundles/assets/css/theme-red-1.css')}}" rel="stylesheet" id="theme-config-link">
+        <link rel="alternate" hrefLang="x-default" href="{{ app.request.uri }}"/>
+        <script src="{{asset('./bundles/assets/plugins/modernizr.custom.js')}}"></script>
+        {{ render(controller('MainRatetradeBundle:Default:Header')) }}
+        <!-- /HEADER -->
+        <!-- CONTENT AREA -->
+        <div class="content-area">
+            <!-- BREADCRUMBS -->
+            <section class="page-section breadcrumbs text-right">
+                <div class="container">
+                    <div class="page-header">
+                        <h1 class="entrytitle">Contact Us</h1>
+                    </div>
+                    <ul class="breadcrumb">
+                        <li>Home</li>
+                        <li class="active">Contact Us</li>
+                    </ul>
+                </div>
+            </section>
+            <!-- /BREADCRUMBS -->
+            <!-- PAGE WITH SIDEBAR -->
+            <section class="page-section with-sidebar">
+                <div class="container">
+                    <div class="row">
+                        <!-- CONTENT -->
+                        <div class="col-md-9 content" id="content">
+                            <!-- Blog posts -->
+                            <article class="post-wrap">
+                                <div class="post-media">
+                                    <div class="content-boxes">
+                                        <p><strong>Contact Us</strong></p>
+                                        <div class="content-boxes">
+                                            <div id="contact_form">
+                                                <form name="contact-form" method="post" action="" class="contact-form1" id="contact-form">
+                                                    <div class="form-group bform">
+                                                        <label for="name">Name: </label>
+                                                        <input type="text" class="form-control required" name="name" id="name" placeholder="Name">
+                                                    </div>
+                                                    <div class="form-group bform">
+                                                        <label for="email">Email address:</label>
+                                                        <input type="text" class="form-control required" name="email" id="email" placeholder="email">
+                                                    </div>
+                                                    <div class="form-group bform">
+                                                        <label for="phone">Phone Number </label>
+                                                        <input type="tel" class="form-control required" id="phone" placeholder="Phone Number" name="phone">
+                                                    </div>
+                                                    <div class="form-group bform">
+                                                        <label for="subject">Subject</label>
+                                                        <input type="text" class="form-control required" id="subject" placeholder="Subject........." name="subject">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="input-message">Query:</label>
+                                                        <textarea name="message" id="input-message" placeholder="Enter Your Query" class="form-control required"></textarea>
+                                                    </div>
+                                                    <input type="submit" name="submit" class="form-button form-button-submit btn btn-block btn-theme ripple-effect btn-theme-dark subsc" id="submit_btn" value="Submit" />
+                                                    <div id="success" style="text-align: center;"></div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <!-- SIDEBAR -->
+                                <aside class="col-md-3 sidebar">
+                                    <div class="address"> 
+                                    <address>
+                                        <strong>Email:</strong><br/>
+                                        <a class="email" href="mailto:contact@ratetrade.ca">contact@ratetrade.ca</a><br/>
+                                        <a class="email" href="mailto:contact@ratetrade.ca">info@ratetrade.ca</a><br/>
+                                    </address>
+                                  <address>
+                                        <strong>Support Phone:</strong><br/>
+                                        <a  class="phone"href="tel:+19056760008">(905) 676 0008</a><br/><br/>
+                                    </address>
+                                  <address>
+                                        <strong> Address::</strong><br/>
+                                        2960 Drew Rd. Unit# 139, Mississauga ON L4T 0A5
+                                    </address>
+                                    <address style="display:none">
+                                        <strong>ratetrade Address::</strong><br/>
+                                        2960 Drew Rd. Unit# 139, Mississauga ON L4T 0A5
+                                    </address>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+{{ render(controller('MainRatetradeBundle:Default:Footer')) }}
+ <script>
+ //         $(document).on("click", ".subsc", function (e) {
+ //             e.preventDefault();
+ //             var formData = {
+ //                 fname: $("#fname").val(),
+ //                 email: $("#lname").val(),
+ //                 phone: $("#phonen").val(),
+ //                 message: $("#email").val(),
+ //                 location: $("#message").val(),
+             
+ //             };
+ //             $.ajax({
+ //                 url: '{{path('contact_us_update')}}',
+ //                 type: "post",
+ //                 async: true,
+ //                 data: formData,
+ //                 success: function (response) {
+            
+ //                 },
+ //                 error: function (request, error) {
+ //                     alert('No data found');
+ //                 }
+ //             });
+     
+ // });
+
+        </script>
+    </body>
+</html>

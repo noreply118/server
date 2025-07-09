@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title> {% for a in educationall %}{% if a.id == '35' %}{{a.ptitle}}{% endif %}{% endfor %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=content-width, initial-scale=1">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="{{ app.request.uri }}">  
+        <meta name="geo.region" content="CA" />
+        <meta name="title" content="{% for a in educationall %}{% if a.id == '35' %}{{a.ptitle}}{% endif %}{% endfor %}">
+        <meta name="description" content="{% for a in educationall %}{% if a.id == '35' %}{{a.mdescription}}{% endif %}{% endfor %}"> 
+        <meta property="og:type" content="article" />
+        <meta name="og:title" content="{% for a in educationall %}{% if a.id == '35' %}{{a.ptitle}}{% endif %}{% endfor %}">
+        <meta name="og:description" content="{% for a in educationall %}{% if a.id == '35' %}{{a.mdescription}}{% endif %}{% endfor %}">
+        <meta property="og:site_name" content="Rate Trade" />
+        <meta property="article:publisher" content="https://www.facebook.com/ratetrade/" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:description" content="{% for a in educationall %}{% if a.id == '35' %}{{a.mdescription}}{% endif %}{% endfor %}">
+        <meta name="twitter:title" content="{% for a in educationall %}{% if a.id == '35' %}{{a.ptitle}}{% endif %}{% endfor %}">
+        <meta name="twitter:site" content="@ratetrade" />
+        <meta name="twitter:creator" content="@ratetrade" />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="favicon.ico" rel="shortcut icon" type="image/png">
+    <link href="favicon.ico" rel="apple-touch-icon">
+    <link href="favicon.ico" rel="apple-touch-icon" sizes="72x72">
+    <link href="favicon.ico" sizes="114x114">
+    <link href="favicon.ico" rel="apple-touch-icon" sizes="144x144">
+    <link href="{{asset('./bundles/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/bootstrap-select/css/bootstrap-select.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/fontawesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/prettyphoto/css/prettyPhoto.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/owl-carousel2/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/owl-carousel2/assets/owl.theme.default.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/animate/animate.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/swiper/css/swiper.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/css/theme.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/css/theme-red-1.css')}}" rel="stylesheet" id="theme-config-link">
+    <script src="{{asset('./bundles/assets/plugins/modernizr.custom.js')}}"></script>
+    <link rel="alternate" hrefLang="x-default" href="{{ app.request.uri }}"/>
+              <script src="http://maps.googleapis.com/maps/api/js"></script>
+        <script>
+            function initialize() {
+                var mapProp = {
+                    center: new google.maps.LatLng(43.7248485, -79.8996275),
+                    zoom: 8,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(43.7315, -79.7624),
+                    map: map,
+                    title: 'Karamjit Randhawa'
+                });
+
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+      
+   </head>
+           {{ render(controller('MainRatetradeBundle:Default:Header')) }}
+    <!-- /HEADER -->
+    <!-- CONTENT AREA -->
+    <div class="content-area">
+
+        <!-- BREADCRUMBS -->
+        <section class="page-section breadcrumbs text-right">
+            <div class="container">
+                <div class="page-header">
+                             <h1 class="entrytitle">Affiliated Partners</h1>
+</div>
+                <ul class="breadcrumb"> 
+                                <li>Home</li>
+                                <li class="active">Affiliated Partners</li>
+                </ul>
+            </div>
+        </section>
+<!-- /BREADCRUMBS -->
+ <!-- PAGE WITH SIDEBAR -->
+        <section class="page-section with-sidebar">
+            <div class="container">
+                <div class="row">
+                   
+
+ <!-- CONTENT -->
+                    <div class="col-md-9 content" id="content">
+
+                        <!-- Blog posts -->
+                        <article class="post-wrap">
+                            <div class="post-media">
+
+
+                            <div class="content-boxes">
+                    
+
+
+                                    <div class="brokers">
+                                        <div class="borker-head">
+                                             <h3>Partners</h3>
+                                                <h3>Partner Name</h3>
+                                                <h3>Location</h3>
+                                                <h3></h3>
+                                          
+                                        </div>
+                                        {% if brokers|length > 0 %}
+                                            {% for r in brokers %}
+                                                <div class="broker-list">
+                                                    <div class="blist">
+                                                        {% if r.photo != '' %}
+                                                            <img src="{{r.photo}}" alt="" class="brokerimg">
+                                                        {% else %}
+                                                            <img src="{{asset('./bundles/mainratetrade/images/bl.jpg')}}" alt="" class="brokerimg">
+                                                        {% endif %}
+                                                        <p style="color: rgba(255,255,255,1.00); line-height:1; padding:5px 0; background: rgba(9,94,0,1.00);"><strong>{{r.fname}} {{r.lname}}</strong></p>
+                                                    </div>
+                                                    <div class="blist>
+                                                        <a href="bdetail.html" class="linkb">{{r.brokerageName}}</a> <br/>
+                                                        Website: {{r.websiteUrl}}
+                                                    </div>
+                                                    <div class="blist">
+                                                        <p>{{r.city}}</p>
+                                                    </div>
+                                                    {#<div class="col-xs-12 col-sm-2 text-center">
+                                                        <a class="{{r.email}} btn btn-primary btn-lg rate-btn" data-toggle="modal" data-target="#agentModal1">Contact Now</a>
+                                                    </div>#}
+                                                    <div class="blist"> 
+                                                        <a href="#" class="brockerlink">Contact Now >></a>
+                                                    </div>
+                                                </div>
+                                            {% endfor %}
+                                        {% else %}
+                                            <div class="broker-list">
+                                                <div class="col-xs-12 col-sm-3">
+                                                    No Brokers Available
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+<div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+                       <!-- SIDEBAR -->
+                    <aside class="col-md-3 sidebar" id="sidebar">
+                    
+                    <!-- widget car categories -->
+                    <div class="widget shadow car-categories">
+                        <h4 class="widget-title">Mortgage Categories</h4>
+                        <div class="widget-content">
+                            <ul>
+                                <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-calculator"></i> &nbsp; Calculators</a>
+                                    <ul class="children">
+                                                <li><a href="{{path('mortgage_payment')}}">Mortgage Payment</a></li>
+                                                <li><a href="{{path('affordability_cal')}}">Mortgage Affordability</a></li>
+                                                <li><a href="{{path('chmc_insurance')}}">Mortgage Insurance</a></li>
+                                                <li><a href="{{path('land_transfer_tax')}}">Land Transfer Tax</a></li>
+                                                <li><a href="{{path('refinance-calculator')}}">Refinance Calculator</a></li>
+                                                <li><a href="{{path('equity_refinance')}}">Refinance Equity</a></li>
+                                                <li><a href="{{path('refinance_penalty')}}">Refinance Penalty</a></li>
+                                                <li><a href="{{path('debt-consolidation-calculator')}}">Debt Consolidation</a></li>
+                                    </ul>
+                                </li>
+                               <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Home Buying Process</a>
+                                    <ul class="children">
+                                        
+                                                         
+                                                              {% for a in educationall %}
+                                                                {% if a.parentCategory == '6' %}
+                                                                    <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                                       
+                                </ul>
+                                </li>
+ <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Renewing Mortgage</a>
+                                    <ul class="children">
+                                  
+                                                             {% for a in educationall %}
+                                                                {% if a.parentCategory == '18' %}
+                                                                    <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                    </ul>
+                                </li>
+<li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Refinancing Guide</a>
+                                    <ul class="children">
+                                           {% for a in educationall %}
+                                                                {% if a.parentCategory == '1' %}
+                                                                    <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                    </ul>
+                                </li>
+<li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Auto Insurance</a>
+                                    <ul class="children">
+                                           {% for a in educationall %}
+                                                                {% if a.parentCategory == '39' %}
+                                                                    <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Home Insurance</a>
+                                    <ul class="children">
+                                           {% for a in educationall %}
+                                                                {% if a.parentCategory == '44' %}
+                                                                    <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                    </ul>
+                                </li>
+
+                              <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Affiliated Partners</a>
+                                    <ul class="children active">
+                                                    <li><a href="{{path('broker_list')}}">Partners List</a></li>
+                                                    <li><a href="{{path('broker_signup')}}">Partner Registration</a></li>
+                                                    <li><a href="{{path('broker_login')}}">Partner Login</a></li>
+                                                </ul>
+                                </li>
+
+
+
+
+
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /widget car categories -->
+                
+                                 </aside>
+                    <!-- /SIDEBAR -->
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        {{ render(controller('MainRatetradeBundle:Default:Footer')) }}
+        <div class="modal fade" id="agentModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Contact Realtor</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12">
+                                <div class="form-class">
+                                    <form class="">
+                                        <div class="col-xs-12 col-sm-6">
+                                            <div class="form-group">
+                                                <label for="name"><i class="fa fa-user"></i> &nbsp;Name: *</label>
+                                                <input type="text" class="form-control required" name="urName" id="urName" placeholder="Enter Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <label for="phoneNumber"><i class="fa fa-mobile"></i> &nbsp; Phone Number: *</label>
+                                                <input type="text"  class="form-control required" name="phoneNumber" id="phonenUmber" placeholder="Enter Phone Number">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="besttime"><i class="fa fa-clock-o"></i> &nbsp;Best Time to Call: *</label>
+                                                <select name="bestTime" id="bestTime"  class="form-control required">
+                                                    <option value="anytime">Any Time</option>
+                                                    <option value="morning">Morning</option>
+                                                    <option value="afternoon">Afternoon</option>
+                                                    <option value="evening">Evening</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="forEmail"><i class="fa fa-envelope"></i> &nbsp;Email Address: *</label>
+                                                <input type="text"  class="form-control required" name="emailId" id="EmailId" placeholder="Enter Email Address">
+                                            </div>                                
+                                        </div>
+
+                                        <div class="col-xs-12 col-sm-6">
+                                            <div class="form-group">
+                                                <label for="agentLocation"><i class="fa fa-map-marker"></i> &nbsp;Location: *</label>
+                                                <input type="text" name="agentLocationName" id="agentLocationName" class="form-control required" value="" placeholder="Seach City">
+                                                <select name="agentLocation" id="agentLocation" class="form-control" onClick="getPop()" size="5" style="display:none;">
+                                                    {% for c in cities %}
+                                                        {% if c.cityUrl == 'brampton' %}  
+                                                            <option value="{{c.cityUrl}}" selected>{{c.city}}</option>
+                                                        {% else %}
+                                                            <option value="{{c.cityUrl}}">{{c.city}}</option>   
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="lookingfor"><i class="fa fa-home"></i> &nbsp;I am Looking For: *</label>
+                                                <select name="lookingFor" id="lookingFor"  class="form-control required">
+                                                    <option value="">Please Select</option>
+                                                    <option value="">Buying</option>
+                                                    <option value="">Renew Mortgage</option>
+                                                    <option value="">Debt Consolidation</option>
+                                                    <option value="">Refinancing</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <br>
+                                                <input type="hidden" id="contact-realtor" value=""/>
+                                                <button type="button" class="btn btn-primary lead-submit">Submit Now</button>
+                                            </div>                                
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="{{asset('./bundles/mainratetrade/js/bootstrap.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('./bundles/mainratetrade/js/menustyle.js')}}" type="text/javascript"></script>
+
+<script src="{{asset('./bundles/mainratetrade/js/menunav.js')}}" type="text/javascript"></script>
+        <script>
+
+                                                    $('.level1Btn').on('click', function() {
+                                                        $('.level1 ul').toggle(500);
+
+                                                    });
+                                                    $('.level2Btn').on('click', function() {
+                                                        $('.level2 ul').toggle(500);
+
+                                                    });
+                                                    $('.level3Btn').on('click', function() {
+                                                        $('.level3 ul').toggle(500);
+
+                                                    });
+
+                                                    $('#locationName').click(function(e) {
+                                                        $('.loclist').show(100);
+                                                    });
+                                                    $('.loclist').blur(function(e) {
+                                                        $(this).hide(100);
+                                                    });
+
+                                                    $('#agentLocationName').click(function(e) {
+                                                        $('#agentLocation').show(100);
+                                                    });
+                                                    $('#agentLocation').blur(function(e) {
+                                                        $(this).hide(100);
+                                                    });
+
+                                                    function capitalizeFirstLetter(string) {
+                                                        return string.charAt(0).toUpperCase() + string.slice(1);
+                                                    }
+
+                                                    $('#locationName').on('input', function() {
+                                                        // Getiing option based on input value and setting it as selected
+                                                        $('#locationList option:contains(' + capitalizeFirstLetter(this.value) + ')').eq(0).prop('selected', true);
+                                                    });
+
+                                                    $('#agentLocationName').on('input', function() {
+                                                        // Getiing option based on input value and setting it as selected
+                                                        $('#agentLocation option:contains(' + capitalizeFirstLetter(this.value) + ')').eq(0).prop('selected', true);
+                                                    });
+
+                                                    function getSelected() {
+
+                                                        //document.getElementById('locationName').value = document.getElementById('locationList').text;
+                                                        $('#locationName').val($('option:selected', $('#locationList')).text());
+                                                        $('#locationList').hide(100);
+                                                    }
+
+                                                    function getPop() {
+
+                                                        //document.getElementById('locationName').value = document.getElementById('locationList').text;
+                                                        $('#agentLocationName').val($('option:selected', $('#agentLocation')).text());
+                                                        $('#agentLocation').hide(100);
+                                                    }
+
+                                                    $(document).on("click", ".rate-btn", function(e) {
+                                                        e.preventDefault();
+                                                        $("#contact-realtor").val($(this).attr("class").split(" ")[0]);
+                                                    });
+
+                                                    function validateEmail(email) {
+                                                        var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                                                        return re.test(email);
+                                                    }
+
+                                                    $(document).on("click", ".subsc", function(e) {
+                                                        e.preventDefault();
+                                                        $("#exampleInputEmail2").css('border', '1px solid green');
+
+                                                        if ($("#exampleInputEmail2") == '')
+                                                        {
+                                                            $("#exampleInputEmail2").focus();
+                                                            $("#exampleInputEmail2").css('border', '1px solid red');
+                                                        }
+                                                        else if (!validateEmail($("#exampleInputEmail2").val()))
+                                                        {
+                                                            $("#exampleInputEmail2").css('border', '1px solid red');
+                                                            $("#exampleInputEmail2").focus();
+                                                        }
+                                                        else {
+                                                            $.ajax({
+                                                                url: '{{path('email_subscribe')}}',
+                                                                type: "post",
+                                                                async: true,
+                                                                data: {'email': $("#exampleInputEmail2").val(),
+                                                                    'name': "testname"},
+                                                                success: function(response) {
+                                                                    $("#exampleInputEmail2").val('');
+                                                                    alert(response);
+                                                                },
+                                                                error: function(request, error) {
+                                                                    // alert('No data found');
+                                                                }
+                                                            });
+                                                        }
+                                                    });
+
+                                                    $(document).on("change", ".required", function() {
+                                                        $(this).css('border', '1px solid green');
+
+                                                        if ($(this).val() == '')
+                                                        {
+                                                            $(this).focus();
+                                                            $(this).css('border', '1px solid red');
+                                                        }
+
+                                                        var id = $(this).attr('id');
+                                                        if (id == 'EmailId' && !validateEmail($("#EmailId").val()))
+                                                        {
+                                                            $("#EmailId").focus();
+                                                            $("#EmailId").css('border', '1px solid red');
+                                                        }
+                                                    });
+
+                                                    $(document).on("click", ".lead-submit", function(e) {
+
+                                                        if ($("#urName").val() == '')
+                                                        {
+                                                            $("#urName").focus();
+                                                            $("#urName").css('border', '1px solid red');
+                                                        }
+                                                        else if ($("#EmailId").val() == '')
+                                                        {
+                                                            $("#EmailId").focus();
+                                                            $("#EmailId").css('border', '1px solid red');
+                                                        }
+                                                        else if (!validateEmail($("#EmailId").val()))
+                                                        {
+                                                            $("#EmailId").css('border', '1px solid red');
+                                                            $("#EmailId").focus();
+                                                        }
+                                                        else if ($("#phonenUmber").val() == '')
+                                                        {
+                                                            $("#phonenUmber").focus();
+                                                            $("#phonenUmber").css('border', '1px solid red');
+                                                        }
+                                                        else {
+                                                            var currentRequest = null;
+                                                            $(".lead-submit").text("Please Wait..");
+                                                            var formData = {
+                                                                fname: $("#urName").val(),
+                                                                email: $("#EmailId").val(),
+                                                                phone: $("#phonenUmber").val(),
+                                                                message: $("#contact-realtor").val(),
+                                                                location: $("#agentLocationName").val(),
+                                                                besttime: $("#bestTime").find("option:selected").text(),
+                                                                purpose: $("#lookingFor").find("option:selected").text()
+                                                            };
+                                                            currentRequest = $.ajax({
+                                                                type: "post",
+                                                                async: true,
+                                                                url: "lead-update.php",
+                                                                data: formData,
+                                                                beforeSend: function() {
+                                                                    if (currentRequest != null) {
+                                                                        currentRequest.abort();
+                                                                    }
+                                                                },
+                                                                success: function(response) {
+                                                                    $(".lead-submit").text("Submit");
+                                                                    $(".required").removeAttr('style');
+                                                                    $("#agentModal1").modal('hide');
+                                                                    alert("Query Successful");
+                                                                    window.location.href = '/thank-you';
+                                                                },
+                                                                error: function(request, error) {
+                                                                    $(".lead-submit").text("Submit");
+                                                                    $(".required").removeAttr('style');
+                                                                    alert("Query Failed");
+                                                                }
+                                                            });
+                                                        }
+                                                    });
+        </script>
+    </body>
+</html>

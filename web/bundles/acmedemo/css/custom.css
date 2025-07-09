@@ -1,0 +1,40 @@
+.savemaximage{
+	width:100%;
+	height: 450px;
+}
+.tradetxt{
+    color: #c8c8c8;
+    font-size: 80px;
+    left: 135;
+    position: absolute;
+    text-shadow: 1px 1px #000000;
+    top: 270;
+}
+.rateTradelogo{
+	margin-top:70px;
+        margin-bottom: 30px;
+}
+.maxsavingFormWraper {
+    position: absolute;
+    top: 450;
+	 left: 80;
+}
+.maxsavingForm {
+    margin-left: 13	0px;
+}
+@media screen and (max-width: 768px) {
+	.tradetxt {
+	left: 60px;
+	top: 270;
+	font-size: 50px;
+}
+.maxsavingFormWraper{
+	left: 10px;
+    top: 365px;
+}
+.savemaximage {
+    height: 615px;
+	}
+}
+
+

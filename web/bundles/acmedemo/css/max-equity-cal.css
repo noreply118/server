@@ -1,0 +1,139 @@
+h1,h3 {font-weight: normal;}
+input {padding: 12px 10px;
+font-size: 14px;
+border: 1px solid #DDD;
+background-color: #F2F0F3;}
+.tablem {font-size: 20px;padding: 10px;}
+.tablem td{height: 35px; padding: 10px;text-align: center;}
+.tablem tr{line-height: 57px;}
+.downtext,.downtext1 {text-align: center;}
+.calc {
+border: 1px solid #CDD6D9;
+}
+#go{
+    clear: both;
+color: #FFF;
+padding: 6px 10px;
+background-color: #006F98;
+border-radius: 3px;
+width: 10%;
+border: medium none;
+cursor: pointer;
+}
+.getquoteform{
+position: absolute;
+top: 300px;
+left: 30%;
+border: 3px solid #CCC;
+background: #FFF none repeat scroll 0% 0%;
+width: 480px;
+text-align: center;
+color: #666;
+border-radius: 3px;
+box-shadow: 0px 0px 2000px 2000px rgba(0, 0, 0, 0.6);
+z-index: 9999;
+display: none;
+}
+
+a.closebtn {
+    position: absolute;
+    padding: 5px 8px;
+    text-align: center;
+    color: #FFF;
+    background: #C00 none repeat scroll 0% 0%;
+    top: -15px;
+    right: -15px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+#emipaymenttable{
+background: #FCFCFC none repeat scroll 0px 0px;
+clear: both;
+margin: 0px 0px 20px;
+text-align: center;
+position: relative;
+bottom: 70px;
+margin-top: 5%;
+}
+
+#emipaymenttable table{
+width: 100%;
+border-top: 1px solid #DBDAD7;
+}
+
+#emipaymenttable table td {
+    border-left: 1px solid #DBDAD7;
+    border-bottom: 1px solid #DBDAD7;
+    border-right: 1px solid #DBDAD7;
+    text-align: center;
+    font-size: 11px;
+    padding: 4px;
+}
+
+td.currency {
+    border-left: 0px none !important;
+    text-align: right !important;
+    width: 150px !important;
+}
+
+td.paidtodateyear, td.paidtodatemonthyear {
+    border-left: 0px none !important;
+    text-align: right !important;
+}
+
+td.monthyearwrapper {
+    margin: 0px;
+    padding: 0px !important;
+    border-bottom: 0px none !important;
+    border-top: 0px none !important;
+}
+
+#monthlypaymentcontainer table {
+    margin: 0px;
+    padding: 0px;
+}
+
+#monthlypaymentcontainer td {
+    background: #EFEFEF none repeat scroll 0px 0px;
+}
+
+td.paymentmonthyear {
+    width: 69px !important;
+}
+
+td.paymentyear {
+    text-align: right !important;
+    width: 77px !important;
+}
+.toggle {
+    background: transparent url("../../acmedemo/images/toggle-closed.png") no-repeat scroll 10% 50%;
+    cursor: pointer;
+}
+
+.toggle-open {
+    background: transparent url("../../acmedemo/images/toggle-open.png") no-repeat scroll 10% 50%;
+}
+.refdetail h2 {
+    background: #0185c6;
+    color: #fff;
+    padding: 8px;
+}
+.refdetail .lamount {
+    padding-right: 28px;
+}
+.refdetail input {
+    width: 374px!important;
+    margin-top: 8px;
+    max-width: 100%!important;
+}
+.refdetail input.mort-type {
+    width: 32px!important;
+    margin-top: 20px;
+	    max-width: 100%!important;
+}
+.debt-left-details {
+    float: left;
+	background:none!important;
+    margin-left: -7px!important;
+    padding: 10px!important;
+}

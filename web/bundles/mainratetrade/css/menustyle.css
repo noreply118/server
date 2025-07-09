@@ -1,0 +1,177 @@
+body, ratenav, ul, li, a  {margin: 0; padding: 0;}
+body {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+a {text-decoration: none;}
+.ratetopbar {
+    width: 100%;
+    margin: 0px auto;
+    background: #aee4ff;
+    min-height: 51px;
+    z-index: 999999;
+    position: fixed;
+}
+.cityselect {
+    background: #015883 none repeat scroll 0 0;
+    color: #fff;
+    float: right;
+    font-weight: bold;
+    margin-right: 26px;
+    margin-top: -54px;
+    padding: 17px 38px;
+}
+ul.ratenav i {
+    color: #3098cb;
+}
+ul.ratenav a {
+    color: #015883;
+    font-weight: bold;
+    font-size: 15px;
+}
+.ratetopbar .logo {
+    float: left;
+    border: 1px solid #fff;
+    margin-left: 22px;
+    border-top: none;
+    border-bottom: none;
+    padding: 1px 33px;
+    width: 263px;
+}
+
+.toggleMenu {
+    display:  none;
+    background: #666;
+    padding: 10px 15px;
+    color: #fff;
+}
+.ratenav {
+    list-style: none;
+     *zoom: 1;
+     background:#aee4ff
+}
+.ratenav:before,
+.ratenav:after {
+    content: " "; 
+    display: table; 
+}
+.ratenav:after {
+    clear: both;
+}
+.ratenav ul {
+    list-style: none;
+    width: 9em;
+}
+.ratenav a {
+    color: #fff;
+    margin-bottom: -6px;
+    padding: 15px;
+}
+.ratenav li {
+    position: relative;
+}
+.ratenav > li {
+    float: left;
+}
+.ratenav > li > .parent {
+    background-image: url("images/downArrow.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.ratenav > li > a {
+    display: block;
+}
+.ratenav li  ul {
+    position: absolute;
+    left: -9999px;
+}
+.sub1 {
+    margin-left: -163px;
+    margin-top: 5px;
+    width: 180px !important;
+}
+.sub1 a{
+    color:#fff!important;	
+}
+.sub1 a:hover{
+   background:#3098cb!important;	
+}
+.subb {
+    background: #fff none repeat scroll 0 0 !important;
+    height: 181px;
+    margin-left: 179px;
+    overflow-x: scroll !important;
+    overflow-y: hidden !important;
+    position: absolute;
+    top: 0 !important;
+	width:800px;
+}
+
+.subb a {
+    background: #fff none repeat scroll 0 0 !important;
+    border-right: 1px solid #ccc;
+    color: #015883!important;
+    padding: 46px 18px;
+    text-align: center;
+	float:left;
+	display:inline-block;
+}
+.subb a:hover {
+    color: #2b82ad !important;
+	background:#fff!important;
+}
+.subb img {
+    display: block;
+    margin: 0 auto;
+	padding:10px 0;
+}
+.ratenav > li.hover > ul {
+    left: 0;
+}
+.ratenav li li.hover ul {
+    left: 100%;
+    top: 0;
+}
+.ratenav li li a {
+    display: block;
+    background: #13587b;
+    position: relative;
+    z-index:100;
+    border-top: 1px solid #13587b;
+}
+.ratenav li a:hover, .ratenav li a:select {
+	background:#13587b;
+}
+.ratenav a:hover, .ratenav .active{
+	background:#13587b;
+	text-decoration:none;
+    color:#fff;
+}
+.ratenav li li li a {
+    background:#249578;
+    z-index:200;
+    border-top: 1px solid #1d7a62;
+}
+
+
+@media screen and (max-width: 768px) {
+    .active {
+        display: block;
+    }
+    .ratenav > li {
+        float: none;
+    }
+    .ratenav > li > .parent {
+        background-position: 95% 50%;
+    }
+    .ratenav li li .parent {
+        background-image: url("images/downArrow.png");
+        background-repeat: no-repeat;
+        background-position: 95% 50%;
+    }
+    .ratenav ul {
+        display: block;
+        width: 100%;
+    }
+   .ratenav > li.hover > ul , .ratenav li li.hover ul {
+        position: static;
+    }
+
+}

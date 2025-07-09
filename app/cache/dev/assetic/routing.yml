@@ -1,0 +1,5 @@
+_assetic:
+    resource: .
+    type: assetic
+_app:
+    resource: /home/nyyj8ifksi1h/public_html/ratetrade.ca/symfonyratetrade/app/config/routing_dev.yml

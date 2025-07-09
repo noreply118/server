@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0;">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Rate Entry Form</title>
+        <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/common.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/products.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/add-product.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/admin-manager.css')}}">
+    </head>
+    <body>
+        <div class="header">
+            <div class="wrapper"> <a href="#" onClick="window.history.back();" class="home-ico">
+                    <img src="{{asset('./bundles/acmedemo/images/back.png')}}"></a> 
+                <span class="page-name">Add New Rate</span> </div>
+        </div>
+        <div class="headerfix"></div>
+        <div class="wrapper bodywrapper">
+            <div class="left-nav"><a href="{{path('rateform')}}">Add Rate</a> <a href="{{path('allrates')}}" class="selected">All Rates</a><a href="{{path('logout')}}">Sign Out</a> </div>
+            <div class="right-details">
+                <div class="right-inner">
+                    <div class="inner">
+                    <form class="imageform" >
+                        {#<div class="meta">
+                            Filter by:  
+                            <select>
+                            <option value="all-cat"></option>
+                            </select>
+                            
+                            <select name="select">
+                                <option value="desc">Newest First</option>
+                                <option value="asc">Oldest First</option>
+                            </select> 
+                        </div>#}
+                        <ul>
+                            {% if rates|length > 0 %}
+                             {% for r in rates %}
+                                <li>
+                                    <div class="list-item">
+                                        <div class="pdetails">
+                                            <span class="pname">{{r.terms}} &nbsp; {{r.rate_type}}</span>
+                                            <span class="pid"><strong>Rate:</strong>&nbsp;{{r.rate}}&nbsp;%</span>
+                                            <div style="clear:both"></div>
+                                            <span class="category"><strong>Category:</strong>{{r.mort_rate}}</span>
+                                            <div class="clear:both"></div>
+                                            <span class="pprice">{{r.city}},&nbsp;{{r.province}}</span>
+                                        </div>
+                                        <div style="clear:both"></div>
+                                        <div class="edit-del">
+                                            <a href="#">Edit</a> 
+                                            <a href="#">Delete</a>
+                                           
+                                        </div>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            {% endif %}    
+                        </ul>
+                    </form>
+                    </div>
+                </div>   
+            </div>
+        </div>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/rate_entry.js') }}"></script>
+    </body>
+</html>

@@ -1,0 +1,139 @@
+    <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/common.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/products.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/add-product.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/admin-manager.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/emicalculator.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/jquery-ui.css')}}">
+    <style type="text/css">
+        ${demo.css}
+    </style>
+        <div class="left-details">
+            <div class="right-inner">
+                <div class="inner">
+                    <form class="imageform">
+                        <div class="entry-content">
+                            <div id="emicalcalulatorinnerform" style="padding: 0px 0px 10px;">
+                                <div class="lamount">
+                                    <label for="loanamount" class="orange"><strong>Property Value ($)</strong> </label>
+                                    <span></span>
+                                    <input id="loanamount" name="loanamount" value="" type="text" />
+
+                                </div>
+                                <div id="loanamountslider"></div>
+                                <div id="loanamountsteps" class="steps">
+                                    <span class="tick" style="left: 0%;">|<br/><span class="marker">0</span></span>
+                                    <span class="tick" style="left: 25%;">|<br/><span class="marker">$250,000</span></span>
+                                    <span class="tick" style="left: 50%;">|<br/><span class="marker">$500,000</span></span>
+                                    <span class="tick" style="left: 75%;">|<br/><span class="marker">$750,000</span></span>
+                                    <span class="tick" style="left: 100%;">|<br/><span class="marker">$1M</span></span>
+                                </div>
+                                <div class="sep lint">
+                                    <label for="loaninterest" class="orange"><strong>Down Payment (%)</strong> </label>
+                                    <span></span>
+                                    <input id="loaninterest" name="loaninterest" value="" type="text" />
+                                </div>
+                                <div id="loaninterestslider"></div>
+                                <div id="loanintereststeps" class="steps">
+                                    <span class="tick" style="left: 0%;">|<br/><span class="marker">5</span></span>
+                                    <span class="tick" style="left: 16.67%;">|<br/><span class="marker">7.5</span></span>				            
+                                    <span class="tick" style="left: 33.34%;">|<br/><span class="marker">10</span></span>
+                                    <span class="tick" style="left: 50%;">|<br/><span class="marker">12.5</span></span>
+                                    <span class="tick" style="left: 66.67%;">|<br/><span class="marker">15</span></span>				            
+                                    <span class="tick" style="left: 83.34%;">|<br/><span class="marker">17.5</span></span>
+                                    <span class="tick" style="left: 100%;">|<br/><span class="marker">20</span></span>
+                                </div>
+
+                                <div class="sep lint">
+                                    <label for="loanterm" class="orange"><strong class="orange">Ammortization Period (Yr)</strong> </label>
+                                    <span></span>
+                                    <input id="loanterm" name="loanterm" value="" type="text" />
+                                </div>
+                                <div id="loantermslider"></div>
+                                <div id="loanintereststeps" class="steps">
+                                    <span class="tick" style="left: 0%;">|<br/><span class="marker">0</span></span>
+                                    <span class="tick" style="left: 16.67%;">|<br/><span class="marker">5</span></span>				            
+                                    <span class="tick" style="left: 33.34%;">|<br/><span class="marker">10</span></span>
+                                    <span class="tick" style="left: 50%;">|<br/><span class="marker">15</span></span>
+                                    <span class="tick" style="left: 66.67%;">|<br/><span class="marker">20</span></span>				            
+                                    <span class="tick" style="left: 83.34%;">|<br/><span class="marker">25</span></span>
+                                    <span class="tick" style="left: 100%;">|<br/><span class="marker">30</span></span>
+                                </div>
+
+                                <div class="sep lint">
+                                    <label for="mortrate" class="orange"><strong class="orange">Mortgage Rate (%)</strong> </label>
+                                    <span></span>
+                                    <input id="mortrate" name="mortrate" value="2.99" type="text" />
+                                </div>
+                                <div id="mortrateslider"></div>
+                                <div id="loanintereststeps" class="steps">
+                                    <span class="tick" style="left: 0%;">|<br/><span class="marker">0</span></span>
+                                    <span class="tick" style="left: 16.67%;">|<br/><span class="marker">1.75</span></span>				            
+                                    <span class="tick" style="left: 33.34%;">|<br/><span class="marker">3.5</span></span>
+                                    <span class="tick" style="left: 50%;">|<br/><span class="marker">5</span></span>
+                                    <span class="tick" style="left: 66.67%;">|<br/><span class="marker">6.75</span></span>				            
+                                    <span class="tick" style="left: 83.34%;">|<br/><span class="marker">8.5</span></span>
+                                    <span class="tick" style="left: 100%;">|<br/><span class="marker">10</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="right-details">
+            <div class="box">
+                <strong class="orange">Property Value</strong>
+                <input id="loanamount-res" name="loanamount" value="500,000" type="text" disabled="disabled" style="text-align:center;color:rgb(35, 98, 2);"/>
+            </div>
+            <div class="box">
+                <strong class="orange">Down Payment</strong>
+                <input id="down-payment" value="60,000" type="text" disabled="disabled" style="text-align:center;color:rgb(35, 98, 2);"/>
+            </div>
+            <div class="box">
+                <strong class="orange">CHMC / GE / CG</strong>
+                <input id="chmc-ins" value="10,560" type="text" disabled="disabled" style="text-align:center;color:rgb(35, 98, 2);"/> 
+            </div>
+            <div class="box">
+                <strong class="orange">Required Mortgage</strong>
+                <input id="mort-reqd" value="450560" type="text" disabled="disabled" style="text-align:center;color:rgb(35, 98, 2);"/>
+            </div>
+            <div class="box-full">
+                <div class="box-4">
+                    <input class="payment-freq" name="installment" value="monthly" type="radio" checked="checked" /><br/><span style="color: rgb(35, 98, 2);">Monthly</span>
+                </div>
+                <div class="box-4">
+                    <input class="payment-freq" name="installment" value="semi_monthly" type="radio"/><br/><span style="color: rgb(35, 98, 2);">Semi Monthly</span>
+                </div>
+                <div class="box-4">
+                    <input class="payment-freq" name="installment" value="acc_bi_weekly" type="radio"/><br/><span style="color: rgb(35, 98, 2);">Accelerated Bi Weekly</span> 
+                </div>
+                <div class="box-4">
+                    <input class="payment-freq" name="installment" value="weekly" type="radio"/><br/><span style="color: rgb(35, 98, 2);">Weekly</span>
+                </div> 
+            </div>
+            <div class="box-full">
+                <strong style="color:rgb(127, 0, 135);">Mortgage Amount</strong><br/><br/>
+                <span class="emi-data result" style="font-size: 22px;"></span> 
+            </div>               
+        </div>
+        <div class="left-details">
+            <div id="container"></div>
+            <div id="container1"></div>
+        </div>        
+        <div class="right-details">
+                <div id="emipaymenttable"></div>         
+        </div>
+    <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery_ss.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.widget.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.accordion.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.tabs.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/superfish.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.loadmask.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/globalize.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/emical.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.mouse.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.slider.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.datepicker.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/highcharts.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/exporting.js') }}"></script>

@@ -1,0 +1,149 @@
+test:
+    path:     /test
+    defaults: { _controller: AcmeDemoBundle:Mortgage:Test }
+mortgage_payment_golden:
+    path:     /mortgage-payment-calculator-golden
+    defaults: { _controller: AcmeDemoBundle:Mortgage:paymentGolden }
+mortgage_payment_ratetrade:
+    path:     /mortgage-payment-calculator-ratetrade
+    defaults: { _controller: AcmeDemoBundle:Mortgage:paymentRatetrade }
+payment_analyzer_ratetrade:
+    path:     /payment-analyzer-ratetrade
+    defaults: { _controller: AcmeDemoBundle:Mortgage:PaymentAnalyzerRatetrade }
+income_ratetrade:
+    path:     /income-ratetrade
+    defaults: { _controller: AcmeDemoBundle:Mortgage:IncomeRatetrade }
+mortgage_payment1:
+    path:     /mortgage-payment-calculator1
+    defaults: { _controller: AcmeDemoBundle:Mortgage:payment1 }
+
+get_mortgage:
+    path:     /get-mortgage
+    defaults: { _controller: AcmeDemoBundle:Mortgage:getMortgage }
+get_mortgage_installement:
+    path:     /get-mortgage-installement
+    defaults: { _controller: AcmeDemoBundle:Mortgage:getMortgageInstallment }
+
+land_transfer_tax_golden:
+    path:     /land-transfer-tax-golden
+    defaults: { _controller: AcmeDemoBundle:Mortgage:LandTransferTaxGolden }
+    
+get_land_transfer_tax:
+    path:     /get-land-transfer-tax
+    defaults: { _controller: AcmeDemoBundle:Mortgage:getLandTransferTax }
+
+chmc_insurance_golden:
+    path:     /chmc-insurance-calculator-golden
+    defaults: { _controller: AcmeDemoBundle:Mortgage:ChmcCalculatorGolden }
+chmc_insurance_ratetrade:
+    path:     /chmc-insurance-calculator-ratetrade
+    defaults: { _controller: AcmeDemoBundle:Mortgage:ChmcCalculatorRatetrade }
+
+loan_tools:
+    path:     /loan-tools-dashboard
+    defaults: { _controller: AcmeDemoBundle:Mortgage:LoanTools }
+    
+affordability_calculator:
+    path:     /affordability-calculator
+    defaults: { _controller: AcmeDemoBundle:Mortgage:AffordabiltyCal }
+    
+province_cities:
+    path:     /get-province-city
+    defaults: { _controller: AcmeDemoBundle:Mortgage:getProvinceCity }
+    
+get_affordability:
+    path:     /get-affordability
+    defaults: { _controller: AcmeDemoBundle:Mortgage:getAffordability }
+
+get_affordability_table:
+    path:     /get-affordability-table
+    defaults: { _controller: AcmeDemoBundle:Mortgage:getAffordabilityTable }
+
+get_affordability_down:
+    path:     /get-affordability-down
+    defaults: { _controller: AcmeDemoBundle:Mortgage:getAffordabilityDown }
+
+get_ammortization_table:
+    path:     /get-ammort-table/{principal}/{num_years}/{rate}/{payment_frequency}
+    defaults: { _controller: AcmeDemoBundle:Mortgage:getAmortizationTable }
+    
+#get_cities:
+    #path:     /get-cities
+    #defaults: { _controller: AcmeDemoBundle:Mortgage:getCities }
+
+get_prop_tax:
+    path:     /get-prop-tax
+    defaults: { _controller: AcmeDemoBundle:Mortgage:getPropTax }
+    
+equity_refinance1:
+    path:     /mortgage-refinance-equity1
+    defaults: { _controller: AcmeDemoBundle:Mortgage:getRefinanceEquity1 }
+
+equity_refinance_golden:
+    path:     /mortgage-refinance-equity-golden
+    defaults: { _controller: AcmeDemoBundle:Mortgage:getRefinanceEquityGolden }
+
+refinance_penalty1:
+    path:     /mortgage-refinance-penalty1
+    defaults: { _controller: AcmeDemoBundle:Mortgage:getRefinancePenalty1 }
+
+  
+refinance_penalty_golden:
+    path:     /mortgage-refinance-penalty-golden
+    defaults: { _controller: AcmeDemoBundle:Mortgage:getRefinancePenaltyGolden }
+
+refinance_calculator1:
+    path:     /mortgage-refinance-calculator1
+    defaults: { _controller: AcmeDemoBundle:Mortgage:RefinanceCalculator1 }
+
+#refinance_calculator:
+    #path:     /mortgage-refinance-calculator
+    #defaults: { _controller: AcmeDemoBundle:Mortgage:RefinanceCalculator }
+
+refinance_calculator_golden:
+    path:     /mortgage-refinance-calculator-golden
+    defaults: { _controller: AcmeDemoBundle:Mortgage:RefinanceCalculatorGolden }
+    
+refinance_calculator_ratetrade:
+    path:     /mortgage-refinance-calculator-ratetrade
+    defaults: { _controller: AcmeDemoBundle:Mortgage:RefinanceCalculatorRatetrade }
+
+debt-consolidation-calculator_golden:
+    path:     /debt-consolidation-refinance-calculator-golden
+    defaults: { _controller: AcmeDemoBundle:Mortgage:DebtConsolidation }
+login:
+    path:     /login
+    defaults: { _controller: AcmeDemoBundle:Mortgage:Login }
+logout:
+    path:     /logout
+    defaults: { _controller: AcmeDemoBundle:Mortgage:Logout }
+broker_signup:
+    path:     /broker-signup
+    defaults: { _controller: AcmeDemoBundle:Mortgage:BrokerSignUp }
+logincheck:
+    path:     /logincheck
+    defaults: { _controller: AcmeDemoBundle:Mortgage:LoginCheck }
+rateform:
+    path:     /rate-entry-form
+    defaults: { _controller: AcmeDemoBundle:Mortgage:RateEntryForm }
+rateform_update:
+    path:     /rate-entry-form-update
+    defaults: { _controller: AcmeDemoBundle:Mortgage:RateEntryFormUpdate }
+about:
+    path:     /about
+    defaults: { _controller: AcmeDemoBundle:Mortgage:About }
+contact:
+    path:     /contact
+    defaults: { _controller: AcmeDemoBundle:Mortgage:Contact }
+mortgage:
+    path:     /mortgage
+    defaults: { _controller: AcmeDemoBundle:Mortgage:Mortgage }
+calculator:
+    path:     /calculator
+    defaults: { _controller: AcmeDemoBundle:Mortgage:Calculator }
+allrates:
+    path:     /all-rates
+    defaults: { _controller: AcmeDemoBundle:Mortgage:AllRates }
+json:
+    path:     /test-json
+    defaults: { _controller: AcmeDemoBundle:Mortgage:JSON }

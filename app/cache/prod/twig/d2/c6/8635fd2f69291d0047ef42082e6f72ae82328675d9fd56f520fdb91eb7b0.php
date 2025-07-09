@@ -1,0 +1,630 @@
+<?php
+
+/* MainRatetradeBundle:Default:broker-signup.html.twig */
+class __TwigTemplate_d2c68635fd2f69291d0047ef42082e6f72ae82328675d9fd56f520fdb91eb7b0 extends Twig_Template
+{
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->parent = false;
+
+        $this->blocks = array(
+        );
+    }
+
+    protected function doDisplay(array $context, array $blocks = array())
+    {
+        // line 1
+        echo "<!doctype html>
+<html lang=\"en\">
+    <head>
+        <title>";
+        // line 4
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["educationall"]) ? $context["educationall"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["a"]) {
+            if (($this->getAttribute((isset($context["a"]) ? $context["a"] : null), "id") == "37")) {
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["a"]) ? $context["a"] : null), "ptitle"), "html", null, true);
+            }
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['a'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        echo "</title>
+        <meta charset=\"utf-8\">
+        <meta name=\"viewport\" content=\"width=content-width, initial-scale=1\">
+        <meta name=\"robots\" content=\"index, follow\">
+        <link rel=\"canonical\" href=\"";
+        // line 8
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "request"), "uri"), "html", null, true);
+        echo "\">  
+        <meta name=\"geo.region\" content=\"CA\" />
+        <meta name=\"title\" content=\"";
+        // line 10
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["educationall"]) ? $context["educationall"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["a"]) {
+            if (($this->getAttribute((isset($context["a"]) ? $context["a"] : null), "id") == "37")) {
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["a"]) ? $context["a"] : null), "ptitle"), "html", null, true);
+            }
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['a'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        echo "\">
+        <meta name=\"description\" content=\"";
+        // line 11
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["educationall"]) ? $context["educationall"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["a"]) {
+            if (($this->getAttribute((isset($context["a"]) ? $context["a"] : null), "id") == "37")) {
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["a"]) ? $context["a"] : null), "mdescription"), "html", null, true);
+            }
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['a'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        echo "\"> 
+        <meta property=\"og:type\" content=\"article\" />
+        <meta name=\"og:title\" content=\"";
+        // line 13
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["educationall"]) ? $context["educationall"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["a"]) {
+            if (($this->getAttribute((isset($context["a"]) ? $context["a"] : null), "id") == "37")) {
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["a"]) ? $context["a"] : null), "ptitle"), "html", null, true);
+            }
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['a'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        echo "\">
+        <meta name=\"og:description\" content=\"";
+        // line 14
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["educationall"]) ? $context["educationall"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["a"]) {
+            if (($this->getAttribute((isset($context["a"]) ? $context["a"] : null), "id") == "37")) {
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["a"]) ? $context["a"] : null), "mdescription"), "html", null, true);
+            }
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['a'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        echo "\">
+        <meta property=\"og:site_name\" content=\"Rate Trade\" />
+        <meta property=\"article:publisher\" content=\"https://www.facebook.com/ratetrade/\" />
+        <meta name=\"twitter:card\" content=\"summary\" />
+        <meta name=\"twitter:description\" content=\"";
+        // line 18
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["educationall"]) ? $context["educationall"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["a"]) {
+            if (($this->getAttribute((isset($context["a"]) ? $context["a"] : null), "id") == "37")) {
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["a"]) ? $context["a"] : null), "mdescription"), "html", null, true);
+            }
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['a'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        echo "\">
+        <meta name=\"twitter:title\" content=\"";
+        // line 19
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["educationall"]) ? $context["educationall"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["a"]) {
+            if (($this->getAttribute((isset($context["a"]) ? $context["a"] : null), "id") == "37")) {
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["a"]) ? $context["a"] : null), "ptitle"), "html", null, true);
+            }
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['a'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        echo "\">
+        <meta name=\"twitter:site\" content=\"@ratetrade\" />
+        <meta name=\"twitter:creator\" content=\"@ratetrade\" /> 
+       <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">
+    <link href=\"favicon.ico\" rel=\"shortcut icon\" type=\"image/png\">
+    <link href=\"favicon.ico\" rel=\"apple-touch-icon\">
+    <link href=\"favicon.ico\" rel=\"apple-touch-icon\" sizes=\"72x72\">
+    <link href=\"favicon.ico\" sizes=\"114x114\">
+    <link href=\"favicon.ico\" rel=\"apple-touch-icon\" sizes=\"144x144\">
+    <link href=\"";
+        // line 28
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("./bundles/assets/plugins/bootstrap/css/bootstrap.min.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+    <link href=\"";
+        // line 29
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("./bundles/assets/plugins/bootstrap-select/css/bootstrap-select.min.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+    <link href=\"";
+        // line 30
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("./bundles/assets/plugins/fontawesome/css/font-awesome.min.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+    <link href=\"";
+        // line 31
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("./bundles/assets/plugins/prettyphoto/css/prettyPhoto.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+    <link href=\"";
+        // line 32
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("./bundles/assets/plugins/owl-carousel2/assets/owl.carousel.min.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+    <link href=\"";
+        // line 33
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("./bundles/assets/plugins/owl-carousel2/assets/owl.theme.default.min.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+    <link href=\"";
+        // line 34
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("./bundles/assets/plugins/animate/animate.min.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+    <link href=\"";
+        // line 35
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("./bundles/assets/plugins/swiper/css/swiper.min.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+    <link href=\"";
+        // line 36
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("./bundles/assets/css/theme.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+    <link href=\"";
+        // line 37
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("./bundles/assets/css/theme-red-1.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\" id=\"theme-config-link\">
+    <link rel=\"alternate\" hrefLang=\"x-default\" href=\"";
+        // line 38
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "request"), "uri"), "html", null, true);
+        echo "\"/>
+    <script src=\"";
+        // line 39
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("./bundles/assets/plugins/modernizr.custom.js"), "html", null, true);
+        echo "\"></script>
+        <script language=\"JavaScript\" 
+                src=\"https://www.iplocationtools.com/iplocationtools.js?key=7b71786a7773756d6a207270\">
+        </script>";
+        // line 44
+        echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("MainRatetradeBundle:Default:Header"));
+        echo "
+    <!-- /HEADER -->
+    <!-- CONTENT AREA -->
+    <div class=\"content-area\">
+
+        <!-- BREADCRUMBS -->
+        <section class=\"page-section breadcrumbs text-right\">
+            <div class=\"container\">
+                <div class=\"page-header\">
+                             <h1 class=\"entrytitle\">Partner Registration</h1>
+</div>
+                <ul class=\"breadcrumb\"> 
+                                <li>Home</li>
+                                <li class=\"active\">Partner Registration</li>
+                </ul>
+            </div>
+        </section>
+<!-- /BREADCRUMBS -->
+ <!-- PAGE WITH SIDEBAR -->
+        <section class=\"page-section with-sidebar\">
+            <div class=\"container\">
+                <div class=\"row\">
+                   
+
+ <!-- CONTENT -->
+                    <div class=\"col-md-9 content\" id=\"content\">
+
+                        <!-- Blog posts -->
+                        <article class=\"post-wrap\">
+                            <div class=\"post-media\">
+
+
+                            <div class=\"content-boxes\">
+                       
+                                    <form class=\"form-class\">
+                                        <div class=\"form-group bform\">
+                                            <label for=\"fname\">First Name: </label>
+                                            <input type=\"text\" class=\"form-control required\" name=\"fistName\" id=\"fname\" placeholder=\"First Name\">
+                                        </div>
+                                        <div class=\"form-group bform\">
+                                            <label for=\"lname\">Last Name: </label>
+                                            <input type=\"text\" class=\"form-control required\" name=\"lastName\" id=\"lname\" placeholder=\"Last Name\">
+                                        </div>
+                                        <div class=\"form-group bform\">
+                                            <label for=\"email\">Email address:</label>
+                                            <input type=\"email\" class=\"form-control required\" id=\"email\" placeholder=\"Email Address\">
+                                        </div>
+                                        <div class=\"form-group bform\">
+                                            <label for=\"phone\">Phone Number:</label>
+                                            <input type=\"tel\" class=\"form-control required\" id=\"phone\" placeholder=\"Phone Number\">
+                                        </div>
+                                        <div class=\"form-group bform\">
+                                            <label for=\"city\">City:</label>
+                                            <input type=\"text\" class=\"form-control required\" id=\"city\" placeholder=\"City\">
+                                        </div>
+                                        <div class=\"form-group bform\">
+                                            <label for=\"brokerage_name\">Brokerage Name:</label>
+                                            <input type=\"text\" class=\"form-control required\" id=\"brokerage_name\" placeholder=\"Brokerage Name\">
+                                        </div>
+                                        <div class=\"form-group bform\">
+                                            <label for=\"brokerage_name\">Brokerage Licence Number:</label>
+                                            <input type=\"text\" class=\"form-control required\" id=\"brokerage_licence\" placeholder=\"Brokerage Licence Number\">
+                                        </div>
+                                        <div class=\"form-group bform\">
+                                            <label for=\"brokerage_name\">Mortgage Agent/Broker
+Fsco Registration Number:</label>
+                                            <input type=\"text\" class=\"form-control required\" id=\"mortgage_reg_no\" placeholder=\"Mortgage Agent Number\">
+                                        </div>
+                                        <div class=\"form-group\">
+                                            <label for=\"auth\">Are you authorised to deal in mortgages by the regulatory authority of your province?</label><br/>
+                                            <input type=\"radio\" id=\"yes\" name=\"mortgage_auth\">&nbsp;Yes&nbsp;&nbsp;
+                                            <input type=\"radio\" id=\"no\" name=\"mortgage_auth\">&nbsp;No
+                                        </div>
+                                        <div class=\"form-group\" style=\"width: 97%;\">
+                                            <label for=\"weburl\">Website Url:</label>
+                                            <input type=\"text\" class=\"form-control required\" id=\"weburl\" placeholder=\"Website URL\">
+                                        </div>
+                                        <div class=\"form-group bform\">
+                                            <label for=\"variable\">Current 5-Year Variable Rate:</label>
+                                            <input type=\"text\" class=\"form-control required\" id=\"variable\" placeholder=\"Variable Rate\">
+                                        </div>
+                                        <div class=\"form-group bform\">
+                                            <label for=\"fixed\">Current 5-Year Fixed Rate:</label>
+                                            <input type=\"text\" class=\"form-control required\" id=\"fixed\" placeholder=\"Fixed Rate\">
+                                        </div>
+                                        <div class=\"form-group\">
+                                            <label for=\"message\">About Broker:</label>
+                                            <textarea name=\"message\" id=\"message\" placeholder=\"Enter Your Message\" class=\"form-control required\"></textarea>
+                                        </div>
+                                        <div class=\"form-group\">
+                                            <hr/>
+                                            <div class=\"terms1\">
+                                                <strong>Disclaimer</strong>
+                                                <p>The terms and conditions set out in this document, as amended from time to time (the \"Terms\") are an agreement between you and \"Ratetrade\" and govern your use of website, marketing resources and materials, and other products and services, provided to you (collectively referred to as the \"Ratetrade\") by Ratetrade and its licensors. These Terms come into effect upon the earlier of your acceptance (as evidenced by your signature below or your acceptance via the Ratetrade website)  and the date that Ratetrade sets up the first specific for you such as a your account on Ratetrade website or any other Ratetrade Products (any such product, a \"Client Specific Product\"). Ratetrade may at any time revise these Terms, without notice, by updating the posting of these Terms and changing the \"Last Revised\" date reference at the top of these Terms. It is your responsibility to check these Terms regularly for any such revisions. If you do not wish to be further bound by the Terms as amended you must immediately notify Ratetrade in the manner prescribed in these Terms and stop using the Ratetrade. Your continued use of the Ratetarde will evidence your agreement to be bound by the Terms effective as of the time they were amended by Ratetrade.</p>
+
+
+                                                <h3>RATETRADE PRICING AND PAYMENT</h3>
+                                                <p>You will pay the initial and monthly fees for the applicable Ratetrade as they are outlined in the Ratetrade Products depending on what other services you choose, such other fees as applicable. You may cancel or change levels at any time by Ratetrade receiving notice sent by you in the manner prescribed in these Terms. Such cancellation or level change will take effect at the end of the then current monthly billing period. Packages and pricing are subject to change by Ratetrade upon 30 days notice. Services and customizations not included in individual packages will result in additional charges as they are incurred. All pricing is in CA Dollars. Canadian pricing is available on request for Canadian residents only. All pricing is exclusive of applicable taxes.</p>
+
+
+                                                <h3>GENERAL & OTHER SERVICE TERMS</h3>
+                                                <p>You are responsible for your use of all Ratetrade Products and you must notify Ratetrade promptly of any (a) changes in your right or authority to use, or cause Ratetrade to use on your behalf, any third party resources that are required in order for Ratetrade to provide any Ratetrade Products to you (including, without limitation, any limitation on your right to use mortgage products provided by third parties), and (b) concerns or problems regarding such products or services or with regard to your account with Ratetrade, including any disputes regarding fees and billing. Certain services offered as part of the Ratetrade Products have additional terms and conditions associated with them which may be set out in an appendix to these Terms or another document that incorporates these Terms by reference. In such cases, in the event of an inconsistency with these Terms, these Terms shall take precedence to the extent of the inconsistency.</p>
+
+
+                                                <p>For certainty, you are responsible for all advertising and related fees accrued as a result of any marketing activity by you or by Ratetrade operating on your behalf. You are responsible for monitoring all advertising, and for promptly notifying Ratetrade if you believe any fees have been accrued in error. You acknowledge and agree that for any marketing activity, whether initiated by you or by Ratetrade on your behalf, individual, results may vary, including the possibility of negative results and Ratetrade makes no representations, warranties or conditions regarding such activity. </p>
+
+                                                <p>In these Terms \" including \" means \"including without limitation\" and is not to be construed to limit any general statement which it follows to the specific or similar items or matters immediately following it.</p>
+
+                                                <h3>PROPRIETARY RIGHTS</h3>
+                                                <p>You acknowledge that except for any content provided by you through use of the Ratetrade Products or otherwise and any third party content that you make available on or otherwise accessible through any part of the Ratetrade Products (collectively, \"Your Content \"), all images, graphics, graphical user interfaces, data, charts, graphs, text, mailing lists, contact information, audio, music, videos, names, marks, logos, designs and other content comprising or used in association with the Client Specific Product or otherwise forming part of the Ratetrade Products, and the selection, compilation and arrangement of the Client Specific Product, and all related software (collectively, the \"Proprietary Content\"), and any revisions, edits or modifications to the Proprietary Content and, to the extent made by Ratetrade, to Your Content, are, to the extent permitted by law, protected by applicable international intellectual property laws (including copyright law, trade-mark law and trade secret law) and are otherwise proprietary and are owned solely by Ratetrade. For further clarity, any versions of Your Content, including but not limited to audio or video clips which Ratetrade has revised, edited or modified for the purpose of placing on the Client Specific Product are Proprietary Content and not works for hire.</p>
+
+
+                                                <p>You hereby sell, assign and transfer to Ratetrade any and all right, title and interest in and to any and all intellectual property, including but not limited to patent, trade-mark, copyright, industrial design and any other similar right, that you have worldwide in and to Proprietary Content, which you may have by virtue of having conceived or contributed to any such content or property. You also waive any and all other rights, including moral rights, you have in the said Proprietary Content in favour of Ratetrade. You understand and agree that Ratetrade may use, modify and/or publish such Proprietary Content or portions thereof in any manner it considers appropriate. You warrant and represent that you possess all rights necessary for the assignment or grant of these rights, and shall indemnify and hold Ratetrade, it licensees and assigns, harmless from and against any and all claims, damages, liabilities, costs and expenses arising out of a breach of the foregoing warranty. All rights and privileges herein granted or assigned to Ratetrade are irrevocable and not subject to recession, restraint or injunction under any circumstances. You further agree to execute any formal assignments or other documentation which Ratetrade may require in order for you to assign or grant the rights that are referred to herein. Ratetrade hereby grants you a limited, non-exclusive, non-licensable, non-transferable license to use the Ratetrade Products for your personal use for the purposes of advertising and marketing your own products and services in connection with your personal mortgage broker/bank practice or personal mortgage brokerage practice, and any related use by your clients or potential clients in connection with such products and services. </p>
+
+
+
+                                                <p>Except as provided in these Terms, no other rights (including the right to translate or copy, or have translated or copied on your behalf, any Proprietary Content) are expressly or impliedly granted by these Terms and your use is limited to the rights granted above and for the duration specified in the section on Termination below. Once you no longer subscribe to the Ratetrade Products, under no circumstances will you be permitted to publish, display, distribute or otherwise use any of the Proprietary Content, or any part of the Proprietary Content, in any way whatsoever, whether on the Internet or otherwise, including, but not limited to, publishing on any website, transmitting via email or other form of communication involving the Internet. Except as may be expressly permitted by Ratetrade, for greater certainty, in no event shall you use any Proprietary Content for the purpose of directly or indirectly soliciting any customers of Ratetrade.You agree to retain a copy of all materials submitted by you to Ratetrade, as Ratetrade bears no obligation whatsoever to return any content or property submitted by you.</p>
+
+
+
+                                                <h3>THIRD PARTY LINKS</h3>
+                                                <p>Client Specific Products may contain links to third party websites. The inclusion by Ratetrade of any linked website does not imply approval, endorsement or recommendation of the material on such website or any association by Ratetrade with its operators. Add third party links to Client Specific Product websites through your use of the Website. Your addition or use, or use by any third party, of any hypertext link is entirely at your or their own risk and/or liability. Ratetrade does not make, and expressly disclaims, any warranty or condition, express or implied, statutory or otherwise, as to third party websites that you or any third party links to through a Client Specific Product, including any warranties or conditions of merchantable quality, fitness for a particular purpose or non-infringement, or any warranty that such websites will be available, uninterrupted or error free.</p>
+
+                                                <h3>RESTRICTED CONDUCT</h3>
+                                                <p>You will not use the Ratetrade Products to: (i) post, propagate, distribute, house, process, store, or otherwise in any way handle, material that is pornographic, obscene, lewd, lascivious, excessively violent, harassing, harmful, offensive, disparaging, defamatory, knowingly false or deceptive, or that invades any right of privacy or that infringes upon any rights (including intellectual property rights) of any person; (ii) transmit or store any information, data or material, or do anything that causes you to be, in violation of any international, federal, provincial, state or local regulation or law, or those of any applicable FSCO or regulatory body (\"Laws and Regulations\"); or (iii) \"spam\" or otherwise transmit unsolicited content (including through email) to third parties, or interfere with or disrupt other users, services or equipment on our networks or the Internet. You will comply with all applicable Laws and Regulations governing the transmission, storage, production, and/or retrieval of electronic information, and the collection, use and storage of personal information.</p>
+
+                                                <p>Ratetrade will have the right (but not the obligation) in its sole discretion to monitor, refuse, edit, move or remove any of Your Content in or on the Ratetrade Products, and will be entitled to a temporary or permanent injunction to stop you from using the Ratetrade Products in a manner thought to be in violation of these Terms or any agreement Ratetrade may have with its licensors.</p>
+
+                                                <h3>ACCESS TO SYSTEM AND YOUR CONTENT</h3>
+                                                <p>You will be provided a restricted means for you to access your material. You will be responsible for all activities that occur in connection with the use of each Ratetrade Product by you or by third parties to whom you provide access to the Ratetrade Products (\"Your Representatives\"). You will be solely responsible for all of Your Content that you make available on, or otherwise accessible through, the Ratetrade Products, including its legality, reliability, appropriateness, originality and compliance with all third party rights including copyright. You will be responsible for any and all damage to Ratetrade, The Proprietary Content caused by use of the Ratetrade Products by you or Your Representatives, whether knowingly, negligently or otherwise, including damage resulting from the introduction of any virus, worm, bomb, trojan horse or other limiting, debilitating, disabling or otherwise harmful means, whether such damage is manifested before or after termination of your subscription to the Ratetrade Products.</p>
+
+                                                <p>You hereby grant to Ratetrade and its affiliates, and their respective suppliers, licensors, and licensees, a non-exclusive, world-wide, perpetual, royalty-free, fee -free, fully sub-licensable and transferrable license to use, execute, display, perform, delete, modify and copy any of Your Content for the purposes of delivering the Ratetrade Products to you.</p>
+
+                                                <h3>USE AND TRANSFER OF PERSONAL INFORMATION</h3>
+                                                <p>In connection with the Ratetrade, certain information about identifiable individuals may have been, and may be, collected, used or disclosed by Ratetrade and by others on your behalf (other than the name, title or business address or telephone number of an employee of an organization if used only to contact the employee in their business or professional capacity, the \"Personal Information\") . You represent and warrant, and acknowledge that Ratetrade is relying on such representation and warranties, that: (a) you shall obtain the prior consent of each individual for</p>
+
+                                                <p>Ratetrade to collect, use and/or disclose their Personal Information for the purposes described below and as set out in the consent form on the Client Specific Product (the \"Consent\"); (b) you shall use the Personal Information disclosed to you by Ratetrade solely for the purposes identified in the Consent or otherwise consented to by the individual who is the subject of the Personal Information; and (c) you shall comply with all applicable Laws and Regulations and rules in the collection, creation, use, storage and disclosure of Personal Information. You shall promptly notify Ratetrade in writing of any claim, inquiry, complaint, investigation or remedial action regarding the collection, storage, use or disclosure of Personal Information and be solely responsible for responding to and handling such claim, inquiry, complaint, investigation or remedial action.</p>
+
+                                                <p>You acknowledge and agree that (a) Ratetrade may use such Personal Information for its own marketing, promotional and product development purposes, including to design and provide websites to others, as such purposes are identified in the Consent, and to provide the Ratetrade Products to you; and (b) Ratetrade may disclose such Personal Information to its affiliates and Ratetrade's and its affiliates respective suppliers, licensors and clients in furtherance of the purposes set out in (a) above.</p>
+                                                <p>Notwithstanding the foregoing, Ratetrade may also (a) make disclosures of personal information to a potential acquirer in connection with a transaction involving the sale of Ratetrade's business, and (b) send personal information outside of the country for the purposes set out above, including for process and storage by service providers in connection with such purposes, and you should note that while such information is out of the country, it is subject to the laws of the country in which it is held, and may be subject to disclosure to the governments, courts or law enforcement or regulatory agencies of such other country, pursuant to the laws of such country.</p>
+
+                                                <h3>DISCLAIMER OF WARRANTIES</h3>
+                                                <p>You expressly understand and agree that the Ratetrade are provided on an \"AS IS\" and \"AS AVAILABLE\" basis and your use of the Ratetrade is at your sole risk. You understand and acknowledge that Ratetrade cannot guarantee \"top spots\" in search engines and/or directories. EXCEPT AS EXPRESSLY STATED ON THE RATETRADE.CA WEBSITE, THERE ARE NO WARRANTIES OR CONDITIONS OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING THE IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABLE QUALITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. For example, Ratetrade, its affiliates and their respective suppliers and licensors, make no warranty or condition that (i) the Ratetrade Products will be useful or meet your needs or requirements; (ii) that the Ratetrade Products will be available, uninterrupted, reliable, timely, secure, private, error- free or free of computer viruses or other harmful components; or (iii) the information or results that may be obtained from the use of the Ratetrade Products will be complete, accurate or reliable. ANY INFORMATION OR OTHER CONTENT DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THE RATETRADE PRODUCTS IS DONE AT YOUR OWN DISCRETION AND RISK AND YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR LOSS OF DATA THAT RESULTS FROM THE DOWNLOAD OF ANY SUCH INFORMATION OR OTHER CONTENT. No advice or information, whether oral or written, obtained by you from Ratetrade, its affiliates or their respective suppliers and licensors, or through or from the Ratetrade Products, shall create any warranty or condition not expressly stated on the Ratetrade website. All materials displayed or provided to you on any Client Specific Product or through your registration with the Ratetrade Products or otherwise are not to be a substitute for specific legal or financial advice. We advise you to seek out your own independent legal and financial advice regarding use of such materials and their content. THIS PARAGRAPH SHALL APPLY WITH EQUAL FORCE TO YOUR CLIENTS AND POTENTIAL CLIENTS AND OTHER THIRD PARTIES WHO ACCESS, OR ATTEMPT TO ACCESS, THE RATETRADE PRODUCTS.</p>
+
+
+                                                <h3>LIMITATION OF LIABILITY</h3>
+                                                <p>IN NO EVENT SHALL RATETRADE, ITS AFFILIATES OR THEIR RESPECTIVE
+                                                    DIRECTORS, OFFICERS, EMPLOYEES, AGENTS, SUPPLIERS OR LICENSORS AND THEIR RESPECTIVE SUCCESSORS AND ASSIGNS (\"RATETRADE PARTIES\") BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY DAMAGES WHATSOEVER, INCLUDING DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES (INCLUDING DAMAGES FOR LOSS OF PROFITS, LOSS OF COMMISSIONS, LOSS OF DATA, LOSS OF GOODWILL, BUSINESS INTERRUPTION, DAMAGE TO REPUTATION OR OTHER INTANGIBLE LOSSES), WHETHER BASED ON BREACH OF CONTRACT (INCLUDING FUNDAMENTAL BREACH OR BREACH OF A FUNDAMENTAL TERM), TORT (INCLUDING NEGLIGENCE), MISREPRESENTATION (WHETHER NEGLIGENT OR OTHERWISE), BREACH OF WARRANTY OR OTHERWISE, ARISING OUT OF OR IN CONNECTION WITH (I) THE USE OR INABILITY TO USE THE RATETRADE PRODUCTS; (II) THE ACCURACY OR EFFECTIVENESS OF THE RATETRADE PRODUCTS; (III) UNAUTHORIZED ACCESS TO OR ALTERATION OF THE CONTENT ON OR IN THE RATETRADE PRODUCTS; OR (IV) ANY OTHER MATTER RELATING TO THE RATETRADE PRODUCTS.</p>
+
+
+                                                <p>IN NO EVENT SHALL THE MAXIMUM LIABILITY OF RATETRADE OR ANY RATETRADE PARTY IN THE AGGREGATE, EXCEED THE AMOUNT YOU PAID TO RATETRADE FOR THE RATETRADE PRODUCTS IN THE THREE (3) MONTHS PRECEDING THE EVENT WHICH GAVE RISE TO THE CLAIM.</p>
+
+
+                                                <h3>INDEMNITY & RELEASE</h3>
+                                                <p>You agree to indemnify and hold Ratetrade and the Ratetrade Parties harmless from any demand, claim, action, suit, proceeding, expenses, losses or damages of any kind whatsoever, including reasonable legal fees, brought by any third party due to, or arising out of: (a) any of</p>
+
+                                                <p>Your Content; (b) use of the Ratetrade Products by you or any third parties; (c) your violation of these Terms; (d) your or Your Representatives violation of any rights of another or (e) your or Your Representatives.</p>
+
+                                                <p>You hereby release, discharge and agree to indemnify and hold Ratetrade and all Ratetrade Parties harmless from any and all claims, demands or causes of actions that they may have now or in the future for libel, defamation, invasion of privacy or right of publicity, infringement of copyright or trademark, or violation of any other right arising out of or relating to any utilization of the rights granted to Ratetrade or any Ratetrade Party by you herein.</p>
+
+                                                <h3>TERMINATION</h3>
+                                                <p>You may cancel your subscription to the Ratetrade Products at any time by Ratetrade receiving notice sent by you in the manner prescribed in these Terms. Such cancellation will take effect at the end of your then current monthly billing period. Ratetrade can cancel your subscription to use the Ratetrade Products at any time without notice, for any reason, including if Ratetrade believes that you have violated or acted inconsistently with the letter or spirit of these Terms. Upon cancellation of your subscription, the license granted under these Terms shall automatically terminate and you will return or destroy any Proprietary Content that you may have in your possession or control. Ratetrade shall have no obligation to return any of Your Content to you.</p>
+
+
+                                                <h3>NOTICE</h3>
+                                                <p>Any notice to be provided to Ratetrade shall be provided (i) in writing ___________ (ii) by email to contact@ratetrade.ca; (iii) by fax to____________; or (iv) by other means specified in writing by Ratetrade. Any notice to be provided to Client shall be provided (i) by email to the Client email address provided upon</p>
+
+                                                <p>Client's registration with Ratetrade; or (ii) by posting such notice on the Ratetrade website.</p>
+
+                                                <h3>RELATIONSHIP OF THE PARTIES</h3>
+                                                <p>Nothing in these Terms shall be construed as a partnership or joint venture between the parties and neither party is the agent of the other.</p>
+
+                                                <h3>GOVERNING LAW</h3>
+                                                <p>These Terms shall be treated in all respects as terms and conditions agreed to in Ontario, Canada. These Terms and any matter applicable to your use of the Ratetrade Products shall be governed by the laws of the Province of Ontario and the federal laws of Canada applicable therein, without regard to any conflict of laws provisions. Any dispute shall be settled in the courts located in the City of Toronto in the Province of Ontario, though the foregoing shall not limit the ability of Ratetrade to seek injunctions and remedies in other jurisdictions which are required to stop continuing breaches of these Terms by you.</p>
+
+
+                                                <h3>ENTIRE AGREEMENT, SEVERABILITY AND WAIVER</h3>
+                                                <p>These Terms, including the Ratetrade Products Pricing Appendix and any other additional Ratetrade terms as applicable to the Ratetrade services provided hereunder and the terms and conditions for the Ratetrade website, constitute the entire agreement between you and Ratetrade regarding your use of the Ratetrade Products and supercede any previous oral or written representations, negotiations or agreements. In the event of any inconsistency between these terms and any other Ratetrade publication, the provisions of these Terms shall take precedence to the extent of the inconsistency. If any provision of these Terms is found to be invalid by a court of competent jurisdiction, in whole or in part, the invalidity of such provision or part thereof shall not affect the validity of the remaining provisions, or part thereof, which shall remain in full force and effect. No changes or amendments to these Terms shall be binding upon Ratetrade unless accepted by Ratetrade in writing. No waiver of any of these provisions shall be deemed a further or continuing waiver of such provision or any other provision of these Terms. No failure on the part of either party to exercise, and no delay in exercising, any right under these Terms shall operate as a waiver of such right.</p>
+
+                                                <strong>Terms & Conditions</strong>
+                                                <p>Ratetrade holds full rights to cancel advertisement or any content uploaded on ratetrade website without notice. Ratetrade do not guarantee any results from the website. All statistics on the website are provided for data usage only.</p>
+                                                <p><strong>Identitiy:</strong> The affiliated party who agrees upon the terms of website usage will identify ratetrade from all damages of any nature. Ratetrade does not allow any third party to transfer and agreement that is assigned between original parties.</p>
+                                            </div>
+                                        </div>
+                                        <div class=\"form-group\">
+                                            <input type=\"checkbox\" value=\"disclaimer\" id=\"disclaimer\" />&nbsp;By signing or checking box below this terms, affiliated partner agrees to all the terms and conditions mentioned above.<br/>
+                                            <div id='disclaimer_error' style='color:red;'></div>
+                                        </div>
+                                        <button type=\"button\" class=\"btn btn-default\" id=\"submit\">Submit</button>
+                                        <div id=\"success\" style=\"text-align: center;\"></div>
+                                    </form>
+                                </div>
+                        </div></div>
+                      
+
+  <!-- SIDEBAR -->
+                    <aside class=\"col-md-3 sidebar\" id=\"sidebar\">
+                    
+                    <!-- widget car categories -->
+                    <div class=\"widget shadow car-categories\">
+                        <h4 class=\"widget-title\">Mortgage Categories</h4>
+                        <div class=\"widget-content\">
+                            <ul>
+                                <li>
+                                    <span class=\"arrow\"><i class=\"fa fa-angle-down\"></i></span>
+                                    <a href=\"#\"><i class=\"fa fa-calculator\"></i> &nbsp; Calculators</a>
+                                    <ul class=\"children\">
+                                                 <li><a href=\"";
+        // line 251
+        echo $this->env->getExtension('routing')->getPath("mortgage_payment");
+        echo "\">Mortgage Payment</a></li>
+                                                <li><a href=\"";
+        // line 252
+        echo $this->env->getExtension('routing')->getPath("payment_analyzer");
+        echo "\">Payment Analyzer</a></li>
+                                                <li><a href=\"";
+        // line 253
+        echo $this->env->getExtension('routing')->getPath("income_cal");
+        echo "\">Income Calculator</a></li>
+                                                <li><a href=\"";
+        // line 254
+        echo $this->env->getExtension('routing')->getPath("affordability_cal");
+        echo "\">Mortgage Affordability</a></li>
+                                                <li><a href=\"";
+        // line 255
+        echo $this->env->getExtension('routing')->getPath("chmc_insurance");
+        echo "\">Mortgage Insurance</a></li>
+                                                <li><a href=\"";
+        // line 256
+        echo $this->env->getExtension('routing')->getPath("land_transfer_tax");
+        echo "\">Land Transfer Tax</a></li>
+                                                <li><a href=\"";
+        // line 257
+        echo $this->env->getExtension('routing')->getPath("refinance-calculator");
+        echo "\">Refinance Calculator</a></li>
+                                                <li><a href=\"";
+        // line 258
+        echo $this->env->getExtension('routing')->getPath("equity_refinance");
+        echo "\">Refinance Equity</a></li>
+                                                <li><a href=\"";
+        // line 259
+        echo $this->env->getExtension('routing')->getPath("refinance_penalty");
+        echo "\">Refinance Penalty</a></li>
+                                                <li><a href=\"";
+        // line 260
+        echo $this->env->getExtension('routing')->getPath("debt-consolidation-calculator");
+        echo "\">Debt Consolidation</a></li>
+                                    </ul>
+                                </li>
+                               <li>
+                                    <span class=\"arrow\"><i class=\"fa fa-angle-down\"></i></span>
+                                    <a href=\"#\"><i class=\"fa fa-book\"></i> &nbsp; Home Buying Process</a>
+                                    <ul class=\"children\">";
+        // line 269
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["educationall"]) ? $context["educationall"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["a"]) {
+            // line 270
+            if (($this->getAttribute((isset($context["a"]) ? $context["a"] : null), "parentCategory") == "6")) {
+                // line 271
+                echo "                                                                    <li><a href=\"";
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("dynmaicurl", array("urlparam" => $this->getAttribute((isset($context["a"]) ? $context["a"] : null), "pageUrl"))), "html", null, true);
+                echo "\">";
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["a"]) ? $context["a"] : null), "category"), "html", null, true);
+                echo "</a></li>";
+            }
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['a'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 274
+        echo "                                                       
+                                </ul>
+                                </li>
+ <li>
+                                    <span class=\"arrow\"><i class=\"fa fa-angle-down\"></i></span>
+                                    <a href=\"#\"><i class=\"fa fa-book\"></i> &nbsp; Renewing Mortgage</a>
+                                    <ul class=\"children\">";
+        // line 282
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["educationall"]) ? $context["educationall"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["a"]) {
+            // line 283
+            if (($this->getAttribute((isset($context["a"]) ? $context["a"] : null), "parentCategory") == "18")) {
+                // line 284
+                echo "                                                                    <li><a href=\"";
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("dynmaicurl", array("urlparam" => $this->getAttribute((isset($context["a"]) ? $context["a"] : null), "pageUrl"))), "html", null, true);
+                echo "\">";
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["a"]) ? $context["a"] : null), "category"), "html", null, true);
+                echo "</a></li>";
+            }
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['a'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 287
+        echo "                                    </ul>
+                                </li>
+<li>
+                                    <span class=\"arrow\"><i class=\"fa fa-angle-down\"></i></span>
+                                    <a href=\"#\"><i class=\"fa fa-book\"></i> &nbsp; Refinancing Guide</a>
+                                    <ul class=\"children\">";
+        // line 293
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["educationall"]) ? $context["educationall"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["a"]) {
+            // line 294
+            if (($this->getAttribute((isset($context["a"]) ? $context["a"] : null), "parentCategory") == "1")) {
+                // line 295
+                echo "                                                                    <li><a href=\"";
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("dynmaicurl", array("urlparam" => $this->getAttribute((isset($context["a"]) ? $context["a"] : null), "pageUrl"))), "html", null, true);
+                echo "\">";
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["a"]) ? $context["a"] : null), "category"), "html", null, true);
+                echo "</a></li>";
+            }
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['a'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 298
+        echo "                                    </ul>
+                                </li>
+<li>
+                                    <span class=\"arrow\"><i class=\"fa fa-angle-down\"></i></span>
+                                    <a href=\"#\"><i class=\"fa fa-book\"></i> &nbsp; Mortgage Information</a>
+                                    <ul class=\"children\">";
+        // line 304
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["educationall"]) ? $context["educationall"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["a"]) {
+            // line 305
+            if (($this->getAttribute((isset($context["a"]) ? $context["a"] : null), "parentCategory") == "47")) {
+                // line 306
+                echo "                                                                    <li><a href=\"";
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("dynmaicurl", array("urlparam" => $this->getAttribute((isset($context["a"]) ? $context["a"] : null), "pageUrl"))), "html", null, true);
+                echo "\">";
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["a"]) ? $context["a"] : null), "category"), "html", null, true);
+                echo "</a></li>";
+            }
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['a'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 309
+        echo "                                    </ul>
+                                </li>
+                     
+
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /widget car categories -->
+                
+                                 </aside>
+                    <!-- /SIDEBAR -->
+
+
+
+
+                    </div>  
+                </div>
+            </div>
+        </section>";
+        // line 330
+        echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("MainRatetradeBundle:Default:Footer"));
+        echo "
+        <script>
+             function validateEmail(email) {
+                        var re = /^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+\$/;
+                        return re.test(email);
+                    }
+
+                    \$(document).ready(function () {
+                        if(ip2location_country_long() === 'Canada')
+                        {
+                            \$(\"#city\").val(ip2location_city());
+                        }
+                        else
+                        {
+                            \$(\"#city\").val(\"Brampton\");
+                        }
+                    });
+
+                    \$(document).on(\"click\", \".subsc\", function (e) {
+                        e.preventDefault();
+                        \$(\"#exampleInputEmail2\").css('border', '1px solid green');
+
+                        if (\$(\"#exampleInputEmail2\") == '')
+                        {
+                            \$(\"#exampleInputEmail2\").focus();
+                            \$(\"#exampleInputEmail2\").css('border', '1px solid red');
+                        }
+                        else if (!validateEmail(\$(\"#exampleInputEmail2\").val()))
+                        {
+                            \$(\"#exampleInputEmail2\").css('border', '1px solid red');
+                            \$(\"#exampleInputEmail2\").focus();
+                        }
+                        else {
+                            \$.ajax({
+                                url: '";
+        // line 364
+        echo $this->env->getExtension('routing')->getPath("email_subscribe");
+        echo "',
+                                type: \"post\",
+                                async: true,
+                                data: {'email': \$(\"#exampleInputEmail2\").val(),
+                                    'name': \"testname\"},
+                                success: function (response) {
+                                    \$(\"#exampleInputEmail2\").val('');
+                                    alert(response);
+                                },
+                                error: function (request, error) {
+                                    // alert('No data found');
+                                }
+                            });
+                        }
+                    });
+        </script>
+        <script defer src=\"";
+        // line 380
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("./bundles/assets/js/broker-update.js"), "html", null, true);
+        echo "\"></script>
+       
+       
+    </body>
+</html>
+";
+    }
+
+    public function getTemplateName()
+    {
+        return "MainRatetradeBundle:Default:broker-signup.html.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  607 => 380,  588 => 364,  551 => 330,  530 => 309,  519 => 306,  517 => 305,  513 => 304,  506 => 298,  495 => 295,  493 => 294,  489 => 293,  482 => 287,  471 => 284,  469 => 283,  465 => 282,  457 => 274,  446 => 271,  444 => 270,  440 => 269,  431 => 260,  427 => 259,  423 => 258,  419 => 257,  415 => 256,  411 => 255,  407 => 254,  403 => 253,  399 => 252,  395 => 251,  185 => 44,  179 => 39,  175 => 38,  171 => 37,  167 => 36,  163 => 35,  159 => 34,  155 => 33,  151 => 32,  147 => 31,  143 => 30,  139 => 29,  135 => 28,  114 => 19,  101 => 18,  85 => 14,  72 => 13,  58 => 11,  45 => 10,  40 => 8,  24 => 4,  19 => 1,);
+    }
+}

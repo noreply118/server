@@ -1,0 +1,417 @@
+<?php
+
+/* AcmeDemoBundle:Demo:debt-console.html.twig */
+class __TwigTemplate_7fdd0344c7a09714ec1b6a164439eb2f15db65782375223450292e3745c15c36 extends Twig_Template
+{
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->parent = false;
+
+        $this->blocks = array(
+        );
+    }
+
+    protected function doDisplay(array $context, array $blocks = array())
+    {
+        // line 1
+        echo "<html>
+    <head>
+        <title>Debt Consolidation Calculator</title>
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 4
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/acmedemo/css/max-equity-cal.css"), "html", null, true);
+        echo "\">
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 5
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("./bundles/acmedemo/css/common.css"), "html", null, true);
+        echo "\">
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 6
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("./bundles/acmedemo/css/products.css"), "html", null, true);
+        echo "\">
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 7
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("./bundles/acmedemo/css/add-product.css"), "html", null, true);
+        echo "\">
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 8
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("./bundles/acmedemo/css/admin-manager.css"), "html", null, true);
+        echo "\">
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 9
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("./bundles/acmedemo/css/emicalculator.css"), "html", null, true);
+        echo "\">
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 10
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("./bundles/acmedemo/css/jquery-ui.css"), "html", null, true);
+        echo "\">
+    </head>
+
+    <body>   <div class=\"debt-left-details\">
+            <form class=\"imageform\">
+                <div class=\"fields\" style=\"padding:0px;\">
+                    <div class=\"box-debt\">
+                        Type
+                    </div>
+                    <div class=\"box-debt\">
+                        Debt Outstanding
+                    </div>
+                    <div class=\"box-debt\">
+                        Annual Interest
+                    </div>
+                    <div class=\"box-debt\">
+                        Min Monthly Payment
+                    </div>
+                </div>
+                <div class=\"fields\" style=\"padding:0px;\">
+                    <div class=\"box-debt\">
+                        <select>
+                            <option selected>Credit Card</option>
+                            <option>Automobile</option>
+                            <option>Line Of Credit</option>
+                            <option>Second Mortgage</option>
+                            <option>New Debt</option>
+                        </select>
+                    </div>
+                    <div class=\"box-debt\">
+                        <input type=\"text\" class=\"debt-outstand\" value=\"5,000\" placeholder=\"\$\"/>
+                    </div>
+                    <div class=\"box-debt\">
+                        <input type=\"text\" class=\"annual-interest\" placeholder=\"%\"/>
+                    </div>
+                    <div class=\"box-debt\">
+                        <input type=\"text\" class=\"min-month\" placeholder=\"\$\"/>
+                    </div>
+                </div>
+                <div class=\"fields debt-div\" style=\"padding:0px;\">
+                    <div class=\"box-debt\">
+                        <select>
+                            <option>Credit Card</option>
+                            <option>Automobile</option>
+                            <option>Line Of Credit</option>
+                            <option>Second Mortgage</option>
+                            <option selected>New Debt</option>
+                        </select>
+                    </div>
+                    <div class=\"box-debt\">
+                        <input type=\"text\" class=\"debt-outstand\" value=\"10,000\" placeholder=\"\$\"/>
+                    </div>
+                    <div class=\"box-debt\">
+                        <input type=\"text\" class=\"annual-interest\" placeholder=\"%\"/>
+                    </div>
+                    <div class=\"box-debt\">
+                        <input type=\"text\" class=\"min-month\" placeholder=\"\$\"/>
+                    </div>
+                </div>
+                <hr>
+                <div class=\"box-debt headdebt\">
+                    <a href=\"#\" class=\"add-debt\">Add New Debt</a>
+                </div>
+                <div style=\"clear:both\"></div>
+                <div class=\"entry-content\">
+                    <div id=\"emicalcalulatorinnerform\" style=\"padding: 0px 0px 10px;\">
+                        <div class=\"pbox\">
+                            <div class=\"lamount\">
+                                <label for=\"loanamount\" class=\"orange\"><strong>Current Property Value (\$)</strong> </label>
+                                <span></span></div>
+                            <div class=\"datafeild\">
+                                <input id=\"loanamount\" name=\"loanamount\" value=\"\" type=\"text\" />
+                                <div id=\"loanamountslider\" style=\"margin-top: 45px;\"></div>
+                                <div id=\"loanamountsteps\" class=\"steps\">
+                                    <span class=\"tick\" style=\"left: 0%;\">|<br/><span class=\"marker\">0</span></span>
+                                    <span class=\"tick\" style=\"left: 25%;\">|<br/><span class=\"marker\">\$250,000</span></span>
+                                    <span class=\"tick\" style=\"left: 50%;\">|<br/><span class=\"marker\">\$500,000</span></span>
+                                    <span class=\"tick\" style=\"left: 75%;\">|<br/><span class=\"marker\">\$750,000</span></span>
+                                    <span class=\"tick\" style=\"left: 100%;\">|<br/><span class=\"marker\">\$1M</span></span>
+                                </div></div></div>
+                        <div class=\"pbox\">
+                            <div class=\"lamount\">
+                                <label for=\"leftamount\" class=\"orange\"><strong>Remaining Balance on Mortgage (\$)</strong> </label>
+                                <span></span></div>
+                            <div class=\"datafeild\">
+                                <input id=\"leftamount\" name=\"leftamount\" value=\"\" type=\"text\" />
+                                <div id=\"leftamountslider\" style=\"margin-top: 45px;\"></div>
+                                <div id=\"leftamountsteps\" class=\"steps\">
+                                    <span class=\"tick\" style=\"left: 0%;\">|<br/><span class=\"marker\">0</span></span>
+                                    <span class=\"tick\" style=\"left: 25%;\">|<br/><span class=\"marker\">\$250,000</span></span>
+                                    <span class=\"tick\" style=\"left: 50%;\">|<br/><span class=\"marker\">\$500,000</span></span>
+                                    <span class=\"tick\" style=\"left: 75%;\">|<br/><span class=\"marker\">\$750,000</span></span>
+                                    <span class=\"tick\" style=\"left: 100%;\">|<br/><span class=\"marker\">\$1M</span></span>
+                                </div></div></div>
+                    </div>
+                </div>
+                <div style=\"clear:both\"></div>  
+                <div style=\"text-align: center;\" class=\"datadebts\">
+                    <label id=\"msg\" style=\"padding: 10px;border: 1px solid;\">Equity Not Avilable</label>
+                </div>
+                <br/>
+                <div class=\"pbox\">
+                    <div class=\"lamount\">
+                        <label for=\"equityamount\" class=\"orange\"><strong>How much Equity want to access? (\$)</strong> </label>
+                        <span></span></div>
+                    <div class=\"datafeild\">
+                        <input id=\"equityamount\" name=\"equityamount\" value=\"15,000\" type=\"text\" disabled=\"disabled\"/>
+                        <div id=\"equityamountslider\" style=\"margin-top: 45px;\"></div>
+                        <div id=\"equityamountsteps\" class=\"steps\">
+                            <span class=\"tick\" style=\"left: 0%;\">|<br/><span class=\"marker\">0</span></span>
+                            <span class=\"tick\" style=\"left: 100%;\">|<br/><span class=\"marker\">Max Equity</span></span>
+                        </div></div></div>
+                <div style=\"clear:both\"></div>
+                <div style=\"text-align: center;\" class=\"datadebts\">
+                    <label style=\"padding: 10px;border: 1px solid;\">New Mortgage Amount = <input id=\"new-mort\" value=\"\" type=\"text\" disabled=\"disabled\"/></label>
+                </div>
+                <div class=\"refdetail\">
+                    <h2 style=\"text-align: center;\"> Estimate Penalty </h2>
+                    <div style=\"clear:both\"></div>
+                    <div class=\"pbox\">
+                        <div class=\"lamount\"> 
+                            <label class=\"orange\">
+                                <strong>Current Mortgage Payment (\$)</strong>
+                            </label></div>
+                        <div class=\"datafeild\">
+                            <div class=\"fields\">
+                                <input id=\"cur-mort\" value=\"1,250\" type=\"text\" style=\"width:50%;\"/>
+                            </div></div></div>
+                    <div style=\"clear:both\"></div>
+                    <div class=\"pbox\">
+                        <div class=\"lamount\">
+                            <label class=\"orange\">
+                                <strong>How offen do you make payment?</strong>
+                            </label></div>
+                        <div class=\"datafeild\">
+                            <div class=\"fields\">
+                                <select id=\"month\" style=\"width:50%;\">
+                                    <option value=\"monthly\">Monthly</option>
+                                    <option value=\"semi_monthly\">Semi Monthly</option>
+                                    <option value=\"acc_bi_weekly\">Accelerated Bi-Weekly</option>
+                                    <option value=\"weekly\">Weekly</option>
+                                </select>
+                            </div></div></div>
+                    <div style=\"clear:both\"></div>
+                    <div class=\"pbox\">
+                        <div class=\"lamount\">
+                            <label class=\"orange\">
+                                <strong>Mortgage Start Date</strong>
+                            </label></div>
+                        <div class=\"datafeild\">
+                            <div class=\"fields\">
+                                <select id=\"date\" style=\"width:30%;\"><option value=\"1\">1</option><option value=\"2\">2</option><option value=\"3\">3</option><option value=\"4\">4</option><option value=\"5\">5</option><option value=\"6\">6</option><option value=\"7\">7</option><option value=\"8\">8</option><option value=\"9\">9</option><option value=\"10\">10</option><option value=\"11\">11</option><option value=\"12\">12</option><option value=\"13\">13</option><option value=\"14\">14</option><option value=\"15\">15</option><option value=\"16\">16</option><option value=\"17\">17</option><option value=\"18\">18</option><option value=\"19\">19</option><option value=\"20\">20</option><option value=\"21\">21</option><option value=\"22\">22</option><option value=\"23\">23</option><option value=\"24\">24</option><option value=\"25\">25</option><option value=\"26\">26</option><option value=\"27\">27</option><option value=\"28\">28</option><option value=\"29\">29</option><option value=\"30\">30</option></select>
+                                &nbsp;
+                                <select id=\"month\" style=\"width:30%;\">
+                                    <option value=\"1\">January</option>
+                                    <option value=\"2\">February</option>
+                                    <option value=\"3\">March</option>
+                                    <option value=\"4\">April</option>
+                                    <option value=\"5\">May</option>
+                                    <option value=\"6\">June</option>
+                                    <option value=\"7\">July</option>
+                                    <option value=\"8\">August</option>
+                                    <option value=\"9\">September</option>
+                                    <option value=\"10\">October</option>
+                                    <option value=\"11\">November</option>
+                                    <option value=\"12\">December</option>
+                                </select>
+                                &nbsp;
+                                <select id=\"year\" style=\"width:30%;\"><option value=\"2000\">2000</option><option value=\"2001\">2001</option><option value=\"2002\">2002</option><option value=\"2003\">2003</option><option value=\"2004\">2004</option><option value=\"2005\">2005</option><option value=\"2006\">2006</option><option value=\"2007\">2007</option><option value=\"2008\">2008</option><option value=\"2009\">2009</option><option value=\"2010\">2010</option><option value=\"2011\">2011</option><option value=\"2012\">2012</option><option value=\"2013\">2013</option><option value=\"2014\">2014</option><option value=\"2015\">2015</option><option value=\"2016\" selected>2016</option></select>
+                            </div></div></div>
+                    <div style=\"clear:both\"></div>
+                    <div class=\"pbox\">
+                        <div class=\"lamount\">
+                            <label class=\"orange\">
+                                <strong>Mortgage Original Term</strong>
+                            </label></div>
+                        <div class=\"datafeild\">
+                            <div class=\"fields\">
+                                <select id=\"mort-term\" style=\"width:30%;\">
+                                    <option>Select Term</option>
+                                    <option>1</option>
+                                    <option selected>3</option>
+                                    <option>5</option>
+                                    <option>10</option>
+                                </select></div></div></div>
+                    <div style=\"clear:both\"></div>
+                    <div class=\"pbox\">
+                        <div class=\"lamount\">
+                            <label class=\"orange\">
+                                <strong>Type of Existing Mortgage</strong>
+                            </label></div>
+                        <div class=\"datafeild\">
+                            <div class=\"fields\">
+                                <input type=\"radio\" name=\"mort-type\" class=\"mort-type\" value=\"variable\" checked=\"checked\"/> Variable
+                                &nbsp;&nbsp;<input type=\"radio\" name=\"mort-type\" class=\"mort-type\" value=\"fixed\" /> Fixed   
+                            </div></div></div>
+                    <div style=\"clear:both\"></div>
+                    <div class=\"pbox\">
+                        <div class=\"sep lint\">
+                            <label for=\"loaninterest\" class=\"orange\"><strong>Existing Mortgage Rate (%)</strong> </label>
+                            <span style=\"height: 41px;\"></span></div> <div class=\"datafeild\">
+                            <input id=\"loaninterest\" name=\"loaninterest\" value=\"2.99\" type=\"text\" />
+                            <div id=\"loaninterestslider\"></div>
+                            <div id=\"loanintereststeps\" class=\"steps\">
+                                <span class=\"tick\" style=\"left: 0%;\">|<br/><span class=\"marker\">0</span></span>
+                                <span class=\"tick\" style=\"left: 16.67%;\">|<br/><span class=\"marker\">1.75</span></span>\t\t\t\t            
+                                <span class=\"tick\" style=\"left: 33.34%;\">|<br/><span class=\"marker\">3.5</span></span>
+                                <span class=\"tick\" style=\"left: 50%;\">|<br/><span class=\"marker\">5</span></span>
+                                <span class=\"tick\" style=\"left: 66.67%;\">|<br/><span class=\"marker\">6.75</span></span>\t\t\t\t            
+                                <span class=\"tick\" style=\"left: 83.34%;\">|<br/><span class=\"marker\">8.5</span></span>
+                                <span class=\"tick\" style=\"left: 100%;\">|<br/><span class=\"marker\">10</span></span>
+                            </div>
+                        </div></div>
+                    <div style=\"clear:both\"></div>  
+                    <div class=\"pbox\"> 
+                        <div class=\"sep lint\">
+                            <label for=\"newloaninterest\" class=\"orange\"><strong>New Mortgage Rate (%)</strong> </label>
+                            <span style=\"height: 41px;\"></span></div> <div class=\"datafeild\">
+                            <input id=\"newloaninterest\" name=\"newloaninterest\" value=\"1.99\" type=\"text\" />
+                            <div id=\"newloaninterestslider\"></div>
+                            <div id=\"loanintereststeps\" class=\"steps\">
+                                <span class=\"tick\" style=\"left: 0%;\">|<br/><span class=\"marker\">0</span></span>
+                                <span class=\"tick\" style=\"left: 16.67%;\">|<br/><span class=\"marker\">1.75</span></span>\t\t\t\t            
+                                <span class=\"tick\" style=\"left: 33.34%;\">|<br/><span class=\"marker\">3.5</span></span>
+                                <span class=\"tick\" style=\"left: 50%;\">|<br/><span class=\"marker\">5</span></span>
+                                <span class=\"tick\" style=\"left: 66.67%;\">|<br/><span class=\"marker\">6.75</span></span>\t\t\t\t            
+                                <span class=\"tick\" style=\"left: 83.34%;\">|<br/><span class=\"marker\">8.5</span></span>
+                                <span class=\"tick\" style=\"left: 100%;\">|<br/><span class=\"marker\">10</span></span>
+                            </div></div></div>
+                    <div style=\"clear:both\"></div>
+                    <div class=\"pbox\">
+                        <div class=\"lamount\">
+                            <label class=\"orange\">
+                                <strong>Province</strong>
+                            </label></div> <div class=\"datafeild\">
+                            <div class=\"fields\">
+                                <select id=\"province\" name=\"province\" >
+                                    <option value=\"AL\">Alberta</option>
+                                    <option value=\"BC\">British Columbia</option>
+                                    <option value=\"MA\">Manitoba</option>
+                                    <option value=\"NB\">New Brunswick</option>
+                                    <option value=\"NE\">Newfoundland</option>
+                                    <option value=\"NS\">Nova Scotia</option>
+                                    <option value=\"NT\">Northwest Territories</option>
+                                    <option value=\"NU\">Nunavut</option>
+                                    <option value=\"ON\" selected=\"selected\">Ontario</option>
+                                    <option value=\"PE\">Prince Edward Island</option>
+                                    <option value=\"QU\">Quebec</option>
+                                    <option value=\"SK\">Saskatchewan</option>
+                                    <option value=\"YU\">Yukon</option>\t\t\t\t
+                                </select>    
+                            </div></div></div>
+                    <div style=\"clear:both\"></div>
+                    <div class=\"pbox\">
+                        <div class=\"lamount\">
+                            <label class=\"orange\">
+                                <strong>Mortgage Provider</strong>
+                            </label></div> <div class=\"datafeild\">
+                            <div class=\"fields\">
+                                <select id=\"provider\" name=\"provider\" style=\"width:50%;\">
+                                    <option value=\"hsbc\">HSBC</option>
+                                    <option value=\"rbc\">RBC</option>
+                                    <option value=\"bmo\">BMO</option>
+                                    <option value=\"other\">Other</option>
+                                </select>
+                            </div></div></div></div>   
+                <div class=\"headdebt\"><h2 style=\"text-align: center;\">Debt Consolidation</h2></div>
+                <div id=\"consolid\">
+                    <div class=\"con-box-debt\" style=\"width:99%;color: #5CB426;border: none;\">Yes! You can consolidate debt through a mortgage refinance.</div>
+                    <div class=\"con-box-debt\">&nbsp;</div>
+                    <div class=\"con-box-debt\"><b>Current Status</b></div>
+                    <div class=\"con-box-debt\"><b>After Consolidation</b></div>
+                    <div class=\"con-box-debt\">Non Mortgage Debt</div>
+                    <div class=\"con-box-debt\"><input type=\"text\" value=\"\" id=\"non-mort-debt\" disabled=\"disabled\"/></div>
+                    <div class=\"con-box-debt\"><input type=\"text\" value=\"\" id=\"new-non-mort-debt\" disabled=\"disabled\"/></div>
+                    <div class=\"con-box-debt\">Penalty</div>
+                    <div class=\"con-box-debt\"><input type=\"text\" value=\"\" disabled=\"disabled\"/></div>
+                    <div class=\"con-box-debt\"><input type=\"text\" value=\"\" id=\"mortgage-penalty\" disabled=\"disabled\"/></div>
+                    <div class=\"con-box-debt\">Mortgage Debt</div>
+                    <div class=\"con-box-debt\"><input type=\"text\" value=\"\" id=\"mort-debt\" disabled=\"disabled\"/></div>
+                    <div class=\"con-box-debt\"><input type=\"text\" value=\"\" id=\"new-mort-debt\" disabled=\"disabled\"/></div>
+                    <div class=\"con-box-debt\"><b>Total Debt</b></div>
+                    <div class=\"con-box-debt\"><input type=\"text\" value=\"\" id=\"total-debt\" disabled=\"disabled\"/></div>
+                    <div class=\"con-box-debt\"><input type=\"text\" value=\"\" id=\"new-total-debt\" disabled=\"disabled\"/></div>
+                    <div class=\"con-box-debt\">Existing Rate</div>
+                    <div class=\"con-box-debt\"><input type=\"text\" value=\"\" id=\"exist-rate\" disabled=\"disabled\"/></div>
+                    <div class=\"con-box-debt\"><input type=\"text\" value=\"\" id=\"new-rate\" disabled=\"disabled\"/></div>
+                    <div class=\"con-box-debt\">Mortagage Payment</div>
+                    <div class=\"con-box-debt\"><input type=\"text\" value=\"\" id=\"old-pay\" disabled=\"disabled\"/></div>
+                    <div class=\"con-box-debt\"><input type=\"text\" value=\"\" id=\"new-pay\" disabled=\"disabled\"/></div>
+                </div>
+                <div id=\"non-consolid\" style=\"height: 400px;\">
+                    <div class=\"con-box-debt\" style=\"width:99%;color: #E45630;border: none;\">No! You can't consolidate debt through a mortgage refinance.</div>
+                </div>
+            </form>
+        </div>
+        <script type=\"text/javascript\" src=\"";
+        // line 306
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/acmedemo/js/jquery.min.js"), "html", null, true);
+        echo "\"></script>
+        <script type=\"text/javascript\" src=\"";
+        // line 307
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/acmedemo/js/jquery_ss.js"), "html", null, true);
+        echo "\"></script>
+        <script type=\"text/javascript\" src=\"";
+        // line 308
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/acmedemo/js/jquery.ui.widget.min.js"), "html", null, true);
+        echo "\"></script>
+        <script type=\"text/javascript\" src=\"";
+        // line 309
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/acmedemo/js/jquery.ui.accordion.min.js"), "html", null, true);
+        echo "\"></script>
+        <script type=\"text/javascript\" src=\"";
+        // line 310
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/acmedemo/js/jquery.ui.tabs.min.js"), "html", null, true);
+        echo "\"></script>
+        <script type=\"text/javascript\" src=\"";
+        // line 311
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/acmedemo/js/superfish.js"), "html", null, true);
+        echo "\"></script>
+        <script type=\"text/javascript\" src=\"";
+        // line 312
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/acmedemo/js/jquery.loadmask.min.js"), "html", null, true);
+        echo "\"></script>
+        <script type=\"text/javascript\" src=\"";
+        // line 313
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/acmedemo/js/globalize.min.js"), "html", null, true);
+        echo "\"></script>
+        <script type=\"text/javascript\" src=\"";
+        // line 314
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/acmedemo/js/debt.js"), "html", null, true);
+        echo "\"></script>
+        <script type=\"text/javascript\" src=\"";
+        // line 315
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/acmedemo/js/jquery.ui.mouse.min.js"), "html", null, true);
+        echo "\"></script>
+        <script type=\"text/javascript\" src=\"";
+        // line 316
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/acmedemo/js/jquery.ui.slider.min.js"), "html", null, true);
+        echo "\"></script>
+        <script type=\"text/javascript\" src=\"";
+        // line 317
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/acmedemo/js/jquery.ui.datepicker.min.js"), "html", null, true);
+        echo "\"></script>
+        <script>
+            \$(\".add-debt\").click(function (e) {
+                e.preventDefault();
+                \$(\".debt-div:last\").clone().insertAfter(\".debt-div:last\");
+            });
+        </script>
+    </body>
+</html>";
+    }
+
+    public function getTemplateName()
+    {
+        return "AcmeDemoBundle:Demo:debt-console.html.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  391 => 317,  387 => 316,  383 => 315,  379 => 314,  375 => 313,  371 => 312,  367 => 311,  363 => 310,  359 => 309,  355 => 308,  351 => 307,  347 => 306,  48 => 10,  44 => 9,  40 => 8,  36 => 7,  32 => 6,  28 => 5,  24 => 4,  19 => 1,);
+    }
+}

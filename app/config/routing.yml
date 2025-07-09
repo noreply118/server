@@ -1,0 +1,5 @@
+acme_demo:
+    resource: "@AcmeDemoBundle/Resources/config/routing.yml"
+main_ratetrade:
+    resource: "@MainRatetradeBundle/Resources/config/routing.yml"
+    prefix:   /

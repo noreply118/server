@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0;">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="/symfonyratetrade/web/bundles/acmedemo/css/common.css">
+<link rel="stylesheet" type="text/css" href="/symfonyratetrade/web/bundles/acmedemo/css/login.css">
+</head>
+<body>
+<div class="header">
+<div class="wrapper">
+<a href="#" onclick="window.history.back();" class="home-ico"><img src="/symfonyratetrade/web/bundles/acmedemo/images/back.png"></a>
+  <span class="page-name" style="width:60%;">Login</span>
+  </div>
+</div>
+<div class="headerfix"></div>
+<div class="wrapper bodywrapper">
+          <form  action="{{path('logincheck')}}" method="post">
+          <h3>Don't Have an Account, <div style="display:inline-block;"><a id="login-back" href="/">Register Now</a></div></h3>
+                           <label>Mobile Number</label>
+                 <input type="text" id="username" placeholder="Mobile Number" name="_username" value=""/>
+                 <label>Password</label>
+                 <input type="password" id="password" placeholder="Password" name="_password" value=""/>
+          <input type="submit" value="Login" />
+          <a href="#" id="forgotpass">Forgot Password?</a>
+          </form>
+<div class="recoverpass">
+<a href="#" class="closerecover">X</a>
+<div style="clear:both"></div>
+<form method="post" name="recoverpass" action="" id="recoveryform">
+<span>Send Password to Your Registered Mobile No.</span>
+<input type="text" name="rmobile" id="rmobile" class="rmobile" placeholder="Enter Registered Mobile No.*" maxlength="10">
+<input type="button" name="rsubmit" id="rsubmit" value="Send">
+</form>
+<div id="success"></div>
+<div id="fail"></div>
+</div>
+</div> 
+</body>
+</html>

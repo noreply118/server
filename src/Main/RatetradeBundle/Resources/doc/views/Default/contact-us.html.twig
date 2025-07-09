@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+    <head>
+        <title> {% for a in educationall %}{% if a.id == '36' %}{{a.ptitle}}{% endif %}{% endfor %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=content-width, initial-scale=1">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="{{ app.request.uri }}">  
+        <meta name="geo.region" content="CA" />
+        <meta name="title" content="{% for a in educationall %}{% if a.id == '36' %}{{a.ptitle}}{% endif %}{% endfor %}">
+        <meta name="description" content="{% for a in educationall %}{% if a.id == '36' %}{{a.mdescription}}{% endif %}{% endfor %}"> 
+        <meta property="og:type" content="article" />
+        <meta name="og:title" content="{% for a in educationall %}{% if a.id == '36' %}{{a.ptitle}}{% endif %}{% endfor %}">
+        <meta name="og:description" content="{% for a in educationall %}{% if a.id == '36' %}{{a.mdescription}}{% endif %}{% endfor %}">
+        <meta property="og:site_name" content="Rate Trade" />
+        <meta property="article:publisher" content="https://www.facebook.com/ratetrade/" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:description" content="{% for a in educationall %}{% if a.id == '36' %}{{a.mdescription}}{% endif %}{% endfor %}">
+        <meta name="twitter:title" content="{% for a in educationall %}{% if a.id == '36' %}{{a.ptitle}}{% endif %}{% endfor %}">
+        <meta name="twitter:site" content="@ratetrade" />
+        <meta name="twitter:creator" content="@ratetrade" /> 
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('./bundles/assets/ico/favicon.png')}}">
+    <link rel="shortcut icon" href="{{asset('./bundles/assets/ico/favicon.ico')}}">
+    <link href="{{asset('./bundles/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/bootstrap-select/css/bootstrap-select.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/fontawesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/prettyphoto/css/prettyPhoto.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/owl-carousel2/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/owl-carousel2/assets/owl.theme.default.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/animate/animate.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/swiper/css/swiper.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/css/theme.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/css/theme-red-1.css')}}" rel="stylesheet" id="theme-config-link">
+    <script src="{{asset('./bundles/assets/plugins/modernizr.custom.js')}}"></script>
+    
+     {{ render(controller('MainRatetradeBundle:Default:Header')) }}
+           <!-- /HEADER -->
+    <!-- CONTENT AREA -->
+    <div class="content-area">
+
+        <!-- BREADCRUMBS -->
+        <section class="page-section breadcrumbs text-right">
+            <div class="container">
+                <div class="page-header">
+                             <h1 class="entrytitle">Contact Us</h1>
+</div>
+                <ul class="breadcrumb"> 
+                                <li>Home</li>
+                                <li class="active">Contact Us</li>
+                </ul>
+            </div>
+        </section>
+<!-- /BREADCRUMBS -->
+
+    <!-- PAGE WITH SIDEBAR -->
+        <section class="page-section with-sidebar">
+            <div class="container">
+                <div class="row">
+                    
+                    <!-- CONTENT -->
+                    <div class="col-md-9 content" id="content">
+
+                        <!-- Blog posts -->
+                        <article class="post-wrap">
+                            <div class="post-media">
+
+
+                            <div class="content-boxes">
+                                <p><strong>Contact Us</strong></p>
+                                <div class="content-boxes">                       
+                                    <form class="form-class">
+                                        <div class="form-group bform">
+                                            <label for="fname">First Name: </label>
+                                            <input type="text" class="form-control required" name="fistName" id="fname" placeholder="First Name">
+                                        </div>
+                                        <div class="form-group bform">
+                                            <label for="lname">Last Name: </label>
+                                            <input type="text" class="form-control required" name="lastName" id="lname" placeholder="Last Name">
+                                        </div>
+                                        <div class="form-group bform">
+                                            <label for="email">Email address:</label>
+                                            <input type="email" class="form-control required" id="email" placeholder="Email Address">
+                                        </div>
+                                        <div class="form-group bform">
+                                            <label for="phone">Phone Number:</label>
+                                            <input type="tel" class="form-control required" id="phone" placeholder="Phone Number">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message">Query:</label>
+                                            <textarea name="message" id="message" placeholder="Enter Your Query" class="form-control required"></textarea>
+                                        </div>
+                                        <button type="button" class="btn btn-default consubt" id="submit">Submit</button>
+                                        <div id="success" style="text-align: center;"></div>
+                                    </form>
+                                   </div>
+                                </div>
+
+
+                            </article>
+</div>
+                            
+
+ <!-- SIDEBAR -->
+                    <aside class="col-md-3 sidebar">
+                    
+                            <div class="address">
+                                
+                                
+                                <address>
+                                    <strong>Email:</strong><br/>
+                                        <a href="mailto:contact@ratetrade.ca">contact@ratetrade.ca</a><br/>
+                                        <a href="mailto:contact@ratetrade.ca">info@ratetrade.ca</a><br/><br/>
+                                  
+                                </address>
+                       
+
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </section>
+        {{ render(controller('MainRatetradeBundle:Default:Footer')) }}
+ 
+        <script>
+            function validateEmail(email) {
+                var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                return re.test(email);
+            }
+
+            $(document).on("click", ".subsc", function(e) {
+                e.preventDefault();
+                $("#exampleInputEmail2").css('border', '1px solid green');
+
+                if ($("#exampleInputEmail2") == '')
+                {
+                    $("#exampleInputEmail2").focus();
+                    $("#exampleInputEmail2").css('border', '1px solid red');
+                }
+                else if (!validateEmail($("#exampleInputEmail2").val()))
+                {
+                    $("#exampleInputEmail2").css('border', '1px solid red');
+                    $("#exampleInputEmail2").focus();
+                }
+                else {
+                    $.ajax({
+                        url: '{{path('email_subscribe')}}',
+                        type: "post",
+                        async: true,
+                        data: {'email': $("#exampleInputEmail2").val(),
+                            'name': "testname"},
+                        success: function(response) {
+                            $("#exampleInputEmail2").val('');
+                            alert(response);
+                        },
+                        error: function(request, error) {
+                            // alert('No data found');
+                        }
+                    });
+                }
+            });
+
+            $(document).on("change", ".required", function() {
+                $(this).css('border', '1px solid green');
+
+                if ($(this).val() == '')
+                {
+                    $(this).focus();
+                    $(this).css('border', '1px solid red');
+                }
+
+                var id = $(this).attr('id');
+                if (id == 'email' && !validateEmail($("#email").val()))
+                {
+                    $("#email").focus();
+                    $("#email").css('border', '1px solid red');
+                }
+            });
+
+            $(document).on("click", "#submit", function(e) {
+
+                if ($("#fname").val() == '')
+                {
+                    $("#fname").focus();
+                    $("#fname").css('border', '1px solid red');
+                }
+                else if ($("#lname").val() == '')
+                {
+                    $("#lname").focus();
+                    $("#lname").css('border', '1px solid red');
+                }
+                else if ($("#email").val() == '')
+                {
+                    $("#email").focus();
+                    $("#email").css('border', '1px solid red');
+                }
+                else if (!validateEmail($("#email").val()))
+                {
+                    $("#email").css('border', '1px solid red');
+                    $("#email").focus();
+                }
+                else if ($("#phone").val() == '')
+                {
+                    $("#phone").focus();
+                    $("#phone").css('border', '1px solid red');
+                }
+                else {
+                    var currentRequest = null;
+                    $("#submit").text("Please Wait..");
+                    var formData = {
+                        fname: $("#fname").val(),
+                        lname: $("#lname").val(),
+                        email: $("#email").val(),
+                        phone: $("#phone").val(),
+                        message: $("#message").val()
+                    };
+                    currentRequest = $.ajax({
+                        type: "post",
+                        async: true,
+                        url: "{{path('contact_us_update')}}",
+                        data: formData,
+                        beforeSend: function() {
+                            if (currentRequest != null) {
+                                currentRequest.abort();
+                            }
+                        },
+                        success: function(response) {
+                            $("#submit").text("Submit");
+                            $("#success").text("Data Captured Successfully");
+                            $("#success").css('color', 'green');
+                            $("#fname").val("");
+                            $("#lname").val("");
+                            $("#email").val("");
+                            $("#phone").val("");
+                            $("#message").val("");
+                            $(".required").removeAttr('style');
+                        },
+                        error: function(request, error) {
+                            $("#success").text("Failed! Try Again");
+                            $("#success").css('color', 'red');
+                            $("#submit").text("Submit");
+                        }
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

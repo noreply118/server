@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0;">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Mortgage Penalty to Refinance</title>
+        <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/common.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/products.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/add-product.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/admin-manager.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/emicalculator.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/jquery-ui.css')}}">
+    </head>
+    <body>
+        <div class="header">
+            <div class="wrapper"> <a href="#" onclick="window.history.back();" class="home-ico">
+                    <img src="/symfonyratetrade/web/bundles/acmedemo/images/back.png">
+                </a> 
+                <span class="page-name">Penalty Calculator</span> </div>
+        </div>
+        <div class="headerfix"></div>
+        <div class="wrapper bodywrapper">
+            <div class="left-nav"> 
+                <a href="{{path('mortgage_payment')}}">EMI Calculator</a>
+                <a href="{{path('chmc_insurance')}}">CHMC Calculator</a>
+                <a href="{{path('land_transfer_tax')}}">Land Transfer Tax</a>
+                <a href="{{path('equity_refinance')}}">Refinance Equity</a>
+                <a href="{{path('refinance_penalty')}}" class="selected">Refinance Penalty</a>
+            </div>
+            <div class="right-details">
+                <div class="right-inner">
+                    <div class="inner">
+                        <form class="imageform">
+                            <div class="entry-content">
+                                <div id="emicalcalulatorinnerform">
+                                    <div class="lamount">
+                                        <label for="loanamount"><strong>Remaining Balance on Mortgage</strong> </label>
+                                        <span><img class="num-icon" src="{{asset('./bundles/acmedemo/images/us-dollar-xxl.png')}}"></span>
+                                        <input id="loanamount" name="loanamount" value="" type="text" />
+
+                                    </div>
+                                    <div id="loanamountslider"></div>
+                                    <div id="loanamountsteps" class="steps">
+                                        <span class="tick" style="left: 0%;">|<br/><span class="marker">0</span></span>
+                                        <span class="tick" style="left: 25%;">|<br/><span class="marker">2.5L</span></span>
+                                        <span class="tick" style="left: 50%;">|<br/><span class="marker">5L</span></span>
+                                        <span class="tick" style="left: 75%;">|<br/><span class="marker">7.5L</span></span>
+                                        <span class="tick" style="left: 100%;">|<br/><span class="marker">10L</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="clear:both"></div>
+                            <label>
+                                <strong>Mortgage Start Date</strong>
+                            </label>
+                            <div class="fields">
+                                <select id="date" style="width:30%;"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option></select>
+                                &nbsp;
+                                <select id="month" style="width:30%;">
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                                &nbsp;
+                                <select id="year" style="width:30%;"><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016" selected>2016</option></select>
+                            </div>
+                            <div style="clear:both"></div>
+                            <label>
+                                <strong>Mortgage Original Term</strong>
+                            </label>
+                            <div class="fields">
+                                <select id="mort-term" style="width:30%;">
+                                    <option>Select Term</option>
+                                    <option>1</option>
+                                    <option selected>3</option>
+                                    <option>5</option>
+                                    <option>10</option>
+                                </select></div>
+                            <div style="clear:both"></div>
+                            <label>
+                                <strong>Type of Existing Mortgage</strong>
+                            </label>
+                            <div class="fields">
+                                <input type="radio" name="mort-type" class="mort-type" value="variable" checked="checked"/> Variable
+                                &nbsp;&nbsp;<input type="radio" name="mort-type" class="mort-type" value="fixed" /> Fixed   
+                            </div>
+
+                            <div style="clear:both"></div>
+                             <div class="sep lint">
+                                    <label for="loaninterest"><strong>Existing Mortgage Rate</strong> </label>
+                                    <span><img class="num-icon" src="{{asset('./bundles/acmedemo/images/128.png')}}"></span>
+                                    <input id="loaninterest" name="loaninterest" value="10.5" type="text" />
+                                </div>
+                                <div id="loaninterestslider"></div>
+                                <div id="loanintereststeps" class="steps">
+                                    <span class="tick" style="left: 0%;">|<br/><span class="marker">5</span></span>
+                                    <span class="tick" style="left: 16.67%;">|<br/><span class="marker">7.5</span></span>				            
+                                    <span class="tick" style="left: 33.34%;">|<br/><span class="marker">10</span></span>
+                                    <span class="tick" style="left: 50%;">|<br/><span class="marker">12.5</span></span>
+                                    <span class="tick" style="left: 66.67%;">|<br/><span class="marker">15</span></span>				            
+                                    <span class="tick" style="left: 83.34%;">|<br/><span class="marker">17.5</span></span>
+                                    <span class="tick" style="left: 100%;">|<br/><span class="marker">20</span></span>
+                                </div>
+                               <div style="clear:both"></div>  
+                               <div class="sep lint">
+                                    <label for="newloaninterest"><strong>New Mortgage Rate</strong> </label>
+                                    <span><img class="num-icon" src="{{asset('./bundles/acmedemo/images/128.png')}}"></span>
+                                    <input id="newloaninterest" name="newloaninterest" value="10.5" type="text" />
+                                </div>
+                                <div id="newloaninterestslider"></div>
+                                <div id="loanintereststeps" class="steps">
+                                    <span class="tick" style="left: 0%;">|<br/><span class="marker">5</span></span>
+                                    <span class="tick" style="left: 16.67%;">|<br/><span class="marker">7.5</span></span>				            
+                                    <span class="tick" style="left: 33.34%;">|<br/><span class="marker">10</span></span>
+                                    <span class="tick" style="left: 50%;">|<br/><span class="marker">12.5</span></span>
+                                    <span class="tick" style="left: 66.67%;">|<br/><span class="marker">15</span></span>				            
+                                    <span class="tick" style="left: 83.34%;">|<br/><span class="marker">17.5</span></span>
+                                    <span class="tick" style="left: 100%;">|<br/><span class="marker">20</span></span>
+                                </div>
+                             <div style="clear:both"></div>
+                            <label>
+                                <strong>Province</strong>
+                            </label>
+                            <div class="fields">
+                            <select id="province" name="province" >
+		                <option value="AL">Alberta</option>
+		                <option value="BC">British Columbia</option>
+                                <option value="MA">Manitoba</option>
+                                <option value="NB">New Brunswick</option>
+                                <option value="NE">Newfoundland</option>
+				<option value="NS">Nova Scotia</option>
+                                <option value="NT">Northwest Territories</option>
+				<option value="NU">Nunavut</option>
+                                <option value="ON" selected="selected">Ontario</option>
+                                <option value="PE">Prince Edward Island</option>
+                                <option value="QU">Quebec</option>
+				<option value="SK">Saskatchewan</option>
+				<option value="YU">Yukon</option>				
+			    </select>    
+                            </div>
+                            <div style="clear:both"></div>
+                            <label>
+                                <strong>Mortgage Original Term</strong>
+                            </label>
+                            <div class="fields">
+                                <select id="provider" name="provider" >
+		                <option value="hsbc">HSBC</option>
+                                <option value="rbc">RBC</option>
+                                <option value="bmo">BMO</option>
+			    </select>
+                            </div>
+                              
+
+                            <div style="clear:both"></div>  
+                            <br/><br/>
+                            <table>
+                                <tr>
+                                    <th>Provider Dishcharge Fee</th>
+                                    <th>&nbsp;</th>
+                                    <th>Mortgage Penalty</th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input id="discharge-fee" value="" type="text" disabled="disabled" style="text-align:center;color:#000;"/>
+                                    </th>
+                                    <th>&nbsp;</th>
+                                    <th>
+                                        <input id="mortgage-penalty" value="" type="text" disabled="disabled" style="text-align:center;color:#000;"/>
+                                    </th>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery_ss.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.widget.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.accordion.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.tabs.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/superfish.js') }}"></script>
+
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.loadmask.min.js') }}"></script>
+
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/globalize.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/penalty.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.mouse.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.slider.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.datepicker.min.js') }}"></script>
+    </body>
+</html>

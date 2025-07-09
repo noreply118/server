@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="widht=content-width, initial-scale=1">
+        <meta name="robots" content="index, follow">
+        <meta name="geo.region" content="CA" />
+        <title>Mortgage Refinance in {{city}}</title>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('./bundles/assets/ico/favicon.png')}}">
+    <link rel="shortcut icon" href="{{asset('./bundles/assets/ico/favicon.ico')}}">
+    <link href="{{asset('./bundles/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/bootstrap-select/css/bootstrap-select.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/fontawesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/prettyphoto/css/prettyPhoto.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/owl-carousel2/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/owl-carousel2/assets/owl.theme.default.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/animate/animate.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/swiper/css/swiper.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/css/theme.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/css/theme-red-1.css')}}" rel="stylesheet" id="theme-config-link">
+    <script src="{{asset('./bundles/assets/plugins/modernizr.custom.js')}}"></script>
+       
+        <script src="https://code.jquery.com/jquery-1.12.1.min.js" type="text/javascript"></script>
+    
+
+          {{ render(controller('MainRatetradeBundle:Default:Header')) }}
+    <!-- /HEADER -->
+      <!-- CONTENT AREA -->
+    <div class="content-area">
+
+        <!-- BREADCRUMBS -->
+        <section class="page-section breadcrumbs text-right">
+            <div class="container">
+                <div class="page-header">
+                             <h1 class="entrytitle">Costs of Refinancing in {{city}}?</h1>
+</div>
+                <ul class="breadcrumb"> 
+                                <li>Home</li>
+                                <li class="active">Costs of Refinancing in {{city}}?</li>
+                </ul>
+            </div>
+        </section>
+<!-- /BREADCRUMBS -->
+</strong></h1>
+
+ <!-- PAGE WITH SIDEBAR -->
+        <section class="page-section with-sidebar">
+            <div class="container">
+                <div class="row">
+                    
+                    <!-- CONTENT -->
+                    <div class="col-md-9 content" id="content">
+
+                        <!-- Blog posts -->
+                        <article class="post-wrap">
+                            <div class="post-media">
+
+
+                            <div class="content-boxes">
+                                <p><strong>How Much Will it Cost to Refinance in {{city}}?</strong></p>
+                                <p>Refinancing is often chosen as alternative by borrowers to either get a lower interest rate or access the equity out of their home. It is essential to know the cost of refinancing to take a calculated decision for refinancing.</p>
+                                <p>Refinancing allows borrowers to access up to 80% of their home’s value less the outstanding balance of their mortgage. For instance, if your home is valued at $300,000 and you have an outstanding mortgage of $100,000, then available equity will be 1, 40,000</p>
+                                <p>There are mainly two kinds of refinancing viz. refinancing within your term and refinancing at the end of your term. When you choose for refinancing within your term, you can get mortgage at lower rate or can take equity out of your home. If you refinance at the end of the term it would allow you to access equity out of your home. There are several kinds of fees involved in both kinds of refinancing methods such as mortgage payment penalty, mortgage discharge fee, mortgage registration fee, legal fees etc.</p>
+                                <p><strong>Mortgage Pre-payment Penalty Charges in {{city}}</strong></p>
+                                <p>If refinancing allow you to pay your mortgage before your term is up for renewal, you’ll have to pay a mortgage prepayment penalty fees along with other fees associated with refinancing mortgage. However, if you are refinancing when your mortgage term is up for renewal, you don’t need to bear prepayment penalty. In case of fixed rate mortgage, prepayment penalty will be the greater of: Three months’ interest or the interest rate differential (IRD). In case of variable rate mortgage, your penalty will be interest paid for three months.</p>
+                                <p><strong>Mortgage Discharge Fees in {{city}}</strong></p>
+                                <p>In case you decide to leave your current lender, you will have to pay a fee to discharge your mortgage from your current lender. Each lender sets his own fee rates, however mortgage discharge fees in Canada typically varies between $200 and $350.</p>
+                                <p><strong>Mortgage Registration Fees in {{city}}</strong></p>
+                                <p>While setting up your loan, your lender will secure it by registering a “charge” against your property. Whether you are leaving or staying with current lender, you will have to pay registration charges in both cases. There are two kinds of charges that can be registered against property; standard and collateral. Mortgage registration fee is usually governed by your provincial government.</p>
+                                <p><strong>Legal Fees in {{city}}</strong></p>
+                                <p>In order to refinance your mortgage, you need to consult with a proficient lawyer to provide you with right guidance as well as to facilitate the entire transaction. Such lawyer will review the mortgage and its terms and conditions before registering the new mortgage. He will also carry out a title search to assure that there are no leans made against your property. Legal fees for a refinance typically range between $700 and $1,000. If you are switching lenders and your mortgage balance is more than $200,000, your new lender might pay legal fees on your behalf.</p>
+                            
+                        {% if target_cities|length > 0 %}<div class="reproc">
+                            <h3>Mortgage Refinance in your City</h3>
+                      
+                                 {% for c in target_cities %}
+                                        <a href="{{path('mortgage_refinance',{'city':c.cityUrl})}}">
+                                            {{c.city}}
+                                        </a>
+                                    {% endfor %}
+                                 {% endif %}
+                    </div></div></div>
+
+                        </div>
+                    <!-- SIDEBAR -->
+                    <aside class="col-md-3 sidebar" id="sidebar">
+                    
+                    <!-- widget car categories -->
+                    <div class="widget shadow car-categories">
+                        <h4 class="widget-title">Mortgage Categories</h4>
+                        <div class="widget-content">
+                            <ul>
+                               
+                                <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Home Buying Process</a>
+  {% if parentcat.id == '6' %}
+                                                        <ul class="children active">
+                                                        {% else %}
+                                                           <ul class="children"> 
+                                                            {% endif %}
+                                    
+                                        
+                                                         
+                                                            {% for a in educationall %}
+                                                                {% if a.parentCategory == '6' %}
+                                                                    {% if cat.id == a.id %}
+                                                                        <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}" class="edu-cat">{{a.category}}</a></li>
+                                                                        {% else %}
+                                                                        <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                                        {% endif %}
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                                       
+                                </ul>
+                                </li>
+                                <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Renewing Mortgage</a>
+                             {% if parentcat.id == '18' %}
+                                                        <ul class="children active">
+                                                        {% else %}
+                                                           <ul class="children"> 
+                                                            {% endif %}
+                                    
+                                        
+                                        {% for a in educationall %}
+                                                                {% if a.parentCategory == '18' %}
+                                                                    {% if cat.id == a.id %}
+                                                                        <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}" class="edu-cat">{{a.category}}</a></li>
+                                                                        {% else %}
+                                                                        <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                                        {% endif %}
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Refinancing Guide</a>
+                                    {% if parentcat.id == '1' %}
+                                                        <ul class="children active">
+                                                        {% else %}
+                                                           <ul class="children"> 
+                                                            {% endif %}
+                                    
+                                        
+                                       {% for a in educationall %}
+                                                                {% if a.parentCategory == '1' %}
+                                                                    {% if cat.id == a.id %}
+                                                                        <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}" class="edu-cat">{{a.category}}</a></li>
+                                                                        {% else %}
+                                                                        <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                                        {% endif %}
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Mortgage Information</a>
+                             {% if parentcat.id == '47' %}
+                                                        <ul class="children active">
+                                                        {% else %}
+                                                           <ul class="children"> 
+                                                            {% endif %}
+                                    
+                                        
+                                       {% for a in educationall %}
+                                                                {% if a.parentCategory == '47' %}
+                                                                    {% if cat.id == a.id %}
+                                                                        <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}" class="edu-cat">{{a.category}}</a></li>
+                                                                        {% else %}
+                                                                        <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                                        {% endif %}
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /widget car categories -->
+                                                     </aside>
+                    <!-- /SIDEBAR -->
+</div></div></section>
+                     <!-- FOOTER -->
+      {{ render(controller('MainRatetradeBundle:Default:Footer')) }} 
+
+        <script>
+
+            function validateEmail(email) {
+                var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                return re.test(email);
+            }
+
+            $(document).on("click", ".subsc", function(e) {
+                e.preventDefault();
+                $("#exampleInputEmail2").css('border', '1px solid green');
+
+                if ($("#exampleInputEmail2") == '')
+                {
+                    $("#exampleInputEmail2").focus();
+                    $("#exampleInputEmail2").css('border', '1px solid red');
+                }
+                else if (!validateEmail($("#exampleInputEmail2").val()))
+                {
+                    $("#exampleInputEmail2").css('border', '1px solid red');
+                    $("#exampleInputEmail2").focus();
+                }
+                else {
+                    $.ajax({
+                        url: '{{path('email_subscribe')}}',
+                        type: "post",
+                        async: true,
+                        data: {'email': $("#exampleInputEmail2").val(),
+                            'name': "testname"},
+                        success: function(response) {
+                            $("#exampleInputEmail2").val('');
+                            alert(response);
+                        },
+                        error: function(request, error) {
+                            // alert('No data found');
+                        }
+                    });
+                }
+            });
+
+            $('.locations').on('click', function() {
+
+                $('.location-name-box').toggle(500);
+            });
+            $('.level1Btn').on('click', function(e) {
+                e.preventDefault();
+                $('.level1 ul').toggle(500);
+            });
+            $('.level2Btn').on('click', function(e) {
+                e.preventDefault();
+                $('.level2 ul').toggle(500);
+            });
+            $('.level3Btn').on('click', function(e) {
+                e.preventDefault();
+                $('.level3 ul').toggle(500);
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,154 @@
+body {color: #6D7172; font-family:Verdana, Geneva, sans-serif;}
+h1,h3 {font-weight: normal;  color:#293740;}
+input {padding: 12px 10px;
+font-size: 14px;
+   border: none;
+  background:#fff;
+    font-size: 18px;
+	border:#00A652 1px solid;
+	border-radius:4px;
+}
+.tablem {/*font-size: 20px;*/ width:100%;  background-color:#fff; font-size:12px;}
+.tablem td{/*color:#FF471C;*/border-bottom: 1px solid #F5F5F5;padding: 5gpx;  height:50px;/*background-color:#fff;*/ vertical-align:top}
+.tabletwo td {width: 50%;color:#000}
+.tablem tr{/*line-height: 57px;*/}
+.downtext,.downtext1 {text-align: center;}
+.calc {
+border: 1px solid #CDD6D9;
+}
+#main
+{
+width:620px;
+margin:auto;
+}
+.downtext, .downtext1, .rateval {
+	border: none;
+    background: #fff;
+  /*  font-size: 18px;*/
+    border: #00A652 1px solid;
+	width:90%;
+	border-radius:4px;
+	font-size:12px;
+    /*border: 1px solid #00A2E2;
+    background-color: #00A2E2;
+    color: #fff;
+   /* width: 86%;*/
+}
+#go {
+    clear: both;
+    color: #FFF;
+    padding: 13px 10px;
+    background-color: ff471c;
+    border-radius: 3px;
+    width: 10%;
+    border: medium none;
+    cursor: pointer;
+}
+.getquoteform{
+position: absolute;
+top: 300px;
+left: 30%;
+border: 3px solid #CCC;
+background: #FFF none repeat scroll 0% 0%;
+width: 480px;
+text-align: center;
+color: #666;
+border-radius: 3px;
+box-shadow: 0px 0px 2000px 2000px rgba(0, 0, 0, 0.6);
+z-index: 9999;
+display: none;
+}
+
+a.closebtn {
+    position: absolute;
+    padding: 5px 8px;
+    text-align: center;
+    color: #FFF;
+    background: #C00 none repeat scroll 0% 0%;
+    top: -15px;
+    right: -15px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+#emipaymenttable{
+background: #FCFCFC none repeat scroll 0px 0px;
+clear: both;
+margin: 0px 0px 20px;
+text-align: center;
+position: relative;
+bottom: 70px;
+margin-top: 10%;
+}
+
+#emipaymenttable table{
+width: 100%;
+border-top: 1px solid #DBDAD7;
+}
+
+#emipaymenttable table td {
+    border-left: 1px solid #DBDAD7;
+    border-bottom: 1px solid #DBDAD7;
+    border-right: 1px solid #DBDAD7;
+    text-align: center;
+    font-size: 11px;
+    padding: 4px;
+}
+
+td.currency {
+    border-left: 0px none !important;
+    text-align: right !important;
+    width: 150px !important;
+}
+
+td.paidtodateyear, td.paidtodatemonthyear {
+    border-left: 0px none !important;
+    text-align: right !important;
+}
+
+td.monthyearwrapper {
+    margin: 0px;
+    padding: 0px !important;
+    border-bottom: 0px none !important;
+    border-top: 0px none !important;
+}
+
+#monthlypaymentcontainer table {
+    margin: 0px;
+    padding: 0px;
+}
+
+#monthlypaymentcontainer td {
+    background: #EFEFEF none repeat scroll 0px 0px;
+}
+
+td.paymentmonthyear {
+    width: 69px !important;
+}
+
+td.paymentyear {
+    text-align: right !important;
+    width: 77px !important;
+}
+.toggle {
+    background: transparent url("../../acmedemo/images/toggle-closed.png") no-repeat scroll 10% 50%;
+    cursor: pointer;
+}
+
+.toggle-open {
+    background: transparent url("../../acmedemo/images/toggle-open.png") no-repeat scroll 10% 50%;
+}
+.askp {
+    border: 1px solid #ddd;
+	padding:20PX;
+    border-bottom: none;
+    text-align: center;
+	background-color:#293740;
+}
+td select, .ammort {
+    padding: 10px;
+    width: 90%;
+    color: #293740;
+    font-size: 1.0em;
+    border-color: #00A652;
+    border-radius: 4px;
+}

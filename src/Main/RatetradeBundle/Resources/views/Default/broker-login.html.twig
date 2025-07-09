@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title> {% for a in educationall %}{% if a.id == '38' %}{{a.ptitle}}{% endif %}{% endfor %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=content-width, initial-scale=1">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="{{ app.request.uri }}">  
+        <meta name="geo.region" content="CA" />
+        <meta name="title" content="{% for a in educationall %}{% if a.id == '38' %}{{a.ptitle}}{% endif %}{% endfor %}">
+        <meta name="description" content="{% for a in educationall %}{% if a.id == '38' %}{{a.mdescription}}{% endif %}{% endfor %}"> 
+        <meta property="og:type" content="article" />
+        <meta name="og:title" content="{% for a in educationall %}{% if a.id == '38' %}{{a.ptitle}}{% endif %}{% endfor %}">
+        <meta name="og:description" content="{% for a in educationall %}{% if a.id == '38' %}{{a.mdescription}}{% endif %}{% endfor %}">
+        <meta property="og:site_name" content="Rate Trade" />
+        <meta property="article:publisher" content="https://www.facebook.com/ratetrade/" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:description" content="{% for a in educationall %}{% if a.id == '38' %}{{a.mdescription}}{% endif %}{% endfor %}">
+        <meta name="twitter:title" content="{% for a in educationall %}{% if a.id == '38' %}{{a.ptitle}}{% endif %}{% endfor %}">
+        <meta name="twitter:site" content="@ratetrade" />
+        <meta name="twitter:creator" content="@ratetrade" /> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link href="favicon.ico" rel="shortcut icon" type="image/png">
+    <link href="favicon.ico" rel="apple-touch-icon">
+    <link href="favicon.ico" rel="apple-touch-icon" sizes="72x72">
+    <link href="favicon.ico" sizes="114x114">
+    <link href="favicon.ico" rel="apple-touch-icon" sizes="144x144">
+    <link href="{{asset('./bundles/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/bootstrap-select/css/bootstrap-select.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/fontawesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/prettyphoto/css/prettyPhoto.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/owl-carousel2/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/owl-carousel2/assets/owl.theme.default.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/animate/animate.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/swiper/css/swiper.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/css/theme.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/css/theme-red-1.css')}}" rel="stylesheet" id="theme-config-link">
+     <link rel="alternate" hrefLang="x-default" href="{{ app.request.uri }}"/>
+    <script src="{{asset('./bundles/assets/plugins/modernizr.custom.js')}}"></script>
+        
+   {{ render(controller('MainRatetradeBundle:Default:Header')) }}
+
+
+     <!-- /HEADER -->
+    <!-- CONTENT AREA -->
+    <div class="content-area">
+
+        <!-- BREADCRUMBS -->
+        <section class="page-section breadcrumbs text-right">
+            <div class="container">
+                <div class="page-header">
+                             <h1 class="entrytitle">Broker Login</h1>
+</div>
+                <ul class="breadcrumb"> 
+                                <li>Home</li>
+                                <li class="active">Broker Login</li>
+                </ul>
+            </div>
+        </section>
+<!-- /BREADCRUMBS -->
+ <!-- PAGE WITH SIDEBAR -->
+        <section class="page-section with-sidebar">
+            <div class="container">
+                <div class="row">
+                   
+
+ <!-- CONTENT -->
+                    <div class="col-md-9 content" id="content">
+
+                        <!-- Blog posts -->
+                        <article class="post-wrap">
+                            <div class="post-media">
+
+
+                            <div class="content-boxes">
+       
+                                        <div id="error" style="text-align: center;color: red;"></div>
+                                        <form class="form-class" id="loginform" action="{{path('broker_logincheck')}}" method="post" onsubmit="return validate()">
+                                            <div class="form-group">
+                                                <label for="username"><i class="fa fa-user" aria-hidden="true"></i>
+                                                    Username or Email</label>
+                                                <input type="text" class="form-control required" name="username" id="username" placeholder="Username">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="password"><i class="fa fa-key" aria-hidden="true"></i>
+                                                    Password</label>
+                                                <input type="password" class="form-control required" name="password" id="password" placeholder="Password">
+                                            </div>
+                                            <button type="submit" class="btn btn-default" id="submit"><i class="fa fa-unlock" aria-hidden="true"></i>
+                                                Submit</button>
+                                        </form>
+                                    </div>
+                                </div></div>
+                            <!-- SIDEBAR -->
+                    <aside class="col-md-3 sidebar" id="sidebar">
+                    
+                    <!-- widget car categories -->
+                    <div class="widget shadow car-categories">
+                        <h4 class="widget-title">Mortgage Categories</h4>
+                        <div class="widget-content">
+                            <ul>
+                                <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-calculator"></i> &nbsp; Calculators</a>
+                                    <ul class="children">
+                                                <li><a href="{{path('mortgage_payment')}}">Mortgage Payment</a></li>
+                                                <li><a href="{{path('payment_analyzer')}}">Payment Analyzer</a></li>
+                                                <li><a href="{{path('income_cal')}}">Income Calculator</a></li>
+                                                <li><a href="{{path('affordability_cal')}}">Mortgage Affordability</a></li>
+                                                <li><a href="{{path('chmc_insurance')}}">Mortgage Insurance</a></li>
+                                                <li><a href="{{path('land_transfer_tax')}}">Land Transfer Tax</a></li>
+                                                <li><a href="{{path('refinance-calculator')}}">Refinance Calculator</a></li>
+                                                <li><a href="{{path('equity_refinance')}}">Refinance Equity</a></li>
+                                                <li><a href="{{path('refinance_penalty')}}">Refinance Penalty</a></li>
+                                                <li><a href="{{path('debt-consolidation-calculator')}}">Debt Consolidation</a></li>
+                                    </ul>
+                                </li>
+                               <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Home Buying Process</a>
+                                    <ul class="children">
+                                        
+                                                         
+                                                              {% for a in educationall %}
+                                                                {% if a.parentCategory == '6' %}
+                                                                    <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                                       
+                                </ul>
+                                </li>
+ <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Renewing Mortgage</a>
+                                    <ul class="children">
+                                  
+                                                             {% for a in educationall %}
+                                                                {% if a.parentCategory == '18' %}
+                                                                    <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                    </ul>
+                                </li>
+<li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Refinancing Guide</a>
+                                    <ul class="children">
+                                           {% for a in educationall %}
+                                                                {% if a.parentCategory == '1' %}
+                                                                    <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Mortgage Information</a>
+                                    <ul class="children">
+                                           {% for a in educationall %}
+                                                                {% if a.parentCategory == '47' %}
+                                                                    <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                                 </aside>
+                    <!-- /SIDEBAR -->
+
+
+
+
+                    </div>  
+                </div>
+            </div>
+        </section>
+        {{ render(controller('MainRatetradeBundle:Default:Footer')) }}
+
+        <script>
+                                function validateEmail(email) {
+                                    var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                                    return re.test(email);
+                                }
+
+                                $(document).on("click", ".subsc", function(e) {
+                                    e.preventDefault();
+                                    $("#exampleInputEmail2").css('border', '1px solid green');
+
+                                    if ($("#exampleInputEmail2") == '')
+                                    {
+                                        $("#exampleInputEmail2").focus();
+                                        $("#exampleInputEmail2").css('border', '1px solid red');
+                                    }
+                                    else if (!validateEmail($("#exampleInputEmail2").val()))
+                                    {
+                                        $("#exampleInputEmail2").css('border', '1px solid red');
+                                        $("#exampleInputEmail2").focus();
+                                    }
+                                    else {
+                                        $.ajax({
+                                            url: '{{path('email_subscribe')}}',
+                                            type: "post",
+                                            async: true,
+                                            data: {'email': $("#exampleInputEmail2").val(),
+                                                'name': "testname"},
+                                            success: function(response) {
+                                                $("#exampleInputEmail2").val('');
+                                                alert(response);
+                                            },
+                                            error: function(request, error) {
+                                                // alert('No data found');
+                                            }
+                                        });
+                                    }
+                                });
+
+                                $(document).on("change", ".required", function() {
+                                    $(this).css('border', '1px solid green');
+
+                                    if ($(this).val() == '')
+                                    {
+                                        $(this).focus();
+                                        $(this).css('border', '1px solid red');
+                                    }
+
+                                    var id = $(this).attr('id');
+                                    if (id == 'username' && !validateEmail($("#username").val()))
+                                    {
+                                        $("#username").focus();
+                                        $("#username").css('border', '1px solid red');
+                                    }
+                                });
+
+                                function validate() {
+
+                                    if ($("#username").val() == '')
+                                    {
+                                        $("#username").focus();
+                                        $("#username").css('border', '1px solid red');
+                                        return false;
+                                    }
+                                    else if (!validateEmail($("#username").val()))
+                                    {
+                                        $("#username").css('border', '1px solid red');
+                                        $("#username").focus();
+                                        return false;
+                                    }
+                                    else if ($("#password").val() == '')
+                                    {
+                                        $("#password").focus();
+                                        $("#password").css('border', '1px solid red');
+                                        return false;
+                                    }
+                                }
+        </script>
+    </body>
+</html>

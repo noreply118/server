@@ -1,0 +1,200 @@
+@charset "utf-8";
+/* CSS Document */
+
+.verror {
+	color: #F00;
+	font-size: 10px;
+	display: block;
+	clear: both;
+	line-height: 11px;
+}
+.snm {
+	display:block;
+}
+.udate {
+	display: block;
+	color: #333;
+	font-size: 11px;
+}
+.udate strong, .verifycount {
+	color:#1c7500;
+	float:right;
+}
+input[type="button"] {
+	color: #FFF;
+	padding: 10px;
+	background-color: #006F98;
+	border: medium none;
+	cursor: pointer;
+	width: 30%;
+	margin-top: 10px;
+}
+.pname b {
+	font-size: 12px;
+	font-weight: normal;
+}
+.pname i {
+	font-style: normal;
+	color: #c12031;
+	font-size: 12px;
+}
+div.fields {
+	width: 100%;
+	overflow: hidden;
+        padding: 10px 0px 10px 0px;
+}
+div.fields label {
+	display:block;
+	font-size: 11px;
+}
+.store-edit-block, #store-div, .product-edit-block {
+	overflow: hidden;
+	padding: 10px;
+	background: #f7f7f7 none repeat scroll 0% 0%;
+	border: 1px solid #e6e6e6;
+	position: relative;
+}
+
+/* CSS Document */
+.prodsubmit {
+	font-size: 16px;
+}
+#imagetab input[type="file"] {
+	color: #c12031;
+	border: 1px solid #c12031;
+	width: 300px;
+	border-radius: 4px;
+	padding: 6px;
+	margin-top: 10px;
+}
+.imagetab {
+	overflow: hidden;
+	float: left;
+	max-width: 33%;
+	margin-bottom: 10px;
+	line-height: 75px;
+	margin-right: 15px;
+	cursor: pointer;
+	width: 77px;
+	height: 77px;
+	background: url(http://www.offlinebazaar.com/bundles/offlinetemplate/images/add-img.png) center center no-repeat #f4fbfe;
+}
+.imagetab:hover {
+	background-size: 40px 39px;/*  transition: background-size 0s linear 0.3s; */
+}
+.imageloadstatus {
+	text-align: center;
+	line-height: 94px;
+	height: 75px;
+	width: 75px;
+	border: 1px solid #0099d2;
+	background: #fff;
+}
+.imagetab input[type=file] {
+	opacity: 0;
+	max-width: 75px;
+	cursor: pointer!important;
+	line-height: 170px;
+	background-color: #ddd;
+	position: absolute;
+	top: -95px;
+	height: 170px;
+}
+.imgList {
+	max-height: 75px;
+	max-width: 75px;
+	vertical-align: middle;
+}
+.imageform span.verror {
+	color: #FF0000;
+	font-size: 11px;
+	display: block;
+	clear: both;
+	margin-bottom: 5px;
+}
+.imageform .sub-menu {
+	left: 185px!important;
+	top: 31px;
+}
+.imageform .sub-menu li span {
+	display: inline!important;
+	margin-left: 0!important;
+}
+#success, #fail {
+	display: none;
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: bold;
+}
+#success {
+	color: #009846;
+}
+#fail {
+	color: #e50000;
+}
+.submitagree {
+	color: #333!important;
+	margin-left: 28%!important;
+}
+.left-fields {
+	float:left;
+	width:60%;
+}
+.right-fields {
+	float:right;
+	width:40%;
+}
+.cke_chrome, #cke_customDescription {
+	width:96%!important;
+	margin-bottom:6px!important;
+}
+#brandprice {
+	width: 56%;
+	float: left;
+	margin-left: 2%;
+}
+label, #add-spec {
+	//font-size:12px;
+	//display:block;
+}
+.btns {
+	margin-top:6px;
+	overflow:hidden;
+}
+.btns a {
+	display: inline-block;
+	width: 19%;
+	margin-right: 1%;
+	text-align: center;
+	padding: 10px;
+	box-sizing: border-box;
+	float: left;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 3px;
+	margin-top: 2%;
+}
+.scrollcontent {
+	max-height: 420px;
+	overflow-y: scroll;
+	height:420px;
+}
+.products-all {
+	border: none!important;
+	border-left: 1px solid #ccc!important;
+}
+.catlist {
+	width:18%;
+	float:right;
+	height:auto;
+}
+.catlist ul {
+	max-height: 600px;
+	overflow-y: scroll;
+	height: 600px;
+}
+.catlist ul li span {
+	display: inline-block;
+	width: 90%;
+	padding-left: 2%;
+}

@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>{% if pgtitle != '' %}{{pgtitle|raw}}{% else %}{{parentcat.category}}{% endif %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="widht=content-width, initial-scale=1">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="{{ app.request.uri }}">  
+        <meta name="geo.region" content="CA" />
+        <meta name="title" content="{% if pgtitle != '' %}{{pgtitle|raw}}{% else %}{{parentcat.category}}{% endif %}">
+        <meta name="description" content="{{mdesc|raw}}"> 
+        <meta name="keywords" content="{% if mkeywords != '' %}{{mkeywords|raw}}{% else %}{{mkeywords}}{% endif %}">
+        <meta property="og:type" content="article" />
+        <meta name="og:title" content="{% if pgtitle != '' %}{{pgtitle|raw}}{% else %}{{parentcat.category}}{% endif %}">
+        <meta name="og:description" content="{{mdesc|raw}}">
+        <meta property="og:site_name" content="Rate Trade" />
+        <meta property="article:publisher" content="https://www.facebook.com/ratetrade/" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:description" content="{{mdesc|raw}}">
+        <meta name="twitter:title" content="{% if pgtitle != '' %}{{pgtitle|raw}}{% else %}{{parentcat.category}}{% endif %}">
+        <meta name="twitter:site" content="@ratetrade" />
+        <meta name="twitter:creator" content="@ratetrade" /> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="favicon.ico" rel="shortcut icon" type="image/png">
+    <link href="favicon.ico" rel="apple-touch-icon">
+    <link href="favicon.ico" rel="apple-touch-icon" sizes="72x72">
+    <link href="favicon.ico" sizes="114x114">
+    <link href="favicon.ico" rel="apple-touch-icon" sizes="144x144">
+    <link href="{{asset('./bundles/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/bootstrap-select/css/bootstrap-select.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/fontawesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/prettyphoto/css/prettyPhoto.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/owl-carousel2/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/owl-carousel2/assets/owl.theme.default.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/animate/animate.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/swiper/css/swiper.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/css/theme.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/css/theme-red-1.css')}}" rel="stylesheet" id="theme-config-link">
+    <script src="{{asset('./bundles/assets/plugins/modernizr.custom.js')}}"></script>
+    <link rel="alternate" hrefLang="x-default" href="{{ app.request.uri }}"/>
+       
+<style>
+.content-boxes{
+  border:none!important;
+}
+</style>
+    
+
+   
+          {{ render(controller('MainRatetradeBundle:Default:Header')) }}
+        <!-- /HEADER -->
+    <!-- CONTENT AREA -->
+    <div class="content-area">
+
+        <!-- BREADCRUMBS -->
+        <section class="page-section breadcrumbs text-right">
+            <div class="container">
+                <div class="page-header">
+                             <h1 class="entrytitle">{{parentcat.category}}</h1>
+</div>
+                <ul class="breadcrumb"> 
+                                <li>Home</li>
+                                <li class="active">{{parentcat.category}}</li>
+                </ul>
+            </div>
+        </section>
+<!-- /BREADCRUMBS -->
+
+        <!-- PAGE WITH SIDEBAR -->
+        <section class="page-section with-sidebar">
+            <div class="container">
+                <div class="row">
+                    
+                    <!-- CONTENT -->
+                    <div class="col-md-9 content" id="content">
+
+                        <!-- Blog posts -->
+                        <article class="post-wrap">
+                            <div class="post-media">
+
+
+                            <div class="content-boxes parentinfo">
+                            <div class="left-content">
+
+                                {% for c in educationdata %}
+
+                                   <a href="{{path('dynmaicurl',{'urlparam': c.pageUrl})}}"><div class="tab-boxes"><div class="boxinside"></div>
+                                        <div class="row">
+                                       
+                                                 <img src="{{c.image}}" alt="No image Avilable" class="img-responsive tabbox-img"> <h3 class="education-heading">{{c.category}}</h3>
+                                                <p>{{c.parentPageContent}}.....</p>
+                                              
+                                        </div>
+                                    </div></a>
+                                {% endfor %}
+                            </div>
+                        </div>
+<div class="clear"></div>
+    </div>
+                      </article>  </div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- SIDEBAR -->
+                    <aside class="col-md-3 sidebar" id="sidebar">
+                    
+                    <!-- widget car categories -->
+                    <div class="widget shadow car-categories">
+                        <h4 class="widget-title">Mortgage Categories</h4>
+                        <div class="widget-content">
+                            <ul>
+                                <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-calculator"></i> &nbsp; Calculators</a>
+                                    <ul class="children">
+                                                <li><a href="{{path('mortgage_payment')}}">Mortgage Payment</a></li>
+                                                <li><a href="{{path('payment_analyzer')}}">Payment Analyzer</a></li>
+                                                <li><a href="{{path('income_cal')}}">Income Calculator</a></li>
+                                                <li><a href="{{path('affordability_cal')}}">Mortgage Affordability</a></li>
+                                                <li><a href="{{path('chmc_insurance')}}">Mortgage Insurance</a></li>
+                                                <li><a href="{{path('land_transfer_tax')}}">Land Transfer Tax</a></li>
+                                                <li><a href="{{path('refinance-calculator')}}">Refinance Calculator</a></li>
+                                                <li><a href="{{path('equity_refinance')}}">Refinance Equity</a></li>
+                                                <li><a href="{{path('refinance_penalty')}}">Refinance Penalty</a></li>
+                                                <li><a href="{{path('debt-consolidation-calculator')}}">Debt Consolidation</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Home Buying Process</a>
+                                     {% if parentcat.id == '6' %}
+                                                        <ul class="children active">
+                                                        {% else %}
+                                                           <ul class="children"> 
+                                                            {% endif %}
+                                                         
+                                                     {% for a in educationall %}
+                                                                    {% if a.parentCategory == '6' %}
+                                                                        <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                                        {% endif %}
+                                                                    {% endfor %}
+                                                       
+                                </ul>
+                                </li>
+                                <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Renewing Mortgage</a>
+                                    {% if parentcat.id == '18' %}
+                                                        <ul class="children active">
+                                                        {% else %}
+                                                           <ul class="children"> 
+                                                            {% endif %}
+                                   
+                                                            {% for a in educationall %}
+                                                                    {% if a.parentCategory == '18' %}
+                                                                        <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                                        {% endif %}
+                                                                    {% endfor %}
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Refinancing Guide</a>
+                                      {% if parentcat.id == '1' %}
+                                                        <ul class="children active">
+                                                        {% else %}
+                                                           <ul class="children"> 
+                                                            {% endif %}
+                                         {% for a in educationall %}
+                                                                    {% if a.parentCategory == '1' %}
+                                                                        <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                                        {% endif %}
+                                                                    {% endfor %}
+                                    </ul>
+                                </li>
+                                
+
+  <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Mortgage Information</a>
+                                      {% if parentcat.id == '47' %}
+                                                        <ul class="children active">
+                                                        {% else %}
+                                                           <ul class="children"> 
+                                                            {% endif %}
+                                         {% for a in educationall %}
+                                                                    {% if a.parentCategory == '47' %}
+                                                                        <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                                        {% endif %}
+                                                                    {% endfor %}
+                                    </ul>
+                                </li>
+
+
+ {% if parentcat.id == '39' %}<li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Auto Insurance</a>
+                                      {% if parentcat.id == '39' %}
+                                                        <ul class="children active">
+                                                        {% else %}
+                                                           <ul class="children"> 
+                                                            {% endif %}
+                                         {% for a in educationall %}
+                                                                    {% if a.parentCategory == '39' %}
+                                                                        <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                                        {% endif %}
+                                                                    {% endfor %}
+                                    </ul>
+                                </li>
+
+{% endif %}
+
+
+ {% if parentcat.id == '44' %}<li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Home Insurance</a>
+                                      {% if parentcat.id == '44' %}
+                                                        <ul class="children active">
+                                                        {% else %}
+                                                           <ul class="children"> 
+                                                            {% endif %}
+                                         {% for a in educationall %}
+                                                                    {% if a.parentCategory == '44' %}
+                                                                        <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                                        {% endif %}
+                                                                    {% endfor %}
+                                    </ul>
+                                </li>
+
+{% endif %}
+
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /widget car categories -->
+                   
+                                 </aside>
+                    <!-- /SIDEBAR -->
+</div></div></section>
+
+
+        {{ render(controller('MainRatetradeBundle:Default:Footer')) }} 
+  
+        <script>
+
+            function validateEmail(email) {
+                var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                return re.test(email);
+            }
+
+            $(document).on("click", ".subsc", function(e) {
+                e.preventDefault();
+                $("#exampleInputEmail2").css('border', '1px solid green');
+
+                if ($("#exampleInputEmail2") == '')
+                {
+                    $("#exampleInputEmail2").focus();
+                    $("#exampleInputEmail2").css('border', '1px solid red');
+                }
+                else if (!validateEmail($("#exampleInputEmail2").val()))
+                {
+                    $("#exampleInputEmail2").css('border', '1px solid red');
+                    $("#exampleInputEmail2").focus();
+                }
+                else {
+                    $.ajax({
+                        url: '{{path('email_subscribe')}}',
+                        type: "post",
+                        async: true,
+                        data: {'email': $("#exampleInputEmail2").val(),
+                            'name': "testname"},
+                        success: function(response) {
+                            $("#exampleInputEmail2").val('');
+                            alert(response);
+                        },
+                        error: function(request, error) {
+                            // alert('No data found');
+                        }
+                    });
+                }
+            });
+
+            $('.locations').on('click', function(e) {
+                e.preventDefault();
+                $('.location-name-box').toggle(500);
+            });
+            $('.level1Btn').on('click', function(e) {
+                e.preventDefault();
+                $('.level1 ul').toggle(200);
+
+            });
+            $('.level2Btn').on('click', function(e) {
+                e.preventDefault();
+                $('.level2 ul').toggle(200);
+
+            });
+            $('.level3Btn').on('click', function(e) {
+                e.preventDefault();
+                $('.level3 ul').toggle(200);
+
+            });
+        </script>
+    </body>
+</html>

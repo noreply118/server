@@ -1,0 +1,128 @@
+@charset "utf-8";
+/* CSS Document */
+.imageform{width:100%;//float:left;//margin-left:2%;}
+a#selectcat {color: #333;text-decoration:none;padding:8px 10px;display:block;font-size:13px;border: 1px solid #DDD;float:left;width:100%;background: transparent url("http://www.offlinebazaar.com/bundles/offlinetemplate/images/drop-ico.png") no-repeat scroll 97% center;margin-bottom:6px;}
+input[type="text"],input[type="password"],select,textarea{font-family:"Open Sans",Arial;padding:6px 6px;width:100%;box-sizing:border-box;font-size:18px;margin-bottom:6px;font-weight:bold;background: #fefefe none repeat scroll 0 0;
+    border: 1px solid #b9babb;
+    border-radius: 4px;
+    color: #353535;text-align:right;}
+.validmsg{font-size:12px;}
+#selectcatpop{display:none;width:100%;background-color:#fff;min-height:400px;position:absolute;top:60px;left:0;box-shadow:0 0 0 2000px rgba(102, 102, 102, 0.6);right:0;margin:auto;max-width:1000px;}
+#catlevel1,#catlevel2,#catlevel3{float:left;width:33.33%;min-height:100px;background:url("http://img.offlinebazaar.com/imgloader.gif") center center no-repeat #fff;padding:0 0 15px 0;box-sizing:border-box;border-right:1px solid #CCCCCC;height:100%;max-height:600px;overflow-y:scroll;}
+#catlevel1{overflow-y:hidden;}
+#store-edit-close,#store-add-close,#product-add-close,#product-edit-close,#closepop{top:0px;position:absolute;right:0px;padding:0px 15px;color:rgb(255, 255, 255);background:#c12031;line-height:31px;height:31px;}
+#catlevel3,#catlevel2{border-right:none!important;}
+#catlevel2,#catlevel3{display:none;}
+#selectcatpop li{padding:0px!important;}
+#selectcatpop ul{padding:0;margin:0;min-height:100px;}
+#catlevel1 ul{background: #f9f9f9;}
+#selectcatpop ul li{list-style: none;}
+#selectcatpop ul a{padding:5px 6px;display:block;font-size:13px;border-bottom:1px solid #f2f2f2;}
+#selectcatpop ul a:hover{background-color:#eeeeee;text-decoration:none;}
+#selectcatpop ul a.selected{background-color:#00a08d;color:#fff;}
+.clearcat
+{
+clear: both; border-bottom: 1px solid #ccc; margin: 10px auto; width: 97%;
+}
+#selectedcat
+{
+display: none;
+float: left;
+  width: 54%;
+  margin-bottom: 6px;
+}
+
+#selectedcat span
+{
+font-size: 14px;
+  color: #0099d2;
+  line-height: 38px;
+}
+#changecat
+{
+  display: block;
+  padding: 12px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #0099d2;
+  border-radius: 3px;
+  float: right;
+}
+.productform input[type="button"], .productform input[type="submit"]
+{
+  clear: both;
+  color: #fff;
+  padding: 6px 10px;
+  background-color: #0099d2;
+  width: 100%;
+  border: none;
+}
+
+.prodsubmit
+{
+font-size: 16px;
+}
+.preview
+{
+  width: 77px;
+  height: 77px;
+  border: 1px solid #0099d2;
+  text-align: center;
+  line-height: 72px;
+  background-color: #fff;
+  position: relative;
+}
+
+.preview a
+{
+cursor: pointer;
+  width: 20px;
+  text-align: center;
+  color: #fff;
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: #c12031;
+  line-height: 22px;
+  font-weight: bold;
+}
+
+.preview a:hover
+{
+opacity:0.8;
+}
+
+.imageloadbutton
+{
+border: 1px solid #0099d2;
+  width: 77px;
+  margin: 0 auto;
+  height: 77px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+.upload-images
+{
+overflow: hidden;
+}
+#productDescription{height:60px;}
+.popup-header{overflow:hidden;border-bottom:1px solid #CCC;background:#EDEDED none repeat scroll 0% 0%;}
+.popupheading{float: left;font-size: 14px;margin-left: 2%;color: #333;line-height: 30px;}
+.close, .catback{float:right;display:none;font-size:16px;background:#BC0D1F none repeat scroll 0% 0%;color:#FFF!important;padding:0px 12px;text-decoration:none;cursor: pointer;position:absolute;right:0;top:0px;line-height:31px;height:31px;}
+/* Responsive CSS */
+@media only screen and (min-width :1px) and (max-width :767px)
+{
+input[type="button"]{width:100%!important;}
+.upload-images{width:100%;}
+.imageform{width:96%;}
+.close, .catback{display:block;}
+#closepop{display:none;}
+#selectcatpop{top:0;z-index:9999;min-height:100%;}
+#selectcatpop ul a{padding:15px 8px;color:#646464;border-bottom-width:2px;}
+#selectcatpop ul li:nth-child(odd){background:#f2f2f2;}
+a#selectcat{width:100%;}
+#catlevel1, #catlevel2, #catlevel3{width:100%;}
+}

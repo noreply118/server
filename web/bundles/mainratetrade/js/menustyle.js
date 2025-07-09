@@ -1,0 +1,38 @@
+$(document).ready(function(){
+    $(".innm1").hover(function(){
+        $("#item1").show();
+		$("#item2").hide();
+		$("#item3").hide();
+		$("#item4").hide();
+		$("#item5").hide();
+	});
+	$(".innm2").hover(function(){
+        $("#item2").show();
+		$("#item1").hide();
+		$("#item3").hide();
+		$("#item4").hide();
+		$("#item5").hide();
+	});
+	$(".innm3").hover(function(){
+        $("#item3").show();
+		$("#item2").hide();
+		$("#item1").hide();
+		$("#item4").hide();
+		$("#item5").hide();
+	});
+	$(".innm4").hover(function(){
+        $("#item4").show();
+		$("#item2").hide();
+		$("#item3").hide();
+		$("#item1").hide();
+		$("#item5").hide();
+	});
+	$(".innm5").hover(function(){
+        $("#item5").show();
+		$("#item2").hide();
+		$("#item3").hide();
+		$("#item4").hide();
+		$("#item1").hide();
+	}); 
+
+});

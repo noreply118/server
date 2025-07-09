@@ -1,0 +1,276 @@
+<html>
+    <head>
+        <title>CHMC Insurance Calculator</title>
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/acmedemo/css/calculators.css') }}">
+    </head>
+<body><div id="main">
+    <h1 align="center">Mortgage Insurance Calculator</h1>
+    
+      <div class="askp" ><h3 style="display:inline;">Property Value</h3>
+    &nbsp;&nbsp;<input type="text" value="" id="askprice"/>
+    &nbsp;&nbsp;<input type="button" value="GO" id="go"/>
+    <br /><br /></div>
+    
+     <div class="calc">
+         <table class="tablem" cellspacing="0" style="background-color:#Fff">
+        <tr>
+            <td rowspan="2" style="background:#FCFCFC;color:#000;">Down Payment <img src="http://newhopephysio.com/down.png"></td>
+            <td>
+                <input type="text" class="downtext" value="5%" />
+                <input type="text" class="downtext1" value="20%" style="display: none;"/>
+            </td>
+            <td>
+                <input type="text" class="downtext" value="10%" />
+                <input type="text" class="downtext1" value="25%" style="display: none;"/>
+            </td>
+            <td>
+                <input type="text" class="downtext" value="15%" />
+                <input type="text" class="downtext1" value="30%" style="display: none;"/>
+            </td>
+            <td>
+                <input type="text" class="downtext" value="20%" />
+                <input type="text" class="downtext1" value="35%" style="display: none;"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="downpayment 0"></td>
+            <td class="downpayment 1"></td>
+            <td class="downpayment 2"></td>
+            <td class="downpayment 3"></td>
+        </tr>
+        <tr>
+            <td style="background:#FCFCFC;color:#000;">Amortization period</td>
+            <td>
+                <select id="ammort" class="ammort">
+                   <option value='0'>Select</option>
+                    <option value='5'>5 years</option>
+                    <option value='10'>10 years</option>
+                    <option value='15'>15 years</option>
+                    <option value='20'>20 years</option>
+                    <option value='25'>25 years</option>
+                    <option value='30' disabled="disabled">30 years</option>
+                    <option value='35' disabled="disabled">35 years</option>
+                </select>
+                <select id="ammort1" class="ammort1" style="display: none;">
+                   <option value='0'>Select</option>
+                    <option value='5'>5 years</option>
+                    <option value='10'>10 years</option>
+                    <option value='15'>15 years</option>
+                    <option value='20'>20 years</option>
+                    <option value='25'>25 years</option>
+                    <option value='30'>30 years</option>
+                    <option value='35'>35 years</option>
+                </select>
+            </td>
+            <td>
+                <select class="ammort">
+                    <option value='0'>Select</option>
+                    <option value='5'>5 years</option>
+                    <option value='10'>10 years</option>
+                    <option value='15'>15 years</option>
+                    <option value='20'>20 years</option>
+                    <option value='25'>25 years</option>
+                    <option value='30' disabled="disabled">30 years</option>
+                    <option value='35' disabled="disabled">35 years</option>
+                </select>
+                <select class="ammort1" style="display: none;">
+                   <option value='0'>Select</option>
+                    <option value='5'>5 years</option>
+                    <option value='10'>10 years</option>
+                    <option value='15'>15 years</option>
+                    <option value='20'>20 years</option>
+                    <option value='25'>25 years</option>
+                    <option value='30'>30 years</option>
+                    <option value='35'>35 years</option>
+                </select>
+            </td>
+            <td>
+                <select class="ammort">
+                    <option value='0'>Select</option>
+                    <option value='5'>5 years</option>
+                    <option value='10'>10 years</option>
+                    <option value='15'>15 years</option>
+                    <option value='20'>20 years</option>
+                    <option value='25'>25 years</option>
+                    <option value='30' disabled="disabled">30 years</option>
+                    <option value='35' disabled="disabled">35 years</option>
+                </select>
+                <select class="ammort1" style="display: none;">
+                   <option value='0'>Select</option>
+                    <option value='5'>5 years</option>
+                    <option value='10'>10 years</option>
+                    <option value='15'>15 years</option>
+                    <option value='20'>20 years</option>
+                    <option value='25'>25 years</option>
+                    <option value='30'>30 years</option>
+                    <option value='35'>35 years</option>
+                </select>
+            </td>
+            <td>
+                <select class="ammort">
+                    <option value='0'>Select</option>
+                    <option value='5'>5 years</option>
+                    <option value='10'>10 years</option>
+                    <option value='15'>15 years</option>
+                    <option value='20'>20 years</option>
+                    <option value='25'>25 years</option>
+                    <option value='30'>30 years</option>
+                    <option value='35'>35 years</option>
+                </select>
+                <select class="ammort1" style="display: none;">
+                   <option value='0'>Select</option>
+                    <option value='5'>5 years</option>
+                    <option value='10'>10 years</option>
+                    <option value='15'>15 years</option>
+                    <option value='20'>20 years</option>
+                    <option value='25'>25 years</option>
+                    <option value='30'>30 years</option>
+                    <option value='35'>35 years</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#FCFCFC;color:#000; height:55px;">Mortgage Insurance <img src="http://newhopephysio.com/plus.png"></td>
+            <td class="insurance 0"></td>
+            <td class="insurance 1"></td>
+            <td class="insurance 2"></td>
+            <td class="insurance 3"></td>
+        </tr>
+        <tr style="background:#FCFCFC;">
+            <td style="color:#000; background-color: #FCFCFC;">Total Mortgage Required <img src="http://newhopephysio.com/equal.png"></td>
+            <td class="reqdmortgage 0"></td>
+            <td class="reqdmortgage 1"></td>
+            <td class="reqdmortgage 2"></td>
+            <td class="reqdmortgage 3"></td>
+        </tr> 
+    </table>
+     </div>
+<div style="clear:both;"></div>
+    
+  </div>
+</body>
+</html>
+
+
+  <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.min.js') }}"></script>
+    <script>
+        
+        function formatdollor(n, currency) {
+          return currency + " " + n.toFixed(1).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").replace(".0","");
+        }
+        
+        $(document).on("change","#ammort",function(){
+            $(".ammort").each(function(){
+              $(this).val($("#ammort").val());
+            });
+        });
+        
+        $(document).on("change","#ammort1",function(){
+            $(".ammort1").each(function(){
+             $(this).val($("#ammort1").val());
+            });
+        });
+        
+        $(document).on("keydown","#askprice",function (e) {
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+             // Allow: Ctrl+A, Command+A
+            (e.keyCode == 65 && ( e.ctrlKey === true || e.metaKey === true ) ) || 
+             // Allow: home, end, left, right, down, up
+            (e.keyCode >= 35 && e.keyCode <= 40)) {
+                 // let it happen, don't do anything
+                 return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    });
+    
+    $("#askprice").blur(function(){
+        var num=parseInt($(this).val().replace(/[^0-9-.]/g, ''));
+        $(this).val(formatdollor(num,"$"));
+        ajax_call();
+    });
+    
+    $(".downtext").blur(function(){
+        ajax_call();
+    });
+       
+       $(document).on("click","#go",function(){
+          ajax_call();
+       });
+        
+       function ajax_call()
+       {
+          
+        if($("#askprice").val() === '')
+        {
+          alert('enter asking price');
+          $("#askprice").focus();
+        }
+        else{
+        var downpays = [];
+        var downpaycheck=0;
+         
+         if(parseInt($("#askprice").val().replace(/[^0-9-.]/g, '')) >= 1000000)
+         {
+             $(".downtext").hide();
+             $(".downtext1").show();
+             $(".ammort1").show();
+             $(".ammort").hide();
+             $(".downtext1").each(function(){             
+             if(parseInt($(this).val()) < 5)
+             { downpaycheck = 1;}
+             else{
+             downpays.push($(this).val());
+             }
+             });
+         }
+         else
+         {
+            $(".downtext1").hide();
+            $(".downtext").show();
+            $(".ammort").show();
+            $(".ammort1").hide();
+            $(".downtext").each(function(){
+             
+             if(parseInt($(this).val()) < 5)
+             { downpaycheck = 1;}
+             else{
+             downpays.push($(this).val());
+             }
+             }); 
+         }
+         
+        var downpays_str = downpays.join('|');
+        
+        if(downpaycheck === 0)
+        {
+        $.ajax({
+                  type: "post",
+                  url: "/get-mortgage",
+                  async: true,
+                  data : {'askprice' : parseInt($("#askprice").val().replace(/[^0-9-.]/g, '')),'downpays':downpays_str},
+                  success: function(response){ 
+                     var data=JSON.parse(response);
+                    
+                     for(var key in data) 
+                     {
+                        $(".downpayment."+key).html(formatdollor(data[key]['downpayment'],"$"));
+                        $(".insurance."+key).html(formatdollor(data[key]['insurance'],"$"));
+                        $(".reqdmortgage."+key).html(formatdollor(data[key]['reqdmortgage'],"$"));
+                     }
+                  },
+                  error: function (request,error) {
+                     alert('No data');
+                }
+        }); 
+        }
+        else{
+           alert('Down payment not allowed below 5%');
+         }
+        } 
+       }
+        
+    </script>

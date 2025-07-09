@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0;">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Rate Entry Form</title>
+        <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/common.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/products.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/add-product.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('./bundles/acmedemo/css/admin-manager.css')}}">
+    </head>
+    <body>
+        <div class="header">
+            <div class="wrapper"> <a href="#" onClick="window.history.back();" class="home-ico">
+                    <img src="{{asset('./bundles/acmedemo/images/back.png')}}"></a> 
+                <span class="page-name">Add New Rate</span> </div>
+        </div>
+        <div class="headerfix"></div>
+        <div class="wrapper bodywrapper">
+            <div class="left-nav"> <a href="{{path('rateform')}}" class="selected">Add Rate</a> <a href="{{path('allrates')}}">All Rates</a><a href="{{path('logout')}}">Sign Out</a> </div>
+            <div class="right-details">
+                <div class="right-inner">
+                    <div class="inner">
+                        <form class="imageform" id="imageform" method="post" action="{{path('rateform_update')}}">
+                            <div style="clear:both"></div>
+                            <label>
+                                <strong>Province</strong>
+                            </label>
+                            <div class="fields">
+                                <select id="province" name="province" >
+                                    <option value="AL">Alberta</option>
+                                    <option value="BC">British Columbia</option>
+                                    <option value="MA">Manitoba</option>
+                                    <option value="NB">New Brunswick</option>
+                                    <option value="NE">Newfoundland</option>
+                                    <option value="NS">Nova Scotia</option>
+                                    <option value="NT">Northwest Territories</option>
+                                    <option value="NU">Nunavut</option>
+                                    <option value="ON" selected="selected">Ontario</option>
+                                    <option value="PE">Prince Edward Island</option>
+                                    <option value="QU">Quebec</option>
+                                    <option value="SK">Saskatchewan</option>
+                                    <option value="YU">Yukon</option>				
+                                </select>
+                            </div>
+                            <div style="clear:both"></div>
+                            <label>
+                                <strong>City</strong>
+                            </label>
+                            <div class="fields">
+                                <select id="city" name="city" >
+                                </select>
+                            </div>
+                            <div style="clear:both"></div>
+                            <label>
+                                <strong>Mortgage Rate</strong>
+                            </label>
+                            <div class="fields">
+                                <select id="mort-rate" name="mort-rate" >
+                                    <option value="Buying Home">Buying Home</option>
+                                    <option value="Renewing">Renewing</option>
+                                    <option value="Refinancing">Refinancing</option>
+                                    <option value="Home Equity">Accessing Home Equity</option> 
+                                </select>
+                            </div>
+                            <div style="clear:both"></div>
+                            <label>
+                                <strong>Rate Type</strong>
+                            </label>
+                            <div class="fields">
+                                <select id="rate-type" name="rate-type" >
+                                    <option value="Fixed">Fixed</option>
+                                    <option value="Variable">Variable</option>
+                                    <option value="Fixed - Open">Fixed - Open</option>
+                                    <option value="Variable - Open">Variable - Open</option> 
+                                    <option value="Cash Back">Cash Back</option> 
+                                </select>
+                            </div>
+                            <div style="clear:both"></div>
+                            <label>
+                                <strong>Terms Length</strong>
+                            </label>
+                            <div class="fields">
+                                <select id="terms-length" name="terms-length" >
+                                    <option value="1 Year">1 Year</option>
+                                    <option value="2 Year">2 Year</option>
+                                    <option value="3 Year">3 Year</option>
+                                    <option value="4 Year">4 Year</option>
+                                    <option value="5 Year">5 Year</option>
+                                    <option value="6 Year">6 Year</option>
+                                    <option value="7 Year">7 Year</option>
+                                    <option value="8 Year">8 Year</option>
+                                    <option value="9 Year">9 Year</option>
+                                    <option value="10 Year">10 Year</option>
+                                </select>
+                            </div>
+                            <div style="clear:both"></div>
+                             <label>
+                                <strong>Enter Rate</strong>
+                            </label>
+                            <div class="fields">
+                                <input type="text" value="" name="rate" id="rate" placeholder="Enter Rate"/>
+                            </div>
+                            <input id="signup-submit" name="signup" value="ADD" class="prodsubmit" type="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/rate_entry.js') }}"></script>
+    </body>
+</html>

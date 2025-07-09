@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>RateTrade.ca | Get Best Mortgage Rates </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="{{asset('./bundles/acmedemo/css/bootstrap.min.css')}}"/>
+        <link rel="stylesheet" href="{{asset('./bundles/acmedemo/css/style_bag.css')}}"/>
+        <link rel="stylesheet" href="{{asset('./bundles/acmedemo/css/custom.css')}}"/>
+        <link href="{{asset('./bundles/acmedemo/css/jquery.bxslider.css')}}" rel="stylesheet" />
+    <div>
+        {{ render(controller('AcmeDemoBundle:Mortgage:header')) }}
+        <div class="container rateTradelogo">
+            <div class="row">
+                <div class="col-lg-12">
+                    <form role="form" class="maxsavingForm">
+                        <div class="col-md-1">
+
+                        </div>
+
+                        <div class="col-md-2">
+                            <div>
+                                <label for="ex1">I am</label>
+                                <select class="form-control form-control-lg" id="ex1">
+                                    <option value="Buying">Buying a home</option>
+                                    <option value="Renewing">Renewing</option>
+                                    <option value="Refinancing">Refinancing</option>
+                                </select>
+                            </div>				
+                        </div>
+
+
+                        <div class="col-md-2">
+                            <div>
+                                <label for="ex3">Location</label>
+                                <select class="form-control form-control-lg">
+                                    <option value="Buying">Vancouver, Bc</option>
+                                    <option value="Renewing">Brampton</option>
+                                    <option value="Refinancing">Maltron</option>
+                                </select>
+                            </div>				
+                        </div>
+
+
+                        <div class="col-md-2">
+                            <div>
+                                <label for="ex3">&nbsp;</label>
+                                <button class="btn btn-primary btn-block">Submit</button>
+                            </div>				
+                        </div>
+                        <div class="col-md-1">
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+         <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+         <ul class="bxslider">
+                <li><img src="{{asset('./bundles/acmedemo/images/rsz_renewal.jpg')}}" /></li>
+                <li><img src="{{asset('./bundles/acmedemo/images/rsz_renewal.jpg')}}" /></li>
+                <li><img src="{{asset('./bundles/acmedemo/images/rsz_renewal.jpg')}}" /></li>
+                <li><img src="{{asset('./bundles/acmedemo/images/rsz_renewal.jpg')}}" /></li>
+            </ul>
+                </div></div></div>
+            <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 style="text-align: center;">Best Mortgage Rates in Canada</h1>
+                </div></div></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="panel panel-primary text-center">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">First Time Home buyers</h3>
+                        </div>
+                        <div class="panel-body">
+                            Before buying a home it's important to get an idea of how much a lender will essentially be willing to give you to purchase your first home So check our mortgage options.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-primary text-center">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Mortgage Calculator</h3>
+                        </div>
+                        <div class="panel-body">
+                            With the help of Mortgage Calculator you will check how much you can afford to borrow so mortgage calculator can help you to find the right mortgage for you. 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-primary text-center">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Frequent Questions</h3>
+                        </div>
+                        <div class="panel-body">
+                            We know that everyone worries about mortgage process so we will help you in every step. You can check our Mortgage rate and if you have any question or enquiry feel free to contact us.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ render(controller('AcmeDemoBundle:Mortgage:footer')) }}
+    </div>
+    <script src="{{asset('./bundles/acmedemo/js/jquery_bag.min.js')}}"></script>
+    <script src="{{asset('./bundles/acmedemo/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('./bundles/acmedemo/js/jquery.bxslider.js')}}"></script>
+    <script>
+        $('.bxslider').bxSlider({
+            adaptiveHeight: true,
+            mode: 'fade'
+           // auto: true,
+            //pause: 3000
+        });
+    </script>
+</head>
+</body>
+</html>

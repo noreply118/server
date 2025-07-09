@@ -1,0 +1,966 @@
+<html>
+    <head>
+        <title>Mortgage Payment Calculator</title>
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/acmedemo/css/mortgage-payment-cal.css') }}">
+        <style type="text/css">
+          ${demo.css}
+        </style>
+    </head>
+<body>
+<div id="main">
+    <h1>Mortgage Payment Calculator</h1>
+    <div class="askp">
+    <h3 style="display:inline; COLOR:#FFF !IMPORTANT">Asking Price</h3>&nbsp;&nbsp;<input type="text" value="" id="askprice"/>
+    &nbsp;&nbsp;<input type="button" value="GO" id="go"/></div>
+    <div class="calc">
+    <table class="tablem" width="100%">
+        <tr>
+            <td rowspan="2" style="background-color:#FCFCFC; width:20%;">Down Payment ( - )</td>
+            <td>
+                <input type="text" class="downtext" value="5%" />
+            </td>
+            <td>
+                <input type="text" class="downtext" value="10%" />
+            </td>
+            <td>
+                <input type="text" class="downtext" value="15%" />
+            </td>
+            <td>
+                <input type="text" class="downtext" value="20%" />
+            </td>
+        </tr>
+        <tr>
+            <td class="downpayment 0"></td>
+            <td class="downpayment 1"></td>
+            <td class="downpayment 2"></td>
+            <td class="downpayment 3"></td>
+        </tr>
+        <tr>
+            <td style="background-color:#FCFCFC;">Mortgage Insurance ( + )</td>
+            <td class="insurance 0"></td>
+            <td class="insurance 1"></td>
+            <td class="insurance 2"></td>
+            <td class="insurance 3"></td>
+        </tr>
+        <tr style="background:#FCFCFC;">
+            <td>Total Mortgage Required ( = )</td>
+            <td class="reqdmortgage 0"></td>
+            <td class="reqdmortgage 1"></td>
+            <td class="reqdmortgage 2"></td>
+            <td class="reqdmortgage 3"></td>
+        </tr>
+        
+        <tr>
+            <td>Amortization period</td>
+            <td>
+                <select id="ammort" class="ammort">
+                   <option value='0'>Select</option>
+                    <option value='5'>5 years</option>
+                    <option value='10'>10 years</option>
+                    <option value='15'>15 years</option>
+                    <option value='20'>20 years</option>
+                    <option value='25'>25 years</option>
+                    <option value='30'>30 years</option>
+                    <option value='35'>35 years</option>
+                    <option value='other'>Other</option>
+                </select>
+                <input type='text' value='' class="amortval" style="display:none;"/>
+            </td>
+            <td>
+                <select class="ammort">
+                    <option value='0'>Select</option>
+                    <option value='5'>5 years</option>
+                    <option value='10'>10 years</option>
+                    <option value='15'>15 years</option>
+                    <option value='20'>20 years</option>
+                    <option value='25'>25 years</option>
+                    <option value='30'>30 years</option>
+                    <option value='35'>35 years</option>
+                     <option value='other'>Other</option>
+                </select>
+               <input type='text' value='' class="amortval" style="display:none;"/>
+            </td>
+            <td>
+                <select class="ammort">
+                    <option value='0'>Select</option>
+                    <option value='5'>5 years</option>
+                    <option value='10'>10 years</option>
+                    <option value='15'>15 years</option>
+                    <option value='20'>20 years</option>
+                    <option value='25'>25 years</option>
+                    <option value='30'>30 years</option>
+                    <option value='35'>35 years</option>
+                    <option value='other'>Other</option>
+                </select>
+                <input type='text' value='' class="amortval" style="display:none;"/>
+            </td>
+            <td>
+                <select class="ammort">
+                    <option value='0'>Select</option>
+                    <option value='5'>5 years</option>
+                    <option value='10'>10 years</option>
+                    <option value='15'>15 years</option>
+                    <option value='20'>20 years</option>
+                    <option value='25'>25 years</option>
+                    <option value='30'>30 years</option>
+                    <option value='35'>35 years</option>
+                    <option value='other'>Other</option>
+                </select>
+                <input type='text' value='' class="amortval" style="display:none;"/>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Mortgage rate</td>
+            <td><input type="text" value="" id="rateval" class="rateval" disabled="disabled"/>
+                <div><a href="#" class="select-rate">Select Rate</a></div>
+            </td>
+            <td><input type="text" value="" class="rateval" disabled="disabled"/>
+            <div><a href="#" class="select-rate">Select Rate</a></div>
+            </td>
+            <td><input type="text" value="" class="rateval" disabled="disabled"/>
+            <div><a href="#" class="select-rate">Select Rate</a></div></td>
+            <td><input type="text" value="" class="rateval" disabled="disabled"/>
+            <div><a href="#" class="select-rate">Select Rate</a></div></td>
+        </tr>
+        
+        <tr style="background:#FCFCFC;">
+            <td>Total Mortgage Payment <br/>
+                <span style="font-size: 14px;">Frequency:</span>&nbsp;
+            <select id="frequency" style="max-width: 125px;">
+                <option value="monthly">Monthly</option>
+                <option value="semi_monthly">Semi Monthly</option>
+                <option value="acc_bi_weekly">Accelerted Bi Weekly</option>
+                <option value="weekly">Weekly</option>
+            </select>
+            </td>
+            <td class="emi 0"></td>
+            <td class="emi 1"></td>
+            <td class="emi 2"></td>
+            <td class="emi 3"></td>
+        </tr>
+                    
+    </table>
+    </div>
+
+    <table width="100%" cellspacing="0" STYLE="BORDER:1px solid #CDD6D9;"><tr><td>
+	
+	<table  class="tablem" style="display:inline;background-color:#fff;">
+        <tr style="background:#FCFCFC;">
+            <td colspan="2" align="center"><b>Profile</b></td>
+        </tr>
+        <tr>
+            <td> Province </td>
+            <td>
+                            <select id="province" name="province" >
+		                <option value="AL">Alberta</option>
+		                <option value="BC">British Columbia</option>
+                                <option value="MA">Manitoba</option>
+                                <option value="NB">New Brunswick</option>
+                                <option value="NE">Newfoundland</option>
+				<option value="NS">Nova Scotia</option>
+                                <option value="NT">Northwest Territories</option>
+				<option value="NU">Nunavut</option>
+                                <option value="ON" selected="selected">Ontario</option>
+                                <option value="PE">Prince Edward Island</option>
+                                <option value="QU">Quebec</option>
+				<option value="SK">Saskatchewan</option>
+				<option value="YU">Yukon</option>				
+			    </select>
+            </td>
+        </tr>
+        <tr>
+            <td> City </td>
+            <td>
+                            <select id="city" name="city" >
+		                			
+			    </select>
+            </td>
+        </tr>
+        <tr>
+            <td>I am a first time home buyer</td>
+            <td><input type="checkbox" id="first-time" /></td>
+        </tr>
+        <tr id="non-resident">
+            <td>Toronto Resident</td>
+            <td><input type="checkbox" id="non-res" /></td>
+        </tr>
+    </table>
+    
+	</td><td width="50%">
+	
+	
+    <table class="tablem" style="display:inline; ">
+        <tr style="background:#FCFCFC;">
+            <td colspan="2" align="center"><b>Land Transfer Tax</b></td>
+        </tr>
+        <tr>
+            <td> Provincial: (+) </td>
+            <td id="pro"> 0 </td>
+        </tr>
+        <tr>
+            <td> Municipal: (+) </td>
+            <td id="mum"> 0 </td>
+        </tr>
+        <tr>
+            <td> Rebate: (-) </td>
+            <td id="reb"> 0 </td>
+        </tr>
+        <tr>
+            <td> Total: </td>
+            <td id="tot"> 0 </td>
+        </tr>
+      </table>
+        </td></tr></table>
+    <div class="calc">
+       <a href="#" style="line-height:50px;font-size: 22px;" class="get-ammort"> Amortization Schedule </a>
+    <div id="ammort-div" style="display:none;">
+    <div id="graph-downpay-div">   
+    </div>
+    <table>
+        <tr>
+            <td><div id="container"></div></td>
+        </tr>
+        <tr>
+           <td><div id="container1"></div></td>
+        </tr>
+    </table>
+    
+       <div id="emipaymenttable">
+           
+       </div>  
+    </div>
+    </div>
+    
+    <div class="calc">
+       <a href="#" style="line-height:50px;font-size: 22px;" class="get-monthly-expense"> Monthly Expenses </a>
+    <div id="monthly-exp-div" style="display:none;">
+    <table id="expense-data">
+        <tr>
+            <td style="width:70%"><strong>Expenses</strong></td>
+            <td><div id="exp-downpay-div"></div></td>
+        </tr>
+        <tr colspan="2"><td>&nbsp;</td></tr>
+        <tr>
+            <td>Mortgage Payment</td>
+            <td><input type="text" id="exp-mortgage-div" class="exp-data" /></td>
+        </tr>
+        <tr>
+            <td>Property Tax</td>
+            <td><input type="text" id="exp-proptax-div" class="exp-data"/></td>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="enter expense"/></td>
+            <td><input type="text" class="exp-data" placeholder="enter value"/></td>
+        </tr>
+    </table>
+    <br/>
+    <table>
+        <tr>
+            <td style="width:82%"><strong>Total</strong></td>
+            <td><div id="exp-total-div"></div></td>
+        </tr>
+    </table> 
+        <input type="button" value="Add Expense" id="add-expense"/>
+    </div>
+    </div>
+    
+    <div class="getquoteform">
+     <a href="#" class="closebtn">X</a>
+    {# <table>
+         <tr>
+             <td>Type</td>
+             <td>
+              <select>
+                 <option>Fixed Rates</option>
+                 <option>Variable Rates</option>
+              </select>
+             </td>
+         </tr>
+         <tr>
+             <td>Term</td>
+             <td>
+               <select>
+                  <option>3 years</option>
+                  <option>5 years</option>
+               </select>
+             </td>
+         </tr>
+         <tr>
+             <td>Location</td>
+             <td>
+                 <select>
+                   <option>Fixed Rates</option>
+                   <option>Variable Rates</option>
+                 </select>
+             </td>
+         </tr>
+     </table> #}
+     <input type="text" value="" class="rate-active" placeholder="Enter Rate"/>
+     <input type="button" value="Select" id="compute"/>
+    </div>
+	</div>
+</body>
+</html>
+    <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/highcharts.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/exporting.js') }}"></script>
+    <script>
+        cities = '{"AL":[{"city":"Acadia Valleyoption"},{"city":"Acmeoption"},{"city":"Airdrieoption"},{"city":"Alberta Beachoption"},{"city":"Alder Flatsoption"},{"city":"Alixoption"},{"city":"Allianceoption"},{"city":"Altariooption"},{"city":"Andrewoption"},{"city":"Anzacoption"},{"city":"Ardrossanoption"},{"city":"Arrowwoodoption"},{"city":"Ashmontoption"},{"city":"Assumptionoption"},{"city":"Athabascaoption"},{"city":"Banffoption"},{"city":"Baronsoption"},{"city":"Barrheadoption"},{"city":"Bashawoption"},{"city":"Bassanooption"},{"city":"Bawlfoption"},{"city":"Bear Canyonoption"},{"city":"Beaumontoption"},{"city":"Beaverlodgeoption"},{"city":"Beisekeroption"},{"city":"Bentleyoption"},{"city":"Berwynoption"},{"city":"Big Valleyoption"},{"city":"Bindlossoption"},{"city":"Black Diamondoption"},{"city":"Blackfaldsoption"},{"city":"Blackieoption"},{"city":"Blue Ridgeoption"},{"city":"Bon Accordoption"},{"city":"Bonanzaoption"},{"city":"Bonnyvilleoption"},{"city":"Bowdenoption"},{"city":"Bow Islandoption"},{"city":"Boyleoption"},{"city":"Bragg Creekoption"},{"city":"Bretonoption"},{"city":"Brocketoption"},{"city":"Brooksoption"},{"city":"Brownvaleoption"},{"city":"Bruderheimoption"},{"city":"Burdettoption"},{"city":"Byemooroption"},{"city":"Cadominoption"},{"city":"Calgaryoption"},{"city":"Calling Lakeoption"},{"city":"Calmaroption"},{"city":"Camroseoption"},{"city":"Canmoreoption"},{"city":"Carbonoption"},{"city":"Cardstonoption"},{"city":"Carmangayoption"},{"city":"Carolineoption"},{"city":"Carselandoption"},{"city":"Carstairsoption"},{"city":"Castoroption"},{"city":"Cayleyoption"},{"city":"Cerealoption"},{"city":"Cessfordoption"},{"city":"Championoption"},{"city":"Chauvinoption"},{"city":"Chestermereoption"},{"city":"Chipewyan Lakeoption"},{"city":"Chipmanoption"},{"city":"Clairmontoption"},{"city":"Claresholmoption"},{"city":"Cliveoption"},{"city":"Clydeoption"},{"city":"Coaldaleoption"},{"city":"Coalhurstoption"},{"city":"Cochraneoption"},{"city":"Cold Lakeoption"},{"city":"Conklinoption"},{"city":"Consortoption"},{"city":"Coronationoption"},{"city":"Couttsoption"},{"city":"Cowleyoption"},{"city":"Craigmyleoption"},{"city":"Cremonaoption"},{"city":"Crossfieldoption"},{"city":"Crowsnest Passoption"},{"city":"Czaroption"},{"city":"Dayslandoption"},{"city":"DeBoltoption"},{"city":"Delburneoption"},{"city":"Deliaoption"},{"city":"Derwentoption"},{"city":"Devonoption"},{"city":"Dewberryoption"},{"city":"Didsburyoption"},{"city":"Dixonvilleoption"},{"city":"Donaldaoption"},{"city":"Donnellyoption"},{"city":"Drayton Valleyoption"},{"city":"Drumhelleroption"},{"city":"Duchessoption"},{"city":"Eagleshamoption"},{"city":"East Couleeoption"},{"city":"Eckvilleoption"},{"city":"Edgertonoption"},{"city":"Edmontonoption"},{"city":"Edsonoption"},{"city":"Elk Pointoption"},{"city":"Elkwateroption"},{"city":"Elnoraoption"},{"city":"Empressoption"},{"city":"Enchantoption"},{"city":"Etzikomoption"},{"city":"Evansburgoption"},{"city":"Exshawoption"},{"city":"Fairviewoption"},{"city":"Falheroption"},{"city":"Faustoption"},{"city":"Ferintoshoption"},{"city":"Flatbushoption"},{"city":"Foremostoption"},{"city":"Forestburgoption"},{"city":"Fort Assiniboineoption"},{"city":"Fort Chipewyanoption"},{"city":"Fort MacKayoption"},{"city":"Fort Macleodoption"},{"city":"Fort McMurrayoption"},{"city":"Fort Saskatchewanoption"},{"city":"Fort Vermilionoption"},{"city":"Fox Creekoption"},{"city":"Fox Lakeoption"},{"city":"Gadsbyoption"},{"city":"Galahadoption"},{"city":"Gibbonsoption"},{"city":"Gift Lakeoption"},{"city":"Girouxvilleoption"},{"city":"Gleichenoption"},{"city":"Glendonoption"},{"city":"Glenwoodoption"},{"city":"Grand Centreoption"},{"city":"Grande Cacheoption"},{"city":"Grande Prairieoption"},{"city":"Granumoption"},{"city":"Grasslandoption"},{"city":"Grassy Lakeoption"},{"city":"Grimshawoption"},{"city":"Grouardoption"},{"city":"Hairy Hilloption"},{"city":"Halkirkoption"},{"city":"Hannaoption"},{"city":"Hardistyoption"},{"city":"Hay Lakesoption"},{"city":"Haysoption"},{"city":"Heinsburgoption"},{"city":"Heisleroption"},{"city":"High Leveloption"},{"city":"High Prairieoption"},{"city":"High Riveroption"},{"city":"Hildaoption"},{"city":"Hines Creekoption"},{"city":"Hintonoption"},{"city":"Hobbemaoption"},{"city":"Holdenoption"},{"city":"Hughendenoption"},{"city":"Hussaroption"},{"city":"Hytheoption"},{"city":"Innisfailoption"},{"city":"Innisfreeoption"},{"city":"Irmaoption"},{"city":"Iron Springsoption"},{"city":"Irricanaoption"},{"city":"Irvineoption"},{"city":"Islayoption"},{"city":"Jarvieoption"},{"city":"Jasperoption"},{"city":"Jenneroption"},{"city":"Joussardoption"},{"city":"Kananaskisoption"},{"city":"Keephillsoption"},{"city":"Keg Riveroption"},{"city":"Killamoption"},{"city":"Kinusooption"},{"city":"Kitscotyoption"},{"city":"Lac La Bicheoption"},{"city":"Lacombeoption"},{"city":"La Creteoption"},{"city":"Lake Louiseoption"},{"city":"Lamontoption"},{"city":"Langdonoption"},{"city":"Lavoyoption"},{"city":"Leducoption"},{"city":"Legaloption"},{"city":"Leslievilleoption"},{"city":"Lethbridgeoption"},{"city":"Lloydminsteroption"},{"city":"Lodgepoleoption"},{"city":"Lomondoption"},{"city":"Longviewoption"},{"city":"Lougheedoption"},{"city":"Magrathoption"},{"city":"Ma-Me-O Beachoption"},{"city":"Manningoption"},{"city":"Mannvilleoption"},{"city":"Manyberriesoption"},{"city":"Marlborooption"},{"city":"Marwayneoption"},{"city":"Mayerthorpeoption"},{"city":"McLennanoption"},{"city":"Meander Riveroption"},{"city":"Medicine Hatoption"},{"city":"Milk Riveroption"},{"city":"Milletoption"},{"city":"Milooption"},{"city":"Minburnoption"},{"city":"Mirroroption"},{"city":"Morinvilleoption"},{"city":"Morleyoption"},{"city":"Morrinoption"},{"city":"Mulhurstoption"},{"city":"Mundareoption"},{"city":"Myrnamoption"},{"city":"Namaooption"},{"city":"Nampaoption"},{"city":"Nantonoption"},{"city":"Newbrookoption"},{"city":"New Daytonoption"},{"city":"New Norwayoption"},{"city":"New Sareptaoption"},{"city":"Niskuoption"},{"city":"Niton Junctionoption"},{"city":"Noblefordoption"},{"city":"Nordeggoption"},{"city":"Okotoksoption"},{"city":"Oldsoption"},{"city":"Onowayoption"},{"city":"Oyenoption"},{"city":"Paradise Valleyoption"},{"city":"Peace Riveroption"},{"city":"Peerless Lakeoption"},{"city":"Peersoption"},{"city":"Penholdoption"},{"city":"Picture Butteoption"},{"city":"Pincher Creekoption"},{"city":"Plamondonoption"},{"city":"Ponokaoption"},{"city":"Provostoption"},{"city":"Radwayoption"},{"city":"Rainbow Lakeoption"},{"city":"Ralstonoption"},{"city":"Raymondoption"},{"city":"Redcliffoption"},{"city":"Red Deeroption"},{"city":"Redwateroption"},{"city":"Rimbeyoption"},{"city":"Robboption"},{"city":"Rochesteroption"},{"city":"Rockyfordoption"},{"city":"Rocky Mountain Houseoption"},{"city":"Rolling Hillsoption"},{"city":"Rosalindoption"},{"city":"Rosebudoption"},{"city":"Rumseyoption"},{"city":"Rycroftoption"},{"city":"Ryleyoption"},{"city":"Sangudooption"},{"city":"Saskatchewan River Crossingoption"},{"city":"Schuleroption"},{"city":"Seba Beachoption"},{"city":"Sedgewickoption"},{"city":"Seven Personsoption"},{"city":"Sexsmithoption"},{"city":"Sherwood Parkoption"},{"city":"Sibbaldoption"},{"city":"Silver Valleyoption"},{"city":"Slave Lakeoption"},{"city":"Smithoption"},{"city":"Smoky Lakeoption"},{"city":"Spirit Riveroption"},{"city":"Spruce Groveoption"},{"city":"Spruce Viewoption"},{"city":"St. Albertoption"},{"city":"Standardoption"},{"city":"Stand Offoption"},{"city":"Stavelyoption"},{"city":"Stettleroption"},{"city":"Stirlingoption"},{"city":"St. Michaeloption"},{"city":"Stony Plainoption"},{"city":"St. Pauloption"},{"city":"Strathmoreoption"},{"city":"Stromeoption"},{"city":"Sundreoption"},{"city":"Swan Hillsoption"},{"city":"Sylvan Lakeoption"},{"city":"Taberoption"},{"city":"Thorhildoption"},{"city":"Thorsbyoption"},{"city":"Three Hillsoption"},{"city":"Tilleyoption"},{"city":"Tofieldoption"},{"city":"Tomahawkoption"},{"city":"Torringtonoption"},{"city":"Trochuoption"},{"city":"Trout Lakeoption"},{"city":"Turner Valleyoption"},{"city":"Two Hillsoption"},{"city":"Valleyviewoption"},{"city":"Vauxhalloption"},{"city":"Vegrevilleoption"},{"city":"Vermilionoption"},{"city":"Veteranoption"},{"city":"Vikingoption"},{"city":"Vilnaoption"},{"city":"Vulcanoption"},{"city":"Wabamunoption"},{"city":"Wainwrightoption"},{"city":"Walshoption"},{"city":"Wandering Riveroption"},{"city":"Wanhamoption"},{"city":"Warburgoption"},{"city":"Warneroption"},{"city":"Warspiteoption"},{"city":"Waskatenauoption"},{"city":"Wembleyoption"},{"city":"Westlockoption"},{"city":"Wetaskiwinoption"},{"city":"Whitecourtoption"},{"city":"Whitelawoption"},{"city":"Widewateroption"},{"city":"Wildwoodoption"},{"city":"Willingdonoption"},{"city":"Winfieldoption"},{"city":"Wokingoption"},{"city":"Worsleyoption"},{"city":"Wrenthamoption"},{"city":"Youngstownoption"}],"BC":[{"city":"100 Mile House"},{"city":"108 Mile House"},{"city":"108 Mile Ranch"},{"city":"150 Mile House"},{"city":"Abbotsford"},{"city":"Agassiz"},{"city":"Ahousat"},{"city":"Aldergrove"},{"city":"Alert Bay"},{"city":"Alexis Creek"},{"city":"Alkali Lake"},{"city":"Armstrong"},{"city":"Ashcroft"},{"city":"Atlin"},{"city":"Avola"},{"city":"Balfour"},{"city":"Bamfield"},{"city":"Barri?re"},{"city":"Beach Grove"},{"city":"Bear Lake"},{"city":"Beaver Cove"},{"city":"Beaverdell"},{"city":"Bella Bella"},{"city":"Bella Coola"},{"city":"Black Creek"},{"city":"Black Point"},{"city":"Blue River"},{"city":"Bob Quinn Lake"},{"city":"Boston Bar"},{"city":"Boswell"},{"city":"Bowen Island"},{"city":"Bowser"},{"city":"Bridge Lake"},{"city":"Britannia Beach"},{"city":"Burnaby"},{"city":"Burns Lake"},{"city":"Cache Creek"},{"city":"Campbell River"},{"city":"Canal Flats"},{"city":"Cassiar"},{"city":"Castlegar"},{"city":"Celista"},{"city":"Chase"},{"city":"Chemainus"},{"city":"Chetwynd"},{"city":"Chilliwack"},{"city":"Christina Lake"},{"city":"Clearwater"},{"city":"Clinton"},{"city":"Cobble Hill"},{"city":"Colwood"},{"city":"Comox"},{"city":"Coquitlam"},{"city":"Courtenay"},{"city":"Cowichan Bay"},{"city":"Cranbrook"},{"city":"Crawford Bay"},{"city":"Crescent Beach"},{"city":"Creston"},{"city":"Cumberland"},{"city":"D\'Arcy"},{"city":"Dawson Creek"},{"city":"Dease Lake"},{"city":"Delta"},{"city":"Donald"},{"city":"Douglas Lake"},{"city":"Duncan"},{"city":"Dunster"},{"city":"East Pine"},{"city":"Elkford"},{"city":"Elko"},{"city":"Enderby"},{"city":"Estevan Point"},{"city":"Fairmont Hot Springs"},{"city":"Falkland"},{"city":"Fauquier"},{"city":"Fernie"},{"city":"Field"},{"city":"Flatrock"},{"city":"Forest Grove"},{"city":"Fort Fraser"},{"city":"Fort Nelson"},{"city":"Fort St. James"},{"city":"Fort St. John"},{"city":"Fraser Lake"},{"city":"Fruitvale"},{"city":"Gabriola"},{"city":"Galiano Island"},{"city":"Ganges"},{"city":"Gibsons"},{"city":"Giscome"},{"city":"Gold Bridge"},{"city":"Golden"},{"city":"Gold River"},{"city":"Good Hope Lake"},{"city":"Grand Forks"},{"city":"Granisle"},{"city":"Grasmere"},{"city":"Grassy Plains"},{"city":"Greenville"},{"city":"Greenwood"},{"city":"Hartley Bay"},{"city":"Hazelton"},{"city":"Hedley"},{"city":"Hemlock Valley"},{"city":"Hendrix Lake"},{"city":"Hixon"},{"city":"Holberg"},{"city":"Hope"},{"city":"Horsefly"},{"city":"Houston"},{"city":"Hudson\'s Hope"},{"city":"Invermere"},{"city":"Iskut"},{"city":"Jaffray"},{"city":"Kamloops"},{"city":"Kaslo"},{"city":"Kelowna"},{"city":"Kemano"},{"city":"Keremeos"},{"city":"Kimberley"},{"city":"Kincolith"},{"city":"Kitimat"},{"city":"Kitkatla"},{"city":"Kitsault"},{"city":"Kitwanga"},{"city":"Klemtu"},{"city":"Kyuquot"},{"city":"Lac la Hache"},{"city":"Ladysmith"},{"city":"Lake Cowichan"},{"city":"Langara"},{"city":"Langley"},{"city":"Lantzville"},{"city":"Likely"},{"city":"Lillooet"},{"city":"Little Fort"},{"city":"Logan Lake"},{"city":"Loos"},{"city":"Lower Post"},{"city":"Lumby"},{"city":"Lytton"},{"city":"Mackenzie"},{"city":"Maple Ridge"},{"city":"Masset"},{"city":"McBride"},{"city":"McLeese Lake"},{"city":"McLeod Lake"},{"city":"Merritt"},{"city":"Mica Creek"},{"city":"Midway"},{"city":"Mission"},{"city":"Montney"},{"city":"Moyie"},{"city":"Muncho Lake"},{"city":"Nakusp"},{"city":"Nanaimo"},{"city":"Naramata"},{"city":"Nelson"},{"city":"New Aiyansh"},{"city":"New Denver"},{"city":"New Westminster"},{"city":"Nimpo Lake"},{"city":"North Saanich"},{"city":"North Vancouver"},{"city":"Ocean Falls"},{"city":"Ocean Park"},{"city":"Okanagan Falls"},{"city":"Oliver"},{"city":"Osoyoos"},{"city":"Oyama"},{"city":"Parksville"},{"city":"Parson"},{"city":"Peachland"},{"city":"Pemberton"},{"city":"Penticton"},{"city":"Pitt Meadows"},{"city":"Port Alberni"},{"city":"Port Alice"},{"city":"Port Clements"},{"city":"Port Coquitlam"},{"city":"Port Edward"},{"city":"Port Hardy"},{"city":"Port McNeill"},{"city":"Port Mellon"},{"city":"Port Moody"},{"city":"Port Renfrew"},{"city":"Pouce Coup?"},{"city":"Powell River"},{"city":"Prespatou"},{"city":"Prince George"},{"city":"Prince Rupert"},{"city":"Princeton"},{"city":"Prophet River"},{"city":"Quadra Island"},{"city":"Qualicum Beach"},{"city":"Queen Charlotte"},{"city":"Quesnel"},{"city":"Radium Hot Springs"},{"city":"Red Rock"},{"city":"Revelstoke"},{"city":"Richmond"},{"city":"Riondel"},{"city":"Riske Creek"},{"city":"Rock Creek"},{"city":"Rolla"},{"city":"Rossland"},{"city":"Saanich"},{"city":"Salmo"},{"city":"Salmon Arm"},{"city":"Salmon Valley"},{"city":"Sandspit"},{"city":"Savona"},{"city":"Sayward"},{"city":"Sechelt"},{"city":"Shalalth"},{"city":"Sicamous"},{"city":"Sidney"},{"city":"Skookumchuck"},{"city":"Slocan"},{"city":"Smithers"},{"city":"Sointula"},{"city":"Sooke"},{"city":"Sorrento"},{"city":"South Slocan"},{"city":"Sparwood"},{"city":"Spences Bridge"},{"city":"Spillimacheen"},{"city":"Squamish"},{"city":"Stewart"},{"city":"Summerland"},{"city":"Summit Lake"},{"city":"Surrey"},{"city":"Tachie"},{"city":"Tahsis"},{"city":"Tatla Lake"},{"city":"Taylor"},{"city":"Telegraph Creek"},{"city":"Telkwa"},{"city":"Terrace"},{"city":"Thrums"},{"city":"Toad River"},{"city":"Tofino"},{"city":"Topley"},{"city":"Trail"},{"city":"Trout Lake"},{"city":"Tsay Keh Dene"},{"city":"Tumbler Ridge"},{"city":"Ucluelet"},{"city":"Valemount"},{"city":"Vallican"},{"city":"Van Anda"},{"city":"Vancouver"},{"city":"Vanderhoof"},{"city":"Vavenby"},{"city":"Vernon"},{"city":"Victoria"},{"city":"View Royal"},{"city":"Wells"},{"city":"Westbank"},{"city":"West Vancouver"},{"city":"Westwold"},{"city":"Whistler"},{"city":"White Rock"},{"city":"Williams Lake"},{"city":"Willowbrook"},{"city":"Winfield"},{"city":"Winter Harbour"},{"city":"Wonowon"},{"city":"Wynndel"},{"city":"Yahk"},{"city":"Yale"},{"city":"Youbou"},{"city":"Zeballos"}],"MA":[{"city":"Agassiz Provincial Forest"},{"city":"Alexander"},{"city":"Alonsa"},{"city":"Altona"},{"city":"Arborg"},{"city":"Ashern"},{"city":"Austin"},{"city":"Baldur"},{"city":"Basswood"},{"city":"Beaus?jour"},{"city":"Belmont"},{"city":"Benito"},{"city":"Berens River"},{"city":"Beulah"},{"city":"Binscarth"},{"city":"Birtle"},{"city":"Bissett"},{"city":"Boissevain"},{"city":"Brandon"},{"city":"Brochet"},{"city":"Brookdale"},{"city":"Camperville"},{"city":"Carberry"},{"city":"Carman"},{"city":"Cartwright"},{"city":"Churchill"},{"city":"Cormorant"},{"city":"Cowan"},{"city":"Cranberry Portage"},{"city":"Crandall"},{"city":"Cross Lake"},{"city":"Crystal City"},{"city":"Cypress River"},{"city":"Darlingford"},{"city":"Dauphin"},{"city":"Deloraine"},{"city":"Dominion City"},{"city":"Dugald"},{"city":"Easterville"},{"city":"Eddystone"},{"city":"Edwin"},{"city":"Elgin"},{"city":"Elie"},{"city":"Elkhorn"},{"city":"Elm Creek"},{"city":"Emerson"},{"city":"Erickson"},{"city":"Eriksdale"},{"city":"Ethelbert"},{"city":"Falcon Lake"},{"city":"Fisher Branch"},{"city":"Fisher River"},{"city":"Flin Flon"},{"city":"Fork River"},{"city":"Foxwarren"},{"city":"Gilbert Plains"},{"city":"Gillam"},{"city":"Gimli"},{"city":"Gladstone"},{"city":"Glenboro"},{"city":"Glenella"},{"city":"Gods Lake Narrows"},{"city":"Grand Beach"},{"city":"Grand Rapids"},{"city":"Grandview"},{"city":"Gretna"},{"city":"Gypsumville"},{"city":"Hadashville"},{"city":"Hamiota"},{"city":"Hartney"},{"city":"Hecla"},{"city":"Holland"},{"city":"Ilford"},{"city":"Inwood"},{"city":"Island Lake"},{"city":"Kelwood"},{"city":"Kenton"},{"city":"Killarney"},{"city":"La Broquerie"},{"city":"Lac Brochet"},{"city":"Lac du Bonnet"},{"city":"Langruth"},{"city":"Leaf Rapids"},{"city":"Libau"},{"city":"Little Grand Rapids"},{"city":"Lockport"},{"city":"Lundar"},{"city":"Lynn Lake"},{"city":"MacGregor"},{"city":"Mafeking"},{"city":"Manigotagan"},{"city":"Manitou"},{"city":"McAuley"},{"city":"McCreary"},{"city":"Melita"},{"city":"Miami"},{"city":"Miniota"},{"city":"Minnedosa"},{"city":"Minto"},{"city":"Moose Lake"},{"city":"Morden"},{"city":"Morris"},{"city":"Neepawa"},{"city":"Nelson House"},{"city":"Newdale"},{"city":"Niverville"},{"city":"Norway House"},{"city":"Notre Dame de Lourdes"},{"city":"Oak Lake"},{"city":"Oak River"},{"city":"Oakville"},{"city":"Ochre River"},{"city":"Oxford House"},{"city":"Peguis"},{"city":"Pelican Rapids"},{"city":"Pikwitonei"},{"city":"Pilot Mound"},{"city":"Pinawa"},{"city":"Pine Dock"},{"city":"Pine Falls"},{"city":"Pine River"},{"city":"Piney"},{"city":"Plumas"},{"city":"Plum Coulee"},{"city":"Pointe du Bois"},{"city":"Poplarfield"},{"city":"Poplar River"},{"city":"Portage la Prairie"},{"city":"Rapid City"},{"city":"Rathwell"},{"city":"Red Sucker Lake"},{"city":"Rennie"},{"city":"Reston"},{"city":"Rivers"},{"city":"Riverton"},{"city":"Roblin"},{"city":"Roland"},{"city":"Rorketon"},{"city":"Rossburn"},{"city":"Russell"},{"city":"Sandy Lake"},{"city":"Sanford"},{"city":"Selkirk"},{"city":"Shamattawa"},{"city":"Shilo"},{"city":"Shoal Lake"},{"city":"Sidney"},{"city":"Sifton"},{"city":"Snowflake"},{"city":"Snow Lake"},{"city":"Somerset"},{"city":"Souris"},{"city":"South Indian Lake"},{"city":"Sperling"},{"city":"Split Lake"},{"city":"Sprague"},{"city":"Starbuck"},{"city":"St. Claude"},{"city":"Ste. Agathe"},{"city":"Steep Rock"},{"city":"Steinbach"},{"city":"Ste. Rose du Lac"},{"city":"St. Francois Xavier"},{"city":"St. Jean Baptiste"},{"city":"St. Laurent"},{"city":"St. Lazare"},{"city":"Stonewall"},{"city":"St-Pierre-Jolys"},{"city":"Strathclair"},{"city":"Swan Lake"},{"city":"Swan River"},{"city":"Tadoule Lake"},{"city":"Teulon"},{"city":"The Pas"},{"city":"Thicket Portage"},{"city":"Thompson"},{"city":"Treherne"},{"city":"Virden"},{"city":"Vita"},{"city":"Waasagomach"},{"city":"Wabowden"},{"city":"Wanless"},{"city":"Wasagaming"},{"city":"Waterhen"},{"city":"Wawanesa"},{"city":"Whitemouth"},{"city":"Winkler"},{"city":"Winnipeg"},{"city":"Winnipeg Beach"},{"city":"Winnipegosis"},{"city":"Woodridge"}],"NB":[{"city":"Albert"},{"city":"Albert Mines"},{"city":"Allardville"},{"city":"Alma"},{"city":"Baie-Ste-Anne"},{"city":"Baker Brook"},{"city":"Balmoral"},{"city":"Bath"},{"city":"Bathurst"},{"city":"Belledune"},{"city":"Beresford"},{"city":"Blacks Harbour"},{"city":"Blackville"},{"city":"Boiestown"},{"city":"Bouctouche"},{"city":"Browns Flat"},{"city":"Campbellton"},{"city":"Campobello Island"},{"city":"Canterbury"},{"city":"Cap-Pele"},{"city":"Caraquet"},{"city":"Centreville"},{"city":"Chatham"},{"city":"Chipman"},{"city":"Clair"},{"city":"Clarks Corners"},{"city":"Cocagne"},{"city":"Dalhousie"},{"city":"Debec"},{"city":"Dieppe"},{"city":"Doaktown"},{"city":"Dorchester"},{"city":"Edmundston"},{"city":"Florenceville"},{"city":"Fords Mills"},{"city":"Fredericton"},{"city":"Fredericton Junction"},{"city":"Gagetown"},{"city":"Glassville"},{"city":"Grand Bay"},{"city":"Grande-Anse"},{"city":"Grand Falls"},{"city":"Grand Manan"},{"city":"Grand-Sault"},{"city":"Hampstead"},{"city":"Hampton"},{"city":"Harewood"},{"city":"Hartland"},{"city":"Havelock"},{"city":"Hillsborough"},{"city":"Hoyt"},{"city":"Jacquet River"},{"city":"Kedgwick"},{"city":"Keswick"},{"city":"Lam?que"},{"city":"Maces Bay"},{"city":"McAdam"},{"city":"Meductic"},{"city":"Memramcook"},{"city":"Millville"},{"city":"Minto"},{"city":"Miramichi"},{"city":"Miscou Island"},{"city":"Moncton"},{"city":"Nackawic"},{"city":"Neguac"},{"city":"New Denmark"},{"city":"Norton"},{"city":"Oromocto"},{"city":"Paquetville"},{"city":"Perth-Andover"},{"city":"Petitcodiac"},{"city":"Petit Rocher"},{"city":"Plaster Rock"},{"city":"Port Elgin"},{"city":"Quispamsis"},{"city":"Red Bank"},{"city":"Richibucto"},{"city":"Riverview"},{"city":"Rogersville"},{"city":"Rothesay"},{"city":"Sackville"},{"city":"Saint Andrews"},{"city":"Saint John"},{"city":"Salisbury"},{"city":"Shediac"},{"city":"Shippagan"},{"city":"Springfield"},{"city":"Stanley"},{"city":"St-Antoine"},{"city":"St-Basile"},{"city":"Ste-Anne-de-Madawaska"},{"city":"St. George"},{"city":"St-Isidore"},{"city":"St. Leonard"},{"city":"St-Louis de Kent"},{"city":"St. Martins"},{"city":"St-Quentin"},{"city":"St. Stephen"},{"city":"Summerville"},{"city":"Sussex"},{"city":"Tabusintac"},{"city":"Tobique First Nation"},{"city":"Tracadie-Sheila"},{"city":"Welsford"},{"city":"Westfield"},{"city":"Woodstock"},{"city":"Young\'s Cove Road"}],"NE":[{"city":"Appleton"},{"city":"Argentia"},{"city":"Arnold\'s Cove"},{"city":"Avondale"},{"city":"Badger"},{"city":"Baie Verte"},{"city":"Batteau"},{"city":"Battle Harbour"},{"city":"Bauline"},{"city":"Bay Bulls"},{"city":"Bay de Verde"},{"city":"Bay L\'Argent"},{"city":"Bay Roberts"},{"city":"Beaumont"},{"city":"Belleoram"},{"city":"Bellevue"},{"city":"Bell Island"},{"city":"Benoit\'s Cove"},{"city":"Birchy Bay"},{"city":"Bishop\'s Falls"},{"city":"Black Duck Cove"},{"city":"Black Tickle"},{"city":"Bonavista"},{"city":"Botwood"},{"city":"Boyd\'s Cove"},{"city":"Branch"},{"city":"Brent\'s Cove"},{"city":"Brigus"},{"city":"Buchans"},{"city":"Burgeo"},{"city":"Burin"},{"city":"Burlington"},{"city":"Burnt Islands"},{"city":"Campbellton"},{"city":"Cape Broyle"},{"city":"Carbonear"},{"city":"Carmanville"},{"city":"Cartwright"},{"city":"Catalina"},{"city":"Centreville-Wareham-Trinity"},{"city":"Chance Cove"},{"city":"Change islands"},{"city":"Chapel Arm"},{"city":"Charlottetown"},{"city":"Churchill Falls"},{"city":"Clarenville"},{"city":"Clarenville-Shoal Harbour"},{"city":"Clarke\'s Beach"},{"city":"Codroy"},{"city":"Colliers"},{"city":"Come By Chance"},{"city":"Comfort Cove-Newstead"},{"city":"Conception Bay South"},{"city":"Conception Harbour"},{"city":"Conche"},{"city":"Conne River"},{"city":"Cook\'s Harbour"},{"city":"Corner Brook"},{"city":"Cottlesville"},{"city":"Cow Head"},{"city":"Cupids"},{"city":"Daniel\'s Harbour"},{"city":"Davis Inlet"},{"city":"Deer Lake"},{"city":"Dover"},{"city":"Eastport"},{"city":"Elliston"},{"city":"Embree"},{"city":"Englee"},{"city":"English Harbour East"},{"city":"Fair Haven"},{"city":"Fermeuse"},{"city":"Flatrock"},{"city":"Fleur de Lys"},{"city":"Flower\'s Cove"},{"city":"Fogo"},{"city":"Forteau"},{"city":"Fortune"},{"city":"Fox Cove-Mortier"},{"city":"Frenchmans Island"},{"city":"Freshwater"},{"city":"Gambo"},{"city":"Gander"},{"city":"Garnish"},{"city":"Gaultois"},{"city":"Glenwood"},{"city":"Glovertown"},{"city":"Goose Bay"},{"city":"Grand Bank"},{"city":"Grand Falls"},{"city":"Grand Falls-Windsor"},{"city":"Great Harbour Deep"},{"city":"Green Island Cove"},{"city":"Greenspond"},{"city":"Hampden"},{"city":"Hant\'s Harbour"},{"city":"Happy Valley-Goose Bay"},{"city":"Harbour Breton"},{"city":"Harbour Grace"},{"city":"Harbour Main-Chapel Cove-Lakev"},{"city":"Hare Bay"},{"city":"Hawke\'s Bay"},{"city":"Heart\'s Content"},{"city":"Heart\'s Delight-Islington"},{"city":"Heart\'s Desire"},{"city":"Hickman\'s Harbour"},{"city":"Hillgrade"},{"city":"Hillview"},{"city":"Holyrood"},{"city":"Hopedale"},{"city":"Howley"},{"city":"Humber Arm South"},{"city":"Indian Tickle"},{"city":"Island Harbour"},{"city":"Isle aux Morts"},{"city":"Jackson\'s Arm"},{"city":"Jamestown"},{"city":"Joe Batt\'s Arm-Barr\'d Islands-"},{"city":"King\'s Cove"},{"city":"King\'s Point"},{"city":"Kippens"},{"city":"Labrador City"},{"city":"Ladle Cove"},{"city":"Lamaline"},{"city":"L\'Anse-au-Loup"},{"city":"Lark Harbour"},{"city":"La Scie"},{"city":"Lawn"},{"city":"Lewisporte"},{"city":"Little Bay"},{"city":"Little Bay Islands"},{"city":"Little Burnt Bay"},{"city":"Little Catalina"},{"city":"Little Heart\'s Ease"},{"city":"Logy Bay-Middle Cove-Outer Cov"},{"city":"Long Harbour-Mount Arlington H"},{"city":"Long Pond"},{"city":"Lourdes"},{"city":"Lower Island Cove"},{"city":"Lumsden"},{"city":"Main Brook"},{"city":"Makkovik"},{"city":"Mary\'s Harbour"},{"city":"Marystown"},{"city":"Massey Drive"},{"city":"McIver\'s"},{"city":"Millertown"},{"city":"Milltown-Head of Bay D\'Espoir"},{"city":"Ming\'s Bight"},{"city":"Monkstown"},{"city":"Mount Carmel-Mitchells Brook-S"},{"city":"Mount Moriah"},{"city":"Mount Pearl"},{"city":"Musgrave Harbour"},{"city":"Musgravetown"},{"city":"Nain"},{"city":"New Harbour"},{"city":"New Perlican"},{"city":"New-Wes-Valley"},{"city":"Nippers Harbour"},{"city":"Norman\'s Cove-Long Cove"},{"city":"Norris Arm"},{"city":"Northern Arm"},{"city":"North West River"},{"city":"Old Perlican"},{"city":"Packs Harbour"},{"city":"Pacquet"},{"city":"Paradise"},{"city":"Paradise River"},{"city":"Pasadena"},{"city":"Peterview"},{"city":"Petty Harbour-Maddox Cove"},{"city":"Placentia"},{"city":"Plate Cove East"},{"city":"Point Leamington"},{"city":"Pool\'s Cove"},{"city":"Port au Choix"},{"city":"Port au Port West-Aguathuna-Fe"},{"city":"Port Aux Basques"},{"city":"Port Blandford"},{"city":"Port Hope Simpson"},{"city":"Port Rexton"},{"city":"Port Saunders"},{"city":"Portugal Cove-St. Philip\'s"},{"city":"Port Union"},{"city":"Postville"},{"city":"Pouch Cove"},{"city":"Princeton"},{"city":"Raleigh"},{"city":"Ramea"},{"city":"Red Bay"},{"city":"Reefs Harbour"},{"city":"Rencontre East"},{"city":"Rigolet"},{"city":"River of Ponds"},{"city":"Robert\'s Arm"},{"city":"Rocky Harbour"},{"city":"Roddickton"},{"city":"Rose Blanche-Harbour Le Cou"},{"city":"Rushoon"},{"city":"Salmon Cove"},{"city":"Salvage"},{"city":"Seal Cove"},{"city":"Seldom-Little Seldom"},{"city":"Small Point-Broad Cove-Blackhe"},{"city":"South Brook"},{"city":"Southern Harbour"},{"city":"South River"},{"city":"Spaniard\'s Bay"},{"city":"Spotted Island"},{"city":"Springdale"},{"city":"St. Alban\'s"},{"city":"St. Anthony"},{"city":"St. Bernard\'s-Jacques Fontaine"},{"city":"St. Brendan\'s"},{"city":"St. Bride\'s"},{"city":"Steady Brook"},{"city":"Stephenville"},{"city":"Stephenville Crossing"},{"city":"St. George\'s"},{"city":"St. Jacques-Coomb\'s Cove"},{"city":"St. John\'s"},{"city":"St. Lawrence"},{"city":"St. Lewis"},{"city":"St. Lunaire-Griquet"},{"city":"St. Mary\'s"},{"city":"St. Vincent\'s-St. Stephen\'s-Pe"},{"city":"Summerford"},{"city":"Summerside"},{"city":"Sunnyside"},{"city":"Terra Nova"},{"city":"Terrenceville"},{"city":"Torbay"},{"city":"Trepassey"},{"city":"Triton"},{"city":"Trout River"},{"city":"Twillingate"},{"city":"Upper Island Cove"},{"city":"Victoria"},{"city":"Wabana"},{"city":"Wabush"},{"city":"Wesleyville"},{"city":"Western Bay"},{"city":"Westport"},{"city":"Whitbourne"},{"city":"Winterton"},{"city":"Witless Bay"},{"city":"Woody Point"}],"NS":[{"city":"Advocate Harbour"},{"city":"Amherst"},{"city":"Annapolis Royal"},{"city":"Antigonish"},{"city":"Argyle"},{"city":"Arichat"},{"city":"Aylesford"},{"city":"Baddeck"},{"city":"Bass River"},{"city":"Bear River"},{"city":"Berwick"},{"city":"Blandford"},{"city":"Boisdale"},{"city":"Boularderie"},{"city":"Bridgetown"},{"city":"Bridgewater"},{"city":"Brookfield"},{"city":"Canning"},{"city":"Canso"},{"city":"Caribou"},{"city":"Carleton"},{"city":"Chelsea"},{"city":"Chester"},{"city":"Ch?ticamp"},{"city":"Ch?verie"},{"city":"Clark\'s Harbour"},{"city":"Clarksville"},{"city":"Collingwood Corner"},{"city":"Dartmouth"},{"city":"Debert"},{"city":"Digby"},{"city":"Dingwall"},{"city":"Dundee"},{"city":"East Bay"},{"city":"Ecum Secum"},{"city":"Elmsdale"},{"city":"Eskasoni"},{"city":"Freeport"},{"city":"French Village"},{"city":"Gabarus"},{"city":"Glace Bay"},{"city":"Goldboro"},{"city":"Goshen"},{"city":"Grand Etang"},{"city":"Grand Lake"},{"city":"Grand Narrows"},{"city":"Great Village"},{"city":"Greenwood"},{"city":"Guysborough"},{"city":"Halifax"},{"city":"Hantsport"},{"city":"Heatherton"},{"city":"Hopewell"},{"city":"Hubbards"},{"city":"Ingonish"},{"city":"Inverness"},{"city":"Kennetcook"},{"city":"Kentville"},{"city":"Kenzieville"},{"city":"Ketch Harbour"},{"city":"Kingston"},{"city":"LaHave"},{"city":"Lake Charlotte"},{"city":"L\'Ardoise"},{"city":"Larrys River"},{"city":"Lawrencetown"},{"city":"Liverpool"},{"city":"Lockeport"},{"city":"Louisbourg"},{"city":"Louisdale"},{"city":"Lunenburg"},{"city":"Mabou"},{"city":"Maccan"},{"city":"Mahone Bay"},{"city":"Maitland"},{"city":"Margaree Forks"},{"city":"Marion Bridge"},{"city":"Melrose"},{"city":"Merigomish"},{"city":"Meteghan"},{"city":"Middleton"},{"city":"Monastery"},{"city":"Mount Uniacke"},{"city":"Mulgrave"},{"city":"Musquodoboit Harbour"},{"city":"New Germany"},{"city":"New Glasgow"},{"city":"New Ross"},{"city":"New Waterford"},{"city":"Noel"},{"city":"North Sydney"},{"city":"Oxford"},{"city":"Parrsboro"},{"city":"Peggy\'s Cove"},{"city":"Pictou"},{"city":"Port Bickerton"},{"city":"Port Dufferin"},{"city":"Port Greville"},{"city":"Port Hawkesbury"},{"city":"Port Hood"},{"city":"Port La Tour"},{"city":"Port Maitland"},{"city":"Port Morien"},{"city":"Port Mouton"},{"city":"Pubnico"},{"city":"Pugwash"},{"city":"Queensport"},{"city":"River H?bert"},{"city":"River John"},{"city":"Riverport"},{"city":"Salt Springs"},{"city":"Saulnierville"},{"city":"Shelburne"},{"city":"Sherbrooke"},{"city":"Shubenacadie"},{"city":"Southampton"},{"city":"Springfield"},{"city":"Springhill"},{"city":"Stellarton"},{"city":"Stewiacke"},{"city":"St. Margaret Village"},{"city":"St. Peter\'s"},{"city":"Sydney"},{"city":"Tangier"},{"city":"Tatamagouche"},{"city":"Thorburn"},{"city":"Trenton"},{"city":"Truro"},{"city":"Tusket"},{"city":"Upper Musquodoboit"},{"city":"Upper Stewiacke"},{"city":"Wallace"},{"city":"Walton"},{"city":"Waverley"},{"city":"Wedgeport"},{"city":"Westville"},{"city":"Weymouth"},{"city":"Whycocomagh"},{"city":"Windsor"},{"city":"Wolfville"},{"city":"Yarmouth"}],"NT":[{"city":"Aklavik"},{"city":"Edzo"},{"city":"Enterprise"},{"city":"Fort Good Hope"},{"city":"Fort Liard"},{"city":"Fort McPherson"},{"city":"Fort Providence"},{"city":"Fort Simpson"},{"city":"Fort Smith"},{"city":"Hay River"},{"city":"Inuvik"},{"city":"Jean Marie River"},{"city":"Kakisa"},{"city":"Kugluktuk"},{"city":"Nahanni Butte"},{"city":"Norman Wells"},{"city":"Rae"},{"city":"Rae Lakes"},{"city":"Trout Lake"},{"city":"Tsiigehtchic"},{"city":"Tuktoyaktuk"},{"city":"Wrigley"},{"city":"Yellowknife"}],"NU":[{"city":"Arviat"},{"city":"Baker Lake"},{"city":"Cambridge Bay"},{"city":"Cape Dorset"},{"city":"Chesterfield Inlet"},{"city":"Coral Harbour"},{"city":"Gjoa Haven"},{"city":"Iqaluit"},{"city":"Rankin Inlet"},{"city":"Resolute"},{"city":"Whale Cove"}],"ON":[{"city":"Aberarder"},{"city":"Abitibi Canyon"},{"city":"Acton"},{"city":"Adolphustown"},{"city":"Ailsa Craig"},{"city":"Ajax"},{"city":"Alban"},{"city":"Alderville First Nation"},{"city":"Alexandria"},{"city":"Alfred"},{"city":"Algoma Mills"},{"city":"Alliston"},{"city":"Almonte"},{"city":"Alvinston"},{"city":"Amherstburg"},{"city":"Ancaster"},{"city":"Angus"},{"city":"Apsley"},{"city":"Arden"},{"city":"Arkell"},{"city":"Arkona"},{"city":"Armstrong"},{"city":"Arnprior"},{"city":"Arthur"},{"city":"Athens"},{"city":"Atikokan"},{"city":"Attawapiskat"},{"city":"Atwood"},{"city":"Auburn"},{"city":"Aurora"},{"city":"Avonmore"},{"city":"Aylmer"},{"city":"Ayr"},{"city":"Ayton"},{"city":"Azilda"},{"city":"Baden"},{"city":"Bailieboro"},{"city":"Bala"},{"city":"Balmertown"},{"city":"Baltimore"},{"city":"Bancroft"},{"city":"Barrie"},{"city":"Barry\'s Bay"},{"city":"Barwick"},{"city":"Batawa"},{"city":"Batchawana Bay"},{"city":"Bath"},{"city":"Bayfield"},{"city":"Baysville"},{"city":"Beachburg"},{"city":"Beachville"},{"city":"Beamsville"},{"city":"Beardmore"},{"city":"Bearskin Lake"},{"city":"Bearskin Lake First Nation"},{"city":"Bear\'s Passage"},{"city":"Beaverton"},{"city":"Beeton"},{"city":"Belle River"},{"city":"Belleville"},{"city":"Belmont"},{"city":"Bethany"},{"city":"Bethesda"},{"city":"Big Trout Lake"},{"city":"Binbrook"},{"city":"Birch Island"},{"city":"Biscotasing"},{"city":"Blackstock"},{"city":"Blenheim"},{"city":"Blezard Valley"},{"city":"Blind River"},{"city":"Bloomfield"},{"city":"Blyth"},{"city":"Bobcaygeon"},{"city":"Bolton"},{"city":"Bonfield"},{"city":"Borden"},{"city":"Bothwell"},{"city":"Bourget"},{"city":"Bowmanville"},{"city":"Bracebridge"},{"city":"Bradford"},{"city":"Bradford West Gwillimbury"},{"city":"Braeside"},{"city":"Brampton"},{"city":"Brantford"},{"city":"Brechin"},{"city":"Breslau"},{"city":"Bridgenorth"},{"city":"Brigden"},{"city":"Bright"},{"city":"Brighton"},{"city":"Brights Grove"},{"city":"Britt"},{"city":"Brockville"},{"city":"Brooklin"},{"city":"Brownsville"},{"city":"Bruce Mines"},{"city":"Brussels"},{"city":"Buckhorn"},{"city":"Burford"},{"city":"Burgessville"},{"city":"Burk\'s Falls"},{"city":"Burleigh Falls"},{"city":"Burlington"},{"city":"Cache Bay"},{"city":"Calabogie"},{"city":"Caledon"},{"city":"Caledon East"},{"city":"Caledonia"},{"city":"Callander"},{"city":"Calstock"},{"city":"Cambray"},{"city":"Cambridge"},{"city":"Cameron"},{"city":"Camlachie"},{"city":"Campbellford"},{"city":"Campbellville"},{"city":"Cannington"},{"city":"Capreol"},{"city":"Caradoc First Nation"},{"city":"Caramat"},{"city":"Cardiff"},{"city":"Cardinal"},{"city":"Cargill"},{"city":"Carleton Place"},{"city":"Carnarvon"},{"city":"Carp"},{"city":"Cartier"},{"city":"Casselman"},{"city":"Castlemore"},{"city":"Castleton"},{"city":"Cat Lake"},{"city":"Cavan"},{"city":"Cayuga"},{"city":"Centralia"},{"city":"Chalk River"},{"city":"Chapleau"},{"city":"Charlton"},{"city":"Chatham"},{"city":"Chatsworth"},{"city":"Chelmsford"},{"city":"Chesley"},{"city":"Chesterville"},{"city":"Chiefs Point First Nation"},{"city":"Chippewas of Kettle\/Stony Poin"},{"city":"Chippewas Of Sarnia First Nati"},{"city":"Christian Island"},{"city":"Claremont"},{"city":"Clarence Creek"},{"city":"Clarence-Rockland"},{"city":"Clarington"},{"city":"Clarkson"},{"city":"Clearwater Bay"},{"city":"Clifford"},{"city":"Clinton"},{"city":"Cloud Bay"},{"city":"Cobalt"},{"city":"Cobden"},{"city":"Coboconk"},{"city":"Cobourg"},{"city":"Cochenour"},{"city":"Cochrane"},{"city":"Coe Hill"},{"city":"Colborne"},{"city":"Colchester"},{"city":"Cold Springs"},{"city":"Coldwater"},{"city":"Collingwood"},{"city":"Comber"},{"city":"Concord"},{"city":"Coniston"},{"city":"Connaught"},{"city":"Constance Bay"},{"city":"Constance Lake First Nation"},{"city":"Cookstown"},{"city":"Cooksville"},{"city":"Cornwall"},{"city":"Corunna"},{"city":"Cottam"},{"city":"Courtice"},{"city":"Courtright"},{"city":"Crediton"},{"city":"Creemore"},{"city":"Crysler"},{"city":"Crystal Beach"},{"city":"Cumberland"},{"city":"Dashwood"},{"city":"Deep River"},{"city":"Deerbrook"},{"city":"Deer Lake"},{"city":"Delaware of the Thames(Moravia"},{"city":"Delhi"},{"city":"Delta"},{"city":"Denbigh"},{"city":"Desbarats"},{"city":"Deseronto"},{"city":"Deux Rivi?res"},{"city":"Devlin"},{"city":"Dokis"},{"city":"Dokis First Nation"},{"city":"Dorchester"},{"city":"Dorion"},{"city":"Dorset"},{"city":"Douglas"},{"city":"Douglastown"},{"city":"Drayton"},{"city":"Dresden"},{"city":"Drumbo"},{"city":"Dryden"},{"city":"Dublin"},{"city":"Dubreuilville"},{"city":"Dunchurch"},{"city":"Dundalk"},{"city":"Dundas"},{"city":"Dungannon"},{"city":"Dunnville"},{"city":"Dunsford"},{"city":"Durham"},{"city":"Dutton"},{"city":"Dwight"},{"city":"Dyer\'s Bay"},{"city":"Eagle Lake First Nation"},{"city":"Eagle River"},{"city":"Ear Falls"},{"city":"Earlton"},{"city":"East Gwillimbury"},{"city":"Eastwood"},{"city":"East York"},{"city":"Echo Bay"},{"city":"Eganville"},{"city":"Elgin"},{"city":"Elizabethtown"},{"city":"Elk Lake"},{"city":"Elliot Lake"},{"city":"Elmira"},{"city":"Elmvale"},{"city":"Elora"},{"city":"Embro"},{"city":"Embrun"},{"city":"Emeryville"},{"city":"Emo"},{"city":"Emsdale"},{"city":"Englehart"},{"city":"Enterprise"},{"city":"Erin"},{"city":"Espanola"},{"city":"Essex"},{"city":"Estaire"},{"city":"Etobicoke"},{"city":"Eugenia"},{"city":"Exeter"},{"city":"Fauquier"},{"city":"Fenelon Falls"},{"city":"Fenwick"},{"city":"Fergus"},{"city":"Feversham"},{"city":"Field"},{"city":"Finch"},{"city":"Fingal"},{"city":"Fisherville"},{"city":"Flamborough"},{"city":"Flanders"},{"city":"Flesherton"},{"city":"Foley"},{"city":"Foleyet"},{"city":"Forest"},{"city":"Fort Albany"},{"city":"Fort Erie"},{"city":"Fort Frances"},{"city":"Fort Hope"},{"city":"Fort Severn"},{"city":"Fort Severn First Nation"},{"city":"Fort William First Nation"},{"city":"Foxboro"},{"city":"Foymount"},{"city":"Frankford"},{"city":"Freelton"},{"city":"French River First Nation"},{"city":"Galt"},{"city":"Gananoque"},{"city":"Garden Hill"},{"city":"Garden River First Nation"},{"city":"Garson"},{"city":"Georgetown"},{"city":"Georgina"},{"city":"Geraldton"},{"city":"Gilmour"},{"city":"Glencoe"},{"city":"Glen Robertson"},{"city":"Glen Water"},{"city":"Glen Williams"},{"city":"Gloucester"},{"city":"Goderich"},{"city":"Gogama"},{"city":"Golden Lake"},{"city":"Gooderham"},{"city":"Gore Bay"},{"city":"Gormley"},{"city":"Gorrie"},{"city":"Goulais River"},{"city":"Gowganda"},{"city":"Grafton"},{"city":"Grand Bend"},{"city":"Grand Valley"},{"city":"Granton"},{"city":"Grassy Narrows"},{"city":"Grassy Narrows First Nation"},{"city":"Gravenhurst"},{"city":"Greensville"},{"city":"Grimsby"},{"city":"Guelph"},{"city":"Gull Bay"},{"city":"Gull Bay First Nation"},{"city":"Hagersville"},{"city":"Haileybury"},{"city":"Haldimand"},{"city":"Haliburton"},{"city":"Halton Hills"},{"city":"Hamilton"},{"city":"Hampton"},{"city":"Hanmer"},{"city":"Hanover"},{"city":"Harrietsville"},{"city":"Harriston"},{"city":"Harrow"},{"city":"Harrowsmith"},{"city":"Hastings"},{"city":"Havelock"},{"city":"Hawkesbury"},{"city":"Hawk Junction"},{"city":"Hearst"},{"city":"Hemlo"},{"city":"Hensall"},{"city":"Henvey Inlet First Nation"},{"city":"Hepworth"},{"city":"Hespeler"},{"city":"Hickson"},{"city":"Highgate"},{"city":"Hillsburgh"},{"city":"Holland Landing"},{"city":"Holstein"},{"city":"Honey Harbour"},{"city":"Hornepayne"},{"city":"Hudson"},{"city":"Humphrey"},{"city":"Huntsville"},{"city":"Ignace"},{"city":"Ilderton"},{"city":"Ingersoll"},{"city":"Ingleside"},{"city":"Innerkip"},{"city":"Innisfil"},{"city":"Inverary"},{"city":"Inwood"},{"city":"Iron Bridge"},{"city":"Iroquois"},{"city":"Iroquois Falls"},{"city":"Jaffray Melick"},{"city":"Jarvis"},{"city":"Jasper"},{"city":"Jellicoe"},{"city":"Jockvale"},{"city":"Johnstown"},{"city":"Jordan"},{"city":"Kaministiquia"},{"city":"Kamiskotia"},{"city":"Kanata"},{"city":"Kapuskasing"},{"city":"Kasabonika First Nation"},{"city":"Kashechewan First Nation"},{"city":"Kearney"},{"city":"Keene"},{"city":"Keewatin"},{"city":"Kemptville"},{"city":"Kenora"},{"city":"Kent Centre"},{"city":"Kerwood"},{"city":"Keswick"},{"city":"Killaloe"},{"city":"Killarney"},{"city":"Kincardine"},{"city":"King City"},{"city":"Kingfisher Lake"},{"city":"Kingfisher Lake First Nation"},{"city":"Kingston"},{"city":"Kingsville"},{"city":"Kinmount"},{"city":"Kintore"},{"city":"Kirkfield"},{"city":"Kirkland Lake"},{"city":"Kirkton"},{"city":"Kitchener"},{"city":"Kleinburg"},{"city":"Lac la Croix"},{"city":"Lac Seul First Nation"},{"city":"Lafontaine"},{"city":"Lagoon City"},{"city":"Lakefield"},{"city":"Lambeth"},{"city":"Lanark"},{"city":"Lancaster"},{"city":"Langton"},{"city":"Lansdowne"},{"city":"Lansdowne House"},{"city":"Larder Lake"},{"city":"LaSalle"},{"city":"Latchford"},{"city":"Leamington"},{"city":"Lefroy"},{"city":"Levack"},{"city":"Lincoln"},{"city":"Lindsay"},{"city":"Linwood"},{"city":"Lion\'s Head"},{"city":"Listowel"},{"city":"Little Britain"},{"city":"Little Current"},{"city":"Lively"},{"city":"Lombardy"},{"city":"London"},{"city":"Longlac"},{"city":"Long Lac"},{"city":"Long Lake First Nation"},{"city":"Long Point"},{"city":"Long Sault"},{"city":"L\'Orignal"},{"city":"Lorne"},{"city":"Lucan"},{"city":"Lucknow"},{"city":"Lyn"},{"city":"Lynden"},{"city":"Maberly"},{"city":"Macdiarmid"},{"city":"MacTier"},{"city":"Madoc"},{"city":"Madsen"},{"city":"Magnetawan"},{"city":"Magnetawan First Nation"},{"city":"Maidstone"},{"city":"Maitland"},{"city":"Mallorytown"},{"city":"Malton"},{"city":"Manitouwadge"},{"city":"Manitowaning"},{"city":"Manotick"},{"city":"Maple"},{"city":"Marathon"},{"city":"Markdale"},{"city":"Markham"},{"city":"Markstay"},{"city":"Marmora"},{"city":"Marten Falls First Nation"},{"city":"Marten River"},{"city":"Martintown"},{"city":"Massey"},{"city":"Matachewan"},{"city":"Matheson"},{"city":"Mattawa"},{"city":"Mattice"},{"city":"Maxville"},{"city":"Maynooth"},{"city":"McDonalds Corners"},{"city":"McGregor"},{"city":"M\'Chigeeng"},{"city":"McKellar"},{"city":"Meaford"},{"city":"Melbourne"},{"city":"Merlin"},{"city":"Merrickville"},{"city":"Metcalfe"},{"city":"Midland"},{"city":"Mildmay"},{"city":"Milford Bay"},{"city":"Millbrook"},{"city":"Millhaven"},{"city":"Milton"},{"city":"Milverton"},{"city":"Minaki"},{"city":"Mindemoya"},{"city":"Minden"},{"city":"Mine Centre"},{"city":"Missanabie"},{"city":"Mississauga"},{"city":"Mitchell"},{"city":"Mohawks Of The Bay of Quinte F"},{"city":"Monkton"},{"city":"Moonbeam"},{"city":"Moonstone"},{"city":"Mooretown"},{"city":"Moose Creek"},{"city":"Moose Factory"},{"city":"Moosonee"},{"city":"Morrisburg"},{"city":"Morson"},{"city":"Mount Albert"},{"city":"Mount Brydges"},{"city":"Mount Forest"},{"city":"Mount Hope"},{"city":"Mount Pleasant"},{"city":"Muskoka"},{"city":"Muskoka Falls"},{"city":"Muskrat Dam"},{"city":"Muskrat Dam First Nation"},{"city":"Nairn"},{"city":"Naiscoutaing First Nation"},{"city":"Nakina"},{"city":"Nanticoke"},{"city":"Napanee"},{"city":"Navan"},{"city":"Nepean"},{"city":"Nephton"},{"city":"Nestor Falls"},{"city":"Neustadt"},{"city":"Newburgh"},{"city":"Newcastle"},{"city":"New Dundee"},{"city":"New Hamburg"},{"city":"New Liskeard"},{"city":"Newmarket"},{"city":"New Tecumseth"},{"city":"Newtonville"},{"city":"Niagara Falls"},{"city":"Niagara-on-the-Lake"},{"city":"Nickel Centre"},{"city":"Nipigon"},{"city":"Nipissing First Nation"},{"city":"Nobel"},{"city":"Nobleton"},{"city":"Noelville"},{"city":"North Augusta"},{"city":"North Bay"},{"city":"Northbrook"},{"city":"North Gower"},{"city":"North Spirit Lake"},{"city":"North York"},{"city":"Norval"},{"city":"Norwich"},{"city":"Norwood"},{"city":"Oak Ridges"},{"city":"Oakville"},{"city":"Oakwood"},{"city":"Oba"},{"city":"Odessa"},{"city":"Ogoki"},{"city":"Ohsweken"},{"city":"Oil Springs"},{"city":"Ojibways of Hiawatha First Nat"},{"city":"Ojibways of Walpole Island Fir"},{"city":"Omemee"},{"city":"Onaping Falls"},{"city":"Oneida First Nation"},{"city":"Opasatika"},{"city":"Ophir"},{"city":"Orangeville"},{"city":"Orillia"},{"city":"Orleans"},{"city":"Oro"},{"city":"Orono"},{"city":"Orrville"},{"city":"Osgoode"},{"city":"Oshawa"},{"city":"Ottawa"},{"city":"Otterville"},{"city":"Owen Sound"},{"city":"Oxdrift"},{"city":"Oxford Mills"},{"city":"Paisley"},{"city":"Pakenham"},{"city":"Palgrave"},{"city":"Palmer Rapids"},{"city":"Palmerston"},{"city":"Paquette Corner"},{"city":"Parham"},{"city":"Paris"},{"city":"Parkhill"},{"city":"Parry Sound"},{"city":"Pass Lake"},{"city":"Peawanuck"},{"city":"Pefferlaw"},{"city":"Pelee Island"},{"city":"Pelham"},{"city":"Pembroke"},{"city":"Penetanguishene"},{"city":"Perrault Falls"},{"city":"Perth"},{"city":"Petawawa"},{"city":"Peterborough"},{"city":"Petrolia"},{"city":"Pickering"},{"city":"Pickle Lake"},{"city":"Picton"},{"city":"Pikangikum First Nation"},{"city":"Pineal Lake"},{"city":"Plantagenet"},{"city":"Plattsville"},{"city":"Pleasant Park"},{"city":"Plevna"},{"city":"Pointe au Baril"},{"city":"Point Grondine First Nation"},{"city":"Point Pelee"},{"city":"Port Burwell"},{"city":"Port Carling"},{"city":"Port Colborne"},{"city":"Port Credit"},{"city":"Port Cunnington"},{"city":"Port Dover"},{"city":"Port Elgin"},{"city":"Port Franks"},{"city":"Port Hope"},{"city":"Port Lambton"},{"city":"Portland"},{"city":"Port Loring"},{"city":"Port McNicoll"},{"city":"Port Perry"},{"city":"Port Robinson"},{"city":"Port Rowan"},{"city":"Port Stanley"},{"city":"Port Sydney"},{"city":"Powassan"},{"city":"Prescott"},{"city":"Preston"},{"city":"Princeton"},{"city":"Puce"},{"city":"Queenston"},{"city":"Queensville"},{"city":"Rainy Lake First Nation"},{"city":"Rainy River"},{"city":"Raith"},{"city":"Ramore"},{"city":"Rayside-Balfour"},{"city":"Redbridge"},{"city":"Redditt"},{"city":"Red Lake"},{"city":"Red Rock"},{"city":"Renfrew"},{"city":"Restoule"},{"city":"Richmond"},{"city":"Richmond Hill"},{"city":"Ridgetown"},{"city":"Ridgeway"},{"city":"Ripley"},{"city":"Rockland"},{"city":"Rockwood"},{"city":"Rodney"},{"city":"Rolphton"},{"city":"Rondeau"},{"city":"Roseneath"},{"city":"Rosseau"},{"city":"Russell"},{"city":"Ruthven"},{"city":"Sachigo First Nation Reserve 1"},{"city":"Saint Clair Beach"},{"city":"Salem"},{"city":"Sandwich"},{"city":"Sandy Cove Acres"},{"city":"Sandy Lake"},{"city":"Sandy Lake First Nation"},{"city":"Sapawe"},{"city":"Sarnia"},{"city":"Sauble Beach"},{"city":"Saugeen First Nation"},{"city":"Sault Ste. Marie"},{"city":"Savant Lake"},{"city":"Scarborough"},{"city":"Schomberg"},{"city":"Schreiber"},{"city":"Scotland"},{"city":"Seaforth"},{"city":"Searchmont"},{"city":"Sebright"},{"city":"Sebringville"},{"city":"Seeleys Bay"},{"city":"Selby"},{"city":"Selkirk"},{"city":"Serpent River First Nation"},{"city":"Severn Bridge"},{"city":"Shakespeare"},{"city":"Shannonville"},{"city":"Sharbot Lake"},{"city":"Shawanaga First Nation"},{"city":"Shebandowan"},{"city":"Shedden"},{"city":"Shelburne"},{"city":"Silver Water"},{"city":"Simcoe"},{"city":"Sioux Lookout"},{"city":"Sioux Narrows"},{"city":"Six Nations of the Grand River"},{"city":"Smiths Falls"},{"city":"Smithville"},{"city":"Smooth Rock Falls"},{"city":"Snelgrove"},{"city":"Sombra"},{"city":"Southampton"},{"city":"South Mountain"},{"city":"South River"},{"city":"Spanish"},{"city":"Sparta"},{"city":"Spencerville"},{"city":"Sprucedale"},{"city":"Stayner"},{"city":"St. Catharines"},{"city":"St. Charles"},{"city":"St. Clements"},{"city":"St. Davids"},{"city":"St-Eugene"},{"city":"Stevensville"},{"city":"Stewarttown"},{"city":"St. George"},{"city":"Stirling"},{"city":"St. Isidore de Prescott"},{"city":"St. Jacobs"},{"city":"St. Mary\'s"},{"city":"Stoke\'s Bay"},{"city":"Stoney Creek"},{"city":"Stoney Point"},{"city":"Stouffville"},{"city":"Straffordville"},{"city":"Stratford"},{"city":"Strathroy"},{"city":"Stratton"},{"city":"Streetsville"},{"city":"St. Regis"},{"city":"Stroud"},{"city":"St. Thomas"},{"city":"Sturgeon Falls"},{"city":"Sudbury"},{"city":"Sultan"},{"city":"Summer Beaver"},{"city":"Sunderland"},{"city":"Sundridge"},{"city":"Sutton"},{"city":"Swastika"},{"city":"Sydenham"},{"city":"Tamworth"},{"city":"Tara"},{"city":"Tavistock"},{"city":"Taylor Corners"},{"city":"Tecumseh"},{"city":"Teeswater"},{"city":"Temagami"},{"city":"Terrace Bay"},{"city":"Thamesford"},{"city":"Thamesville"},{"city":"Thedford"},{"city":"The Eabametoong (Fort Hope) Fi"},{"city":"Thessalon"},{"city":"Thessalon First Nation"},{"city":"Thornbury"},{"city":"Thorndale"},{"city":"Thorne"},{"city":"Thornhill"},{"city":"Thorold"},{"city":"Thunder Bay"},{"city":"Thurlow"},{"city":"Tilbury"},{"city":"Tillsonburg"},{"city":"Timmins"},{"city":"Tiverton"},{"city":"Tobermory"},{"city":"Toledo"},{"city":"Toronto"},{"city":"Tottenham"},{"city":"Trenton"},{"city":"Trout Creek"},{"city":"Trowbridge"},{"city":"Tweed"},{"city":"Udora"},{"city":"Uniondale"},{"city":"Unionville"},{"city":"Upsala"},{"city":"Utterson"},{"city":"Uxbridge"},{"city":"Valley East"},{"city":"Vanier"},{"city":"Vankleek Hill"},{"city":"Vaughan"},{"city":"Vermilion Bay"},{"city":"Verner"},{"city":"Verona"},{"city":"Victoria"},{"city":"Vineland"},{"city":"Virginiatown"},{"city":"Wabigoon"},{"city":"Wainfleet"},{"city":"Walden"},{"city":"Walkerton"},{"city":"Wallaceburg"},{"city":"Wapekeka First Nation"},{"city":"Wardsville"},{"city":"Warkworth"},{"city":"Warren"},{"city":"Wasaga Beach"},{"city":"Waterdown"},{"city":"Waterford"},{"city":"Waterloo"},{"city":"Watford"},{"city":"Waubaushene"},{"city":"Wawa"},{"city":"Webbwood"},{"city":"Webequie"},{"city":"Welcome"},{"city":"Welland"},{"city":"Wellandport"},{"city":"Wellesley"},{"city":"Wellington"},{"city":"West Guilford"},{"city":"West Lincoln"},{"city":"West Lorne"},{"city":"Westmeath"},{"city":"Westport"},{"city":"Westree"},{"city":"Wheatley"},{"city":"Whitby"},{"city":"Whitchurch-Stouffville"},{"city":"Whitefish"},{"city":"Whitefish Falls"},{"city":"Whitefish River First Nation"},{"city":"White River"},{"city":"Whitney"},{"city":"Wiarton"},{"city":"Wikwemikong"},{"city":"Wilberforce"},{"city":"Williamsburg"},{"city":"Winchester"},{"city":"Windermere"},{"city":"Windsor"},{"city":"Wingham"},{"city":"Winona"},{"city":"Woodbridge"},{"city":"Woodstock"},{"city":"Woodville"},{"city":"Wooler"},{"city":"Wunnummin Lake"},{"city":"Wyoming"},{"city":"Yarker"},{"city":"York"},{"city":"Zurich"}],"PE":[{"city":"Alberton"},{"city":"Bedeque"},{"city":"Borden"},{"city":"Cardigan"},{"city":"Charlottetown"},{"city":"Cornwall"},{"city":"Covehead"},{"city":"Crapaud"},{"city":"East Point"},{"city":"Eldon"},{"city":"Georgetown"},{"city":"Hunter River"},{"city":"Kensington"},{"city":"Montague"},{"city":"Morell"},{"city":"Mount Stewart"},{"city":"Murray River"},{"city":"New Haven"},{"city":"New London"},{"city":"O\'Leary"},{"city":"Rusticoville"},{"city":"Souris"},{"city":"South Lake"},{"city":"St. Peter\'s"},{"city":"Stratford"},{"city":"Summerside"},{"city":"Tignish"},{"city":"Tyne Valley"},{"city":"Vernon River"},{"city":"Wellington"}],"QU":[{"city":"Abercorn"},{"city":"Acton Vale"},{"city":"Adamsville"},{"city":"Aguanish"},{"city":"Albanel"},{"city":"Alma"},{"city":"Alouette"},{"city":"Amos"},{"city":"Amqui"},{"city":"Angliers"},{"city":"Anjou"},{"city":"Anse-Saint-Jean"},{"city":"Armagh"},{"city":"Arundel"},{"city":"Asbestos"},{"city":"Ascot"},{"city":"Ascot Corner"},{"city":"Ashuapmushuan"},{"city":"Aston-Jonction"},{"city":"Ayer\'s Cliff"},{"city":"Aylmer"},{"city":"Bagotville"},{"city":"Baie-Comeau"},{"city":"Baie-de-Shawinigan"},{"city":"Baie-des-Sables"},{"city":"Baie-du-Febvre"},{"city":"Baie-d\'Urfe"},{"city":"Baie-Johan-Beetz"},{"city":"Baie-Sainte-Catherine"},{"city":"Baie-St-Paul"},{"city":"Baie-Trinite"},{"city":"Barachois"},{"city":"Barkmere"},{"city":"Barraute"},{"city":"Batiscan"},{"city":"Beaconsfield"},{"city":"Beaucanton"},{"city":"Beauceville"},{"city":"Beauharnois"},{"city":"Beaulac-Garthby"},{"city":"Beaumont"},{"city":"Beauport"},{"city":"Beaupr?"},{"city":"B?cancour"},{"city":"Bedford"},{"city":"Bellefeuille"},{"city":"Belle Neige"},{"city":"Belleterre"},{"city":"Beloeil"},{"city":"Bergeronnes"},{"city":"Berthierville"},{"city":"Betsiamites"},{"city":"Biencourt"},{"city":"Bishopton"},{"city":"Black Lake"},{"city":"Blainville"},{"city":"Blanc-Sablon"},{"city":"Boisbriand"},{"city":"Boischatel"},{"city":"Bois-des-Filion"},{"city":"Bonaventure"},{"city":"Bonne-Esperance"},{"city":"Boucherville"},{"city":"Bouchette"},{"city":"Breakeyville"},{"city":"Brigham"},{"city":"Brome"},{"city":"Bromont"},{"city":"Bromptonville"},{"city":"Brossard"},{"city":"Brownsburg"},{"city":"Bryson"},{"city":"Buckingham"},{"city":"Bury"},{"city":"Cabano"},{"city":"Cacouna"},{"city":"Cadillac"},{"city":"Calumet"},{"city":"Campbell\'s Bay"},{"city":"Candiac"},{"city":"Cantley"},{"city":"Cap-?-l\'Aigle"},{"city":"Cap-aux-Meules"},{"city":"Cap-Chat"},{"city":"Cap-de-la-Madeleine"},{"city":"Cap-des-Rosiers"},{"city":"Caplan"},{"city":"Cap-Rouge"},{"city":"Cap-Saint-Ignace"},{"city":"Carignan"},{"city":"Carillon"},{"city":"Carleton"},{"city":"Causapscal"},{"city":"Chambly"},{"city":"Chambord"},{"city":"Champlain"},{"city":"Chandler"},{"city":"Chapais"},{"city":"Chapeau"},{"city":"Charette"},{"city":"Charlemagne"},{"city":"Charlesbourg"},{"city":"Charlevoix"},{"city":"Charny"},{"city":"Chartierville"},{"city":"Ch?teauguay"},{"city":"Chateau-Richer"},{"city":"Chelsea"},{"city":"Cheneville"},{"city":"Chesterville"},{"city":"Chevery"},{"city":"Chibougamau"},{"city":"Chicoutimi"},{"city":"Chisasibi"},{"city":"Chomedey"},{"city":"Chute-aux-Outardes"},{"city":"Chute-des-Passes"},{"city":"Cl?ricy"},{"city":"Clermont"},{"city":"Cloridorme"},{"city":"Clova"},{"city":"Coaticook"},{"city":"Colombier"},{"city":"Compton"},{"city":"Contrecoeur"},{"city":"Cookshire"},{"city":"Coteau-du-Lac"},{"city":"C?te-Saint-Luc"},{"city":"Courcelette"},{"city":"Courcelles"},{"city":"Cowansville"},{"city":"Crabtree"},{"city":"Danville"},{"city":"Daveluyville"},{"city":"Deauville"},{"city":"Degelis"},{"city":"Delisle"},{"city":"Delson"},{"city":"Desbiens"},{"city":"Deschaillons-sur-Saint-Laurent"},{"city":"Deux-Montagnes"},{"city":"Disraeli"},{"city":"Dolbeau-Mistassini"},{"city":"Dollard-des-Ormeaux"},{"city":"Donnacona"},{"city":"Dorval"},{"city":"Drummondville"},{"city":"Dubuisson"},{"city":"Dunham"},{"city":"Duparquet"},{"city":"Dupuy"},{"city":"Duvernay"},{"city":"East Angus"},{"city":"East Broughton"},{"city":"East Farnham"},{"city":"East Hereford"},{"city":"Eastmain"},{"city":"Eastman"},{"city":"Entrelacs"},{"city":"Esterel"},{"city":"Evain"},{"city":"Fabre"},{"city":"Fabreville"},{"city":"Falardeau"},{"city":"Farnham"},{"city":"Fassett"},{"city":"Ferland"},{"city":"Ferme-Neuve"},{"city":"Fermont"},{"city":"Fleurimont"},{"city":"Forestville"},{"city":"Fort-Coulonge"},{"city":"Fortierville"},{"city":"Fossambault-sur-le-Lac"},{"city":"Frampton"},{"city":"Franklin Centre"},{"city":"Frelighsburg"},{"city":"Fugereville"},{"city":"Gasp?"},{"city":"Gatineau"},{"city":"Gentilly"},{"city":"Girardville"},{"city":"Godbout"},{"city":"Gracefield"},{"city":"Granby"},{"city":"Grande-Entr?e"},{"city":"Grande-Rivi?re"},{"city":"Grandes-Bergeronnes"},{"city":"Grandes-Piles"},{"city":"Grande-Vall?e"},{"city":"Grand-Mere"},{"city":"Grand-Remous"},{"city":"Greenfield Park"},{"city":"Grenville"},{"city":"Guigues"},{"city":"Hammond"},{"city":"Ham-Nord"},{"city":"Hampstead"},{"city":"Harrington Harbour"},{"city":"Havre-Aubert"},{"city":"Havre-aux-Maisons"},{"city":"Havre-St-Pierre"},{"city":"H?bertville"},{"city":"Hebertville-Station"},{"city":"Hemmingford"},{"city":"Henryville"},{"city":"Howick"},{"city":"Hudson"},{"city":"Hull"},{"city":"Huntingdon"},{"city":"Iberville"},{"city":"Ile-aux-Coudres"},{"city":"Iles-de-la-Madeleine"},{"city":"Inukjuak"},{"city":"Inverness"},{"city":"Joliette"},{"city":"Jonqui?re"},{"city":"Joutel"},{"city":"Kangiqsualujjuaq"},{"city":"Kangirsuk"},{"city":"Kateville"},{"city":"Kazabazua"},{"city":"Kingsbury"},{"city":"Kingsey Falls"},{"city":"Kirkland"},{"city":"Knowlton"},{"city":"Kuujjuaq"},{"city":"La Baie"},{"city":"Labelle"},{"city":"L\'Acadie"},{"city":"Lac-au-Saumon"},{"city":"Lac-aux-Sables"},{"city":"Lac-Bouchette"},{"city":"Lac-Brome"},{"city":"Lac-Delage"},{"city":"Lac-des-Ecorces"},{"city":"Lac-Drolet"},{"city":"Lac-du-Cerf"},{"city":"Lac-Edouard"},{"city":"Lac-Etchemin"},{"city":"Lac Fronti?re"},{"city":"Lachenaie"},{"city":"Lachine"},{"city":"Lachute"},{"city":"Lac Kenogami"},{"city":"Lacolle"},{"city":"La Corne"},{"city":"Lac-Poulin"},{"city":"Lac-Saguay"},{"city":"Lac-Sergent"},{"city":"Lac-St-Joseph"},{"city":"La Dore"},{"city":"Lafontaine"},{"city":"La Grande"},{"city":"La Guadeloupe"},{"city":"Lake Megantic"},{"city":"La Malbaie"},{"city":"La Martre"},{"city":"Lambton"},{"city":"La Minerve"},{"city":"L\'Ancienne-Lorette"},{"city":"L\'Ange-Gardien"},{"city":"L\'Annonciation"},{"city":"Lanoraie"},{"city":"La Patrie"},{"city":"La Plaine"},{"city":"La Pocatiere"},{"city":"La Prairie"},{"city":"La Reine"},{"city":"La Romaine"},{"city":"LaSalle"},{"city":"La Sarre"},{"city":"L\'Assomption"},{"city":"Laterriere"},{"city":"Latulipe"},{"city":"La Tuque"},{"city":"Laurentides"},{"city":"Laurier-Station"},{"city":"Laurierville"},{"city":"Laval"},{"city":"Laval des Rapides"},{"city":"Laval Ouest"},{"city":"Lavaltrie"},{"city":"L\'Avenir"},{"city":"Laverloch?re"},{"city":"Lawrenceville"},{"city":"Lebel-sur-Quevillon"},{"city":"Le Bic"},{"city":"Leclercville"},{"city":"Le Gardeur"},{"city":"LeMoyne"},{"city":"Lennoxville"},{"city":"L\'Epiphanie"},{"city":"L?ry"},{"city":"Les Boules"},{"city":"Les Cedres"},{"city":"Les Coteaux"},{"city":"Les Eboulements"},{"city":"Les Escoumins"},{"city":"Les M?chins"},{"city":"L?vis"},{"city":"L\'Ile-Aux-Noix"},{"city":"L\'Ile-Bizard"},{"city":"L\'Ile-Cadieux"},{"city":"L\'Ile-d\'Entree"},{"city":"L\'Ile-Dorval"},{"city":"L\'Ile-Perrot"},{"city":"L\'Islet"},{"city":"L\'Isle-Verte"},{"city":"Longueuil"},{"city":"Loretteville"},{"city":"Lorraine"},{"city":"Lorrainville"},{"city":"Louiseville"},{"city":"Lourdes de Blanc Sablon"},{"city":"Louvicourt"},{"city":"Low"},{"city":"Luceville"},{"city":"Luskville"},{"city":"Lyster"},{"city":"Macamic"},{"city":"Magog"},{"city":"Malartic"},{"city":"Manic-Cinq"},{"city":"Maniwaki"},{"city":"Manouane"},{"city":"Manseau"},{"city":"Mansonville"},{"city":"Maple Grove"},{"city":"Maria"},{"city":"Marieville"},{"city":"Marsoui"},{"city":"Mascouche"},{"city":"Maskinong?"},{"city":"Masson-Angers"},{"city":"Massueville"},{"city":"Mastigouche"},{"city":"Matagami"},{"city":"Matane"},{"city":"Matapedia"},{"city":"Mcmasterville"},{"city":"Melbourne"},{"city":"Mellin"},{"city":"Melocheville"},{"city":"Mercier"},{"city":"Metabetchouan"},{"city":"Metis-sur-Mer"},{"city":"Mirabel"},{"city":"Mistassini"},{"city":"Moisie"},{"city":"Mont Bechervaise"},{"city":"Montebello"},{"city":"Mont-Joli"},{"city":"Mont-Laurier"},{"city":"Mont-Louis"},{"city":"Montmagny"},{"city":"Montr?al"},{"city":"Montr?al-Est"},{"city":"Montr?al - Nord"},{"city":"Montr?al - Ouest"},{"city":"Mont-Rolland"},{"city":"Mont-Royal"},{"city":"Mont St Gr?goire"},{"city":"Mont-St-Hilaire"},{"city":"Mont-St-Pierre"},{"city":"Mont-Tremblant"},{"city":"Morin-Heights"},{"city":"Murdochville"},{"city":"Mutton Bay"},{"city":"Nantes"},{"city":"Napierville"},{"city":"Natashquan"},{"city":"Nedelec"},{"city":"Neuville"},{"city":"New Carlisle"},{"city":"New Glasgow"},{"city":"Newport"},{"city":"New Richmond"},{"city":"Nicolet"},{"city":"Norbertville"},{"city":"Normandin"},{"city":"Normetal"},{"city":"North Hatley"},{"city":"Notre Dame de Bonsecours"},{"city":"Notre-Dame-de-la-Paix"},{"city":"Notre-Dame-de-la-Salette"},{"city":"Notre Dame De L\'Ile Perrot"},{"city":"Notre Dame de Lourdes"},{"city":"Notre Dame des Laurentides"},{"city":"Notre Dame Des Prairies"},{"city":"Notre-Dame-de-Stanbridge"},{"city":"Notre-Dame-du-Bon-Conseil"},{"city":"Notre-Dame-du-Lac"},{"city":"Notre-Dame-du-Laus"},{"city":"Notre-Dame-du-Nord"},{"city":"Notre Dame Du Portage"},{"city":"Nouvelle"},{"city":"Oka"},{"city":"Omerville"},{"city":"Orford"},{"city":"Ormstown"},{"city":"Otterburn Park"},{"city":"Outremont"},{"city":"Palmarolle"},{"city":"Papineauville"},{"city":"Parent"},{"city":"Perce"},{"city":"Peribonka"},{"city":"Perkins"},{"city":"Petite-Riviere-St-Francois"},{"city":"Philipsburg"},{"city":"Pierrefonds"},{"city":"Pierreville"},{"city":"Pincourt"},{"city":"Pintendre"},{"city":"Plaisance"},{"city":"Plessisville"},{"city":"Pohenegamook"},{"city":"Pointe-?-la-Croix"},{"city":"Pointe-au-Pere"},{"city":"Pointe-aux-Outardes"},{"city":"Pointe Aux Trembles"},{"city":"Pointe-Calumet"},{"city":"Pointe-Claire"},{"city":"Pointe-des-Cascades"},{"city":"Pointe-des-Monts"},{"city":"Pointe-Fortune"},{"city":"Pointe-Lebel"},{"city":"Pontiac"},{"city":"Pont-Rouge"},{"city":"Pont-Viau"},{"city":"Portage-du-Fort"},{"city":"Port-Cartier"},{"city":"Port-Daniel"},{"city":"Port-Menier"},{"city":"Portneuf"},{"city":"Poste-de-la-Baleine"},{"city":"Prevost"},{"city":"Price"},{"city":"Princeville"},{"city":"Puvirnituq"},{"city":"Quebec"},{"city":"Quyon"},{"city":"Radisson"},{"city":"Rawdon"},{"city":"Remigny"},{"city":"Repentigny"},{"city":"R?serve faunique de Rimouski"},{"city":"Reserve faunique la V?rendrye"},{"city":"Reserves fauniques de Matane"},{"city":"Richelieu"},{"city":"Richmond"},{"city":"Rigaud"},{"city":"Rimouski"},{"city":"Rimouski-Est"},{"city":"Ripon"},{"city":"Rivi?re-?-Pierre"},{"city":"Riviere-au-Renard"},{"city":"Rivi?re-au-Tonnerre"},{"city":"Riviere-Beaudette"},{"city":"Rivi?re-Bleue"},{"city":"Rivi?re-du-Loup"},{"city":"Riviere-Heva"},{"city":"Riviere-St-Jean"},{"city":"Robertsonville"},{"city":"Roberval"},{"city":"Rochebaucourt"},{"city":"Rock Forest"},{"city":"Rollet"},{"city":"Rosem?re"},{"city":"Rougemont"},{"city":"Rouyn-Noranda"},{"city":"Roxboro"},{"city":"Roxton Falls"},{"city":"Roxton Pond"},{"city":"Sabrevois"},{"city":"Sacr?-Coeur"},{"city":"Saint Alexandre D\'Iberville"},{"city":"Saint-Alexis-de-Montcalm"},{"city":"Saint Alphonse de Granby"},{"city":"Saint Amable"},{"city":"Saint-Andr?"},{"city":"Saint-Andr?-Avellin"},{"city":"Saint-Andr?-du-Lac-Saint-Jean"},{"city":"Saint-Andr?-Est"},{"city":"Saint Antoine Des Laurentides"},{"city":"Saint Antoine Sur Richelieu"},{"city":"Saint Antonin"},{"city":"Saint Athanase"},{"city":"Saint Calixte"},{"city":"Saint Charles Borromee"},{"city":"Saint Charles Sur Richelieu"},{"city":"Saint Christophe D\'Arthabaska"},{"city":"Saint Colomban"},{"city":"Saint-C?me"},{"city":"Saint Denis De Brompton"},{"city":"Saint Denis Sur Richelieu"},{"city":"Saint-Donat"},{"city":"Sainte Angele De Monnoir"},{"city":"Sainte Ann De Sorel"},{"city":"Sainte Brigide D\'Iberville"},{"city":"Sainte Cecile De Milton"},{"city":"Sainte Dorothe?"},{"city":"Sainte Famille"},{"city":"Saint-?lie"},{"city":"Saint-?lie-d\'Orford"},{"city":"Sainte Marie Salome"},{"city":"Sainte Marthe Du Cap"},{"city":"Sainte Sophie"},{"city":"Saint Esprit"},{"city":"Sainte-Th?r?se-de-Blainville"},{"city":"Saint Etienne de Beauharnois"},{"city":"Saint Etienne de Lauzon"},{"city":"Saint-Ferdinand"},{"city":"Saint-Ferr?ol-les-Neiges"},{"city":"Saint Gerard Majella"},{"city":"Saint-Hubert"},{"city":"Saint-Hyacinthe"},{"city":"Saint Isidore de la Prairie"},{"city":"Saint Jean Baptiste"},{"city":"Saint Jean D\'Orleans"},{"city":"Saint Joachim"},{"city":"Saint Joseph De La Pointe De L"},{"city":"Saint-Laurent"},{"city":"Saint Laurent D\'Orleans"},{"city":"Saint Lazare De Vaudreuil"},{"city":"Saint Lin Laurentides"},{"city":"Saint Marc Sur Richelieu"},{"city":"Saint Mathias Sur Richelieu"},{"city":"Saint Mathieu de Beloeil"},{"city":"Saint Mathieu de la Prairie"},{"city":"Saint Maurice"},{"city":"Saint-Michel-des-Saints"},{"city":"Saint Norbert D\'Arthabaska"},{"city":"Saint Paul D\'Industrie"},{"city":"Saint Philippe"},{"city":"Saint Pierre D\'Orleans"},{"city":"Saint Robert"},{"city":"Saint Roch De L\'Achigan"},{"city":"Saint Roch De Richelieu"},{"city":"Saint Sulpice"},{"city":"Saint Thomas"},{"city":"Saint Urbain Premier"},{"city":"Saint Valere"},{"city":"Saint Victoire de Sorel"},{"city":"Salaberry-de-Valleyfield"},{"city":"Salluit"},{"city":"Sanmaur"},{"city":"Sault-au-Mouton"},{"city":"Sawyerville"},{"city":"Sayabec"},{"city":"Schefferville"},{"city":"Scotstown"},{"city":"Senneterre"},{"city":"Senneville"},{"city":"Sept-?les"},{"city":"Shawbridge"},{"city":"Shawinigan"},{"city":"Shawinigan-Sud"},{"city":"Shawville"},{"city":"Shefford"},{"city":"Sherbrooke"},{"city":"Shigawake"},{"city":"Shipshaw"},{"city":"Sillery"},{"city":"Sorel-Tracy"},{"city":"Squatec"},{"city":"St-Adelphe"},{"city":"St-Adolphe-de-Dudswell"},{"city":"St-Adolphe-d\'Howard"},{"city":"St-Agapit"},{"city":"St-Aime"},{"city":"St-Albert"},{"city":"St-Alexandre-de-Kamouraska"},{"city":"St-Alexis-de-Matapedia"},{"city":"St-Alexis-des-Monts"},{"city":"St-Alphonse-Rodriguez"},{"city":"St. Ambroise de Chicoutimi"},{"city":"St-Anselme"},{"city":"Stanstead"},{"city":"St-Antoine"},{"city":"St-Antoine-de-Tilly"},{"city":"St-Apollinaire"},{"city":"St-Augustin-de-Desmaures"},{"city":"St-Barnabe"},{"city":"St-Barthelemy"},{"city":"St. Basile de Portneuf"},{"city":"St-Basile-le-Grand"},{"city":"St-Basile-Sud"},{"city":"St. Bernard de Dorchester"},{"city":"St-Blaise-sur-Richelieu"},{"city":"St-Boniface-de-Shawinigan"},{"city":"St-Bruno"},{"city":"St-Bruno-de-Montarville"},{"city":"St-Calixte-de-Kilkenny"},{"city":"St-Casimir"},{"city":"St-Celestin"},{"city":"St-Cesaire"},{"city":"St-Charles-de-Bellechasse"},{"city":"St-Chrysostome"},{"city":"St-Clet"},{"city":"St. C?me de Kennebec"},{"city":"St-Constant"},{"city":"St-Cyrille-de-Wendover"},{"city":"St-Damase"},{"city":"St-Damien-de-Buckland"},{"city":"St-Denis"},{"city":"Ste-Adele"},{"city":"Ste-Agathe"},{"city":"Ste. Agathe de Lotbiniere"},{"city":"Ste-Agathe-des-Monts"},{"city":"Ste-Agathe-Sud"},{"city":"Ste. Angele de Laval"},{"city":"Ste-Anne-de-Beaupre"},{"city":"Ste-Anne-de-Bellevue"},{"city":"Ste-Anne-de-la-Perade"},{"city":"Ste-Anne-de-Portneuf"},{"city":"Ste-Anne-des-Monts"},{"city":"Ste-Anne-des-Plaines"},{"city":"Ste-Anne-du-Lac"},{"city":"Ste-Blandine"},{"city":"Ste-Brigitte-de-Laval"},{"city":"Ste-Catherine"},{"city":"Ste. Cecile Masham"},{"city":"Ste. Claire de Dorchester"},{"city":"Ste-Clotilde-de-Horton"},{"city":"Ste. Croix de Lotbiniere"},{"city":"St. Edouard de Frampton"},{"city":"St-Edouard-de-Lotbiniere"},{"city":"Ste-Eulalie"},{"city":"Ste-Felicite"},{"city":"Ste-Foy"},{"city":"Ste-Genevieve"},{"city":"Ste. Gertrude"},{"city":"Ste-Helene-de-Bagot"},{"city":"Ste-Henedine"},{"city":"Ste-Jeanne-d\'Arc"},{"city":"Ste-Julie"},{"city":"Ste-Julie-de-Vercheres"},{"city":"Ste-Julienne"},{"city":"Ste-Justine"},{"city":"Ste. Justine de Newton"},{"city":"St-Eleuthere"},{"city":"Ste-Lucie-de-Beauregard"},{"city":"Ste-Madeleine"},{"city":"Ste-Marguerite"},{"city":"Ste-Marie-de-Beauce"},{"city":"Ste-Marie-de-Blandford"},{"city":"Ste-Marthe"},{"city":"Ste-Marthe-sur-le-Lac"},{"city":"Ste. Martine"},{"city":"Ste. Methode de Frontenac"},{"city":"St-Emile"},{"city":"St-Emile-de-Suffolk"},{"city":"Ste. Monique de Nicolet"},{"city":"Ste-Perpetue"},{"city":"Ste-Petronille"},{"city":"St-Ephrem-de-Beauce"},{"city":"St-Ephrem-de-Tring"},{"city":"Ste-Rosalie"},{"city":"Ste-Rose"},{"city":"Ste-Rose-de-Watford"},{"city":"Ste-Rose-du-Nord"},{"city":"Ste-Sophie-de-Levrard"},{"city":"Ste-Thecle"},{"city":"Ste-Therese"},{"city":"St-Eugene-de-Guigues"},{"city":"St-Eustache"},{"city":"Ste-Veronique"},{"city":"Ste-Victoire"},{"city":"St-Fabien-de-Panet"},{"city":"St. Fabien de Rimouski"},{"city":"St-Felicien"},{"city":"St-Felix-de-Kingsey"},{"city":"St-Felix-de-Valois"},{"city":"St. Ferdinand d\'Halifax"},{"city":"St. Fidele"},{"city":"St-Fidele-de-Mont-Murray"},{"city":"St-Flavien"},{"city":"St-Francois-du-Lac"},{"city":"St-Fulgence"},{"city":"St-Gabriel"},{"city":"St-Gabriel-de-Brandon"},{"city":"St. Gabriel de Rimouski"},{"city":"St-Gedeon"},{"city":"St. Gedeon de Beauce"},{"city":"St. George\'s"},{"city":"St-Georges-de-Beauce"},{"city":"St-Georges-de-Cacouna"},{"city":"St-Gerard"},{"city":"St-Germain-de-Grantham"},{"city":"St-Gregoire-de-Greenlay"},{"city":"St. Gregoire de Nicolet"},{"city":"St-Guillaume"},{"city":"St. Henri de Levis"},{"city":"St-Hilarion"},{"city":"St-Hippolyte"},{"city":"St. Honore"},{"city":"St-Honore-de-Beauce"},{"city":"St-Honore-de-Chicoutimi"},{"city":"St-Hugues"},{"city":"St-Irenee"},{"city":"St-Jacques"},{"city":"St-Jean-Chrysostome"},{"city":"St-Jean-de-Dieu"},{"city":"St-Jean-de-Matha"},{"city":"St-Jean-Port-Joli"},{"city":"St-Jean-sur-Richelieu"},{"city":"St-Jerome"},{"city":"St-Joseph-de-Beauce"},{"city":"St-Joseph-de-la-Rive"},{"city":"St-Joseph-de-Sorel"},{"city":"St-Jovite"},{"city":"St-Jude"},{"city":"St-Just-de-Bretenieres"},{"city":"St-Lambert"},{"city":"St-Lambert-de-Lauzon"},{"city":"St-Leonard"},{"city":"St-Leonard-d\'Aston"},{"city":"St. Leon De Chic."},{"city":"St-Leon-le-Grand"},{"city":"St-Liboire"},{"city":"St-Lin"},{"city":"St-Louis-de-France"},{"city":"St-Luc"},{"city":"St-Ludger"},{"city":"St-Magloire"},{"city":"St-Malachie"},{"city":"St-Malo"},{"city":"St-Marc-des-Carrieres"},{"city":"St. Martin de Beauce"},{"city":"St-Methode-de-Frontenac"},{"city":"St-Michel-de-Bellechasse"},{"city":"St. Moise"},{"city":"St-Moose"},{"city":"St-Nazaire-d\'Acton"},{"city":"St-Nicolas"},{"city":"St-Noel"},{"city":"St-Odilon-de-Cranbourne"},{"city":"Stoke"},{"city":"Stoneham"},{"city":"St-Ours"},{"city":"St-Pac?me"},{"city":"St-Pamphile"},{"city":"St-Pascal"},{"city":"St-Patrice-de-Beaurivage"},{"city":"St-Paul-d\'Abbotsford"},{"city":"St-Paul-de-Montminy"},{"city":"St-Paulin"},{"city":"St-Philippe-de-Neri"},{"city":"St-Pie"},{"city":"St-Pie-de-Guire"},{"city":"St-Pierre"},{"city":"St-Pierre-de-Wakefield"},{"city":"St-Pierre-les-Becquets"},{"city":"St-Polycarpe"},{"city":"St-Prime"},{"city":"St-Prosper-de-Dorchester"},{"city":"St. Raphael de Bellechasse"},{"city":"Stratford"},{"city":"St-Raymond"},{"city":"St-Redempteur"},{"city":"St-Remi"},{"city":"St-Rene-de-Matane"},{"city":"St-Roch-de-Mekinac"},{"city":"St-Roch-des-Aulnaies"},{"city":"St-Romuald"},{"city":"St-Sauveur"},{"city":"St-Sauveur-des-Monts"},{"city":"St. Sebastien"},{"city":"St-Simeon"},{"city":"St-Simon-de-Bagot"},{"city":"St-Simon-de-Rimouski"},{"city":"St. Stanislas de Champlain"},{"city":"St-Sylvere"},{"city":"St-Sylvestre"},{"city":"St. Theodore de Chertsey"},{"city":"St-Theophile"},{"city":"St-Thomas-d\'Aquin"},{"city":"St-Timothee"},{"city":"St-Tite"},{"city":"St-Tite-des-Caps"},{"city":"St-Ubalde"},{"city":"Stukely-Sud"},{"city":"St-Ulric"},{"city":"St-Urbain"},{"city":"St-Victor"},{"city":"St. Victor de Beauce"},{"city":"St. Vincent de Paul"},{"city":"St-Wenceslas"},{"city":"St-Zacharie"},{"city":"St-Zenon"},{"city":"St-Zephirin"},{"city":"St-Zotique"},{"city":"Sutton"},{"city":"Tadoussac"},{"city":"Taschereau"},{"city":"Tasiujaq"},{"city":"Temiscaming"},{"city":"Terrasse Vaudreuil"},{"city":"Terrebonne"},{"city":"T?te-?-la-Baleine"},{"city":"Thetford Mines"},{"city":"Thurso"},{"city":"Tingwick"},{"city":"Tremblay"},{"city":"Tring-Jonction"},{"city":"Trois-Pistoles"},{"city":"Trois-Rivi?res"},{"city":"Umiujaq"},{"city":"Upton"},{"city":"Val-Alain"},{"city":"Val-Barrette"},{"city":"Val-Belair"},{"city":"Val-Brillant"},{"city":"Valcartier"},{"city":"Valcourt"},{"city":"Val-David"},{"city":"Val-des-Bois"},{"city":"Val-d\'Or"},{"city":"Vall?e-Jonction"},{"city":"Vanier"},{"city":"Varennes"},{"city":"Vaudreuil"},{"city":"Vaudreuil Dorion"},{"city":"Vaudreuil-sur-le-Lac"},{"city":"Venise-en-Quebec"},{"city":"Verch?res"},{"city":"Verdun"},{"city":"Victoriaville"},{"city":"Ville-Marie"},{"city":"Vimont"},{"city":"Wakefield"},{"city":"Warden"},{"city":"Warwick"},{"city":"Waskaganish"},{"city":"Waswanipi"},{"city":"Waterloo"},{"city":"Waterville"},{"city":"Weedon"},{"city":"Weedon Centre"},{"city":"Wemindji"},{"city":"Wendover"},{"city":"West Brome"},{"city":"Westbury"},{"city":"Westmount"},{"city":"Wickham"},{"city":"Windsor"},{"city":"Woburn"},{"city":"Wotton"},{"city":"Yamachiche"},{"city":"Yamaska"},{"city":"Yamaska-Est"}],"SK":[{"city":"Abbey"},{"city":"Aberdeen"},{"city":"Abernethy"},{"city":"Alameda"},{"city":"Alida"},{"city":"Allan"},{"city":"Alsask"},{"city":"Alvena"},{"city":"Aneroid"},{"city":"Arborfield"},{"city":"Archerwill"},{"city":"Arcola"},{"city":"Asquith"},{"city":"Assiniboia"},{"city":"Avonlea"},{"city":"Balcarres"},{"city":"Balgonie"},{"city":"Battleford"},{"city":"Beauval"},{"city":"Beechy"},{"city":"Bengough"},{"city":"Bethune"},{"city":"Bienfait"},{"city":"Biggar"},{"city":"Big River"},{"city":"Birch Hills"},{"city":"Birsay"},{"city":"Blaine Lake"},{"city":"Borden"},{"city":"Bredenbury"},{"city":"Briercrest"},{"city":"Broadview"},{"city":"Brock"},{"city":"Bruno"},{"city":"Buchanan"},{"city":"Buffalo Narrows"},{"city":"Burstall"},{"city":"Cabri"},{"city":"Cadillac"},{"city":"Calder"},{"city":"Canoe Narrows"},{"city":"Canora"},{"city":"Canwood"},{"city":"Carievale"},{"city":"Carlyle"},{"city":"Carnduff"},{"city":"Caron"},{"city":"Carrot River"},{"city":"Central Butte"},{"city":"Ceylon"},{"city":"Chaplin"},{"city":"Choiceland"},{"city":"Christopher Lake"},{"city":"Churchbridge"},{"city":"Clavet"},{"city":"Climax"},{"city":"Cochin"},{"city":"Coderre"},{"city":"Coleville"},{"city":"Colonsay"},{"city":"Conquest"},{"city":"Consul"},{"city":"Coronach"},{"city":"Craik"},{"city":"Creelman"},{"city":"Creighton"},{"city":"Cudworth"},{"city":"Cumberland House"},{"city":"Cupar"},{"city":"Cut Knife"},{"city":"Dalmeny"},{"city":"Davidson"},{"city":"Debden"},{"city":"Delisle"},{"city":"Denzil"},{"city":"Dillon"},{"city":"Dinsmore"},{"city":"Dodsland"},{"city":"Domremy"},{"city":"Drake"},{"city":"Dubuc"},{"city":"Duck Lake"},{"city":"Dundurn"},{"city":"Dysart"},{"city":"Earl Grey"},{"city":"Eastend"},{"city":"Eatonia"},{"city":"Edam"},{"city":"Elbow"},{"city":"Elfros"},{"city":"Elrose"},{"city":"Esterhazy"},{"city":"Estevan"},{"city":"Eston"},{"city":"Eyebrow"},{"city":"Fillmore"},{"city":"Fleming"},{"city":"Foam Lake"},{"city":"Fond-du-Lac"},{"city":"Fort Qu\'Appelle"},{"city":"Fox Valley"},{"city":"Francis"},{"city":"Frobisher"},{"city":"Frontier"},{"city":"Gainsborough"},{"city":"Glaslyn"},{"city":"Glenavon"},{"city":"Glen Ewen"},{"city":"Goodeve"},{"city":"Goodsoil"},{"city":"Govan"},{"city":"Gravelbourg"},{"city":"Grayson"},{"city":"Green Lake"},{"city":"Grenfell"},{"city":"Gull Lake"},{"city":"Hafford"},{"city":"Hague"},{"city":"Hanley"},{"city":"Harris"},{"city":"Hawarden"},{"city":"Hazlet"},{"city":"Hepburn"},{"city":"Herbert"},{"city":"Herschel"},{"city":"Hodgeville"},{"city":"Holdfast"},{"city":"Hudson Bay"},{"city":"Humboldt"},{"city":"Ile-?-la-Crosse"},{"city":"Imperial"},{"city":"Indian Head"},{"city":"Invermay"},{"city":"Ituna"},{"city":"Jansen"},{"city":"Kamsack"},{"city":"Kelliher"},{"city":"Kelvington"},{"city":"Kenaston"},{"city":"Kennedy"},{"city":"Kenosee"},{"city":"Kerrobert"},{"city":"Key Lake"},{"city":"Kincaid"},{"city":"Kindersley"},{"city":"Kinistino"},{"city":"Kipling"},{"city":"Kisbey"},{"city":"Kyle"},{"city":"Lafl?che"},{"city":"Laird"},{"city":"Lake Alma"},{"city":"Lake Lenore"},{"city":"La Loche"},{"city":"Lampman"},{"city":"Landis"},{"city":"Lang"},{"city":"Langenburg"},{"city":"Langham"},{"city":"Lanigan"},{"city":"La Ronge"},{"city":"Lashburn"},{"city":"Leader"},{"city":"Leask"},{"city":"Lemberg"},{"city":"Leoville"},{"city":"Leroy"},{"city":"Lestock"},{"city":"Liberty"},{"city":"Limerick"},{"city":"Lintlaw"},{"city":"Lipton"},{"city":"Lloydminster"},{"city":"Loon Lake"},{"city":"Loreburn"},{"city":"Lucky Lake"},{"city":"Lumsden"},{"city":"Luseland"},{"city":"Macklin"},{"city":"Macrorie"},{"city":"Maidstone"},{"city":"Mankota"},{"city":"Manor"},{"city":"Maple Creek"},{"city":"Marcelin"},{"city":"Margo"},{"city":"Marquis"},{"city":"Marsden"},{"city":"Marshall"},{"city":"Martensville"},{"city":"Maryfield"},{"city":"Maymont"},{"city":"Meacham"},{"city":"Meadow Lake"},{"city":"Meath Park"},{"city":"Melfort"},{"city":"Melville"},{"city":"Meota"},{"city":"Midale"},{"city":"Middle Lake"},{"city":"Milden"},{"city":"Milestone"},{"city":"Minton"},{"city":"Mistatim"},{"city":"Molanosa"},{"city":"Montmartre"},{"city":"Moose Jaw"},{"city":"Moosomin"},{"city":"Morse"},{"city":"Mortlach"},{"city":"Mossbank"},{"city":"Naicam"},{"city":"Neidpath"},{"city":"Neilburg"},{"city":"Neudorf"},{"city":"Neville"},{"city":"Nipawin"},{"city":"Nokomis"},{"city":"Norquay"},{"city":"North Battleford"},{"city":"North Portal"},{"city":"Odessa"},{"city":"Ogema"},{"city":"Ormiston"},{"city":"Osler"},{"city":"Outlook"},{"city":"Oxbow"},{"city":"Paddockwood"},{"city":"Pangman"},{"city":"Paradise Hill"},{"city":"Patuanak"},{"city":"Paynton"},{"city":"Pelican Narrows"},{"city":"Pelly"},{"city":"Pennant"},{"city":"Pense"},{"city":"Perdue"},{"city":"Piapot"},{"city":"Pierceland"},{"city":"Pilot Butte"},{"city":"Pinehouse"},{"city":"Plato"},{"city":"Plenty"},{"city":"Ponteix"},{"city":"Porcupine Plain"},{"city":"Preeceville"},{"city":"Prelate"},{"city":"Prince Albert"},{"city":"Prud\'homme"},{"city":"Punnichy"},{"city":"Qu\'Appelle"},{"city":"Quill Lake"},{"city":"Rabbit Lake"},{"city":"Radisson"},{"city":"Radville"},{"city":"Raymore"},{"city":"Redvers"},{"city":"Regina"},{"city":"Regina Beach"},{"city":"Rhein"},{"city":"Riceton"},{"city":"Richmound"},{"city":"Ridgedale"},{"city":"Riverhurst"},{"city":"Rocanville"},{"city":"Rockglen"},{"city":"Rosetown"},{"city":"Rose Valley"},{"city":"Rosthern"},{"city":"Rouleau"},{"city":"Saltcoats"},{"city":"Sandy Bay"},{"city":"Saskatoon"},{"city":"Sceptre"},{"city":"Scott"},{"city":"Sedley"},{"city":"Semans"},{"city":"Shaunavon"},{"city":"Sheho"},{"city":"Shellbrook"},{"city":"Shell Lake"},{"city":"Simpson"},{"city":"Sintaluta"},{"city":"Smeaton"},{"city":"Smiley"},{"city":"Southend"},{"city":"Southey"},{"city":"Spalding"},{"city":"Speers"},{"city":"Spiritwood"},{"city":"Springside"},{"city":"Spy Hill"},{"city":"Stanley Mission"},{"city":"Star City"},{"city":"St. Benedict"},{"city":"St. Brieux"},{"city":"St. Gregor"},{"city":"St. Louis"},{"city":"Stockholm"},{"city":"Stony Rapids"},{"city":"Storthoaks"},{"city":"Stoughton"},{"city":"Strasbourg"},{"city":"Strongfield"},{"city":"Sturgis"},{"city":"St. Walburg"},{"city":"Swift Current"},{"city":"Tantallon"},{"city":"Theodore"},{"city":"Tisdale"},{"city":"Togo"},{"city":"Tompkins"},{"city":"Torquay"},{"city":"Tramping Lake"},{"city":"Tribune"},{"city":"Turnor Lake"},{"city":"Turtleford"},{"city":"Unity"},{"city":"Uranium City"},{"city":"Val Marie"},{"city":"Vanguard"},{"city":"Vanscoy"},{"city":"Vibank"},{"city":"Viscount"},{"city":"Vonda"},{"city":"Wadena"},{"city":"Wakaw"},{"city":"Waldheim"},{"city":"Wapella"},{"city":"Warman"},{"city":"Waskesiu Lake"},{"city":"Watrous"},{"city":"Watson"},{"city":"Wawota"},{"city":"Webb"},{"city":"Welwyn"},{"city":"Weyburn"},{"city":"White Fox"},{"city":"Whitewood"},{"city":"Wilcox"},{"city":"Wilkie"},{"city":"Willow Bunch"},{"city":"Windthorst"},{"city":"Wiseton"},{"city":"Wishart"},{"city":"Wollaston Lake"},{"city":"Wolseley"},{"city":"Wood Mountain"},{"city":"Wynyard"},{"city":"Yellow Creek"},{"city":"Yellow Grass"},{"city":"Yorkton"},{"city":"Young"},{"city":"Zealandia"},{"city":"Zenon Park"}],"YU":[{"city":"Beaver Creek"},{"city":"Burwash Landing"},{"city":"Carcross"},{"city":"Carmacks"},{"city":"Dawson"},{"city":"Destruction Bay"},{"city":"Faro"},{"city":"Haines Junction"},{"city":"Marsh Lake"},{"city":"Mayo"},{"city":"Old Crow"},{"city":"Pelly Crossing"},{"city":"Ross River"},{"city":"Swift River"},{"city":"Tagish"},{"city":"Teslin"},{"city":"Watson Lake"},{"city":"Whitehorse"}]}';
+   
+        $(document).ready(function(){
+            
+            var prov = JSON.parse(cities);
+            
+            str = '';
+            for(var i=0; i < prov['ON'].length ; i++)
+            {
+                if(prov['ON'][i]['city'] == 'Brampton')
+                {
+                  str += '<option selected="selected">'+prov['ON'][i]['city']+'</option>';
+                }
+                else
+                {
+                  str += '<option>'+prov['ON'][i]['city']+'</option>';  
+                }
+            }
+            
+            $("#city").empty();
+            $("#city").append(str);
+        });
+        
+        $(document).on("change","#province",function(){
+            
+            var prov = JSON.parse(cities);
+            
+            str = '';
+            for(var i=0; i < prov[$(this).val()].length ; i++)
+            {
+                str += '<option>'+prov[$(this).val()][i]['city']+'</option>';
+            }
+            
+            $("#city").empty();
+            $("#city").append(str);
+            
+        });
+        
+        function formatdollor(n, currency) {
+          return currency + " " + n.toFixed(1).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").replace(".0","");
+        }
+        
+        function formatdollor2(n, currency) {
+          return currency + " " + n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,");
+        }
+        
+        $(document).on('click',"#emipaymenttable td.toggle",function(){
+            var a=$(this).attr("id");
+            $(this).toggleClass("toggle-open");
+            $("tr#month"+a).find("div").slideToggle();
+        });
+        
+        $(document).on("click",".closebtn",function(){
+            $(".getquoteform").hide();
+        });
+                
+        $(document).on("click",".select-rate",function(){
+            $(".getquoteform").show();
+        });
+        
+        
+        $(document).on("click","#compute",function(){
+           $(".rateval").val($(".rate-active").val());
+           $(".getquoteform").hide();
+           getEMI();
+           getAmmortSchedule();
+       });
+          
+        $(document).on("change","#ammort",function(){
+            
+            $(".ammort").each(function(){
+            
+            if($("#ammort").val() === 'other')
+            {
+              $(this).val($("#ammort").val());
+              $(this).closest('td').find("input").show(); 
+              $(this).hide();
+            }
+            else
+            {
+             $(this).val($("#ammort").val());
+             $(this).closest('td').find("input").val($("#ammort").val());
+             $(this).closest('td').find("input").hide();
+            }
+        });
+       });
+        
+        $(document).on("change",".ammort",function(){
+            
+            if($(this).val() === 'other')
+            {
+              $(this).closest('td').find("input.amortval").show();
+              $(this).hide();
+            }
+            else
+            {
+             $(this).closest('td').find("input.amortval").val($(this).val());
+             $(this).closest('td').find("input.amortval").hide();
+            }
+            
+             getEMI();
+             getAmmortSchedule();
+        });
+        
+        
+        $(document).on("keydown","#askprice",function (e) {
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+             // Allow: Ctrl+A, Command+A
+            (e.keyCode == 65 && ( e.ctrlKey === true || e.metaKey === true ) ) || 
+             // Allow: home, end, left, right, down, up
+            (e.keyCode >= 35 && e.keyCode <= 40)) {
+                 // let it happen, don't do anything
+                 return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    });
+    
+        $(document).on("click",".get-ammort",function(e){
+           e.preventDefault();
+           
+            if(isNaN(parseInt($("#askprice").val().replace(/[^0-9-.]/g, ''))))
+            {
+             alert('enter asking price');
+             $("#askprice").focus();
+             $("#askprice").val('');
+            }
+            else
+            {
+             $("#ammort-div").show();
+             getAmmortSchedule();
+            }
+        });
+    
+        $("#askprice").blur(function(){
+        var num=parseInt($(this).val().replace(/[^0-9-.]/g, ''));
+        $(this).val(formatdollor(num,"$"));
+        });
+       
+        
+        $(document).on("click","#go",function(){
+         getMortgage();
+       });
+       
+       
+       $(document).on("click","#frequency",function(){
+           getEMI();
+           getAmmortSchedule();
+       });
+       
+       
+        $(document).on("change",".ammort-graph",function(){
+             getAmmortSchedule();
+       });
+      
+       $(document).on("change","#province",function(){
+            
+            if($(this).val() === 'ON')
+            {
+              $("#non-resident").show();  
+            }
+            else
+            {
+              $("#non-resident").hide();  
+            }
+            
+            getLandTransferTax();            
+        });
+        
+       $(document).on("click","#non-res",function(){
+            getLandTransferTax();
+        });
+        
+        $(document).on("click","#first-time",function(){
+           getLandTransferTax();
+        });
+       
+     function getMortgage()
+     {
+         
+        if(isNaN(parseInt($("#askprice").val().replace(/[^0-9-.]/g, ''))))
+        {
+             alert('enter asking price');
+             $("#askprice").focus();
+             $("#askprice").val('');
+        }
+        else{
+        var downpays = [];
+        var downpaycheck=0;
+        
+        $("#graph-downpay-div").empty();
+        $("#exp-downpay-div").empty();
+        
+          if(parseInt($("#askprice").val().replace(/[^0-9-.]/g, '')) >= 1000000)
+         {
+             $(".downtext").eq(0).val("20%");
+             $(".downtext").eq(1).val("25%");
+             $(".downtext").eq(2).val("30%");
+             $(".downtext").eq(3).val("35%");
+             $(".ammort").find('option[value=30], option[value=35]').attr('disabled', false);
+             
+            $("#graph-downpay-div,#exp-downpay-div").append('<select class="ammort-graph">\n\
+                      <option value="0"> Downpayment (20%)</option>\n\
+                      <option value="1"> Downpayment (25%)</option>\n\
+                      <option value="2"> Downpayment (30%)</option>\n\
+                      <option value="3"> Downpayment (35%)</option>\n\
+                      </select>');
+                
+            $("#exp-downpay-div").append('<select class="exp-down-select">\n\
+                      <option value="0"> Downpayment (20%)</option>\n\
+                      <option value="1"> Downpayment (25%)</option>\n\
+                      <option value="2"> Downpayment (30%)</option>\n\
+                      <option value="3"> Downpayment (35%)</option>\n\
+                      </select>');
+         }
+         else
+         {
+             $(".downtext").eq(0).val("5%");
+             $(".downtext").eq(1).val("10%");
+             $(".downtext").eq(2).val("15%");
+             $(".downtext").eq(3).val("20%");
+             $(".ammort").find('option[value=30], option[value=35]').attr('disabled', true);
+            
+             
+             $("#graph-downpay-div").append('<select class="ammort-graph">\n\
+                      <option value="0"> Downpayment (5%)</option>\n\
+                      <option value="1"> Downpayment (10%)</option>\n\
+                      <option value="2"> Downpayment (15%)</option>\n\
+                      <option value="3"> Downpayment (20%)</option>\n\
+                      </select>');
+                
+            $("#exp-downpay-div").append('<select class="exp-down-select">\n\
+                      <option value="0"> Downpayment (5%)</option>\n\
+                      <option value="1"> Downpayment (10%)</option>\n\
+                      <option value="2"> Downpayment (15%)</option>\n\
+                      <option value="3"> Downpayment (20%)</option>\n\
+                      </select>');
+         }
+         
+         $(".downtext").each(function(){
+             
+             if(parseInt($(this).val()) < 5)
+             { downpaycheck = 1;}
+             else{
+             downpays.push($(this).val());
+             }
+             }); 
+             
+         
+        var downpays_str = downpays.join('|');
+        
+        if(downpaycheck === 0)
+        {
+        $.ajax({
+                  type: "post",
+                  url: "/get-mortgage",
+                  async: true,
+                  data : {'askprice' : parseInt($("#askprice").val().replace(/[^0-9-.]/g, '')),'downpays':downpays_str},
+                  success: function(response){ 
+                     var data=JSON.parse(response);
+                    
+                     for(var key in data) 
+                     {
+                        $(".downpayment."+key).html(formatdollor(data[key]['downpayment'],"$"));
+                        $(".insurance."+key).html(formatdollor(data[key]['insurance'],"$"));
+                        $(".reqdmortgage."+key).html(formatdollor(data[key]['reqdmortgage'],"$"));
+                     }
+                      getEMI();
+                      getAmmortSchedule();
+                  },
+                  error: function (request,error) {
+                    // alert('No data');
+                }
+        }); 
+        
+        getLandTransferTax();
+        }
+        else{
+           alert('Down payment not allowed below 5%');
+         }
+        }
+     }
+     
+     function getEMI()
+     {
+            var principals = [];
+        
+          $(".reqdmortgage").each(function(){  
+            principals.push(parseInt($(this).html().replace(/[^0-9-.]/g, '')));
+         });
+        
+        var years = [];
+        
+          $(".amortval").each(function(){  
+            years.push($(this).val());
+          });
+        
+        var rates = [];
+        
+          $(".rateval").each(function(){  
+            rates.push($(this).val());
+         });
+        
+       
+        $.ajax({
+                  type: "post",
+                  url: "/get-mortgage-installement",
+                  async: true,
+                  data : {'principal' : principals.join("|"),'years': years.join("|"), 'rate': rates.join("|"),'freq': $("#frequency").val()},
+                  success: function(response){ 
+                     var data=JSON.parse(response);
+                    
+                     for(var key in data) 
+                     {
+                        $(".emi."+key).html(formatdollor2(data[key]['emi'],"$"));
+                     }
+                  },
+                  error: function (request,error) {
+                    // alert('No data');
+                }
+        });
+       }
+     
+     function getAmmortSchedule()
+     {
+           // alert($(".ammort-graph").find('option:selected').val());
+            var principals = parseInt($(".reqdmortgage").eq($(".ammort-graph").find('option:selected').val()).html().replace(/[^0-9-.]/g, ''));
+            var years = $(".amortval").eq($(".ammort-graph").find('option:selected').val()).val();
+            var rates = $(".rateval").eq($(".ammort-graph").find('option:selected').val()).val();
+        
+        $.ajax({
+                  type: "post",
+                  url: "/get-ammort-table/"+principals+"/"+years+"/"+rates+"/"+$("#frequency").val(),
+                  async: true,
+                  success: function(response){ 
+                    
+                    $("#emipaymenttable").empty();
+                    
+                    var data=JSON.parse(response);
+                    
+    $('#container').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Break-up of Total Payment'
+        },
+        tooltip: {
+            pointFormat: '<b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                },
+                showInLegend: true
+            }
+        },
+        series: [{
+            name: "Principal Loan Amount Vs Total Interest",
+            colorByPoint: true,
+            data: [{
+                name: "Principal Loan Amount",
+                y: data['breakup']['total-principal']
+            }, {
+                name: "Total Interest",
+                y: data['breakup']['total-interest'],
+                sliced: true,
+                selected: true
+            }]
+        }]
+    });
+    
+    var years = [];
+    var interest = [];
+    var principal = [];
+    var balance = [];
+    var str='<table>\n\
+        <tr><th id="yearheader">Year</th>\n\
+        <th id="principalheader">Principal<br>(A)</th>\n\
+        <th id="interestheader">Interest<br>(B)</th>\n\
+        <th id="totalheader">Total Payment<br>(A + B)</th>\n\
+        <th id="balanceheader">Balance</th>\n\
+        <th id="paidtodateheader">Loan Paid To Date</th>\n\
+        </tr>';
+    
+    for(var i=0; i < data['schedule'].length ; i++)
+    {
+        years.push(data['schedule'][i]['year']);
+        interest.push(data['schedule'][i]['interest']);
+        principal.push(data['schedule'][i]['yprincipal']);
+        balance.push(data['schedule'][i]['balance']);
+        
+        str+='<tr class="yearlypaymentdetails">\n\
+             <td id="year'+data['schedule'][i]['year']+'" class="paymentyear toggle">'+data['schedule'][i]['year']+'</td>\n\
+             <td class="currency">'+formatdollor2(data['schedule'][i]['yprincipal'],"$")+'</td>\n\
+             <td class="currency">'+formatdollor2(data['schedule'][i]['interest'],"$")+'</td>\n\
+             <td class="currency">'+formatdollor2(data['schedule'][i]['installment'],"$")+'</td>\n\
+             <td class="currency">'+formatdollor2(data['schedule'][i]['balance'],"$")+'</td>\n\
+             <td class="paidtodateyear">'+data['schedule'][i]['loan_returned']+'%</td></tr>\n\
+             <tr id="monthyear'+data['schedule'][i]['year']+'" class="monthlypaymentdetails">\n\
+               <td class="monthyearwrapper" colspan="6">\n\
+              <div style="display: none;" >\n\
+              <table>';
+             
+            for(var j=0; j < data['schedule'][i]['months'].length ; j++)
+            {
+              str+='<tr style="color:blue;"><td class="paymentmonthyear">'+data['schedule'][i]['months'][j]['month']+'</td>\n\
+                   <td class="currency">'+formatdollor2(data['schedule'][i]['months'][j]['principal'],"$")+'</td>\n\
+                   <td class="currency">'+formatdollor2(data['schedule'][i]['months'][j]['interest'],"$")+'</td>\n\
+                   <td class="currency">'+formatdollor2(data['schedule'][i]['months'][j]['installment'],"$")+'</td>\n\
+                   <td class="currency">'+formatdollor2(data['schedule'][i]['months'][j]['balance'],"$")+'</td>\n\
+                   <td class="paidtodatemonthyear">'+data['schedule'][i]['months'][j]['loan_returned_month']+'%</td></tr>';
+            }
+            
+              str+='</table>\n\
+              </div></td></tr>';
+    }
+    
+    str+='</table>';
+    
+    $("#emipaymenttable").append(str);   
+                   
+    
+    $('#container1').highcharts({
+        chart: {
+            renderTo: "emibarchart",
+            defaultSeriesType: "column",
+            borderWidth: 0,
+            spacingLeft: 0,
+            spacingRight: 0
+        },
+        title: {
+            text: ""
+        },
+        xAxis: {
+            categories: years,
+            labels: {
+                rotation: -45,
+                align: "right",
+                style: {
+                    font: "normal 9px Verdana, sans-serif"
+                },
+                formatter: function() {
+                    return this.value
+                }
+            }
+        },
+        yAxis: [{
+            min: 0,
+            title: {
+                text: "EMI Payment / year"
+            },
+            stackLabels: {
+                enabled: !1,
+                style: {
+                    fontWeight: "bold",
+                    color: Highcharts.theme &&
+                        Highcharts.theme.c || "gray"
+                }
+            },
+            opposite: !0,
+            labels: {
+                formatter: function() {
+                    return "\u20b9 " + this.value
+                }
+            }
+        }, {
+            min: 0,
+            title: {
+                text: "Balance"
+            },
+            stackLabels: {
+                enabled: !1,
+                style: {
+                    fontWeight: "bold",
+                    color: Highcharts.theme && Highcharts.theme.c || "gray"
+                }
+            },
+            labels: {
+                formatter: function() {
+                    return "\u20b9 " + this.value
+                }
+            }
+        }],
+        legend: {
+            align: "right",
+            x: -120,
+            verticalAlign: "top",
+            y: -10,
+            floating: !0,
+            backgroundColor: Highcharts.theme && Highcharts.theme.k || "white",
+            shadow: !1
+        },
+        tooltip: {
+            text : "" 
+        },
+        plotOptions: {
+            column: {
+                stacking: "normal",
+                dataLabels: {
+                    enabled: !1,
+                    color: Highcharts.theme && Highcharts.theme.j || "white"
+                }
+            }
+        },
+        series: [{
+            name: "Interest",
+            data: interest,
+            yAxis: 0,
+            legendIndex: 2,
+            color: "#ED8C2B"
+        }, {
+            name: "Principal",
+            data: principal,
+            yAxis: 0,
+            legendIndex: 1,
+            color: "#88A825"
+        }, {
+            name: "Balance",
+            data: balance,
+            type: "spline",
+            yAxis: 1,
+            legendIndex: 3,
+            color: "#B8204C"
+        }]
+    });
+                    
+                  },
+                  error: function (request,error) {
+                    // alert('No data');
+                }
+        });
+       }
+       
+     function getLandTransferTax()
+     {
+        if(isNaN(parseInt($("#askprice").val().replace(/[^0-9-.]/g, ''))))
+        {
+             alert('enter asking price');
+             $("#askprice").focus();
+             $("#askprice").val('');
+        }
+        else{  
+            
+        var firsttime = 0;
+        var nonres = 0;
+        
+        if($("#first-time").is(":checked"))
+        {
+            firsttime = 1;
+        }
+        
+        if($("#non-res").is(":checked"))
+        {
+            nonres = 1;
+        }
+            
+        $.ajax({
+                  type: "post",
+                  url: "/get-land-transfer-tax",
+                  async: true,
+                  data : {'askprice' : parseInt($("#askprice").val().replace(/[^0-9-.]/g, '')),'province': $("#province").val(), 'first-time':firsttime,'non-res':nonres},
+                  success: function(response){ 
+                     var data=JSON.parse(response);
+                    
+                        $("#pro").html(formatdollor(data['pro'],"$"));
+                        $("#mum").html(formatdollor(data['mum'],"$"));
+                        $("#reb").html(formatdollor(data['reb'],"$"));
+                        $("#tot").html(formatdollor(data['tot'],"$"));
+                  },
+                  error: function (request,error) {
+                    // alert('No data');
+                }
+        }); 
+        }
+    }
+    
+     $(document).on("click",".get-monthly-expense",function(e){
+            e.preventDefault();
+            
+            if(isNaN(parseInt($("#askprice").val().replace(/[^0-9-.]/g, ''))))
+            {
+             alert('enter asking price');
+             $("#askprice").focus();
+             $("#askprice").val('');
+            }
+            else
+            {
+            $("#monthly-exp-div").show();
+            $("#exp-mortgage-div").val($(".emi.0").html());
+            getPropertyTax();
+            }
+     });
+     
+      $(document).on("click",".exp-down-select",function(){
+           $("#exp-mortgage-div").val($(".emi."+$(this).find('option:selected').val()).html());
+           UpdateTotalExp();
+       });
+     
+     function UpdateTotalExp()
+     {
+         var total='0';
+         
+         $(".exp-data").each(function(e){
+             if(!isNaN(parseFloat($(this).val().replace(/[^0-9-.]/g, ''))))
+             {
+               total = parseFloat(total)+parseFloat($(this).val().replace(/[^0-9-.]/g, ''));
+             }
+         });
+         $("#exp-total-div").html(formatdollor2(total,"$"));
+     }
+     
+     $(document).on('keyup',".exp-data",function(){
+         UpdateTotalExp();
+     });
+     
+     $(document).on('change',"#city",function(){
+         getPropertyTax();
+     });
+     
+     $(document).on('click',"#add-expense",function(){
+         
+         $("#expense-data").append('<tr><td><input type="text" placeholder="enter expense"/></td>\n\
+                                   <td><input type="text" class="exp-data" placeholder="enter value"/></td></tr>');
+     });
+     
+     function getPropertyTax()
+     {
+           
+        $.ajax({
+                  type: "post",
+                  url: "/get-prop-tax",
+                  async: true,
+                  data : {'askprice' : parseInt($("#askprice").val().replace(/[^0-9-.]/g, '')),'province': $("#province").val(),'city': $("#city option:selected").text()},
+                  success: function(response){ 
+                    $("#exp-proptax-div").val(formatdollor2(parseFloat(response),"$"));
+                    UpdateTotalExp();
+                  },
+                  error: function (request,error) {
+                    // alert('No data');
+                }
+        });
+     }
+    </script>
+	

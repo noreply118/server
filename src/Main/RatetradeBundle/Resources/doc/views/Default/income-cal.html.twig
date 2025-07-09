@@ -1,0 +1,616 @@
+<!doctype html>
+<html>
+    <head>
+       <title> {% for a in educationall %}{% if a.id == '27' %}{{a.ptitle}}{% endif %}{% endfor %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="widht=content-width, initial-scale=1">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="{{ app.request.uri }}">
+        <meta name="geo.region" content="CA" />
+        <meta name="title" content="{% for a in educationall %}{% if a.id == '27' %}{{a.ptitle}}{% endif %}{% endfor %}">
+        <meta name="description" content="{% for a in educationall %}{% if a.id == '25' %}{{a.mdescription}}{% endif %}{% endfor %}"> 
+        <meta property="og:type" content="article" />
+        <meta name="og:title" content="{% for a in educationall %}{% if a.id == '27' %}{{a.ptitle}}{% endif %}{% endfor %}">
+        <meta name="og:description" content="{% for a in educationall %}{% if a.id == '27' %}{{a.mdescription}}{% endif %}{% endfor %}">
+        <meta property="og:site_name" content="Rate Trade" />
+        <meta property="article:publisher" content="https://www.facebook.com/ratetrade/" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:description" content="{% for a in educationall %}{% if a.id == '27' %}{{a.mdescription}}{% endif %}{% endfor %}">
+        <meta name="twitter:title" content="{% for a in educationall %}{% if a.id == '27' %}{{a.ptitle}}{% endif %}{% endfor %}">
+        <meta name="twitter:site" content="@ratetrade" />
+        <meta name="twitter:creator" content="@ratetrade" /> 
+        <link rel="shortcut icon" href="/symfonyratetrade/web/favicon.ico" type="image/x-icon">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('./bundles/assets/ico/favicon.png')}}">
+    <link rel="shortcut icon" href="{{asset('./bundles/assets/ico/favicon.ico')}}">
+    <link href="{{asset('./bundles/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/bootstrap-select/css/bootstrap-select.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/fontawesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/prettyphoto/css/prettyPhoto.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/owl-carousel2/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/owl-carousel2/assets/owl.theme.default.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/animate/animate.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/plugins/swiper/css/swiper.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/css/theme.css')}}" rel="stylesheet">
+    <link href="{{asset('./bundles/assets/css/theme-red-1.css')}}" rel="stylesheet" id="theme-config-link">
+	    <script src="/./bundles/assets/plugins/modernizr.custom.js"></script>
+     <link rel="stylesheet" type="text/css" href="/./bundles/acmedemo/css/emicalculator.css">
+<link rel="stylesheet" type="text/css" href="/./bundles/acmedemo/css/jquery-ui.css">  
+  
+          {{ render(controller('MainRatetradeBundle:Default:Header')) }}
+    <!-- /HEADER -->
+ <!-- CONTENT AREA -->
+    <div class="content-area">
+
+        <!-- BREADCRUMBS -->
+        <section class="page-section breadcrumbs text-right">
+            <div class="container">
+                <div class="page-header">
+                             <h1 class="entrytitle">Income Calculator</h1>
+</div>
+                <ul class="breadcrumb"> 
+                                <li>Home</li>
+                                <li>Calculator</li>
+                                <li class="active">Income Calculator</li>
+                </ul>
+            </div>
+        </section>
+<!-- /BREADCRUMBS --
+        <!-- PAGE WITH SIDEBAR -->
+        <section class="page-section with-sidebar">
+            <div class="container">
+                <div class="row">
+                  
+
+                    <!-- CONTENT -->
+                    <div class="col-md-9 content" id="content">
+
+                        <!-- Blog posts -->
+                        <article class="post-wrap">
+                            <div class="post-media">
+
+
+                            <div class="content-boxes framecontent">
+						   
+            <form>
+           <div class="pboxheading">CALCULATE INCOME REQUIRED</div>
+                        <div class="pbox">
+                            <div class="lamount">
+                                <label for="loanamount" class="orange"><strong>Property Value ($)</strong> </label>
+                                <span></span>
+                            </div>
+                            <div class="datafeild">
+                                <label class="property-error errorc" style="color: #993A00;"></label>
+                                <input id="loanamount" name="loanamount" value="" type="text" />
+                                <span class="prc-addon">$</span>
+                                <div id="loanamountslider"></div>
+                                <div id="loanamountsteps" class="steps">
+                                      <span class="tick" style="left: 0%;">|<br/><span class="marker">0</span></span>
+                                    <span class="tick" style="left: 16.67%;">|<br/><span class="marker">$500,000</span></span>				            
+                                    <span class="tick" style="left: 33.34%;">|<br/><span class="marker">$1M</span></span>
+                                    <span class="tick" style="left:  50%;">|<br/><span class="marker">$1.5M</span></span>
+                                    <span class="tick" style="left: 66.67%;">|<br/><span class="marker">$2M</span></span>				            
+                                    <span class="tick" style="left: 83.34%;">|<br/><span class="marker">$2.5M</span></span>
+                                    <span class="tick" style="left: 100%;">|<br/><span class="marker">$3</span></span>
+                                </div></div></div>
+                        <div class="pbox">
+                            <div class="sep lint">
+                                <label for="loaninterest" class="orange"><strong>Down Payment ($)</strong> </label>
+                                <span></span>
+                            </div>
+                            <div class="datafeild">
+                                <label class="down-error errorc" style="color: rgb(153, 58, 0);"></label>
+                                <input id="loaninterest" name="loaninterest" value="" type="text" />
+                                <span class="prc-addon">$</span>
+                                <div id="loaninterestslider"></div>
+                                <div id="loanintereststeps" class="steps">
+                                    <span class="tick" style="left: 0%;">|<br/><span class="marker">0</span></span>
+                                    <span class="tick" style="left: 25%;">|<br/><span class="marker">$500,000</span></span>
+                                    <span class="tick" style="left: 50%;">|<br/><span class="marker">$1M</span></span>
+                                    <span class="tick" style="left: 75%;">|<br/><span class="marker">$1.5M</span></span>
+                                    <span class="tick" style="left: 100%;">|<br/><span class="marker">$2M</span></span>
+                                </div></div></div>
+                        <div class="pbox">
+                            <div class="sep lint">
+                                <label for="loanterm" class="orange"><strong class="orange">Ammortization Period (Yr)</strong> </label>
+                                <span></span>
+                            </div>
+                            <div class="datafeild">
+                                <label class="ammort-error errorc" style="color: #993A00;"></label>
+                                <input id="loanterm" name="loanterm" value="" type="text" />
+                                <span class="prc-addon">Yr</span>
+                                <div id="loantermslider"></div>
+                                <div id="loanintereststeps" class="steps">
+                                    <span class="tick" style="left: 0%;">|<br/><span class="marker">0</span></span>
+                                    <span class="tick" style="left: 19.67%;">|<br/><span class="marker">5</span></span>				            
+                                    <span class="tick" style="left: 39.8%;">|<br/><span class="marker">10</span></span>
+                                    <span class="tick" style="left: 59.8%;">|<br/><span class="marker">15</span></span>
+                                    <span class="tick" style="left: 79.67%;">|<br/><span class="marker">20</span></span>				            
+                                    <span class="tick" style="left: 100%;">|<br/><span class="marker">25</span></span>
+                                </div></div></div>
+                        <div class="pbox">
+                            <div class="sep lint">
+                                <label for="mortrate" class="orange"><strong class="orange">Mortgage Rate (%)</strong> </label>
+                                <span></span>
+                            </div>
+                            <div class="datafeild">
+                                <label class="mortrate-error errorc" style="color: #993A00;"></label>
+                                <input id="mortrate" name="mortrate" value="" type="text" />
+                                <span class="prc-addon">%</span>
+                                <div id="mortrateslider"></div>
+                                <div id="loanintereststeps" class="steps">
+                                    <span class="tick" style="left: 0%;">|<br/><span class="marker">0</span></span>
+                                    <span class="tick" style="left: 16.67%;">|<br/><span class="marker">1.75</span></span>				            
+                                    <span class="tick" style="left: 33.34%;">|<br/><span class="marker">3.5</span></span>
+                                    <span class="tick" style="left: 50%;">|<br/><span class="marker">5</span></span>
+                                    <span class="tick" style="left: 66.67%;">|<br/><span class="marker">6.75</span></span>				            
+                                    <span class="tick" style="left: 83.34%;">|<br/><span class="marker">8.5</span></span>
+                                    <span class="tick" style="left: 100%;">|<br/><span class="marker">10</span></span>
+                                </div></div></div><div class="clear"></div>
+ <div class="pboxheading">LIVING COSTS & DEBTS</div>
+                        <div class="pbox">
+                            <div class="sep lint">
+                                <label for="proptax" class="orange"><strong>Property Tax (Yearly)</strong> </label>
+                                <span></span>
+                            </div>
+                            <div class="datafeild">
+                                <label class="property-error errorc" style="color: #993A00;"></label>
+                                <input id="proptax" name="proptax" value="" type="text" />
+                                <span class="prc-addon">Yr</span>
+                                <div id="proptaxslider"></div>
+                                <div id="loanamountsteps" class="steps">
+                                    <span class="tick" style="left: 0%;">|<br/><span class="marker">0</span></span>
+                                    <span class="tick" style="left: 25%;">|<br/><span class="marker">$500,000</span></span>
+                                    <span class="tick" style="left: 50%;">|<br/><span class="marker">$1M</span></span>
+                                    <span class="tick" style="left: 75%;">|<br/><span class="marker">$1.5M</span></span>
+                                    <span class="tick" style="left: 100%;">|<br/><span class="marker">$2M</span></span>
+                                </div></div></div>
+                        <div class="pbox">
+                            <div class="sep lint">
+                                <label for="heating" class="orange"><strong>Heating Cost (Monthly)</strong> </label>
+                                <span></span>
+                            </div>
+                            <div class="datafeild">
+                                <label class="property-error errorc" style="color: #993A00;"></label>
+                                <input id="heating" name="heating" value="" type="text" />
+                                <span class="prc-addon">M</span>
+                                <div id="heatingslider"></div>
+                                <div id="loanamountsteps" class="steps">
+                                    <span class="tick" style="left: 0%;">|<br/><span class="marker">0</span></span>
+                                    <span class="tick" style="left: 25%;">|<br/><span class="marker">$500,000</span></span>
+                                    <span class="tick" style="left: 50%;">|<br/><span class="marker">$1M</span></span>
+                                    <span class="tick" style="left: 75%;">|<br/><span class="marker">$1.5M</span></span>
+                                    <span class="tick" style="left: 100%;">|<br/><span class="marker">$2M</span></span>
+                                </div>
+                            </div></div>
+                        <div class="pbox">
+                            <div class="sep lint">
+                                <label for="condo" class="orange"><strong>Condo Fees ($)</strong> </label>
+                                <span></span>
+                            </div>
+                            <div class="datafeild">
+                                <label class="property-error errorc" style="color: #993A00;"></label>
+                                <input id="condo" name="condo" value="" type="text" />
+                                <span class="prc-addon">$</span>
+                                <div id="condoslider"></div>
+                                <div id="loanamountsteps" class="steps">
+                                    <span class="tick" style="left: 0%;">|<br/><span class="marker">0</span></span>
+                                    <span class="tick" style="left: 25%;">|<br/><span class="marker">$500,000</span></span>
+                                    <span class="tick" style="left: 50%;">|<br/><span class="marker">$1M</span></span>
+                                    <span class="tick" style="left: 75%;">|<br/><span class="marker">$1.5M</span></span>
+                                    <span class="tick" style="left: 100%;">|<br/><span class="marker">$2M</span></span>
+                                </div></div></div>
+                        <div class="pbox">
+                            <div class="sep lint">
+                                <label for="debt" class="orange"><strong>Monthly Debts ($)</strong> </label>
+                                <span></span>
+                            </div>
+                            <div class="datafeild">
+                                <label class="property-error errorc" style="color: #993A00;"></label>
+                                <input id="debt" name="debt" value="" type="text" />
+                                <span class="prc-addon">$</span>
+                                <div id="debtslider"></div>
+                                <div id="loanamountsteps" class="steps">
+                                    <span class="tick" style="left: 0%;">|<br/><span class="marker">0</span></span>
+                                    <span class="tick" style="left: 25%;">|<br/><span class="marker">$500,000</span></span>
+                                    <span class="tick" style="left: 50%;">|<br/><span class="marker">$1M</span></span>
+                                    <span class="tick" style="left: 75%;">|<br/><span class="marker">$1.5M</span></span>
+                                    <span class="tick" style="left: 100%;">|<br/><span class="marker">$2M</span></span>
+                                </div>
+                            </div></div>
+                    </div>
+                </div>
+            </form>
+<div class="boxdta">
+        <div class="box resultam">
+        <strong class="orange">Loan to Value (%)</strong>
+        <input id="down-payment" value="" type="text" disabled="disabled" style="width:70%;text-align:center;color:rgb(35, 98, 2);"/>
+    </div>
+
+    <div class="box resultam">
+        <strong class="orange">Mortgage Insurance ($)</strong>
+        <input id="chmc-ins" value="" type="text" disabled="disabled" style="width:70%;text-align:center;color:rgb(35, 98, 2);"/> 
+    </div>
+    <div class="box resultam">
+        <strong class="orange">Total Mortgage ($)</strong>
+
+        <input id="mort-reqd" value="" type="text" disabled="disabled" style="width:70%;text-align:center;color:rgb(35, 98, 2);"/>
+    </div>
+    <div class="box resultam">
+        <strong class="orange">Mortgage Payment ($)</strong>
+        <input id="emi-data" value="" type="text" disabled="disabled" style="width:70%;text-align:center;color:rgb(35, 98, 2);"/>
+    </div>
+    <div class="box resultam">
+        <strong class="orange">Total Monthly Payment($)</strong>
+        <input id="total-emi" value="" type="text" disabled="disabled" style="width:70%;text-align:center;color:rgb(35, 98, 2);"/>
+    </div>
+    <div class="box resultam">
+        <strong class="orange">Income Required($)</strong>
+        <input id="income" value="" type="text" disabled="disabled" style="width:70%;text-align:center;color:rgb(35, 98, 2);"/>
+    </div>
+</div>
+
+			   
+						   
+						   
+						   
+						   
+						   
+						   
+						   
+						   
+                            <div class="mortapb">
+                                <a href="#" class="an-button" data-toggle="modal" data-target="#agentModal1">Apply Now</a>
+                                &nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;
+                                <a href="{{path('mortgage_rates',{'target':'best','ratetype':'fixed'})}}" class="an-button">Best Available Rates</a>
+                            </div>
+</atricle>
+                        </div>
+                    
+  <!-- SIDEBAR -->
+                    <aside class="col-md-3 sidebar" id="sidebar">
+                    
+                    <!-- widget car categories -->
+                    <div class="widget shadow car-categories">
+                        <h4 class="widget-title">Mortgage Categories</h4>
+                        <div class="widget-content">
+                            <ul>
+                                <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-calculator"></i> &nbsp; Calculators</a>
+                                    <ul class="children active">
+                                                <li><a href="{{path('mortgage_payment')}}">Mortgage Payment</a></li>
+                                                <li><a href="{{path('payment_analyzer')}}">Payment Analyzer</a></li>
+                                                <li><a href="{{path('income_cal')}}">Income Calculator</a></li>
+                                                <li><a href="{{path('affordability_cal')}}">Mortgage Affordability</a></li>
+                                                <li><a href="{{path('chmc_insurance')}}">Mortgage Insurance</a></li>
+                                                <li><a href="{{path('land_transfer_tax')}}">Land Transfer Tax</a></li>
+                                                <li><a href="{{path('refinance-calculator')}}">Refinance Calculator</a></li>
+                                                <li><a href="{{path('equity_refinance')}}">Refinance Equity</a></li>
+                                                <li><a href="{{path('refinance_penalty')}}">Refinance Penalty</a></li>
+                                                <li><a href="{{path('debt-consolidation-calculator')}}">Debt Consolidation</a></li>
+                                     </ul>
+                                </li>
+                                <li> 
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Home Buying Process</a>
+                                    <ul class="children">
+                                        
+                                                {% for a in educationall %}
+                                                        {% if a.parentCategory == '6' %}
+                                                            <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                       
+                                </ul>
+                                </li>
+                                <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Renewing Mortgage</a>
+                                    <ul class="children">
+                                       {% for a in educationall %}
+                                                        {% if a.parentCategory == '18' %}
+                                                            <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                    <a href="#"><i class="fa fa-book"></i> &nbsp; Refinancing Guide</a>
+                                    <ul class="children">
+                                      {% for a in educationall %}
+                                                        {% if a.parentCategory == '1' %}
+                                                            <li><a href="{{path('dynmaicurl',{'urlparam': a.pageUrl})}}">{{a.category}}</a></li>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /widget car categories -->
+                 
+                                 </aside>
+                    <!-- /SIDEBAR -->
+            </div>
+        </div>
+        </section>
+        {{ render(controller('MainRatetradeBundle:Default:Footer')) }}
+        <div class="modal fade" id="agentModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Contact Us</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12">
+                                <div class="form-class">
+                                    <form class="">
+                                        <div class="col-xs-12 col-sm-6">
+                                            <div class="form-group">
+                                                <label for="name"><i class="fa fa-user"></i> &nbsp;Name: *</label>
+                                                <input type="text" class="form-control required" name="urName" id="urName" placeholder="Enter Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <label for="phoneNumber"><i class="fa fa-mobile"></i> &nbsp; Phone Number: *</label>
+                                                <input type="text"  class="form-control required" name="phoneNumber" id="phonenUmber" placeholder="Enter Phone Number">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="besttime"><i class="fa fa-clock-o"></i> &nbsp;Best Time to Call: *</label>
+                                                <select name="bestTime" id="bestTime"  class="form-control required">
+                                                    <option value="anytime">Any Time</option>
+                                                    <option value="morning">Morning</option>
+                                                    <option value="afternoon">Afternoon</option>
+                                                    <option value="evening">Evening</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="forEmail"><i class="fa fa-envelope"></i> &nbsp;Email Address: *</label>
+                                                <input type="text"  class="form-control" name="emailId" id="EmailId" placeholder="Enter Email Address">
+                                            </div>                                
+                                        </div>
+
+                                        <div class="col-xs-12 col-sm-6">
+                                            <div class="form-group">
+                                                <label for="agentLocation"><i class="fa fa-map-marker"></i> &nbsp;Location: *</label>
+                                                <input type="text" name="agentLocationName" id="agentLocationName" class="form-control" value="" placeholder="Seach City">
+                                                <select name="agentLocation" id="agentLocation" class="form-control required" onClick="getPop()" size="5" style="display:none;">
+                                                    {% for c in cities %}
+                                                        {% if c.cityUrl == 'brampton' %}  
+                                                            <option value="{{c.cityUrl}}" selected>{{c.city}}</option>
+                                                        {% else %}
+                                                            <option value="{{c.cityUrl}}">{{c.city}}</option>   
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="lookingfor"><i class="fa fa-home"></i> &nbsp;I am Looking For: *</label>
+                                                <select name="lookingFor" id="lookingFor"  class="form-control required">
+                                                    <option value="">Please Select</option>
+                                                    <option value="buying" selected>Buying</option>
+                                                    <option value="renew-mortgage">Renew Mortgage</option>
+                                                    <option value="debt-consolidation">Debt Consolidation</option>
+                                                    <option value="refinancing">Refinancing</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <br>
+                                                <input type="hidden" id="rate-request" value=""/>
+                                                <button type="button" class="btn btn-primary lead-submit" >Submit Now</button>
+                                            </div>                                
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.widget.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.accordion.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.tabs.min.js') }}"></script>
+
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.loadmask.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/globalize.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/income_ratetrade.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.mouse.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.slider.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.ui.datepicker.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/highcharts.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/exporting.js') }}"></script>
+        <script>
+                                                    $('#locationName').click(function(e) {
+                                                        $('.loclist').show(100);
+                                                    });
+                                                    $('.loclist').blur(function(e) {
+                                                        $(this).hide(100);
+                                                    });
+                                                    $('#fixedBtn').click(function(e) {
+                                                        if ($(this).hasClass('active-btn'))
+                                                        {
+                                                            e.preventDefault();
+
+                                                        }
+                                                        else
+                                                        {
+                                                            $(this).addClass('active-btn');
+                                                            $('#variableBtn').removeClass('active-btn');
+                                                            $('#variaTab').hide(100);
+                                                            $('#fixedTab').show(100);
+
+                                                        }
+                                                    });
+                                                    $('#variableBtn').click(function(e) {
+                                                        if ($(this).hasClass('active-btn'))
+                                                        {
+                                                            e.preventDefault();
+                                                        }
+                                                        else
+                                                        {
+                                                            $(this).addClass('active-btn');
+                                                            $('#fixedBtn').removeClass('active-btn');
+                                                            $('#fixedTab').hide(100);
+                                                            $('#variaTab').show(100);
+                                                        }
+                                                    });
+
+                                                    function getSelected() {
+
+                                                        document.getElementById('locationName').value = document.getElementById('locationList').value;
+
+                                                        $('#locationList').hide(100);
+                                                    }
+
+                                                    $('#agentLocationName').click(function(e) {
+                                                        $('#agentLocation').show(100);
+                                                    });
+                                                    $('#agentLocation').blur(function(e) {
+                                                        $(this).hide(100);
+                                                    });
+
+                                                    function capitalizeFirstLetter(string) {
+                                                        return string.charAt(0).toUpperCase() + string.slice(1);
+                                                    }
+
+                                                    $('#agentLocationName').on('input', function() {
+                                                        // Getiing option based on input value and setting it as selected
+                                                        $('#agentLocation option:contains(' + capitalizeFirstLetter(this.value) + ')').eq(0).prop('selected', true);
+                                                    });
+
+                                                    function getPop() {
+
+                                                        //document.getElementById('locationName').value = document.getElementById('locationList').text;
+                                                        $('#agentLocationName').val($('option:selected', $('#agentLocation')).text());
+                                                        $('#agentLocation').hide(100);
+                                                    }
+
+                                                    function validateEmail(email) {
+                                                        var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                                                        return re.test(email);
+                                                    }
+
+                                                    $(document).on("click", ".subsc", function(e) {
+                                                        e.preventDefault();
+                                                        $("#exampleInputEmail2").css('border', '1px solid green');
+
+                                                        if ($("#exampleInputEmail2") == '')
+                                                        {
+                                                            $("#exampleInputEmail2").focus();
+                                                            $("#exampleInputEmail2").css('border', '1px solid red');
+                                                        }
+                                                        else if (!validateEmail($("#exampleInputEmail2").val()))
+                                                        {
+                                                            $("#exampleInputEmail2").css('border', '1px solid red');
+                                                            $("#exampleInputEmail2").focus();
+                                                        }
+                                                        else {
+                                                            $.ajax({
+                                                                url: '{{path('email_subscribe')}}',
+                                                                type: "post",
+                                                                async: true,
+                                                                data: {'email': $("#exampleInputEmail2").val(),
+                                                                    'name': "testname"},
+                                                                success: function(response) {
+                                                                    $("#exampleInputEmail2").val('');
+                                                                    alert(response);
+                                                                },
+                                                                error: function(request, error) {
+                                                                    // alert('No data found');
+                                                                }
+                                                            });
+                                                        }
+                                                    });
+
+                                                    $(document).on("change", ".required", function() {
+                                                        $(this).css('border', '1px solid green');
+
+                                                        if ($(this).val() == '')
+                                                        {
+                                                            $(this).focus();
+                                                            $(this).css('border', '1px solid red');
+                                                        }
+
+                                                        var id = $(this).attr('id');
+                                                        if (id == 'EmailId' && !validateEmail($("#EmailId").val()))
+                                                        {
+                                                            $("#EmailId").focus();
+                                                            $("#EmailId").css('border', '1px solid red');
+                                                        }
+                                                    });
+
+                                                    $(document).on("click", ".lead-submit", function(e) {
+
+                                                        if ($("#urName").val() == '')
+                                                        {
+                                                            $("#urName").focus();
+                                                            $("#urName").css('border', '1px solid red');
+                                                        }
+                                                        else if ($("#EmailId").val() == '')
+                                                        {
+                                                            $("#EmailId").focus();
+                                                            $("#EmailId").css('border', '1px solid red');
+                                                        }
+                                                        else if (!validateEmail($("#EmailId").val()))
+                                                        {
+                                                            $("#EmailId").css('border', '1px solid red');
+                                                            $("#EmailId").focus();
+                                                        }
+                                                        else if ($("#phonenUmber").val() == '')
+                                                        {
+                                                            $("#phonenUmber").focus();
+                                                            $("#phonenUmber").css('border', '1px solid red');
+                                                        }
+                                                        else {
+                                                            var currentRequest = null;
+                                                            $(".lead-submit").text("Please Wait..");
+                                                            var formData = {
+                                                                fname: $("#urName").val(),
+                                                                email: $("#EmailId").val(),
+                                                                phone: $("#phonenUmber").val(),
+                                                                message: $("#rate-request").val(),
+                                                                location: $("#agentLocationName").val(),
+                                                                besttime: $("#bestTime").find("option:selected").text(),
+                                                                purpose: $("#lookingFor").find("option:selected").text()
+                                                            };
+                                                            currentRequest = $.ajax({
+                                                                type: "post",
+                                                                async: true,
+                                                                url: "{{path('lead_update')}}",
+                                                                data: formData,
+                                                                beforeSend: function() {
+                                                                    if (currentRequest != null) {
+                                                                        currentRequest.abort();
+                                                                    }
+                                                                },
+                                                                success: function(response) {
+                                                                    $(".lead-submit").text("Submit");
+                                                                    $(".required").removeAttr('style');
+                                                                    $("#agentModal1").modal('hide');
+                                                                    alert("Query Successful");
+                                                                    window.location.href = '/thank-you';
+                                                                },
+                                                                error: function(request, error) {
+                                                                    $(".lead-submit").text("Submit");
+                                                                    $(".required").removeAttr('style');
+                                                                    alert("Query Failed");
+                                                                }
+                                                            });
+                                                        }
+                                                    });
+        </script>
+    </body>
+</html>

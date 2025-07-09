@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Main\RatetradeBundle\Entity\MortgageBrokers" table="mortgage_brokers">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="fname" type="string" column="fname" length="255" nullable="false"/>
+    <field name="lname" type="string" column="lname" length="255" nullable="true"/>
+    <field name="photo" type="string" column="photo" length="255" nullable="true"/>
+    <field name="city" type="string" column="city" length="255" nullable="false"/>
+    <field name="phone" type="string" column="phone" length="20" nullable="false"/>
+    <field name="email" type="string" column="email" length="255" nullable="false"/>
+    <field name="password" type="string" column="password" length="255" nullable="false"/>
+    <field name="brokerageName" type="string" column="brokerage_name" length="255" nullable="false"/>
+    <field name="brokerageLic" type="string" column="brokerage_lic" length="255" nullable="true"/>
+    <field name="ciscoRegNum" type="string" column="cisco_reg_num" length="255" nullable="true"/>
+    <field name="lifeRegAuth" type="string" column="life_reg_auth" length="255" nullable="true"/>
+    <field name="websiteUrl" type="string" column="website_url" length="255" nullable="true"/>
+    <field name="variableRateFive" type="string" column="variable_rate_five" length="255" nullable="false"/>
+    <field name="fixedRateFive" type="string" column="fixed_rate_five" length="255" nullable="false"/>
+    <field name="variableRateOne" type="string" column="variable_rate_one" length="255" nullable="true"/>
+    <field name="fixedRateOne" type="string" column="fixed_rate_one" length="255" nullable="true"/>
+    <field name="variableRateTwo" type="string" column="variable_rate_two" length="255" nullable="true"/>
+    <field name="fixedRateTwo" type="string" column="fixed_rate_two" length="255" nullable="true"/>
+    <field name="variableRateThree" type="string" column="variable_rate_three" length="255" nullable="true"/>
+    <field name="fixedRateThree" type="string" column="fixed_rate_three" length="255" nullable="true"/>
+    <field name="variableRateFour" type="string" column="variable_rate_four" length="255" nullable="true"/>
+    <field name="fixedRateFour" type="string" column="fixed_rate_four" length="255" nullable="true"/>
+    <field name="variableRateSix" type="string" column="variable_rate_six" length="255" nullable="true"/>
+    <field name="fixedRateSix" type="string" column="fixed_rate_six" length="255" nullable="true"/>
+    <field name="variableRateSeven" type="string" column="variable_rate_seven" length="2555" nullable="true"/>
+    <field name="fixedRateSeven" type="string" column="fixed_rate_seven" length="255" nullable="true"/>
+    <field name="variableRateEight" type="string" column="variable_rate_eight" length="255" nullable="true"/>
+    <field name="fixedRateEight" type="string" column="fixed_rate_eight" length="255" nullable="true"/>
+    <field name="variableRateNine" type="string" column="variable_rate_nine" length="255" nullable="true"/>
+    <field name="fixedRateNine" type="string" column="fixed_rate_nine" length="255" nullable="true"/>
+    <field name="variableRateTen" type="string" column="variable_rate_ten" length="255" nullable="true"/>
+    <field name="fixedRateTen" type="string" column="fixed_rate_ten" length="255" nullable="true"/>
+    <field name="about" type="text" column="about" nullable="true"/>
+    <field name="updateDateTime" type="datetime" column="update_date_time" nullable="false"/>
+    <field name="showFlag" type="integer" column="show_flag" nullable="false"/>
+  </entity>
+</doctrine-mapping>

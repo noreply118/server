@@ -1,0 +1,380 @@
+<html>
+    <head>
+        <title>Mortgage Refinance Calculator</title>
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/acmedemo/css/max-equity-cal.css') }}">
+    </head>
+<body>
+    <h1>Mortgage Refinance Calculator</h1>
+    <br /><br />
+    <div class="calc">
+    <table class="tablem">
+        <tr>
+            <td>What is the current value of your home?</td>
+            <td>
+                <input type="text" class="homeprice" value="" />
+            </td>
+        </tr>
+        
+        <tr>
+            <td>What is the remaining balance on your mortgage?</td>
+            <td>
+                <input type="text" class="mortgage-val" value="" />
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Why do you want to refinance?</td>
+            <td>
+                <input type="radio" name="mort-reason" class="mort-reason" value="lower-rate" /> Lower Rate
+                <input type="radio" name="mort-reason" class="mort-reason" value="access-equity" checked/> Access Equity
+            </td>
+        </tr>
+        
+        <tr style="background:#F2F0F3;" class="equity-div">
+            <td>current home value</td>
+            <td>maximum loan to value ratio (80%)</td>
+            <td>current mortgage</td>
+            <td>Available equity</td>
+        </tr>
+        
+        <tr style="background:#F2F0F3;" class="equity-div">
+            <td class="homeval"></td>
+            <td class="loanval"></td>
+            <td class="mortgage-bal"></td>
+            <td class="equity"></td>
+        </tr>
+        
+         <tr class="equity-div">
+             <td>How much do you want to access from <span class="equity"></span> equity?</td>
+            <td>
+                <input type="text" class="access-equity" value="0" />
+            </td>
+        </tr>
+        
+        <tr>
+             <td>Your new mortgage amount</td>
+            <td class="new-mortgage"></td>
+        </tr>
+        
+         <tr>
+            <td colspan="2">Mortgage Break Penalty</td>
+        </tr>
+        <tr>
+            <td>When did your current mortgage start?</td>
+            <td>
+               <select id="date"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option></select>
+                &nbsp;
+               <select id="month">
+															<option value="1">January</option>
+															<option value="2">February</option>
+															<option value="3">March</option>
+															<option value="4">April</option>
+															<option value="5">May</option>
+															<option value="6">June</option>
+															<option value="7">July</option>
+															<option value="8">August</option>
+															<option value="9">September</option>
+															<option value="10">October</option>
+															<option value="11">November</option>
+															<option value="12">December</option>
+													</select>
+                &nbsp;
+                <select id="year"><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option></select>
+            </td>
+        </tr>
+        <tr>
+            <td>What is the original term of your mortgage?</td>
+            <td>
+                <select id="mort-term">
+                    <option>Select Term</option>
+                    <option>1</option>
+                    <option selected>3</option>
+                    <option>5</option>
+                    <option>10</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>What is the type of existing mortgage?</td>
+            <td>
+                <input type="radio" name="mort-type" class="mort-type" value="variable" checked="checked"/> Variable
+                &nbsp;&nbsp;<input type="radio" name="mort-type" class="mort-type" value="fixed" /> Fixed
+            </td>
+        </tr>
+        <tr>
+            <td>What is the existing mortgage rate?</td>
+            <td>
+                <input type="text" class="mortgage-rate" value="" />
+            </td>
+        </tr>
+        <tr>
+            <td>What is the new rate in lower to existing mortgage rate?</td>
+            <td>
+                <input type="text" class="new-rate" value="" />
+            </td>
+        </tr>
+        <tr>
+            <td>Which province are you located in?</td>
+            <td>
+                            <select id="province" name="province" >
+		                <option value="AL">Alberta</option>
+		                <option value="BC">British Columbia</option>
+                                <option value="MA">Manitoba</option>
+                                <option value="NB">New Brunswick</option>
+                                <option value="NE">Newfoundland</option>
+				<option value="NS">Nova Scotia</option>
+                                <option value="NT">Northwest Territories</option>
+				<option value="NU">Nunavut</option>
+                                <option value="ON" selected="selected">Ontario</option>
+                                <option value="PE">Prince Edward Island</option>
+                                <option value="QU">Quebec</option>
+				<option value="SK">Saskatchewan</option>
+				<option value="YU">Yukon</option>				
+			    </select>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Who is your current mortgage provider?</td>
+            <td>
+                            <select id="provider" name="provider" >
+		                <option value="hsbc">HSBC</option>
+                                <option value="rbc">RBC</option>
+                                <option value="bmo">BMO</option>
+			    </select>
+            </td>
+        </tr>
+        
+        
+        <tr style="background:#F2F0F3;">
+            <td>Mortgage Balance</td>
+            <td>Mortgage Rate</td>
+            <td>Provider Discharge Fee</td>
+            <td>Mortgage Penalty</td>
+        </tr>
+        
+        <tr style="background:#F2F0F3;">
+            <td class="mortgage-bal"></td>
+            <td class="mortgage-rat"></td>
+            <td class="discharge-fee"></td>
+            <td class="mortgage-penalty"></td>
+        </tr>
+    </table>
+    </div>
+    
+    <h3>Results:</h3>
+    <div class="calc">
+        <table>
+        <tr class="yes" style="display:none;">
+            <td>Yes! You can access up to</td>
+            <td><span class="equity"></span></td>
+        </tr>
+        <tr class="no" style="display:none;">
+            <td>No! No equity available</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Onetime Refinance Penalty--</td>
+            <td class="mortgage-penalty"></td>
+        <tr> 
+        </table>
+    </div>
+    
+    <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/jquery.min.js') }}"></script>
+   <script>
+        
+        function formatdollor(n, currency) {
+          return currency + " " + n.toFixed(1).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").replace(".0","");
+        }
+        
+        function formatdollor2(n, currency) {
+          return currency + " " + n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,");
+        }
+        
+        $(".mortgage-rate").keyup(function(){
+          getPenalty();
+        });
+        
+        $(".new-rate").keyup(function(){
+          getPenalty();
+        });
+        
+        $(".mort-type").click(function(){
+            getPenalty();
+        });
+        
+         $("#mort-term").change(function(){
+          getPenalty();
+        });
+        
+        $("#date").change(function(){
+          getPenalty();
+        });
+        
+        $("#month").change(function(){
+          getPenalty();
+        });
+        
+        $("#year").change(function(){
+          getPenalty();
+        });
+        
+        $(".mortgage-val").keyup(function(){
+          getPenalty();
+        });
+        
+        $("#province").change(function(){
+          getPenalty();
+        });
+        
+        $("#provider").change(function(){
+          getPenalty();
+        });
+        
+        var discharge_fee='{"AL":{"hsbc":"5","rbc":"0","bmo":"5"},\n\
+                            "ON":{"hsbc":"250","rbc":"200","bmo":"250"},\n\
+                            "YU":{"hsbc":"250","rbc":"200","bmo":"250"}}';
+        
+        function getPenalty()
+        {
+           var mortgage=parseInt($(".mortgage-val").val().replace(/[^0-9-.]/g, ''));
+           
+           if(isNaN(mortgage))
+           {
+             mortgage = 0;
+           }
+           
+           var mortgagerate=$(".mortgage-rate").val();
+           
+           if(isNaN(mortgagerate))
+           {
+             mortgagerate = 0;
+           }
+           
+           $(".mortgage-val").val(formatdollor(mortgage,"$"));
+                      
+           var penalty = '0';
+           var discharge = '0';
+           var total_penalty = '0';
+           
+           if($(".mort-type:checked").val() == 'variable')
+           {
+           penalty = (mortgage/100) * mortgagerate * (3/12);
+           var fee = JSON.parse(discharge_fee);
+           discharge = fee[$("#province").find('option:selected').val()][$("#provider").find('option:selected').val()];
+           total_penalty = parseInt(penalty) + parseInt(discharge);
+           $(".discharge-fee").html(discharge);
+           $(".mortgage-rat").html(mortgagerate);
+           $(".mortgage-bal").html(formatdollor(mortgage,"$"));
+           $(".mortgage-penalty").html(formatdollor(Math.abs(total_penalty),"$"));
+           }
+           else
+           {
+               
+           var start_date = new Date($("#year").find('option:selected').val(), $("#month").find('option:selected').val(), $("#date").find('option:selected').val());
+           var end_date = new Date();
+           var months = (end_date.getFullYear() - start_date.getFullYear())*12 + (end_date.getMonth() - start_date.getMonth());
+           var total_months = parseInt($("#mort-term").find('option:selected').text()) * 12;
+           var diff_months = parseInt(total_months) - parseInt(months);
+           
+           var newrate=$(".new-rate").val();
+           
+           if(isNaN(newrate))
+           {
+             newrate = 0;
+           }
+           
+           var rate_diff = mortgagerate - newrate; 
+           var month_interest = (mortgage * rate_diff/100) / 12;
+           penalty = diff_months * month_interest;
+           var fee = JSON.parse(discharge_fee);
+           discharge = fee[$("#province").find('option:selected').val()][$("#provider").find('option:selected').val()];
+           total_penalty = parseInt(penalty) + parseInt(discharge);
+           $(".discharge-fee").html(discharge);
+           $(".mortgage-rat").html(mortgagerate);
+           $(".mortgage-bal").html(formatdollor(mortgage,"$"));
+           $(".mortgage-penalty").html(formatdollor(Math.abs(total_penalty),"$"));  
+           }
+           
+           
+           if(total_penalty < 0)
+           {
+             $(".mortgage-penalty").css("color","red");  
+           }
+           else
+           {
+             $(".mortgage-penalty").css("color","green");  
+           }
+        }
+      
+        
+        $(".homeprice").keyup(function(){
+          getEquity();
+        });
+        
+        $(".mortgage-val").keyup(function(){
+          getEquity();
+        });
+        
+        $(".mort-reason").click(function(){
+          
+          if($(this).val() == 'lower-rate')
+          {
+              $(".equity-div").hide();
+              var mortgage=parseInt($(".mortgage-val").val().replace(/[^0-9-.]/g, ''));
+              $(".new-mortgage").html(mortgage);
+          }
+          else
+          {
+              $(".equity-div").show();
+              var mortgage=parseInt($(".mortgage-val").val().replace(/[^0-9-.]/g, ''));
+              var access_equity=parseInt($(".access-equity").val());
+              $(".new-mortgage").html(mortgage+access_equity);
+          }
+        });
+        
+        $(".access-equity").keyup(function(){
+            
+            var mortgage=parseInt($(".mortgage-val").val().replace(/[^0-9-.]/g, ''));
+            var access_equity=parseInt($(this).val());
+            $(".new-mortgage").html(mortgage+access_equity);
+        });
+        
+        function getEquity()
+        {
+           var num=parseInt($(".homeprice").val().replace(/[^0-9-.]/g, ''));
+           
+           if(isNaN(num))
+           {
+             num = 0;
+           }
+           
+           var mortgage=parseInt($(".mortgage-val").val().replace(/[^0-9-.]/g, ''));
+           
+           if(isNaN(mortgage))
+           {
+             mortgage = 0;
+           }
+           
+           var loanval = num * 0.8;
+           var equity = loanval - mortgage;
+           $(".homeprice").val(formatdollor(num,"$"));
+           $(".mortgage-val").val(formatdollor(mortgage,"$"));
+           $(".homeval").html(formatdollor(num,"$"));
+           $(".loanval").html(formatdollor(loanval,"$"));
+           $(".mortgage-bal").html(formatdollor(mortgage,"$"));
+           $(".equity").html(formatdollor(Math.abs(equity),"$"));
+           
+           if(equity < 0)
+           {
+             $(".equity").css("color","red");  
+           }
+           else
+           {
+             $(".equity").css("color","green");  
+           }
+        }
+        
+    </script>
+</body>
+</html>

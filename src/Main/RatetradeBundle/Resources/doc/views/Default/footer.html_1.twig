@@ -1,0 +1,100 @@
+<div class="newsl"><div class="container">
+        <div class="row">
+            <div class="listl">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="exampleInputName1">Name</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Jane Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail2" class="pd-left">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                    </div>
+                    <button type="submit" class="btn btn-success btn-lg subsc">Subscribe Us</button>
+                </form>
+            </div>
+
+            <div class="slinl"><span>Follow Us :</span> <a href="https://www.facebook.com/RateTradeBestMortgageRate/" target="_blank">
+                    <i class="fa fa-facebook-square"></i>
+                </a> 
+                <a href="https://twitter.com/RatetradeCanada" target="_blank">
+                    <i class="fa fa-twitter-square"></i>
+                </a> 
+                <a href="https://www.linkedin.com/in/ratetrade-canada-47a075120" target="_blank">
+                    <i class="fa fa-linkedin-square"></i>
+                </a>
+                <a href="https://in.pinterest.com/ratetrade/" target="_blank">
+                    <i class="fa fa-pinterest-square"></i>
+                </a>
+                <a href="https://plus.google.com/u/0/113824083193294175526/posts" target="_blank">
+                    <i class="fa fa-google-plus-square"></i>
+                </a></div>
+        </div>
+    </div></div>
+<footer>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-xs-12 footer-top">
+                <div class="col-xs-12 col-sm-6">
+                    <img src="{{asset('./bundles/mainratetrade/images/ratetrade-300x48.png')}}" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <h4>{#Toll Free Number: #}&nbsp;</h4>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+
+                <div class="abouts">
+                    <h3>Mortgage</h3>
+                    <ul>
+                        <li><a href="{{path('mortgage_rates',{'target':'best','ratetype':'fixed'})}}">Fixed Mortgage Rates</a></li>
+                        <li><a href="{{path('mortgage_rates',{'target':'best','ratetype':'variable'})}}">Variable Mortgage Rates</a></li>
+                        <li><a href="{{path('dynmaicurl',{'urlparam':'buying-home-canada'})}}">Buying Home in Canada</a></li>
+                        <li><a href="{{path('dynmaicurl',{'urlparam':'renewing-guide'})}}">Renewing Your Mortgage</a></li>
+                        <li><a href="{{path('dynmaicurl',{'urlparam':'mortgage-refinancing-guide'})}}">Mortgage Refinancing Guide</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-md-5 col-sm-6 col-xs-12">
+
+                <div class="contact-us">
+                    <h3>Contact Us</h3>
+                    <address>
+                        <strong>Email:</strong> <a href="mailto:contact@ratetrade.ca">contact@ratetrade.ca</a><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:contact@ratetrade.ca">info@ratetrade.ca</a>
+                    </address>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+
+                <div class="ft-social"><!-- social -->
+                    <h3>Follow Us on Social</h3> 
+                    <a href="https://www.facebook.com/RateTradeBestMortgageRate/" target="_blank">
+                        <i class="fa fa-facebook-square"></i>
+                    </a> 
+                    <a href="https://twitter.com/RatetradeCanada" target="_blank">
+                        <i class="fa fa-twitter-square"></i>
+                    </a> 
+                    <a href="https://www.linkedin.com/in/ratetrade-canada-47a075120" target="_blank">
+                        <i class="fa fa-linkedin-square"></i>
+                    </a>
+                    <a href="https://in.pinterest.com/ratetrade/" target="_blank">
+                        <i class="fa fa-pinterest-square"></i>
+                    </a>
+                    <a href="https://plus.google.com/u/0/113824083193294175526/posts" target="_blank">
+                        <i class="fa fa-google-plus-square"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="footer-bottom">
+        <small>Copyright &copy; {{ "now"|date("Y") }} <a href="{{path('ratetrade_homepage')}}">RateTrade.ca</a></small>
+    </div>
+</footer>
